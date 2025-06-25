@@ -68,8 +68,7 @@
           "$ref": "license.json"
         },
         "book-version": {
-            "description": "Version des Buchs.",
-            "$ref": "#/$defs/semver"
+          "$ref": "book-version.json"
         },
         "prerequisites": {
             "description": "Liste von Voraussetzungen und deren jeweiliger Einordnung in der Bloomschen Taxonomie, welche Lernende für die erfolgreiche Bearbeitung des Buchs mitbringen sollten.",
