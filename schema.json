@@ -96,8 +96,7 @@
             }
         },
         "context-of-creation": {
-            "description": "Verweis auf QUADRIGA",
-            "$ref": "#/$defs/multilingual-text"
+            "$ref": "context-of-creation.json"
         },
         "date-of-last-change": {
             "type": "string",
