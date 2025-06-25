@@ -77,27 +77,7 @@
           "$ref": "publication-date.json"
         },
         "quality-assurance": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "type": "object",
-                "required": [
-                    "person",
-                    "date"
-                ],
-                "properties": {
-                    "person": {
-                        "$ref": "#/$defs/person"
-                    },
-                    "date": {
-                        "type": "string",
-                        "format": "date"
-                    },
-                    "description": {
-                        "$ref": "#/$defs/multilingual-text"
-                    }
-                }
-            }
+          "$ref": "quality-assurance.json"
         },
         "related-works": {
             "description": "Eine Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
