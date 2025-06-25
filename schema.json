@@ -129,10 +129,7 @@
             "$ref": "duration.json"
         },
         "git": {
-            "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
-            "type": "string",
-            "format": "uri",
-            "@id": "schema:codeRepository"
+            "$ref": "git.json"
         },
         "has-predecessor": {
             "oneOf": [
