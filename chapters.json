@@ -1,0 +1,68 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:chapters",
+  "description": "Liste der Kapitel.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "title",
+      "description",
+      "learning-objectives",
+      "learning-goal"
+    ],
+    "properties": {
+      "title": {
+        "description": "Kapitelüberschrift",
+        "$ref": "schema.json#/$defs/multilingual-text"
+      },
+      "description": {
+        "description": "Beschreibung des Kapitelinhalts.",
+        "$ref": "schema.json#/$defs/multilingual-text"
+      },
+      "url": {
+        "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
+        "type": "string",
+        "format": "uri"
+      },
+      "duration": {
+        "description": "Angedachte Bearbeitungsdauer für Lernende.",
+        "type": "string",
+        "format": "duration",
+        "@id": "schema:timeRequired"
+      },
+      "learning-objectives": {
+        "description": "Liste der Feinlernziele des Kapitels",
+        "$ref": "schema.json#/$defs/learning-objectives"
+      },
+      "learning-goal": {
+        "$ref": "schema.json#/$defs/multilingual-text",
+        "description": "Kurze Benennung des Groblernziels des Kapitels."
+      },
+      "supplemented-by": {
+        "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "link",
+            "description"
+          ],
+          "properties": {
+            "description": {
+              "description": "Beschreibung des verlinkten Werks und dessen Beziehung zur OER/zum Kapitel.",
+              "$ref": "schema.json#/$defs/multilingual-text"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "@id": "dct:relation"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}
