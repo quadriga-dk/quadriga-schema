@@ -1,5 +1,5 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:book-version",
   "description": "Version des Buchs.",
-  "$ref": "schema.json#/$defs/semver"
+  "$ref": "semver.json"
 }
