@@ -176,19 +176,7 @@
             "@id": "dct:relation"
         },
         "has-successor": {
-            "oneOf": [
-                {
-                    "enum": [
-                        false
-                    ]
-                },
-                {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Link zum Vorgänger"
-                }
-            ],
-            "@id": "dct:relation"
+            "$ref": "has-successor.json"
         },
         "identifier": {
             "description": "Eindeutiger Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
