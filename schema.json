@@ -74,9 +74,7 @@
           "$ref": "prerequisites.json"
         },
         "publication-date": {
-            "type": "string",
-            "format": "date",
-            "@id": "dct:issued"
+          "$ref": "publication-date.json"
         },
         "quality-assurance": {
             "type": "array",
