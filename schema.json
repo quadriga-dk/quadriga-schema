@@ -62,9 +62,7 @@
           "$ref": "keywords.json"
         },
         "language": {
-            "description": "Sprache des Buchs als ISO639-1 Sprachcode.",
-            "type": "string",
-            "@id": "dct:language"
+          "$ref": "language.json"
         },
         "license": {
             "description": "Lizenz des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
