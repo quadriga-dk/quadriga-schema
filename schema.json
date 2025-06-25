@@ -27,7 +27,7 @@
     "properties": {
         "authors": {
             "$ref": "authors.json"
-         },
+        },
         "chapters": {
             "description": "Liste der Kapitel.",
             "type": "array",
