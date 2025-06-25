@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=schema.json
+
+identifier: test
+authors:
+- given-names: test
+  family-names: author
+  affiliation: test affiliation
+  orcid: https://orcid.org/0000-0000-0000-0000
+context-of-creation: QUADRIGA
+date-of-last-change: 2025-06-25
+duration: 1h
+discipline: 
+  - übergreifend
+git: https://github.com/quadriga-dk/quadriga-schema
