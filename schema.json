@@ -98,9 +98,7 @@
           "$ref": "type-of-research-object.json"
         },
         "url": {
-            "description": "URL des Buchs.",
-            "type": "string",
-            "format": "uri"
+          "$ref": "url.json"
         },
         "used-tools": {
             "description": "Liste von Tools, die bei der Erstellung des Buchs verwendet wurden.",
