@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "tag:quadriga-dk.de,2025:quadriga",
+    "$id": "tag:quadriga-dk.de,2025:schema",
     "title": "QUADRIGA OER",
     "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
     "@context": {
