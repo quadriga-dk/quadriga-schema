@@ -123,19 +123,7 @@
             "additionalProperties": false
         },
         "discipline": {
-            "description": "Nennung der Disziplinen, die bei der Erstellung  im Fokus standen.",
-            "type": "array",
-            "minItems": 1,
-            "maxItems": 5,
-            "items": {
-                "enum": [
-                    "Verwaltungswissenschaften",
-                    "Digital Humanities",
-                    "Informatik",
-                    "Informationswissenschaft",
-                    "übergreifend"
-                ]
-            }
+            "$ref": "discipline.json"
         },
         "duration": {
             "description": "Angedachte Bearbeitungsdauer für Lernende.",
