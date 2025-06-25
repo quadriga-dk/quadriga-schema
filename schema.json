@@ -65,74 +65,7 @@
           "$ref": "language.json"
         },
         "license": {
-            "description": "Lizenz des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
-            "type": "object",
-            "required": [
-                "content"
-            ],
-            "additionalProperties": false,
-            "properties": {
-                "content": {
-                    "description": "Lizenz des Buchs",
-                    "oneOf": [
-                        {
-                            "@id": "dct:license",
-                            "description": "URL zur Lizenz des Buchs",
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        {
-                            "description": "Lizenzname und URL zur Lizenz des Buchs",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "type": "string"
-                                },
-                                "url": {
-                                    "@id": "dct:license",
-                                    "type": "string",
-                                    "format": "uri"
-                                }
-                            },
-                            "required": [
-                                "name",
-                                "url"
-                            ],
-                            "additionalProperties": false
-                        }
-                    ]
-                },
-                "code": {
-                    "description": "Lizenz des Codes",
-                    "oneOf": [
-                        {
-                            "@id": "dct:license",
-                            "description": "URL zur Lizenz des Codes",
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        {
-                            "description": "Lizenzname und URL zur Lizenz des Codes",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "type": "string"
-                                },
-                                "url": {
-                                    "@id": "dct:license",
-                                    "type": "string",
-                                    "format": "uri"
-                                }
-                            },
-                            "required": [
-                                "name",
-                                "url"
-                            ],
-                            "additionalProperties": false
-                        }
-                    ]
-                }
-            }
+          "$ref": "license.json"
         },
         "book-version": {
             "description": "Version des Buchs.",
