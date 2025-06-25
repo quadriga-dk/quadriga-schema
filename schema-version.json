@@ -1,0 +1,9 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:schema-version",
+  "description": "Versionsnummer des QUADRIGA-Metadatenschemas",
+  "enum": [
+    "1.1",
+    "1.1-beta",
+    "1.1-beta2"
+  ]
+}
