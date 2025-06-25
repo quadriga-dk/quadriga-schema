@@ -89,9 +89,7 @@
           "$ref": "target-group.json"
         },
         "title": {
-            "description": "Titel des Buchs",
-            "type": "string",
-            "@id": "dct:title"
+          "$ref": "title.json"
         },
         "type-of-learning-resource": {
             "enum": [
