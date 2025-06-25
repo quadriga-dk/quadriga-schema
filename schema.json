@@ -26,15 +26,8 @@
     ],
     "properties": {
         "authors": {
-            "description": "Liste der Autor:innen des Buchs.",
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-                "$ref": "#/$defs/person",
-                "@id": "dct:author"
-            }
-        },
+            "$ref": "authors.json"
+         },
         "chapters": {
             "description": "Liste der Kapitel.",
             "type": "array",
