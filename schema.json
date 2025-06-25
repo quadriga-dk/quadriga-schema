@@ -138,10 +138,7 @@
             "$ref": "has-successor.json"
         },
         "identifier": {
-            "description": "Eindeutiger Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
-            "type": "string",
-            "format": "uri",
-            "@id": "dct:identifier"
+            "$ref": "identifier.json"
         },
         "keywords": {
             "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
