@@ -1,0 +1,18 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema",
+  "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "description": "Ein Schlag-/Stichwort; als (ggf. mehrsprachiger) Text oder als URI",
+    "oneOf": [{
+        "$ref": "schema.json#/$defs/multilingual-text"
+      },
+      {
+        "type": "string",
+        "format": "uri"
+      }
+    ],
+    "@id": "dct:subject"
+  }
+}
