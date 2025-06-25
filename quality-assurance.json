@@ -10,7 +10,7 @@
     ],
     "properties": {
       "person": {
-        "$ref": "schema.json#/$defs/person"
+        "$ref": "person.json"
       },
       "date": {
         "type": "string",

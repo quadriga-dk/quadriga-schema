@@ -205,38 +205,7 @@
             ]
         },
         "person": {
-            "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.",
-            "@id": "schema:person",
-            "oneOf": [
-                {
-                    "type": "string",
-                    "description": "Vollständiger Name der Person."
-                },
-                {
-                    "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.",
-                    "$comment": "Andere Schlüssel können nach Bedarf angelegt werden.",
-                    "type": "object",
-                    "required": [
-                        "given-names",
-                        "family-names"
-                    ],
-                    "properties": {
-                        "given-names": {
-                          "$ref": "given-names.json"
-                        },
-                        "family-names": {
-                          "$ref": "family-names.json"
-                        },
-                        "orcid": {
-                          "$ref": "orcid.json"
-                        },
-                        "credit": {
-                          "$ref": "credit.json"
-                        }
-                    },
-                    "additionalProperties": true
-                }
-            ]
+          "$ref": "person.json"
         },
         "semver": {
           "$ref": "semver.json"
