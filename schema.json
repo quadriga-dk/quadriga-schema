@@ -222,9 +222,7 @@
                     ],
                     "properties": {
                         "given-names": {
-                            "description": "Vorname(n) der Person",
-                            "type": "string",
-                            "@id": "schema:givenName"
+                          "$ref": "given-names.json"
                         },
                         "family-names": {
                           "$ref": "family-names.json"
