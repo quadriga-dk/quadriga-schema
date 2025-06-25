@@ -1,0 +1,15 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:target-group",
+  "description": "Zielgruppe",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "enum": [
+      "Forschende (PostDoc)",
+      "Forschende (Projektleitung)",
+      "Promovierende",
+      "Hochschullehrende"
+    ]
+  },
+  "@id": "dct:audience"
+}
