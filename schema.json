@@ -126,10 +126,7 @@
             "$ref": "discipline.json"
         },
         "duration": {
-            "description": "Angedachte Bearbeitungsdauer für Lernende.",
-            "type": "string",
-            "format": "duration",
-            "@id": "schema:timeRequired"
+            "$ref": "duration.json"
         },
         "git": {
             "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
