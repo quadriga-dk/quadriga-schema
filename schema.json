@@ -101,30 +101,7 @@
           "$ref": "url.json"
         },
         "used-tools": {
-            "description": "Liste von Tools, die bei der Erstellung des Buchs verwendet wurden.",
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "oneOf": [
-                    {
-                        "type": "string",
-                        "format": "uri"
-                    },
-                    {
-                        "description": "Strukturierte Angabe des Tools",
-                        "@id": "schema:softwareApplication",
-                        "properties": {
-                            "name": {
-                                "$ref": "#/$defs/multilingual-text"
-                            },
-                            "url": {
-                                "type": "string",
-                                "format": "uri"
-                            }
-                        }
-                    }
-                ]
-            }
+          "$ref": "used-tools.json"
         }
     },
     "additionalProperties": false,
