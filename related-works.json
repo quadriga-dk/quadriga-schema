@@ -11,7 +11,7 @@
     "properties": {
       "description": {
         "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch.",
-        "$ref": "schema.json#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       },
       "url": {
         "type": "string",

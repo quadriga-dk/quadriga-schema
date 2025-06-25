@@ -123,7 +123,7 @@
                 "properties": {
                     "learning-objective": {
                         "description": "Formulierung des Lernziels.",
-                        "$ref": "#/$defs/multilingual-text"
+                        "$ref": "multilingual-text.json"
                     },
                     "competency": {
                         "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework.",
@@ -177,7 +177,7 @@
                     },
                     "assessment": {
                         "description": "Beschreibung der Art der Überprüfung des Lernziels.",
-                        "$ref": "#/$defs/multilingual-text"
+                        "$ref": "multilingual-text.json"
                     },
                     "learning-objective-id": {
                         "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`.",
@@ -188,21 +188,7 @@
             }
         },
         "multilingual-text": {
-            "oneOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "description": "Sollen Metadaten mehrsprachig definiert werden, so wird als Key der Sprachcode nach ISO639-1 verwendet.",
-                    "type": "object",
-                    "patternProperties": {
-                        "^[a-z][a-z]$": {
-                            "type": "string"
-                        }
-                    },
-                    "additionalProperties": false
-                }
-            ]
+          "$ref": "multilingual-text.json"
         },
         "person": {
           "$ref": "person.json"

@@ -1,0 +1,17 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:multilingual-text",
+  "oneOf": [{
+      "type": "string"
+    },
+    {
+      "description": "Sollen Metadaten mehrsprachig definiert werden, so wird als Key der Sprachcode nach ISO639-1 verwendet.",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-z]$": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

@@ -10,11 +10,11 @@
   "properties": {
     "introduction": {
       "description": "Einleitung des Buchs.",
-      "$ref": "schema.json#/$defs/multilingual-text"
+      "$ref": "multilingual-text.json"
     },
     "table-of-contents": {
       "description": "Inhaltsverzeichnis des Buchs.",
-      "$ref": "schema.json#/$defs/multilingual-text",
+      "$ref": "multilingual-text.json",
       "@id": "dct:tableOfContents"
     }
   },
