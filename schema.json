@@ -227,9 +227,7 @@
                             "@id": "schema:givenName"
                         },
                         "family-names": {
-                            "description": "Nachname(n) der Person",
-                            "type": "string",
-                            "@id": "schema:familyName"
+                          "$ref": "family-names.json"
                         },
                         "orcid": {
                           "$ref": "orcid.json"
