@@ -132,19 +132,7 @@
             "$ref": "git.json"
         },
         "has-predecessor": {
-            "oneOf": [
-                {
-                    "enum": [
-                        false
-                    ]
-                },
-                {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Link zum Vorgänger"
-                }
-            ],
-            "@id": "dct:relation"
+            "$ref": "has-predecessor.json"
         },
         "has-successor": {
             "$ref": "has-successor.json"
