@@ -59,22 +59,7 @@
             "$ref": "identifier.json"
         },
         "keywords": {
-            "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "description": "Ein Schlag-/Stichwort; als (ggf. mehrsprachiger) Text oder als URI",
-                "oneOf": [
-                    {
-                        "$ref": "#/$defs/multilingual-text"
-                    },
-                    {
-                        "type": "string",
-                        "format": "uri"
-                    }
-                ],
-                "@id": "dct:subject"
-            }
+          "$ref": "keywords.json"
         },
         "language": {
             "description": "Sprache des Buchs als ISO639-1 Sprachcode.",
