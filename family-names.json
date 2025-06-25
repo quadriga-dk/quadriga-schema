@@ -1,0 +1,6 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:family-names",
+  "description": "Nachname(n) der Person",
+  "type": "string",
+  "@id": "schema:familyName"
+}
