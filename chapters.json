@@ -15,11 +15,11 @@
     "properties": {
       "title": {
         "description": "Kapitelüberschrift",
-        "$ref": "schema.json#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       },
       "description": {
         "description": "Beschreibung des Kapitelinhalts.",
-        "$ref": "schema.json#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       },
       "url": {
         "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
@@ -37,7 +37,7 @@
         "$ref": "schema.json#/$defs/learning-objectives"
       },
       "learning-goal": {
-        "$ref": "schema.json#/$defs/multilingual-text",
+        "$ref": "multilingual-text.json",
         "description": "Kurze Benennung des Groblernziels des Kapitels."
       },
       "supplemented-by": {
@@ -52,7 +52,7 @@
           "properties": {
             "description": {
               "description": "Beschreibung des verlinkten Werks und dessen Beziehung zur OER/zum Kapitel.",
-              "$ref": "schema.json#/$defs/multilingual-text"
+              "$ref": "multilingual-text.json"
             },
             "url": {
               "type": "string",

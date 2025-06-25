@@ -6,7 +6,7 @@
   "items": {
     "description": "Ein Schlag-/Stichwort; als (ggf. mehrsprachiger) Text oder als URI",
     "oneOf": [{
-        "$ref": "schema.json#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       },
       {
         "type": "string",

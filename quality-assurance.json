@@ -17,7 +17,7 @@
         "format": "date"
       },
       "description": {
-        "$ref": "schema.json#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       }
     }
   }

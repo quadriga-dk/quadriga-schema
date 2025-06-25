@@ -13,7 +13,7 @@
         "@id": "schema:softwareApplication",
         "properties": {
           "name": {
-            "$ref": "schema.json#/$defs/multilingual-text"
+            "$ref": "multilingual-text.json"
           },
           "url": {
             "type": "string",

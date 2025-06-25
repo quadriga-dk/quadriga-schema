@@ -9,7 +9,7 @@
     "type": "object",
     "properties": {
       "description": {
-        "$ref": "#/$defs/multilingual-text"
+        "$ref": "multilingual-text.json"
       },
       "blooms-category": {
         "description": "Kategorie der Bloomschen Taxonomie, der die Voraussetzung zugeordnet ist.",
