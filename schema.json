@@ -80,26 +80,7 @@
           "$ref": "quality-assurance.json"
         },
         "related-works": {
-            "description": "Eine Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
-            "type": "array",
-            "items": {
-                "type": "object",
-                "required": [
-                    "url",
-                    "description"
-                ],
-                "properties": {
-                    "description": {
-                        "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch.",
-                        "$ref": "#/$defs/multilingual-text"
-                    },
-                    "url": {
-                        "type": "string",
-                        "format": "uri"
-                    }
-                },
-                "additionalProperties": false
-            }
+          "$ref": "related-works.json"
         },
         "schema-version": {
             "description": "Versionsnummer des QUADRIGA-Metadatenschemas",
