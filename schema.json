@@ -92,9 +92,7 @@
           "$ref": "title.json"
         },
         "type-of-learning-resource": {
-            "enum": [
-                "Jupyter Book"
-            ]
+          "$ref": "type-of-learning-resource.json"
         },
         "type-of-research-object": {
           "$ref": "type-of-research-object.json"
