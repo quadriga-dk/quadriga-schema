@@ -38,25 +38,7 @@
             "$ref": "date-of-last-change.json"
         },
         "description": {
-            "description": "Beschreibung des Buchs.",
-            "type": "object",
-            "@id": "dct:description",
-            "required": [
-                "introduction",
-                "table-of-contents"
-            ],
-            "properties": {
-                "introduction": {
-                    "description": "Einleitung des Buchs.",
-                    "$ref": "#/$defs/multilingual-text"
-                },
-                "table-of-contents": {
-                    "description": "Inhaltsverzeichnis des Buchs.",
-                    "$ref": "#/$defs/multilingual-text",
-                    "@id": "dct:tableOfContents"
-                }
-            },
-            "additionalProperties": false
+          "$ref": "description.json"
         },
         "discipline": {
             "$ref": "discipline.json"
