@@ -1,6 +1,6 @@
 {
-    "id": "tag:quadriga-dk.de,2025:schema:author",
-    "$ref": "person.json",
-    "@id": "dct:author",
-    "@id": "schema:author"
+  "id": "tag:quadriga-dk.de,2025:schema:author",
+  "$ref": "person.json",
+  "@id": "dct:author",
+  "@id": "schema:author"
 }

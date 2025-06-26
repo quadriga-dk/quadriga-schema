@@ -1,16 +1,16 @@
 {
-    "id": "tag:quadriga-dk.de,2025:schema:has-successor",
-    "oneOf": [
-        {
-            "enum": [
-                false
-            ]
-        },
-        {
-            "type": "string",
-            "format": "uri",
-            "description": "Link zum Vorgänger"
-        }
-    ],
-    "@id": "dct:relation"
+  "id": "tag:quadriga-dk.de,2025:schema:has-successor",
+  "oneOf": [
+    {
+      "enum": [
+        false
+      ]
+    },
+    {
+      "type": "string",
+      "format": "uri",
+      "description": "Link zum Vorgänger"
+    }
+  ],
+  "@id": "dct:relation"
 }

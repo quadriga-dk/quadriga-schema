@@ -1,10 +1,10 @@
 {
-    "$id": "tag:quadriga-dk.de,2025:schema:authors",
-    "description": "Liste der Autor:innen des Buchs.",
-    "type": "array",
-    "minItems": 1,
-    "uniqueItems": true,
-    "items": {
-        "$ref": "author.json"
-    }
+  "$id": "tag:quadriga-dk.de,2025:schema:authors",
+  "description": "Liste der Autor:innen des Buchs.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "$ref": "author.json"
+  }
 }
