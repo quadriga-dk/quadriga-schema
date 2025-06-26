@@ -1,0 +1,9 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:focus",
+  "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
+  "enum": [
+    "Wissen",
+    "Fähigkeit",
+    "Haltung"
+  ]
+}
