@@ -1,7 +1,7 @@
 {
-    "id": "tag:quadriga-dk.de,2025:schema:duration",
-    "description": "Angedachte Bearbeitungsdauer für Lernende.",
-    "type": "string",
-    "format": "duration",
-    "@id": "schema:timeRequired"
+  "id": "tag:quadriga-dk.de,2025:schema:duration",
+  "description": "Angedachte Bearbeitungsdauer für Lernende.",
+  "type": "string",
+  "format": "duration",
+  "@id": "schema:timeRequired"
 }

@@ -1,200 +1,200 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "tag:quadriga-dk.de,2025:schema",
-    "title": "QUADRIGA OER",
-    "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
-    "@context": {
-        "dct": "http://purl.org/dc/terms/",
-        "schema": "http://schema.org/"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tag:quadriga-dk.de,2025:schema",
+  "title": "QUADRIGA OER",
+  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/"
+  },
+  "type": "object",
+  "required": [
+    "authors",
+    "chapters",
+    "context-of-creation",
+    "date-of-last-change",
+    "description",
+    "discipline",
+    "duration",
+    "identifier",
+    "book-version",
+    "publication-date",
+    "schema-version",
+    "target-group",
+    "title",
+    "type-of-research-object"
+  ],
+  "properties": {
+    "authors": {
+      "$ref": "authors.json"
     },
-    "type": "object",
-    "required": [
-        "authors",
-        "chapters",
-        "context-of-creation",
-        "date-of-last-change",
-        "description",
-        "discipline",
-        "duration",
-        "identifier",
-        "book-version",
-        "publication-date",
-        "schema-version",
-        "target-group",
-        "title",
-        "type-of-research-object"
-    ],
-    "properties": {
-        "authors": {
-            "$ref": "authors.json"
-        },
-        "chapters": {
-          "$ref": "chapters.json"
-        },
-        "context-of-creation": {
-            "$ref": "context-of-creation.json"
-        },
-        "date-of-last-change": {
-            "$ref": "date-of-last-change.json"
-        },
-        "description": {
-          "$ref": "description.json"
-        },
-        "discipline": {
-            "$ref": "discipline.json"
-        },
-        "duration": {
-            "$ref": "duration.json"
-        },
-        "git": {
-            "$ref": "git.json"
-        },
-        "has-predecessor": {
-            "$ref": "has-predecessor.json"
-        },
-        "has-successor": {
-            "$ref": "has-successor.json"
-        },
-        "identifier": {
-            "$ref": "identifier.json"
-        },
-        "keywords": {
-          "$ref": "keywords.json"
-        },
-        "language": {
-          "$ref": "language.json"
-        },
-        "license": {
-          "$ref": "license.json"
-        },
-        "book-version": {
-          "$ref": "book-version.json"
-        },
-        "prerequisites": {
-          "$ref": "prerequisites.json"
-        },
-        "publication-date": {
-          "$ref": "publication-date.json"
-        },
-        "quality-assurance": {
-          "$ref": "quality-assurance.json"
-        },
-        "related-works": {
-          "$ref": "related-works.json"
-        },
-        "schema-version": {
-          "$ref": "schema-version.json"
-        },
-        "target-group": {
-          "$ref": "target-group.json"
-        },
-        "title": {
-          "$ref": "title.json"
-        },
-        "type-of-learning-resource": {
-          "$ref": "type-of-learning-resource.json"
-        },
-        "type-of-research-object": {
-          "$ref": "type-of-research-object.json"
-        },
-        "url": {
-          "$ref": "url.json"
-        },
-        "used-tools": {
-          "$ref": "used-tools.json"
-        }
+    "chapters": {
+      "$ref": "chapters.json"
     },
-    "additionalProperties": false,
-    "$defs": {
-        "learning-objectives": {
-            "description": "Eine Liste von Lernzielen.",
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-                "type": "object",
-                "required": [
-                    "learning-objective",
-                    "competency",
-                    "data-flow",
-                    "focus",
-                    "blooms-category"
-                ],
-                "properties": {
-                    "learning-objective": {
-                        "description": "Formulierung des Lernziels.",
-                        "$ref": "multilingual-text.json"
-                    },
-                    "competency": {
-                        "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework.",
-                        "enum": [
-                            "1 Basiskompetenz",
-                            "2 Identifikation",
-                            "3 Qualitätssicherung",
-                            "4 Ethik und Recht",
-                            "5 Erhebung",
-                            "6 Validierung",
-                            "7 Aufbereitung",
-                            "8 Management",
-                            "9 Erschließung",
-                            "10 Datenanalyse",
-                            "11 Visualisierung",
-                            "12 Interpretation",
-                            "13 Aufbereitung",
-                            "14 Datenpublikation",
-                            "15 Kommunikation"
-                        ]
-                    },
-                    "focus": {
-                        "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
-                        "enum": [
-                            "Wissen",
-                            "Fähigkeit",
-                            "Haltung"
-                        ]
-                    },
-                    "data-flow": {
-                        "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
-                        "enum": [
-                            "Grundlagen",
-                            "Planung",
-                            "Erhebung und Aufbereitung",
-                            "Management",
-                            "Analyse",
-                            "Publikation und Nachnutzung"
-                        ]
-                    },
-                    "blooms-category": {
-                        "description": "Kategorie der Bloomschen Taxonomie, welcher das Lernziel zugeordnet ist. Aus der Kombination der Zuordnungen der Lernziele eines Kapitels lässt sich ein allgemeines Kompetenzniveau (\"Basis\", \"Fortgeschritten\", \"Expert:in\") ableiten.",
-                        "enum": [
-                            "1 Erinnern",
-                            "2 Verstehen",
-                            "3 Anwenden",
-                            "4 Analysieren",
-                            "5 Bewerten",
-                            "6 Erschaffen"
-                        ]
-                    },
-                    "assessment": {
-                        "description": "Beschreibung der Art der Überprüfung des Lernziels.",
-                        "$ref": "multilingual-text.json"
-                    },
-                    "learning-objective-id": {
-                        "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`.",
-                        "type": "string"
-                    }
-                },
-                "additionalProperties": false
-            }
-        },
-        "multilingual-text": {
-          "$ref": "multilingual-text.json"
-        },
-        "person": {
-          "$ref": "person.json"
-        },
-        "semver": {
-          "$ref": "semver.json"
-        }
+    "context-of-creation": {
+      "$ref": "context-of-creation.json"
+    },
+    "date-of-last-change": {
+      "$ref": "date-of-last-change.json"
+    },
+    "description": {
+      "$ref": "description.json"
+    },
+    "discipline": {
+      "$ref": "discipline.json"
+    },
+    "duration": {
+      "$ref": "duration.json"
+    },
+    "git": {
+      "$ref": "git.json"
+    },
+    "has-predecessor": {
+      "$ref": "has-predecessor.json"
+    },
+    "has-successor": {
+      "$ref": "has-successor.json"
+    },
+    "identifier": {
+      "$ref": "identifier.json"
+    },
+    "keywords": {
+      "$ref": "keywords.json"
+    },
+    "language": {
+      "$ref": "language.json"
+    },
+    "license": {
+      "$ref": "license.json"
+    },
+    "book-version": {
+      "$ref": "book-version.json"
+    },
+    "prerequisites": {
+      "$ref": "prerequisites.json"
+    },
+    "publication-date": {
+      "$ref": "publication-date.json"
+    },
+    "quality-assurance": {
+      "$ref": "quality-assurance.json"
+    },
+    "related-works": {
+      "$ref": "related-works.json"
+    },
+    "schema-version": {
+      "$ref": "schema-version.json"
+    },
+    "target-group": {
+      "$ref": "target-group.json"
+    },
+    "title": {
+      "$ref": "title.json"
+    },
+    "type-of-learning-resource": {
+      "$ref": "type-of-learning-resource.json"
+    },
+    "type-of-research-object": {
+      "$ref": "type-of-research-object.json"
+    },
+    "url": {
+      "$ref": "url.json"
+    },
+    "used-tools": {
+      "$ref": "used-tools.json"
     }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "learning-objectives": {
+      "description": "Eine Liste von Lernzielen.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "learning-objective",
+          "competency",
+          "data-flow",
+          "focus",
+          "blooms-category"
+        ],
+        "properties": {
+          "learning-objective": {
+            "description": "Formulierung des Lernziels.",
+            "$ref": "multilingual-text.json"
+          },
+          "competency": {
+            "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework.",
+            "enum": [
+              "1 Basiskompetenz",
+              "2 Identifikation",
+              "3 Qualitätssicherung",
+              "4 Ethik und Recht",
+              "5 Erhebung",
+              "6 Validierung",
+              "7 Aufbereitung",
+              "8 Management",
+              "9 Erschließung",
+              "10 Datenanalyse",
+              "11 Visualisierung",
+              "12 Interpretation",
+              "13 Aufbereitung",
+              "14 Datenpublikation",
+              "15 Kommunikation"
+            ]
+          },
+          "focus": {
+            "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
+            "enum": [
+              "Wissen",
+              "Fähigkeit",
+              "Haltung"
+            ]
+          },
+          "data-flow": {
+            "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
+            "enum": [
+              "Grundlagen",
+              "Planung",
+              "Erhebung und Aufbereitung",
+              "Management",
+              "Analyse",
+              "Publikation und Nachnutzung"
+            ]
+          },
+          "blooms-category": {
+            "description": "Kategorie der Bloomschen Taxonomie, welcher das Lernziel zugeordnet ist. Aus der Kombination der Zuordnungen der Lernziele eines Kapitels lässt sich ein allgemeines Kompetenzniveau (\"Basis\", \"Fortgeschritten\", \"Expert:in\") ableiten.",
+            "enum": [
+              "1 Erinnern",
+              "2 Verstehen",
+              "3 Anwenden",
+              "4 Analysieren",
+              "5 Bewerten",
+              "6 Erschaffen"
+            ]
+          },
+          "assessment": {
+            "description": "Beschreibung der Art der Überprüfung des Lernziels.",
+            "$ref": "multilingual-text.json"
+          },
+          "learning-objective-id": {
+            "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "multilingual-text": {
+      "$ref": "multilingual-text.json"
+    },
+    "person": {
+      "$ref": "person.json"
+    },
+    "semver": {
+      "$ref": "semver.json"
+    }
+  }
 }
