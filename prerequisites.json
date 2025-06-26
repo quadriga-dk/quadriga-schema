@@ -12,15 +12,7 @@
         "$ref": "multilingual-text.json"
       },
       "blooms-category": {
-        "description": "Kategorie der Bloomschen Taxonomie, der die Voraussetzung zugeordnet ist.",
-        "enum": [
-          "1 Erinnern",
-          "2 Verstehen",
-          "3 Anwenden",
-          "4 Analysieren",
-          "5 Bewerten",
-          "6 Erschaffen"
-        ]
+        "$ref": "blooms-category.json"
       }
     },
     "required": [

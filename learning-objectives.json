@@ -36,15 +36,7 @@
         ]
       },
       "blooms-category": {
-        "description": "Kategorie der Bloomschen Taxonomie, welcher das Lernziel zugeordnet ist. Aus der Kombination der Zuordnungen der Lernziele eines Kapitels lässt sich ein allgemeines Kompetenzniveau (\"Basis\", \"Fortgeschritten\", \"Expert:in\") ableiten.",
-        "enum": [
-          "1 Erinnern",
-          "2 Verstehen",
-          "3 Anwenden",
-          "4 Analysieren",
-          "5 Bewerten",
-          "6 Erschaffen"
-        ]
+        "$ref": "blooms-category.json"
       },
       "assessment": {
         "description": "Beschreibung der Art der Überprüfung des Lernziels.",
