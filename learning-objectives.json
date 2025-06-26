@@ -19,24 +19,7 @@
         "$ref": "multilingual-text.json"
       },
       "competency": {
-        "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework.",
-        "enum": [
-          "1 Basiskompetenz",
-          "2 Identifikation",
-          "3 Qualitätssicherung",
-          "4 Ethik und Recht",
-          "5 Erhebung",
-          "6 Validierung",
-          "7 Aufbereitung",
-          "8 Management",
-          "9 Erschließung",
-          "10 Datenanalyse",
-          "11 Visualisierung",
-          "12 Interpretation",
-          "13 Aufbereitung",
-          "14 Datenpublikation",
-          "15 Kommunikation"
-        ]
+        "$ref": "competency.json"
       },
       "focus": {
         "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
