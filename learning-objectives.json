@@ -25,15 +25,7 @@
         "$ref": "competency_focus.json"
       },
       "data-flow": {
-        "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
-        "enum": [
-          "Grundlagen",
-          "Planung",
-          "Erhebung und Aufbereitung",
-          "Management",
-          "Analyse",
-          "Publikation und Nachnutzung"
-        ]
+        "$ref": "competency_data-flow.json"
       },
       "blooms-category": {
         "$ref": "blooms-category.json"
