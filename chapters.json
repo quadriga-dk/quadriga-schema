@@ -34,7 +34,7 @@
       },
       "learning-objectives": {
         "description": "Liste der Feinlernziele des Kapitels",
-        "$ref": "schema.json#/$defs/learning-objectives"
+        "$ref": "learning-objectives.json"
       },
       "learning-goal": {
         "$ref": "multilingual-text.json",
