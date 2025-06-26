@@ -22,12 +22,7 @@
         "$ref": "competency.json"
       },
       "focus": {
-        "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
-        "enum": [
-          "Wissen",
-          "Fähigkeit",
-          "Haltung"
-        ]
+        "$ref": "competency_focus.json"
       },
       "data-flow": {
         "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
