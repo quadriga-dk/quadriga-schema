@@ -4,13 +4,14 @@
   "type": "array",
   "minItems": 1,
   "items": {
-    "oneOf": [{
+    "oneOf": [
+      {
         "type": "string",
         "format": "uri"
       },
       {
         "description": "Strukturierte Angabe des Tools",
-        "@id": "schema:softwareApplication",
+        "@id": "schema:SoftwareApplication",
         "properties": {
           "name": {
             "$ref": "multilingual-text.json"
