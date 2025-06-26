@@ -1,14 +1,37 @@
 # yaml-language-server: $schema=schema.json
-
+schema-version: 1.0.0-alpha
+book-version: 0.0.1
 identifier: test
+title: t
+description: 
+  introduction: t
+  table-of-contents: t
+date-of-last-change: 2025-06-26
+publication-date: 2025-06-24
 authors:
 - given-names: test
   family-names: author
   affiliation: test affiliation
   orcid: https://orcid.org/0000-0000-0000-0000
+chapters:
+- title: t
+  description: t
+  learning-goal: t
+  learning-objectives:
+  - learning-objective: t
+    competency: 1 Basiskompetenz
+    focus: Wissen
+    data-flow: Grundlagen
+    blooms-category: 1 Erinnern
 context-of-creation: QUADRIGA
-date-of-last-change: 2025-06-25
 duration: 1h
 discipline: 
   - übergreifend
 git: https://github.com/quadriga-dk/quadriga-schema
+type-of-research-object:
+  - übergreifend
+target-group:
+  - Promovierende
+  - Forschende (PostDoc)
+  - Forschende (Projektleitung)
+  - Hochschullehrende
