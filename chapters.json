@@ -5,64 +5,6 @@
   "minItems": 1,
   "uniqueItems": true,
   "items": {
-    "type": "object",
-    "required": [
-      "title",
-      "description",
-      "learning-objectives",
-      "learning-goal"
-    ],
-    "properties": {
-      "title": {
-        "description": "Kapitelüberschrift",
-        "$ref": "multilingual-text.json"
-      },
-      "description": {
-        "description": "Beschreibung des Kapitelinhalts.",
-        "$ref": "multilingual-text.json"
-      },
-      "url": {
-        "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
-        "type": "string",
-        "format": "uri"
-      },
-      "duration": {
-        "description": "Angedachte Bearbeitungsdauer für Lernende.",
-        "type": "string",
-        "format": "duration",
-        "@id": "schema:timeRequired"
-      },
-      "learning-objectives": {
-        "description": "Liste der Feinlernziele des Kapitels",
-        "$ref": "learning-objectives.json"
-      },
-      "learning-goal": {
-        "$ref": "multilingual-text.json",
-        "description": "Kurze Benennung des Groblernziels des Kapitels."
-      },
-      "supplemented-by": {
-        "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "required": [
-            "link",
-            "description"
-          ],
-          "properties": {
-            "description": {
-              "description": "Beschreibung des verlinkten Werks und dessen Beziehung zur OER/zum Kapitel.",
-              "$ref": "multilingual-text.json"
-            },
-            "url": {
-              "type": "string",
-              "format": "uri",
-              "@id": "dct:relation"
-            }
-          },
-          "additionalProperties": false
-        }
-      }
-    }
+    "$ref": "chapter.json"
   }
 }
