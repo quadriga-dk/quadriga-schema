@@ -104,19 +104,5 @@
       "$ref": "used-tools.json"
     }
   },
-  "additionalProperties": false,
-  "$defs": {
-    "learning-objectives": {
-      "$ref": "learning-objectives.json"
-    },
-    "multilingual-text": {
-      "$ref": "multilingual-text.json"
-    },
-    "person": {
-      "$ref": "person.json"
-    },
-    "semver": {
-      "$ref": "semver.json"
-    }
-  }
+  "additionalProperties": false
 }
