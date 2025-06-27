@@ -1,5 +1,5 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema",
+  "$id": "tag:quadriga-dk.de,2025:schema:keywords",
   "type": "array",
   "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
   "minItems": 1,
