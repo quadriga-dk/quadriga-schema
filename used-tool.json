@@ -1,0 +1,23 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:used-tool",
+  "description": "Ein bei der Erstellung des Buchs verwendetes Software-Tool.",
+  "oneOf": [
+    {
+      "type": "string",
+      "format": "uri"
+    },
+    {
+      "description": "Strukturierte Angabe des Tools",
+      "@id": "schema:SoftwareApplication",
+      "properties": {
+        "name": {
+          "$ref": "multilingual-text.json"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  ]
+}

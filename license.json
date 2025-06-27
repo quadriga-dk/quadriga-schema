@@ -1,10 +1,8 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:license",
-  "description": "Lizenz des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
   "type": "object",
-  "required": [
-    "content"
-  ],
+  "description": "Lizenz des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
+  "required": ["content"],
   "additionalProperties": false,
   "properties": {
     "content": {
@@ -17,3 +15,4 @@
     }
   }
 }
+

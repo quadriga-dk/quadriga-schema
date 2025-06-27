@@ -24,6 +24,7 @@
     "title",
     "type-of-research-object"
   ],
+  "additionalProperties": false,
   "properties": {
     "authors": {
       "$ref": "authors.json"
@@ -103,6 +104,6 @@
     "used-tools": {
       "$ref": "used-tools.json"
     }
-  },
-  "additionalProperties": false
+  }
 }
+

@@ -1,10 +1,11 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:chapters",
-  "description": "Liste der Kapitel.",
   "type": "array",
+  "description": "Liste der Kapitel.",
   "minItems": 1,
   "uniqueItems": true,
   "items": {
     "$ref": "chapter.json"
   }
 }
+

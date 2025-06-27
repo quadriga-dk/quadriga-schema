@@ -8,6 +8,7 @@
     "focus",
     "blooms-category"
   ],
+  "additionalProperties": false,
   "properties": {
     "learning-objective": {
       "description": "Formulierung des Lernziels.",
@@ -30,9 +31,8 @@
       "$ref": "multilingual-text.json"
     },
     "learning-objective-id": {
-      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`.",
-      "type": "string"
+      "type": "string",
+      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`."
     }
-  },
-  "additionalProperties": false
+  }
 }

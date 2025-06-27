@@ -1,12 +1,13 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:prerequisites",
-  "description": "Liste von Voraussetzungen und deren jeweiliger Einordnung in der Bloomschen Taxonomie, welche Lernende für die erfolgreiche Bearbeitung des Buchs mitbringen sollten.",
   "type": "array",
+  "description": "Liste von Voraussetzungen und deren jeweiliger Einordnung in der Bloomschen Taxonomie, welche Lernende für die erfolgreiche Bearbeitung des Buchs mitbringen sollten.",
   "minItems": 1,
   "uniqueItems": true,
   "items": {
-    "description": "Eine Voraussetzung.",
     "type": "object",
+    "description": "Eine Voraussetzung.",
+    "additionalProperties": false,
     "properties": {
       "description": {
         "$ref": "multilingual-text.json"
@@ -15,10 +16,7 @@
         "$ref": "blooms-category.json"
       }
     },
-    "required": [
-      "description",
-      "blooms-category"
-    ],
-    "additionalProperties": false
+    "required": ["description", "blooms-category"]
   }
 }
+
