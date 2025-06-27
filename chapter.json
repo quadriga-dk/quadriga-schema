@@ -1,5 +1,5 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:schapter",
+  "$id": "tag:quadriga-dk.de,2025:schema:chapter",
   "type": "object",
   "required": ["title", "description", "learning-objectives", "learning-goal"],
   "properties": {
