@@ -1,6 +1,7 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:title",
-  "description": "Titel des Buchs",
   "type": "string",
+  "description": "Titel des Buchs",
   "@id": "dct:title"
 }
+

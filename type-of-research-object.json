@@ -1,15 +1,11 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:type-of-research-object",
-  "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.",
   "type": "array",
+  "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.",
   "minItems": 1,
   "maxItems": 2,
   "items": {
-    "enum": [
-      "Text",
-      "Tabelle",
-      "Bewegtes Bild",
-      "übergreifend"
-    ]
+    "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
   }
 }
+

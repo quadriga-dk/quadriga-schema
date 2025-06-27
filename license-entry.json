@@ -2,29 +2,27 @@
   "$id": "tag:quadriga-dk.de,2025:schema:license-entry",
   "oneOf": [
     {
-      "@id": "dct:license",
-      "description": "URL zur Lizenz",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "description": "URL zur Lizenz",
+      "@id": "dct:license"
     },
     {
-      "description": "Lizenzname und URL zur Lizenz",
       "type": "object",
+      "description": "Lizenzname und URL zur Lizenz",
+      "required": ["name", "url"],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
         },
         "url": {
-          "@id": "dct:license",
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "@id": "dct:license"
         }
-      },
-      "required": [
-        "name",
-        "url"
-      ],
-      "additionalProperties": false
+      }
     }
   ]
 }
+

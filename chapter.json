@@ -1,11 +1,7 @@
 {
+  "$id": "tag:quadriga-dk.de,2025:schema:schapter",
   "type": "object",
-  "required": [
-    "title",
-    "description",
-    "learning-objectives",
-    "learning-goal"
-  ],
+  "required": ["title", "description", "learning-objectives", "learning-goal"],
   "properties": {
     "title": {
       "description": "Kapitelüberschrift",
@@ -21,10 +17,7 @@
       "format": "uri"
     },
     "duration": {
-      "description": "Angedachte Bearbeitungsdauer für Lernende.",
-      "type": "string",
-      "format": "duration",
-      "@id": "schema:timeRequired"
+      "$ref": "duration.json"
     },
     "learning-objectives": {
       "description": "Liste der Feinlernziele des Kapitels",
@@ -40,3 +33,4 @@
     }
   }
 }
+

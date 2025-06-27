@@ -1,7 +1,8 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:url",
-  "description": "URL des Buchs.",
   "type": "string",
   "format": "uri",
+  "description": "URL des Buchs.",
   "@id": "schema:url"
 }
+

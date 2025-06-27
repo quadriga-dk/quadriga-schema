@@ -1,7 +1,8 @@
 {
   "id": "tag:quadriga-dk.de,2025:schema:git",
-  "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
   "type": "string",
   "format": "uri",
+  "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
   "@id": "schema:codeRepository"
 }
+

@@ -2,18 +2,17 @@
   "$id": "tag:quadriga-dk.de,2025:schema:person",
   "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.",
   "@id": "schema:person",
-  "oneOf": [{
+  "oneOf": [
+    {
       "type": "string",
       "description": "Vollständiger Name der Person."
     },
     {
+      "type": "object",
       "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.",
       "$comment": "Andere Schlüssel können nach Bedarf angelegt werden.",
-      "type": "object",
-      "required": [
-        "given-names",
-        "family-names"
-      ],
+      "required": ["given-names", "family-names"],
+      "additionalProperties": true,
       "properties": {
         "given-names": {
           "$ref": "given-names.json"
@@ -27,8 +26,8 @@
         "credit": {
           "$ref": "credit.json"
         }
-      },
-      "additionalProperties": true
+      }
     }
   ]
 }
+

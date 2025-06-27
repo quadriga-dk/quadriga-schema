@@ -1,7 +1,8 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:target-group",
-  "description": "Zielgruppe",
   "type": "array",
+  "description": "Zielgruppe",
+  "@id": "dct:audience",
   "minItems": 1,
   "items": {
     "enum": [
@@ -10,6 +11,6 @@
       "Promovierende",
       "Hochschullehrende"
     ]
-  },
-  "@id": "dct:audience"
+  }
 }
+

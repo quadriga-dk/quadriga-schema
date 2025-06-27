@@ -1,23 +1,9 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:related-works",
-  "description": "Eine Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
   "type": "array",
+  "description": "Eine Liste von Verweisen auf verwandte Werke.",
   "items": {
-    "type": "object",
-    "required": [
-      "url",
-      "description"
-    ],
-    "properties": {
-      "description": {
-        "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch.",
-        "$ref": "multilingual-text.json"
-      },
-      "url": {
-        "type": "string",
-        "format": "uri"
-      }
-    },
-    "additionalProperties": false
+    "$ref": "related-work.json"
   }
 }
+

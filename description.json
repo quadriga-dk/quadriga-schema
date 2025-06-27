@@ -1,12 +1,10 @@
 {
-  "$id":"tag:quadriga-dk.de,2025:schema:description",
-  "description": "Beschreibung des Buchs.",
+  "$id": "tag:quadriga-dk.de,2025:schema:description",
   "type": "object",
+  "description": "Beschreibung des Buchs.",
   "@id": "dct:description",
-  "required": [
-    "introduction",
-    "table-of-contents"
-  ],
+  "required": ["introduction", "table-of-contents"],
+  "additionalProperties": false,
   "properties": {
     "introduction": {
       "description": "Einleitung des Buchs.",
@@ -14,9 +12,9 @@
     },
     "table-of-contents": {
       "description": "Inhaltsverzeichnis des Buchs.",
-      "$ref": "multilingual-text.json",
-      "@id": "dct:tableOfContents"
+      "@id": "dct:tableOfContents",
+      "$ref": "multilingual-text.json"
     }
-  },
-  "additionalProperties": false
+  }
 }
+
