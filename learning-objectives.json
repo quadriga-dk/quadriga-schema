@@ -5,40 +5,6 @@
   "minItems": 1,
   "uniqueItems": true,
   "items": {
-    "type": "object",
-    "required": [
-      "learning-objective",
-      "competency",
-      "data-flow",
-      "focus",
-      "blooms-category"
-    ],
-    "properties": {
-      "learning-objective": {
-        "description": "Formulierung des Lernziels.",
-        "$ref": "multilingual-text.json"
-      },
-      "competency": {
-        "$ref": "competency.json"
-      },
-      "focus": {
-        "$ref": "competency_focus.json"
-      },
-      "data-flow": {
-        "$ref": "competency_data-flow.json"
-      },
-      "blooms-category": {
-        "$ref": "blooms-category.json"
-      },
-      "assessment": {
-        "description": "Beschreibung der Art der Überprüfung des Lernziels.",
-        "$ref": "multilingual-text.json"
-      },
-      "learning-objective-id": {
-        "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`.",
-        "type": "string"
-      }
-    },
-    "additionalProperties": false
+    "$ref": "learning-objectives-entry.json"
   }
 }
