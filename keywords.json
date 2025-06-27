@@ -4,7 +4,7 @@
   "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
   "minItems": 1,
   "items": {
-    "$ref": "keword.json"
+    "$ref": "keyword.json"
   }
 }
 
