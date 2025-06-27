@@ -1,5 +1,5 @@
 {
-  "id": "tag:quadriga-dk.de,2025:schema:date-of-last-change",
+  "$id": "tag:quadriga-dk.de,2025:schema:date-of-last-change",
   "type": "string",
   "format": "date",
   "description": "Datum der letzten (großen, inhaltlich umfangreichen) Änderung. Sollte immer mit einer Versionsänderung einhergehen.",
