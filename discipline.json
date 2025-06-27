@@ -1,5 +1,5 @@
 {
-  "id": "tag:quadriga-dk.de,2025:schema:discipline",
+  "$id": "tag:quadriga-dk.de,2025:schema:discipline",
   "type": "array",
   "description": "Nennung der Disziplinen, die bei der Erstellung  im Fokus standen.",
   "minItems": 1,
