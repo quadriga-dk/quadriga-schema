@@ -3,4 +3,3 @@
   "description": "Fokus des Lernziels auf den Aspekt \"Wissen\", \"Fähigkeit\" oder \"Haltung\" der Kompetenz.",
   "enum": ["Wissen", "Fähigkeit", "Haltung"]
 }
-

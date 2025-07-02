@@ -4,4 +4,3 @@
   "description": "Version des Buchs.",
   "$ref": "semver.json"
 }
-

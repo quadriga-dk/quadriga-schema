@@ -3,4 +3,3 @@
   "@id": "dct:author",
   "$ref": "person.json"
 }
-

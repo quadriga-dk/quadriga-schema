@@ -5,4 +5,3 @@
   "description": "Datum der letzten (großen, inhaltlich umfangreichen) Änderung. Sollte immer mit einer Versionsänderung einhergehen.",
   "@id": "dct:modified"
 }
-

@@ -5,4 +5,3 @@
   "description": "Eindeutiger Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
   "@id": "dct:identifier"
 }
-

@@ -4,4 +4,3 @@
   "description": "Versionsnummer des QUADRIGA-Metadatenschemas",
   "enum": ["1.0.0-alpha"]
 }
-
