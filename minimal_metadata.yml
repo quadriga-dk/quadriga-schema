@@ -1,24 +1,23 @@
-# yaml-language-server: $schema=schema.json
+# yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/schema.json
 schema-version: 1.0.0-alpha
 book-version: 0.0.1
-identifier: test
-title: t
+identifier: DOI of the book as a whole
+title: Title of the whole book
 description: 
-  introduction: t
-  table-of-contents: t
-date-of-last-change: 2025-06-26
+  introduction: Description of the whole book
+  table-of-contents: table of contents of the whole book. mostly a list of chapters formatted in Markdown
+date-of-last-change: 2025-07-04
 publication-date: 2025-06-24
 authors:
 - given-names: test
   family-names: author
-  affiliation: test affiliation
-  orcid: https://orcid.org/0000-0000-0000-0000
+  orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly adviced
 chapters:
-- title: t
-  description: t
-  learning-goal: t
+- title: The title of the chapter
+  description: A short description of the chapter and its contents.
+  learning-goal: Overarching learning goal of the chapter as a whole.
   learning-objectives:
-  - learning-objective: t
+  - learning-objective: one specific learning objective
     competency: 1 Basiskompetenz
     focus: Wissen
     data-flow: Grundlagen
@@ -32,6 +31,3 @@ type-of-research-object:
   - übergreifend
 target-group:
   - Promovierende
-  - Forschende (PostDoc)
-  - Forschende (Projektleitung)
-  - Hochschullehrende
