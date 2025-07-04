@@ -32,6 +32,10 @@ jobs:
         echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > _build/index.html
         generate-schema-doc --config template_name=js schema.json _build/schema.html
 
+    - name: Copy json-files to _build
+      run: |
+          cp *.json _build/.
+
     - name: Upload HTML
       uses: actions/upload-pages-artifact@v3
       with:
