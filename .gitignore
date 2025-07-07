@@ -1,2 +1,5 @@
+# virtual env
 .venv
+
+# jupyter book build results
 _build
