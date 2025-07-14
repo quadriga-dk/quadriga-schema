@@ -1,5 +1,5 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:contributor",
-  "description": " CRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.".
+  "description": "CRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.",
   "$ref": "person.json"
 }
