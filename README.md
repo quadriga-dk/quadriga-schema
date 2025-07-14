@@ -12,6 +12,19 @@ This repository contains the complete QUADRIGA schema definition split into modu
 
 **Licensing:** The schema is licensed under CC0 (see `LICENSE-SCHEMA.txt`). Any code in this repository is licensed under MIT (see `LICENSE-CODE.txt`).
 
+## Schema Structure
+
+The schema describes educational resources with the following key components:
+
+- **Basic metadata**: Title, description, identifiers, publication dates, and versioning
+- **Authors and contributors**: Structured person information with ORCID support
+- **Content organization**: Chapter-based structure with individual learning objectives
+- **Competency mapping**: Integration with QUADRIGA competency framework, focus areas, data flow categories, and Bloom's taxonomy
+- **Context information**: Creation context, duration, discipline, target groups, and research object types
+- **Technical details**: Git repository links and multilingual text support
+
+See `examples/minimal_metadata.yml` for a complete example showing how these elements work together to describe an educational resource.
+
 ## Documentation
 
 - **HTML Documentation:** [https://quadriga-dk.github.io/quadriga-schema/](https://quadriga-dk.github.io/quadriga-schema/)
