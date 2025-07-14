@@ -29,3 +29,6 @@ See `examples/minimal_metadata.yml` for a complete example showing how these ele
 
 - **HTML Documentation:** [https://quadriga-dk.github.io/quadriga-schema/](https://quadriga-dk.github.io/quadriga-schema/)
 - **Latest Schema:** [https://quadriga-dk.github.io/quadriga-schema/latest/schema.json](https://quadriga-dk.github.io/quadriga-schema/latest/schema.json)
+
+## Related Links
+- **QUADRIGA Data Literacy Framework (german):** [https://doi.org/10.5281/zenodo.15058057](https://doi.org/10.5281/zenodo.15058057)
