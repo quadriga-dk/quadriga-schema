@@ -37,6 +37,8 @@ jobs:
             echo "Building HTML for $version_dir"
             mkdir -p "_build/$version_dir"
             generate-schema-doc --config template_name=js "$version_dir/schema.json" "_build/$version_dir/schema.html"
+            # Create index.html redirect in version folder
+            echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > "_build/$version_dir/index.html"
           fi
         done
         
@@ -44,6 +46,8 @@ jobs:
         if [ -f "latest/schema.json" ]; then
           mkdir -p "_build/latest"
           generate-schema-doc --config template_name=js "latest/schema.json" "_build/latest/schema.html"
+          # Create index.html redirect in latest folder
+          echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > "_build/latest/index.html"
         fi
 
     - name: Copy all version folders and files to _build
