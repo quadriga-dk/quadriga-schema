@@ -55,8 +55,8 @@ jobs:
             fi
           done
           
-          # Copy latest symlink
-          cp -r latest _build/
+          # Copy latest folder contents (HTML was already built, now copy JSON files)
+          cp latest/*.json _build/latest/
           
           # Copy examples
           cp -r examples _build/
