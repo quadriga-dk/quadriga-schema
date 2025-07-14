@@ -35,6 +35,9 @@
     "context-of-creation": {
       "$ref": "context-of-creation.json"
     },
+    "contributors": {
+      "$ref": "contributors.json"
+    },
     "date-of-last-change": {
       "$ref": "date-of-last-change.json"
     },
