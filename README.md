@@ -25,6 +25,46 @@ The schema describes educational resources with the following key components:
 
 See `examples/minimal_metadata.yml` for a complete example showing how these elements work together to describe an educational resource.
 
+## Usage and Validation
+
+### Creating Metadata Files
+
+Create a YAML or JSON file following the schema structure. Start with the minimal example:
+
+```yaml
+# yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/latest/schema.json
+schema-version: 1.0.0-alpha
+book-version: 0.0.1
+identifier: your-resource-identifier
+title: Your Resource Title
+description: 
+  introduction: Brief description of your educational resource
+# ... add other required fields
+```
+
+You can use the latest version but in production we recommend to pick a specific `schema-version`.
+
+### Validation
+
+**YAML Language Server:**
+Use the schema reference in the first line of your YAML file for real-time validation in supported editors. The [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) provides schema validation, auto-completion, and error highlighting in VS Code, Vim, and other editors.
+
+**Python Validation:**
+```python
+import json
+import requests
+from jsonschema import validate
+
+# Load schema
+schema_url = "https://quadriga-dk.github.io/quadriga-schema/latest/schema.json"
+schema = requests.get(schema_url).json()
+
+# Load and validate your metadata
+with open('your-metadata.json') as f:
+    metadata = json.load(f)
+    validate(metadata, schema)
+```
+
 ## Documentation
 
 - **HTML Documentation:** [https://quadriga-dk.github.io/quadriga-schema/](https://quadriga-dk.github.io/quadriga-schema/)
