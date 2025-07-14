@@ -1,7 +1,7 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:credit",
   "type": "array",
-  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org.",
+  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org.)",
   "items": {
     "enum": [
       "Conceptualization",
