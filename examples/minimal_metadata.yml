@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/schema.json
+# yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/latest/schema.json
 schema-version: 1.0.0-alpha
 book-version: 0.0.1
 identifier: DOI of the book as a whole

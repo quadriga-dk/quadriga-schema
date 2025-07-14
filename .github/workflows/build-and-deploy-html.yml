@@ -26,15 +26,40 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Build HTML for schema.json in directory _build
+    - name: Build HTML for all schema versions
       run: |
         mkdir _build
-        echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > _build/index.html
-        generate-schema-doc --config template_name=js schema.json _build/schema.html
+        echo '<meta http-equiv="Refresh" content="0; url=latest/schema.html" />' > _build/index.html
+        
+        # Build HTML for each version folder
+        for version_dir in v*/; do
+          if [ -d "$version_dir" ] && [ -f "$version_dir/schema.json" ]; then
+            echo "Building HTML for $version_dir"
+            mkdir -p "_build/$version_dir"
+            generate-schema-doc --config template_name=js "$version_dir/schema.json" "_build/$version_dir/schema.html"
+          fi
+        done
+        
+        # Build HTML for latest (symlink)
+        if [ -f "latest/schema.json" ]; then
+          mkdir -p "_build/latest"
+          generate-schema-doc --config template_name=js "latest/schema.json" "_build/latest/schema.html"
+        fi
 
-    - name: Copy json-files to _build
+    - name: Copy all version folders and files to _build
       run: |
-          cp *.json _build/.
+          # Copy all version folders with their JSON files
+          for version_dir in v*/; do
+            if [ -d "$version_dir" ]; then
+              cp -r "$version_dir" _build/
+            fi
+          done
+          
+          # Copy latest symlink
+          cp -r latest _build/
+          
+          # Copy examples
+          cp -r examples _build/
 
     - name: Upload HTML
       uses: actions/upload-pages-artifact@v3
