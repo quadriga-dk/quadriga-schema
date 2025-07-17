@@ -1,0 +1,20 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:quality-assurance-event",
+  "type": "object",
+  "required": ["person", "date"],
+  "properties": {
+    "person": {
+      "$ref": "person.json",
+      "description": "Für die Qualitätssicherungsmaßnahme verantwortliche Person."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde."
+    },
+    "description": {
+      "$ref": "multilingual-text.json",
+      "description": "Beschreibung der Qualitätssicherungsmaßnahme. Ggf. mit Verweis auf Checklisten, Ergebnisprotokolle o.ä."
+    }
+  }
+}

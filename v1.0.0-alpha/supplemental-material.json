@@ -1,7 +1,7 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:related-work",
+  "$id": "tag:quadriga-dk.de,2025:schema:supplemental-material",
   "type": "object",
-  "description": "Verweis auf ein Werk, das mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Werk sowie dessen Beziehung zum Buch werden kurz beschrieben.",
+  "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Werk sowie dessen Beziehung zum Buch werden kurz beschrieben.",
   "required": ["url", "description"],
   "additionalProperties": false,
   "properties": {

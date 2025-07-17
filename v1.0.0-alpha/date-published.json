@@ -1,5 +1,5 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:publication-date",
+  "$id": "tag:quadriga-dk.de,2025:schema:date-published",
   "type": "string",
   "format": "date",
   "@id": "dct:issued"

@@ -2,11 +2,19 @@
   "$id": "tag:quadriga-dk.de,2025:schema:chapter",
   "type": "object",
   "@id": "schema:LearningResource",
-  "required": ["title", "description", "learning-objectives", "learning-goal"],
+  "required": [
+    "title",
+    "description",
+    "duration",
+    "learning-objectives",
+    "learning-goal",
+    "educational-level"
+  ],
   "properties": {
     "title": {
       "description": "Kapitelüberschrift",
-      "$ref": "multilingual-text.json"
+      "$ref": "multilingual-text.json",
+      "@id": "dct:title"
     },
     "description": {
       "description": "Beschreibung des Kapitelinhalts.",
@@ -21,16 +29,21 @@
       "$ref": "duration.json"
     },
     "learning-objectives": {
-      "description": "Liste der Feinlernziele des Kapitels",
+      "description": "Liste der Feinlernziele des Kapitels.",
       "$ref": "learning-objectives.json"
     },
     "learning-goal": {
       "$ref": "multilingual-text.json",
       "description": "Kurze Benennung des Groblernziels des Kapitels."
     },
+    "educational-level": {
+      "description": "Kompetenzniveau des Kapitels.",
+      "@id": "schema:educationalLevel",
+      "enum": ["Basis", "Fortgeschritten", "Expert:in"]
+    },
     "supplemented-by": {
-      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu zusätzlichen, weiterführenden Inhalten o.ä.",
-      "$ref": "related-works.json"
+      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
+      "$ref": "supplemental-material.json"
     }
   }
 }
