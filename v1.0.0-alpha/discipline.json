@@ -5,6 +5,7 @@
   "minItems": 1,
   "maxItems": 5,
   "items": {
+    "$comment": "# english translation\n'Verwaltungswissenschaften'->'Administrative sciences'\n'Digital Humanities'->'Digital Humanities'\n'Informatik'->'Computer science'\n'Informationswissenschaft'->'Information science'\n'übergreifend'->'Cross-disciplinary'",
     "enum": [
       "Verwaltungswissenschaften",
       "Digital Humanities",
