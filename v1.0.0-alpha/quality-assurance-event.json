@@ -4,7 +4,7 @@
   "required": ["person", "date"],
   "properties": {
     "person": {
-      "$ref": "person.json",
+      "allOf": [{ "$ref": "person.json" }],
       "description": "Für die Qualitätssicherungsmaßnahme verantwortliche Person."
     },
     "date": {
@@ -13,7 +13,7 @@
       "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde."
     },
     "description": {
-      "$ref": "multilingual-text.json",
+      "allOf": [{ "$ref": "multilingual-text.json" }],
       "description": "Beschreibung der Qualitätssicherungsmaßnahme. Ggf. mit Verweis auf Checklisten, Ergebnisprotokolle o.ä."
     }
   }
