@@ -5,6 +5,7 @@
   "@id": "dcterms:audience",
   "minItems": 1,
   "items": {
+    "$comment": "# english translation\n'Forschende (PostDoc)'->'Researchers (PostDoc)'\n'Forschende (Projektleitung)'->'Researchers (Project lead)'\n'Promovierende'->'PhD students'\n'Hochschullehrende'->'University lecturers'",
     "enum": [
       "Forschende (PostDoc)",
       "Forschende (Projektleitung)",

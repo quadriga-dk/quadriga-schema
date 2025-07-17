@@ -5,6 +5,7 @@
   "minItems": 1,
   "maxItems": 2,
   "items": {
+    "$comment": "# english translation\n'Text'->'Text'\n'Tabelle'->'Table'\n'Bewegtes Bild'->'Moving picture'\n'übergreifend'->'datatype independent'",
     "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
   }
 }

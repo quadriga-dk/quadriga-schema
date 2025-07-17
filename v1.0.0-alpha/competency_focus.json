@@ -8,10 +8,12 @@
       "maxItems": 3,
       "uniqueItems": true,
       "items": {
+        "$comment": "# english translation\n'Wissen'->'Knowledge'\n'Fähigkeit'->'Skill'\n'Haltung'->'Attitude'",
         "enum": ["Wissen", "Fähigkeit", "Haltung"]
       }
     },
     {
+      "$comment": "# english translation\n'Wissen'->'Knowledge'\n'Fähigkeit'->'Skill'\n'Haltung'->'Attitude'",
       "enum": ["Wissen", "Fähigkeit", "Haltung"]
     }
   ]

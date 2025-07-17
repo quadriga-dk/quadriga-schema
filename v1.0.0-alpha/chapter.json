@@ -40,6 +40,7 @@
     "educational-level": {
       "description": "Kompetenzniveau des Kapitels.",
       "@id": "schema:educationalLevel",
+      "$comment": "# english translation\n'Basis'->'Basic'\n'Fortgeschritten'->'Advanced'\n'Expert:in'->'Expert'",
       "enum": ["Basis", "Fortgeschritten", "Expert:in"]
     },
     "supplemented-by": {
