@@ -6,8 +6,8 @@
   "additionalProperties": false,
   "properties": {
     "description": {
-      "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch.",
-      "$ref": "multilingual-text.json"
+      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch."
     },
     "url": {
       "type": "string",

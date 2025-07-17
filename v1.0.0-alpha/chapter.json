@@ -12,13 +12,13 @@
   ],
   "properties": {
     "title": {
+      "allOf": [{ "$ref": "multilingual-text.json" }],
       "description": "Kapitelüberschrift",
-      "$ref": "multilingual-text.json",
       "@id": "dcterms:title"
     },
     "description": {
-      "description": "Beschreibung des Kapitelinhalts.",
-      "$ref": "multilingual-text.json"
+      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "description": "Beschreibung des Kapitelinhalts."
     },
     "url": {
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
@@ -26,14 +26,15 @@
       "format": "uri"
     },
     "duration": {
-      "$ref": "duration.json"
+      "allOf": [{ "$ref": "duration.json" }],
+      "description": "Geschätzte Bearbeitungsdauer des Kapitels."
     },
     "learning-objectives": {
-      "description": "Liste der Feinlernziele des Kapitels.",
-      "$ref": "learning-objectives.json"
+      "allOf": [{ "$ref": "learning-objectives.json" }],
+      "description": "Liste der Feinlernziele des Kapitels."
     },
     "learning-goal": {
-      "$ref": "multilingual-text.json",
+      "allOf": [{ "$ref": "multilingual-text.json" }],
       "description": "Kurze Benennung des Groblernziels des Kapitels."
     },
     "educational-level": {
@@ -42,8 +43,8 @@
       "enum": ["Basis", "Fortgeschritten", "Expert:in"]
     },
     "supplemented-by": {
-      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
-      "$ref": "supplemental-material.json"
+      "allOf": [{ "$ref": "supplemental-material.json" }],
+      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden."
     }
   }
 }
