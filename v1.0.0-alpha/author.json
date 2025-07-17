@@ -1,5 +1,5 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:author",
-  "@id": "dct:author",
+  "@id": "dcterms:author",
   "$ref": "person.json"
 }
