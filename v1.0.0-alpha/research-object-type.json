@@ -1,5 +1,5 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:type-of-research-object",
+  "$id": "tag:quadriga-dk.de,2025:schema:research-object-type",
   "type": "array",
   "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.",
   "minItems": 1,

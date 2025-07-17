@@ -1,8 +1,0 @@
-{
-  "$id": "tag:quadriga-dk.de,2025:schema:related-works",
-  "type": "array",
-  "description": "Eine Liste von Verweisen auf verwandte Werke.",
-  "items": {
-    "$ref": "related-work.json"
-  }
-}

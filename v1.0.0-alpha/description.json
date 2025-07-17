@@ -1,19 +1,6 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:description",
-  "type": "object",
   "description": "Beschreibung des Buchs.",
   "@id": "dct:description",
-  "required": ["introduction", "table-of-contents"],
-  "additionalProperties": false,
-  "properties": {
-    "introduction": {
-      "description": "Einleitung des Buchs.",
-      "$ref": "multilingual-text.json"
-    },
-    "table-of-contents": {
-      "description": "Inhaltsverzeichnis des Buchs.",
-      "@id": "dct:tableOfContents",
-      "$ref": "multilingual-text.json"
-    }
-  }
+  "$ref": "multilingual-text.json"
 }

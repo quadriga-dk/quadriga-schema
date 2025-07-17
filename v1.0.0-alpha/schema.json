@@ -12,17 +12,19 @@
     "authors",
     "chapters",
     "context-of-creation",
-    "date-of-last-change",
+    "contributors",
+    "date-modified",
+    "date-published",
     "description",
     "discipline",
     "duration",
     "identifier",
     "book-version",
-    "publication-date",
     "schema-version",
+    "table-of-contents",
     "target-group",
     "title",
-    "type-of-research-object"
+    "research-object-type"
   ],
   "additionalProperties": false,
   "properties": {
@@ -38,8 +40,11 @@
     "contributors": {
       "$ref": "contributors.json"
     },
-    "date-of-last-change": {
-      "$ref": "date-of-last-change.json"
+    "date-modified": {
+      "$ref": "date-modified.json"
+    },
+    "date-published": {
+      "$ref": "date-published.json"
     },
     "description": {
       "$ref": "description.json"
@@ -52,12 +57,6 @@
     },
     "git": {
       "$ref": "git.json"
-    },
-    "has-predecessor": {
-      "$ref": "has-predecessor.json"
-    },
-    "has-successor": {
-      "$ref": "has-successor.json"
     },
     "identifier": {
       "$ref": "identifier.json"
@@ -77,9 +76,6 @@
     "prerequisites": {
       "$ref": "prerequisites.json"
     },
-    "publication-date": {
-      "$ref": "publication-date.json"
-    },
     "quality-assurance": {
       "$ref": "quality-assurance.json"
     },
@@ -92,14 +88,17 @@
     "target-group": {
       "$ref": "target-group.json"
     },
+    "table-of-contents": {
+      "$ref": "table-of-contents.json"
+    },
     "title": {
       "$ref": "title.json"
     },
-    "type-of-learning-resource": {
-      "$ref": "type-of-learning-resource.json"
+    "learning-resource-type": {
+      "$ref": "learning-resource-type.json"
     },
-    "type-of-research-object": {
-      "$ref": "type-of-research-object.json"
+    "research-object-type": {
+      "$ref": "research-object-type.json"
     },
     "url": {
       "$ref": "url.json"

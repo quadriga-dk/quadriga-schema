@@ -1,22 +1,9 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:quality-assurance",
   "type": "array",
-  "description": "Beschreibung einer QM-Handlung. Durchführende Person sowie Datum der Durchführung sind Pflicht. Eine Beschreibung der QM-Handlung wird empfohlen.",
+  "description": "Liste der Qualitätsmanagementhandlungen/-maßnahmen, die durchgeführt wurden. Durchführende Person sowie Datum der Durchführung sind jeweils verpflichtend. Eine Beschreibung der QM-Handlung wird empfohlen.",
   "minItems": 1,
   "items": {
-    "type": "object",
-    "required": ["person", "date"],
-    "properties": {
-      "person": {
-        "$ref": "person.json"
-      },
-      "date": {
-        "type": "string",
-        "format": "date"
-      },
-      "description": {
-        "$ref": "multilingual-text.json"
-      }
-    }
+    "$ref": "quality-assurance-event.json"
   }
 }
