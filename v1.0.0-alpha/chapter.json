@@ -14,7 +14,7 @@
     "title": {
       "description": "Kapitelüberschrift",
       "$ref": "multilingual-text.json",
-      "@id": "dct:title"
+      "@id": "dcterms:title"
     },
     "description": {
       "description": "Beschreibung des Kapitelinhalts.",

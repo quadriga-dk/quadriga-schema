@@ -2,5 +2,5 @@
   "$id": "tag:quadriga-dk.de,2025:schema:title",
   "type": "string",
   "description": "Titel des Buchs",
-  "@id": "dct:title"
+  "@id": "dcterms:title"
 }

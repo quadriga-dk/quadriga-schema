@@ -2,7 +2,7 @@
   "$id": "tag:quadriga-dk.de,2025:schema:target-group",
   "type": "array",
   "description": "Zielgruppe",
-  "@id": "dct:audience",
+  "@id": "dcterms:audience",
   "minItems": 1,
   "items": {
     "enum": [
