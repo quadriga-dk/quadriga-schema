@@ -1,14 +1,14 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:competency_data-flow",
   "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
-  "$comment": "# english translation\n'Grundlagen'->'Fundamentals'\n'Planung'->'Planning'\n'Erhebung und Aufbereitung'->'Collection and processing'\n'Management'->'Management'\n'Analyse'->'Analysis'\n'Publikation und Nachnutzung'->'Publication and reuse'",
+  "$comment": "# english translation\n'0 Grundlagen'->'0 Fundamentals'\n'1 Planung'->'1 Planning'\n'2 Erhebung und Aufbereitung'->'2 Collection and processing'\n'3 Management'->'3 Management'\n'4 Analyse'->'4 Analysis'\n'5 Publikation und Nachnutzung'->'5 Publication and reuse'",
   "enum": [
-    "Grundlagen",
-    "Planung",
-    "Erhebung und Aufbereitung",
-    "Management",
-    "Analyse",
-    "Publikation und Nachnutzung",
+    "0 Grundlagen",
+    "1 Planung",
+    "2 Erhebung und Aufbereitung",
+    "3 Management",
+    "4 Analyse",
+    "5 Publikation und Nachnutzung",
     "nicht anwendbar"
   ]
 }
