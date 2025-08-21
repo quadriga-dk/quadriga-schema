@@ -79,9 +79,6 @@
     "quality-assurance": {
       "$ref": "quality-assurance.json"
     },
-    "related-works": {
-      "$ref": "related-works.json"
-    },
     "schema-version": {
       "$ref": "schema-version.json"
     },
