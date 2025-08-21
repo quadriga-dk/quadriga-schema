@@ -4,7 +4,8 @@
   "required": [
     "learning-objective",
     "competency",
-    "data-flow"
+    "data-flow",
+    "blooms-category"
   ],
   "additionalProperties": false,
   "properties": {
