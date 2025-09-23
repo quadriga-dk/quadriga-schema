@@ -1,0 +1,6 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:author",
+  "description": "Ein:e Autor:in des Buchs. Idealerweise wird die Person strukturiert mit Nachname(n), Vorname(n), ORCID und CRediT-Rolle angegeben.",
+  "allOf": [{ "$ref": "person.json" }],
+  "@id": "dcterms:author"
+}

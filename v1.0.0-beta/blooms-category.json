@@ -1,0 +1,14 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:blooms-category",
+  "type": "string",
+  "description": "Kategorie der Bloomschen Taxonomie, welcher das Lernziel zugeordnet ist. Aus der Kombination der Zuordnungen der Lernziele eines Kapitels lässt sich ein allgemeines Kompetenzniveau (\"Basis\", \"Fortgeschritten\", \"Expert:in\") ableiten.",
+  "$comment": "# english translation\n'1 Erinnern'->'1 Remember'\n'2 Verstehen'->'2 Understand'\n'3 Anwenden'->'3 Apply'\n'4 Analysieren'->'4 Analyze'\n'5 Bewerten'->'5 Evaluate'\n'6 Erschaffen'->'6 Create'",
+  "enum": [
+    "1 Erinnern",
+    "2 Verstehen",
+    "3 Anwenden",
+    "4 Analysieren",
+    "5 Bewerten",
+    "6 Erschaffen"
+  ]
+}
