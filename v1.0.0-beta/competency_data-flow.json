@@ -1,0 +1,13 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:competency_data-flow",
+  "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.",
+  "enum": [
+    "Grundlagen",
+    "Planung",
+    "Erhebung und Aufbereitung",
+    "Management",
+    "Analyse",
+    "Publikation und Nachnutzung",
+    "nicht anwendbar"
+  ]
+}
