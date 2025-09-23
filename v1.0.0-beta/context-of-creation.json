@@ -1,5 +1,6 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:context-of-creation",
   "allOf": [{ "$ref": "multilingual-text.json" }],
-  "description": "Verweis auf QUADRIGA"
+  "description": "Verweis auf QUADRIGA",
+  "@id": "modalia:Community"
 }

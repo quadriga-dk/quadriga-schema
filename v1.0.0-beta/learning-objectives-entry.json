@@ -8,6 +8,7 @@
     "blooms-category"
   ],
   "additionalProperties": false,
+  "@id": "schema:teaches",
   "properties": {
     "learning-objective": {
       "allOf": [{ "$ref": "multilingual-text.json" }],

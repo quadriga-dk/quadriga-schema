@@ -10,5 +10,6 @@
     "4 Analysieren",
     "5 Bewerten",
     "6 Erschaffen"
-  ]
+  ],
+  "@id": "schema:educationalFramework"
 }
