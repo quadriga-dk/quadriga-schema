@@ -2,5 +2,6 @@
   "$id": "tag:quadriga-dk.de,2025:schema:book-version",
   "allOf": [{ "$ref": "semver.json" }],
   "type": "string",
-  "description": "Version des Buchs."
+  "description": "Version des Buchs.",
+  "@id": "schema:version"
 }

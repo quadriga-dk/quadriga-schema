@@ -7,8 +7,7 @@
     "description",
     "duration",
     "learning-objectives",
-    "learning-goal",
-    "educational-level"
+    "learning-goal"
   ],
   "properties": {
     "title": {
@@ -18,24 +17,29 @@
     },
     "description": {
       "allOf": [{ "$ref": "multilingual-text.json" }],
-      "description": "Beschreibung des Kapitelinhalts."
+      "description": "Beschreibung des Kapitelinhalts.",
+      "@id": "dcterms:title"
     },
     "url": {
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "@id": "schema:url"
     },
     "duration": {
       "allOf": [{ "$ref": "duration.json" }],
-      "description": "Geschätzte Bearbeitungsdauer des Kapitels."
+      "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
+      "@id": "schema:timeRequired"
     },
     "learning-objectives": {
       "allOf": [{ "$ref": "learning-objectives.json" }],
-      "description": "Liste der Feinlernziele des Kapitels."
+      "description": "Liste der Feinlernziele des Kapitels.",
+      "$comment": "Ähnlich zu schema:LearningResource:teaches."
     },
     "learning-goal": {
       "allOf": [{ "$ref": "multilingual-text.json" }],
-      "description": "Kurze Benennung des Groblernziels des Kapitels."
+      "description": "Kurze Benennung des Groblernziels des Kapitels.",
+      "$comment": "Ähnlich zu schema:LearningResource:teaches."
     },
     "educational-level": {
       "description": "Kompetenzniveau des Kapitels.",
@@ -45,7 +49,9 @@
     },
     "supplemented-by": {
       "allOf": [{ "$ref": "supplemental-material.json" }],
-      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden."
+      "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
+      "@id": "dcterms:references",
+      "$comment": "Ähnlich zu dcterms:relation."
     }
   }
 }
