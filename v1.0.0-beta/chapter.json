@@ -48,8 +48,20 @@
       "enum": ["Basis", "Fortgeschritten", "Expert:in"]
     },
     "supplemented-by": {
-      "allOf": [{ "$ref": "supplemental-material.json" }],
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "allOf": [{ "$ref": "multilingual-text.json" }]
+          },
+          {
+            "allOf": [{ "$ref": "supplemental-material.json" }]
+          }
+        ]
+      },
       "@id": "dcterms:references",
       "$comment": "Ähnlich zu dcterms:relation."
     }
