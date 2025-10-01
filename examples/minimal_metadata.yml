@@ -1,33 +1,34 @@
 # yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/latest/schema.json
-schema-version: 1.0.0-alpha
+schema-version: 1.0.0-beta
 book-version: 0.0.1
 identifier: DOI of the book as a whole
 title: Title of the whole book
-description: 
-  introduction: Description of the whole book
-  table-of-contents: table of contents of the whole book. mostly a list of chapters formatted in Markdown
-date-of-last-change: 2025-07-04
-publication-date: 2025-06-24
+description: Description of the whole book
+table-of-contents: table of contents of the whole book. mostly a list of chapters formatted in Markdown
+date-modified: 2025-07-04
+date-published: 2025-06-24
 authors:
-- given-names: test
-  family-names: author
-  orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly adviced
+  - given-names: test
+    family-names: author
+    orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly adviced
+contributors:
+  - Test Mitarbeiter\*in
 chapters:
-- title: The title of the chapter
-  description: A short description of the chapter and its contents.
-  learning-goal: Overarching learning goal of the chapter as a whole.
-  learning-objectives:
-  - learning-objective: one specific learning objective
-    competency: 1 Basiskompetenz
-    focus: Wissen
-    data-flow: Grundlagen
-    blooms-category: 1 Erinnern
+  - title: The title of the chapter
+    description: A short description of the chapter and its contents.
+    learning-goal: Overarching learning goal of the chapter as a whole.
+    duration: 1h
+    learning-objectives:
+      - learning-objective: one specific learning objective
+        competency: Orientierungswissen
+        data-flow: übergreifend
+        blooms-category: 1 Erinnern
 context-of-creation: QUADRIGA
 duration: 1h
-discipline: 
+discipline:
   - übergreifend
 git: https://github.com/quadriga-dk/quadriga-schema
-type-of-research-object:
+research-object-type:
   - übergreifend
 target-group:
   - Promovierende
