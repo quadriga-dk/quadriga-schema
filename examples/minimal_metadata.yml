@@ -1,16 +1,19 @@
 # yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/latest/schema.json
-schema-version: 1.0.0-beta
-book-version: 0.0.1
+schema-version: 1.0.0
+book-version: 0.1.0
 identifier: DOI of the book as a whole
 title: Title of the whole book
 description: Description of the whole book
-table-of-contents: table of contents of the whole book. mostly a list of chapters formatted in Markdown
-date-modified: 2025-07-04
+table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
+date-modified: 2025-10-23
 date-published: 2025-06-24
+language: de
+license:
+  content: https://creativecommons.org/licenses/by-sa/4.0/
 authors:
   - given-names: test
     family-names: author
-    orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly adviced
+    orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly advised
 contributors:
   - Test Mitarbeiter\*in
 chapters:
@@ -23,7 +26,7 @@ chapters:
         competency: Orientierungswissen
         data-flow: übergreifend
         blooms-category: 1 Erinnern
-context-of-creation: QUADRIGA
+context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
 duration: 1h
 discipline:
   - übergreifend
