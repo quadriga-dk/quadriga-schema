@@ -70,5 +70,7 @@ with open('your-metadata.json') as f:
 - **HTML Documentation:** [https://quadriga-dk.github.io/quadriga-schema/](https://quadriga-dk.github.io/quadriga-schema/)
 - **Latest Schema:** [https://quadriga-dk.github.io/quadriga-schema/latest/schema.json](https://quadriga-dk.github.io/quadriga-schema/latest/schema.json)
 
+To build the HTML documentation locally, run `./build-html.sh` (output will be in `_build/`).
+
 ## Related Links
 - **QUADRIGA Data Literacy Framework (german):** [https://doi.org/10.5281/zenodo.15058057](https://doi.org/10.5281/zenodo.15058057)
