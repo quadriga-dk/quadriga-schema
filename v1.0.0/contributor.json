@@ -2,5 +2,5 @@
   "$id": "tag:quadriga-dk.de,2025:schema:contributor",
   "allOf": [{ "$ref": "person.json" }],
   "description": "CRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.",
-  "@id": "dcterms:contributor"
+  "@id": "schema:contributor"
 }

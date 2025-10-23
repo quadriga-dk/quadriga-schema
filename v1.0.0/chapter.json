@@ -18,7 +18,7 @@
     "description": {
       "allOf": [{ "$ref": "multilingual-text.json" }],
       "description": "Beschreibung des Kapitelinhalts.",
-      "@id": "dcterms:title"
+      "@id": "schema:description"
     },
     "url": {
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",

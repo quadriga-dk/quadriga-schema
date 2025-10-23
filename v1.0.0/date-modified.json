@@ -3,5 +3,5 @@
   "type": "string",
   "format": "date",
   "description": "Datum der letzten (großen, inhaltlich umfangreichen) Änderung. Sollte immer mit einer Versionsänderung einhergehen.",
-  "@id": "dcterms:modified"
+  "@id": "schema:dateModified"
 }
