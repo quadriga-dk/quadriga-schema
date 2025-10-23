@@ -1,9 +1,0 @@
-{
-  "$id": "tag:quadriga-dk.de,2025:schema:quality-assurance",
-  "type": "array",
-  "description": "Liste der Qualitätsmanagementhandlungen/-maßnahmen, die durchgeführt wurden. Durchführende Person sowie Datum der Durchführung sind jeweils verpflichtend. Eine Beschreibung der QM-Handlung wird empfohlen.",
-  "minItems": 1,
-  "items": {
-    "$ref": "quality-assurance-event.json"
-  }
-}
