@@ -1,7 +1,0 @@
-{
-  "$id": "tag:quadriga-dk.de,2025:schema:orcid",
-  "type": "string",
-  "format": "uri",
-  "description": "ORCID der Autor:in als URI (https://orcid.org/XXXX-XXXX-XXXX-XXXX)",
-  "pattern": "^https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
-}
