@@ -1,0 +1,10 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:learning-objectives",
+  "type": "array",
+  "description": "Eine Liste von Lernzielen.",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "$ref": "learning-objectives-entry.json"
+  }
+}

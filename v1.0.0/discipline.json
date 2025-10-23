@@ -1,0 +1,18 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:discipline",
+  "type": "array",
+  "description": "Nennung der Disziplinen, die bei der Erstellung  im Fokus standen.",
+  "minItems": 1,
+  "maxItems": 5,
+  "items": {
+    "$comment": "# english translation\n'Verwaltungswissenschaften'->'Administrative sciences'\n'Digital Humanities'->'Digital Humanities'\n'Informatik'->'Computer science'\n'Informationswissenschaft'->'Information science'\n'übergreifend'->'Cross-disciplinary'",
+    "enum": [
+      "Verwaltungswissenschaften",
+      "Digital Humanities",
+      "Informatik",
+      "Informationswissenschaft",
+      "übergreifend"
+    ]
+  },
+  "@id": "modalia:Discipline"
+}

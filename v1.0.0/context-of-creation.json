@@ -1,0 +1,9 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:context-of-creation",
+  "type": "string",
+  "enum": [
+    "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
+  ],
+  "description": "Verweis auf QUADRIGA",
+  "@id": "modalia:Community"
+}
