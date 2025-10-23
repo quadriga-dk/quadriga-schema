@@ -1,0 +1,24 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:credit",
+  "type": "array",
+  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org.)",
+  "items": {
+    "enum": [
+      "Conceptualization",
+      "Data curation",
+      "Formal analysis",
+      "Funding acquisition",
+      "Investigation",
+      "Methodology",
+      "Project administration",
+      "Software",
+      "Resources",
+      "Supervision",
+      "Validation",
+      "Visualization",
+      "Writing",
+      "Writing – original draft",
+      "Writing – review & editing"
+    ]
+  }
+}

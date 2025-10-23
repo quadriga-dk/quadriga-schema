@@ -1,0 +1,35 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:learning-objectives-entry",
+  "type": "object",
+  "required": [
+    "learning-objective",
+    "competency",
+    "data-flow",
+    "blooms-category"
+  ],
+  "additionalProperties": false,
+  "@id": "schema:teaches",
+  "properties": {
+    "learning-objective": {
+      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "description": "Formulierung des Lernziels."
+    },
+    "competency": {
+      "$ref": "competency.json"
+    },
+    "data-flow": {
+      "$ref": "competency_data-flow.json"
+    },
+    "blooms-category": {
+      "$ref": "blooms-category.json"
+    },
+    "assessment": {
+      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "description": "Beschreibung der Art der Überprüfung des Lernziels."
+    },
+    "jupyter-book-glue-id": {
+      "type": "string",
+      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`. Nur für die interne Verwendung beim Schreiben der OER."
+    }
+  }
+}

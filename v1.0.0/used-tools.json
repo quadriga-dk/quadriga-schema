@@ -1,0 +1,9 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:used-tools",
+  "description": "Liste von Software-Tools, die bei der Erstellung des Buchs verwendet wurden.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "used-tool.json"
+  }
+}

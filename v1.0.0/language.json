@@ -1,0 +1,6 @@
+{
+  "$id": "tag:quadriga-dk.de,2025:schema:language",
+  "type": "string",
+  "description": "Sprache des Buchs als ISO639-1 Sprachcode.",
+  "@id": "dcterms:language"
+}
