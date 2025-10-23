@@ -1,24 +1,56 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:credit",
   "type": "array",
-  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org.)",
+  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org/contributor-roles/.)",
   "items": {
-    "enum": [
-      "Conceptualization",
-      "Data curation",
-      "Formal analysis",
-      "Funding acquisition",
-      "Investigation",
-      "Methodology",
-      "Project administration",
-      "Software",
-      "Resources",
-      "Supervision",
-      "Validation",
-      "Visualization",
-      "Writing",
-      "Writing – original draft",
-      "Writing – review & editing"
+    "oneOf": [
+      {
+        "enum": [
+          "Conceptualization",
+          "Data curation",
+          "Formal analysis",
+          "Funding acquisition",
+          "Investigation",
+          "Methodology",
+          "Project administration",
+          "Software",
+          "Resources",
+          "Supervision",
+          "Validation",
+          "Visualization",
+          "Writing",
+          "Writing – original draft",
+          "Writing – review & editing"
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "https://credit.niso.org/contributor-roles/conceptualization/",
+              "https://credit.niso.org/contributor-roles/data-curation/",
+              "https://credit.niso.org/contributor-roles/formal-analysis/",
+              "https://credit.niso.org/contributor-roles/funding-acquisition/",
+              "https://credit.niso.org/contributor-roles/investigation/",
+              "https://credit.niso.org/contributor-roles/methodology/",
+              "https://credit.niso.org/contributor-roles/project-administration/",
+              "https://credit.niso.org/contributor-roles/resources/",
+              "https://credit.niso.org/contributor-roles/software/",
+              "https://credit.niso.org/contributor-roles/supervision/",
+              "https://credit.niso.org/contributor-roles/validation/",
+              "https://credit.niso.org/contributor-roles/visualization/",
+              "https://credit.niso.org/contributor-roles/writing-original-draft/",
+              "https://credit.niso.org/contributor-roles/writing-review-editing/"
+            ]
+          },
+          "degree": {
+            "type": "string",
+            "enum": ["lead", "equal", "supporting"]
+          }
+        }
+      }
     ]
   }
 }
