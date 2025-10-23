@@ -1,6 +1,0 @@
-{
-  "$id": "tag:quadriga-dk.de,2025:schema:learning-resource-type",
-  "type": "string",
-  "enum": ["Jupyter Book"],
-  "@id": "modalia:LearningResourceType"
-}
