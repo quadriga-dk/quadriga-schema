@@ -1,6 +1,0 @@
-{
-  "$id": "tag:quadriga-dk.de,2025:schema:semver",
-  "type": "string",
-  "description": "Semantic Versioning 2.0.0 (https://semver.org)",
-  "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
-}
