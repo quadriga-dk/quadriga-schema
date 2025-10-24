@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://citation-file-format.github.io/1.2.0/schema.json
+cff-version: 1.2.0
+version: 1.0.0
+title: QUADRIGA metadata schema
+abstract: Internal metadata schema for the OER authored in the QUADRIGA project.
+type: standard
+date-published: 2025-10-31 # TODO
+message: Use this schema to validate the metadata of QUADRIGA case studies.
+authors: &id001
+- given-names: Paul
+  family-names: Walter
+  orcid: https://orcid.org/0000-0002-9236-3268
+  affiliation: Fachhochschule Potsdam
+- given-names: Hannes
+  family-names: Schnaitter
+  orcid: https://orcid.org/0000-0002-1602-6032
+  affiliation: >
+    Humboldt-Universität zu Berlin,
+    Institut für Bibliotheks- und Informationswissenschaft
+- given-names: Carsten
+  family-names: Schneemann
+  orcid: https://orcid.org/0000-0002-2683-5853
+- given-names: Heike
+  family-names: Neuroth
+  orcid: https://orcid.org/0000-0002-3637-3154
+  affiliation: Fachhochschule Potsdam
+- given-names: Vivien
+  family-names: Petras
+  orcid: https://orcid.org/0000-0002-8113-1509
+  affiliation: >
+    Humboldt-Universität zu Berlin,
+    Institut für Bibliotheks- und Informationswissenschaft
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.XXXXXXX # TODO
+  description: Zenodo
+repository-code: https://github.com/quadriga-dk/quadriga-schema
+url: https://quadriga-dk.github.io/quadriga-schema/
+keywords:
+- metadata
+- open educational resources
+license: CC0-1.0
