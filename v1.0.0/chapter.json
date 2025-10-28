@@ -34,12 +34,12 @@
     "learning-objectives": {
       "allOf": [{ "$ref": "learning-objectives.json" }],
       "description": "Liste der Feinlernziele des Kapitels.",
-      "$comment": "Ähnlich zu schema:LearningResource:teaches."
+      "$comment": "Ähnlich zu schema:teaches."
     },
     "learning-goal": {
       "allOf": [{ "$ref": "multilingual-text.json" }],
       "description": "Kurze Benennung des Groblernziels des Kapitels.",
-      "$comment": "Ähnlich zu schema:LearningResource:teaches."
+      "$comment": "Ähnlich zu schema:teaches."
     },
     "supplemented-by": {
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
