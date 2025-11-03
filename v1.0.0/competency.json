@@ -1,7 +1,7 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:competency",
-  "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework (https://doi.org/10.5281/zenodo.14747822). Aktuell in Überarbeitung für Version 4.",
-  "$comment": "Ähnlich zu modalia:Skill.\n# english translation:\nOrientierungswissen → conceptual knowledge\n1 Identification → 1 identification\n2 Qualitätssicherung → 2 quality assurance\n3 Ethik und Recht → 3 ethics and legal aspects\n 4 Erhebung → 4 acquisition\n5 Validierung → 5 validation\n6 Aufbereitung → 6 (pre-)processing\n7 Organisation → 7 organisation\n8 Erschließung → 8 metadata\n9 Datenanalyse → 9 data analysis\n10 Visualisierung → 10 visualisation\n11 Interpretation → 11 interpretation\n12 Aufbewahrung → 12 preservation\n13 Datenpublikation → 13 data publication\n14 Kommunikation → 14 communication\nnicht anwendbar → not applicable",
+  "description": "Im Lernziel adressierte Kompetenz nach dem QUADRIGA Datenkompetenzframework (https://doi.org/10.5281/zenodo.14747822). Aktuell in Überarbeitung für Version 4.\n\nenglish translation:\n---------------------\nOrientierungswissen → conceptual knowledge\n1 Identification → 1 identification\n2 Qualitätssicherung → 2 quality assurance\n3 Ethik und Recht → 3 ethics and legal aspects\n 4 Erhebung → 4 acquisition\n5 Validierung → 5 validation\n6 Aufbereitung → 6 (pre-)processing\n7 Organisation → 7 organisation\n8 Erschließung → 8 metadata\n9 Datenanalyse → 9 data analysis\n10 Visualisierung → 10 visualisation\n11 Interpretation → 11 interpretation\n12 Aufbewahrung → 12 preservation\n13 Datenpublikation → 13 data publication\n14 Kommunikation → 14 communication\nnicht anwendbar → not applicable",
+  "$comment": "Ähnlich zu modalia:Skill.",
   "enum": [
     "Orientierungswissen",
     "1 Identifikation",
