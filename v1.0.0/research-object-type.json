@@ -1,11 +1,10 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:research-object-type",
   "type": "array",
-  "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.",
+  "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.\n\nenglish translation:\n--------------------\nText → Text\nTabelle → Table\nBewegtes Bild → Moving picture\nübergreifend → datatype independent",
   "minItems": 1,
   "maxItems": 2,
   "items": {
-    "$comment": "# english translation\n'Text'->'Text'\n'Tabelle'->'Table'\n'Bewegtes Bild'->'Moving picture'\n'übergreifend'->'datatype independent'",
     "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
   }
 }
