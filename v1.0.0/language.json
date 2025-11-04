@@ -4,4 +4,4 @@
   "type": "string",
   "description": "Sprache des Buchs als ISO639-1 Sprachcode.",
   "@id": "schema:inLanguage"
-}
+} /* TODO: language ggf. auf kapitel-ebene überschreiben? bei mehreren sprachen mu */
