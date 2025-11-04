@@ -1,7 +1,7 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:target-group",
   "type": "array",
-  "description": "Zielgruppe\n\nenglish translation:\n--------------------\nForschende (PostDoc) → Researchers (PostDoc)\nForschende (Projektleitung) → Researchers (Project lead)\nPromovierende → PhD students\nHochschullehrende → University lecturers",
+  "description": "Zielgruppe<br><br>english translation:<br>--------------------<br>Forschende (PostDoc) → Researchers (PostDoc)<br>Forschende (Projektleitung) → Researchers (Project lead)<br>Promovierende → PhD students<br>Hochschullehrende → University lecturers",
   "@id": "modalia:TargetGroup",
   "minItems": 1,
   "items": {

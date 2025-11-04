@@ -1,6 +1,6 @@
 {
   "$id": "tag:quadriga-dk.de,2025:schema:competency_data-flow",
-  "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.\n\nenglish translation:\n-------------------\nübergreifend → cross-cutting\n1 Planung → 1 planning\n2 Erhebung und Aufbereitung → 2 collection and preparation\n3 Management → 3 management\n4 Analyse → 4 analysis\n5 Publikation und Nachnutzung → 5 publication and reuse\nnicht anwendbar → not applicable",
+  "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.<br><br>english translation:<br>-------------------<br>übergreifend → cross-cutting<br>1 Planung → 1 planning<br>2 Erhebung und Aufbereitung → 2 collection and preparation<br>3 Management → 3 management<br>4 Analyse → 4 analysis<br>5 Publikation und Nachnutzung → 5 publication and reuse<br>nicht anwendbar → not applicable",
   "enum": [
     "übergreifend",
     "1 Planung",
