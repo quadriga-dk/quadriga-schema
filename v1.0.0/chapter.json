@@ -6,7 +6,7 @@
   "required": [
     "title",
     "description",
-    "duration",
+    "time-required",
     "learning-objectives",
     "learning-goal"
   ],
@@ -27,8 +27,8 @@
       "format": "uri",
       "@id": "schema:url"
     },
-    "duration": {
-      "allOf": [{ "$ref": "duration.json" }],
+    "time-required": {
+      "allOf": [{ "$ref": "time-required.json" }],
       "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
       "@id": "schema:timeRequired"
     },

@@ -11,15 +11,15 @@
   "type": "object",
   "required": [
     "authors",
-    "book-version",
+    "version",
     "chapters",
     "context-of-creation",
     "contributors",
+    "date-issued",
     "date-modified",
-    "date-published",
     "description",
     "discipline",
-    "duration",
+    "time-required",
     "identifier",
     "language",
     "license",
@@ -46,8 +46,8 @@
     "date-modified": {
       "$ref": "date-modified.json"
     },
-    "date-published": {
-      "$ref": "date-published.json"
+    "date-issued": {
+      "$ref": "date-issued.json"
     },
     "description": {
       "$ref": "description.json"
@@ -55,8 +55,8 @@
     "discipline": {
       "$ref": "discipline.json"
     },
-    "duration": {
-      "$ref": "duration.json"
+    "time-required": {
+      "$ref": "time-required.json"
     },
     "git": {
       "$ref": "git.json"
@@ -73,8 +73,8 @@
     "license": {
       "$ref": "license.json"
     },
-    "book-version": {
-      "$ref": "book-version.json"
+    "version": {
+      "$ref": "version.json"
     },
     "prerequisites": {
       "$ref": "prerequisites.json"
