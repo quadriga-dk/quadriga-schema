@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:table-of-contents",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/table-of-contents.json",
   "allOf": [{ "$ref": "multilingual-text.json" }],
   "description": "Inhaltsverzeichnis des Buchs.",
   "@id": "dcterms:tableOfContents"

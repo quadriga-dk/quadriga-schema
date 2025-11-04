@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:discipline",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/discipline.json",
   "type": "array",
   "description": "Nennung der Disziplinen, die bei der Erstellung  im Fokus standen.\n\nenglish translation:\n---------------------\nVerwaltungswissenschaften → Administrative sciences\nDigital Humanities → Digital Humanities\nInformatik → Computer science\nInformationswissenschaft → Information science\nübergreifend → Cross-disciplinary",
   "minItems": 1,

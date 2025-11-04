@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:supplemental-material",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/supplemental-material.json",
   "type": "object",
   "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Werk sowie dessen Beziehung zum Buch werden kurz beschrieben.",
   "required": ["url", "description"],

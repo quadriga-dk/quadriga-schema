@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:blooms-category",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/blooms-category.json",
   "type": "string",
   "description": "Kategorie der Bloomschen Taxonomie, welcher das Lernziel zugeordnet ist. Aus der Kombination der Zuordnungen der Lernziele eines Kapitels lässt sich ein allgemeines Kompetenzniveau (\"Basis\", \"Fortgeschritten\", \"Expert:in\") ableiten.\n\nenglish translation:\n--------------------\n1 Erinnern → 1 Remember\n2 Verstehen → 2 Understand\n3 Anwenden → 3 Apply\n4 Analysieren → 4 Analyze\n5 Bewerten → 5 Evaluate\n6 Erschaffen → 6 Create\nnicht anwendbar → not applicable",
   "enum": [
