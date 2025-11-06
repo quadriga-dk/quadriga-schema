@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:keywords",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/keywords.json",
   "type": "array",
   "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
   "@id": "schema:keywords",

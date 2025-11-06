@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:orcid",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/orcid.json",
   "type": "string",
   "format": "uri",
   "description": "ORCID der Autor:in als URI (https://orcid.org/XXXX-XXXX-XXXX-XXXX)",

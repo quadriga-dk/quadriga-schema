@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:contributors",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/contributors.json",
   "type": "array",
   "description": "Liste der Mitarbeiter:innen des Buchs. Personen in dieser Liste waren an spezifischen Teilen der Entwicklung beteiligt, sind jedoch nicht Autor:innen.",
   "minItems": 1,

@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:research-object-type",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/research-object-type.json",
   "type": "array",
   "description": "Nennung des Datentyps, der vorrangig im Buch behandelt wird.<br><br>english translation:<br>--------------------<br>Text → Text<br>Tabelle → Table<br>Bewegtes Bild → Moving picture<br>übergreifend → datatype independent",
   "minItems": 1,

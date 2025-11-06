@@ -1,11 +1,12 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:chapter",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/chapter.json",
   "type": "object",
   "@id": "schema:LearningResource",
   "required": [
     "title",
     "description",
-    "duration",
+    "time-required",
     "learning-objectives",
     "learning-goal"
   ],
@@ -26,8 +27,8 @@
       "format": "uri",
       "@id": "schema:url"
     },
-    "duration": {
-      "allOf": [{ "$ref": "duration.json" }],
+    "time-required": {
+      "allOf": [{ "$ref": "time-required.json" }],
       "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
       "@id": "schema:timeRequired"
     },
