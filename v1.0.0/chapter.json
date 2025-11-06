@@ -73,6 +73,10 @@
       ],
       "@id": "dcterms:references",
       "$comment": "Ähnlich zu dcterms:relation."
+    },
+    "language": {
+      "allOf": [{ "$ref": "language.json" }],
+      "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel."
     }
   }
 }
