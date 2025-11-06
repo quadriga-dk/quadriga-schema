@@ -1,7 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/table-of-contents.json",
-  "allOf": [{ "$ref": "multilingual-text.json" }],
+  "allOf": [
+    {
+      "$ref": "multilingual-text.json"
+    }
+  ],
   "description": "Inhaltsverzeichnis des Buchs.",
-  "@id": "dcterms:tableOfContents"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:tableOfContents"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
+  }
 }

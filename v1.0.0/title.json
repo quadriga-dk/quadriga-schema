@@ -3,5 +3,20 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/title.json",
   "type": "string",
   "description": "Titel des Buchs",
-  "@id": "dcterms:title"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:title"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:title"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:name"
+    }
+  }
 }

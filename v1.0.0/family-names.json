@@ -3,5 +3,14 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/family-names.json",
   "type": "string",
   "description": "Nachname(n) der Person",
-  "@id": "schema:familyName"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:familyName"
+    }
+  }
 }

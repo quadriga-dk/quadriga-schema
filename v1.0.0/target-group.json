@@ -3,7 +3,6 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/target-group.json",
   "type": "array",
   "description": "Zielgruppe<br><br>english translation:<br>--------------------<br>Forschende (PostDoc) → Researchers (PostDoc)<br>Forschende (Projektleitung) → Researchers (Project lead)<br>Promovierende → PhD students<br>Hochschullehrende → University lecturers",
-  "@id": "modalia:TargetGroup",
   "minItems": 1,
   "items": {
     "enum": [
@@ -12,5 +11,24 @@
       "Promovierende",
       "Hochschullehrende"
     ]
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "property": "dcterms:audience"
+    },
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "property": "lrmi:educationalAudience"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "property": "modalia:TargetGroup"
+    },
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:audience"
+    }
   }
 }

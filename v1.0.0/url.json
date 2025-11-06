@@ -4,5 +4,14 @@
   "type": "string",
   "format": "uri",
   "description": "URL des Buchs.",
-  "@id": "schema:url"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:url"
+    }
+  }
 }

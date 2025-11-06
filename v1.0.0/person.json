@@ -2,7 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/person.json",
   "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.",
-  "@id": "schema:person",
   "oneOf": [
     {
       "type": "string",
@@ -29,5 +28,15 @@
         }
       }
     }
-  ]
+  ],
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:Person"
+    }
+  }
 }

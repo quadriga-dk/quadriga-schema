@@ -5,8 +5,7 @@
     {
       "type": "string",
       "format": "uri",
-      "description": "URL zur Lizenz",
-      "@id": "schema:license"
+      "description": "URL zur Lizenz"
     },
     {
       "type": "object",
@@ -19,10 +18,25 @@
         },
         "url": {
           "type": "string",
-          "format": "uri",
-          "@id": "schema:license"
+          "format": "uri"
         }
       }
     }
-  ]
+  ],
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:rights"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:license"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:license"
+    }
+  }
 }

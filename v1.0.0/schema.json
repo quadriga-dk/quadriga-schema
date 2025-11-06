@@ -4,9 +4,12 @@
   "title": "QUADRIGA OER",
   "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
   "@context": {
+    "dc": "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
+    "lrmi": "http://purl.org/dcx/lrmi-terms/",
+    "modalia": "https://purl.org/ontology/modalia#",
     "schema": "http://schema.org/",
-    "modalia": "https://purl.org/ontology/modalia#"
+    "skos": "http://www.w3.org/2004/02/skos/core#"
   },
   "type": "object",
   "required": [

@@ -1,7 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/description.json",
-  "allOf": [{ "$ref": "multilingual-text.json" }],
+  "allOf": [
+    {
+      "$ref": "multilingual-text.json"
+    }
+  ],
   "description": "Beschreibung des Buchs.",
-  "@id": "schema:description"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:description"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:description"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:description"
+    }
+  }
 }

@@ -4,5 +4,20 @@
   "type": "string",
   "format": "date",
   "description": "Datum der letzten (großen, inhaltlich umfangreichen) Änderung. Sollte immer mit einer Versionsänderung einhergehen.",
-  "@id": "schema:dateModified"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:date"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:modified"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:dateModified"
+    }
+  }
 }

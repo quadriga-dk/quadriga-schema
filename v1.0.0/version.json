@@ -1,8 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/version.json",
-  "allOf": [{ "$ref": "semver.json" }],
+  "allOf": [
+    {
+      "$ref": "semver.json"
+    }
+  ],
   "type": "string",
   "description": "Version des Buchs.",
-  "@id": "schema:version"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:version"
+    }
+  }
 }
