@@ -1,17 +1,22 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:supplemental-material",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/supplemental-material.json",
   "type": "object",
-  "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Werk sowie dessen Beziehung zum Buch werden kurz beschrieben.",
-  "required": ["url", "description"],
+  "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Titel; optional kann die Beziehung zum Buch in einer Anmerkung beschrieben werden.",
+  "required": ["url", "title"],
   "additionalProperties": false,
   "properties": {
-    "description": {
+    "title": {
       "allOf": [{ "$ref": "multilingual-text.json" }],
-      "description": "Beschreibung des verlinkten Werks und dessen Beziehung zum Buch."
+      "description": "Titel oder Name des verlinkten Werks."
     },
     "url": {
       "type": "string",
       "format": "uri"
+    },
+    "note": {
+      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "description": "Optionale Anmerkung zur Verwendung oder Beziehung des Werks zum Buch/Kapitel."
     }
   }
 }

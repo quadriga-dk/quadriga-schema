@@ -1,5 +1,6 @@
 {
-  "$id": "tag:quadriga-dk.de,2025:schema:prerequisites",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/prerequisites.json",
   "type": "array",
   "description": "Liste von Voraussetzungen, welche Lernende für die erfolgreiche Bearbeitung des Buchs mitbringen sollten.<br>Dieses Feld insbesondere genutzt werden, wenn fachspezifische Grundlagen vorausgesetzt werden.",
   "@id": "schema:coursePrerequisites",
