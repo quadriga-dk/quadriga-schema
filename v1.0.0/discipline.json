@@ -14,5 +14,23 @@
       "übergreifend"
     ]
   },
-  "@id": "modalia:Discipline"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:broadMatch",
+      "property": "dc:subject"
+    },
+    "dcterms": {
+      "relation": "skos:broadMatch",
+      "property": "dcterms:subject"
+    },
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "property": "modalia:Discipline"
+    },
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:about"
+    }
+  }
 }

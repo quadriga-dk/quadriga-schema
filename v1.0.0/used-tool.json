@@ -9,7 +9,6 @@
     },
     {
       "description": "Strukturierte Angabe des Tools",
-      "@id": "schema:SoftwareApplication",
       "properties": {
         "name": {
           "$ref": "multilingual-text.json"
@@ -20,5 +19,15 @@
         }
       }
     }
-  ]
+  ],
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:SoftwareApplication"
+    }
+  }
 }

@@ -6,5 +6,14 @@
     "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.<br><br>Förderkennzeichen: 16DKZ2034"
   ],
   "description": "Verweis auf QUADRIGA",
-  "@id": "modalia:Community"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "property": "modalia:Community"
+    },
+    "schema": null
+  }
 }

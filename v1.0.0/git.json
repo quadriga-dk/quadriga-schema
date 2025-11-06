@@ -4,5 +4,14 @@
   "type": "string",
   "format": "uri",
   "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
-  "@id": "schema:codeRepository"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:codeRepository"
+    }
+  }
 }

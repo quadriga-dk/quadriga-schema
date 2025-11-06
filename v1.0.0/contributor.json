@@ -1,7 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/contributor.json",
-  "allOf": [{ "$ref": "person.json" }],
+  "allOf": [
+    {
+      "$ref": "person.json"
+    }
+  ],
   "description": "CRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.",
-  "@id": "schema:contributor"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:broadMatch",
+      "property": "dc:contributor"
+    },
+    "dcterms": {
+      "relation": "skos:broadMatch",
+      "property": "dcterms:contributor"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:contributor"
+    }
+  }
 }

@@ -18,5 +18,21 @@
         "pattern": "^[a-z]{2}$"
       }
     }
-  ]
+  ],
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:language"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:language"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:inLanguage"
+    }
+  }
 }

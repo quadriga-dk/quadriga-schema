@@ -2,7 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/chapter.json",
   "type": "object",
-  "@id": "schema:LearningResource",
   "required": [
     "title",
     "description",
@@ -12,33 +11,49 @@
   ],
   "properties": {
     "title": {
-      "allOf": [{ "$ref": "multilingual-text.json" }],
-      "description": "Kapitelüberschrift",
-      "@id": "dcterms:title"
+      "allOf": [
+        {
+          "$ref": "multilingual-text.json"
+        }
+      ],
+      "description": "Kapitelüberschrift"
     },
     "description": {
-      "allOf": [{ "$ref": "multilingual-text.json" }],
-      "description": "Beschreibung des Kapitelinhalts.",
-      "@id": "schema:description"
+      "allOf": [
+        {
+          "$ref": "multilingual-text.json"
+        }
+      ],
+      "description": "Beschreibung des Kapitelinhalts."
     },
     "url": {
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
       "type": "string",
-      "format": "uri",
-      "@id": "schema:url"
+      "format": "uri"
     },
     "time-required": {
-      "allOf": [{ "$ref": "time-required.json" }],
-      "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
-      "@id": "schema:timeRequired"
+      "allOf": [
+        {
+          "$ref": "time-required.json"
+        }
+      ],
+      "description": "Geschätzte Bearbeitungsdauer des Kapitels."
     },
     "learning-objectives": {
-      "allOf": [{ "$ref": "learning-objectives.json" }],
+      "allOf": [
+        {
+          "$ref": "learning-objectives.json"
+        }
+      ],
       "description": "Liste der Feinlernziele des Kapitels.",
       "$comment": "Ähnlich zu schema:teaches."
     },
     "learning-goal": {
-      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "allOf": [
+        {
+          "$ref": "multilingual-text.json"
+        }
+      ],
       "description": "Kurze Benennung des Groblernziels des Kapitels.",
       "$comment": "Ähnlich zu schema:teaches."
     },
@@ -52,10 +67,18 @@
           "items": {
             "oneOf": [
               {
-                "allOf": [{ "$ref": "multilingual-text.json" }]
+                "allOf": [
+                  {
+                    "$ref": "multilingual-text.json"
+                  }
+                ]
               },
               {
-                "allOf": [{ "$ref": "supplemental-material.json" }]
+                "allOf": [
+                  {
+                    "$ref": "supplemental-material.json"
+                  }
+                ]
               }
             ]
           }
@@ -63,20 +86,44 @@
         {
           "oneOf": [
             {
-              "allOf": [{ "$ref": "multilingual-text.json" }]
+              "allOf": [
+                {
+                  "$ref": "multilingual-text.json"
+                }
+              ]
             },
             {
-              "allOf": [{ "$ref": "supplemental-material.json" }]
+              "allOf": [
+                {
+                  "$ref": "supplemental-material.json"
+                }
+              ]
             }
           ]
         }
       ],
-      "@id": "dcterms:references",
       "$comment": "Ähnlich zu dcterms:relation."
     },
     "language": {
-      "allOf": [{ "$ref": "language.json" }],
+      "allOf": [
+        {
+          "$ref": "language.json"
+        }
+      ],
       "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel."
+    }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "property": "lrmi:LearningResource"
+    },
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:LearningResource"
     }
   }
 }

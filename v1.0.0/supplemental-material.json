@@ -7,7 +7,11 @@
   "additionalProperties": false,
   "properties": {
     "title": {
-      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "allOf": [
+        {
+          "$ref": "multilingual-text.json"
+        }
+      ],
       "description": "Titel oder Name des verlinkten Werks."
     },
     "url": {
@@ -15,8 +19,25 @@
       "format": "uri"
     },
     "note": {
-      "allOf": [{ "$ref": "multilingual-text.json" }],
+      "allOf": [
+        {
+          "$ref": "multilingual-text.json"
+        }
+      ],
       "description": "Optionale Anmerkung zur Verwendung oder Beziehung des Werks zum Buch/Kapitel."
+    }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "property": "dcterms:relation"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:isRelatedTo"
     }
   }
 }

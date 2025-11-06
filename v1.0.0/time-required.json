@@ -4,5 +4,14 @@
   "type": "string",
   "format": "duration",
   "description": "Angedachte Bearbeitungsdauer für Lernende.",
-  "@id": "schema:timeRequired"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:timeRequired"
+    }
+  }
 }

@@ -3,9 +3,24 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/keywords.json",
   "type": "array",
   "description": "Liste von Schlag-/Stichwörtern, welche das Buch und dessen (Lern-)Inhalte beschreiben.",
-  "@id": "schema:keywords",
   "minItems": 1,
   "items": {
     "$ref": "keyword.json"
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:subject"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:subject"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:keywords"
+    }
   }
 }

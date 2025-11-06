@@ -4,5 +4,20 @@
   "type": "string",
   "format": "uri",
   "description": "Eindeutiger Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
-  "@id": "schema:identifier"
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:identifier"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:identifier"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:identifier"
+    }
+  }
 }

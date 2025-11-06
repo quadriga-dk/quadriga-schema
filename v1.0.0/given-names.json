@@ -3,5 +3,14 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/given-names.json",
   "type": "string",
   "description": "Vorname(n) der Person",
-  "@id": "schema:givenName"
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:givenName"
+    }
+  }
 }
