@@ -4,6 +4,15 @@
 
 set -e  # Exit on error
 
+# Validate x-mappings before building
+echo "Validating x-mappings..."
+python3 validate-x-mappings.py
+if [ $? -ne 0 ]; then
+  echo "ERROR: x-mappings validation failed. Please fix the errors before building."
+  exit 1
+fi
+echo ""
+
 echo "Building HTML for QUADRIGA schema versions..."
 
 # Create build directory
