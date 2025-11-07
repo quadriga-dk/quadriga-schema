@@ -6,15 +6,7 @@
   "minItems": 1,
   "uniqueItems": true,
   "items": {
-    "type": "object",
-    "description": "Eine Voraussetzung.",
-    "additionalProperties": false,
-    "properties": {
-      "description": {
-        "$ref": "multilingual-text.json"
-      }
-    },
-    "required": ["description"]
+    "$ref": "multilingual-text.json"
   },
   "x-mappings": {
     "dc": null,
