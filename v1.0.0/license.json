@@ -6,11 +6,11 @@
   "required": ["content"],
   "properties": {
     "content": {
-      "allOf": [{ "$ref": "license-entry.json" }],
+      "$ref": "license-entry.json",
       "description": "Lizenz des Buchs"
     },
     "code": {
-      "allOf": [{ "$ref": "license-entry.json" }],
+      "$ref": "license-entry.json",
       "description": "Lizenz des Codes"
     }
   }
