@@ -93,8 +93,72 @@ target-group:
   - Promovierende
 ```
 
-You can use `latest` in the schema URL, but in production we recommend picking a
-specific `schema-version` like `v1.0.0`.
+You can use `latest` in the schema URL, but in production we recommend picking
+a specific `schema-version` like `v1.0.0`.
+
+### Vocabulary Mappings (x-mappings)
+
+The QUADRIGA schema uses a custom `x-mappings` extension field to document how
+each property maps to standard vocabularies. This approach co-locates crosswalk
+mappings directly within the schema definition, making them machine-readable
+and version-controlled alongside the schema itself.
+
+#### Structure
+
+Each schema property can include an `x-mappings` field that maps to five target
+vocabularies:
+
+```json
+{
+  "title": {
+    "type": "string",
+    "description": "Titel des Buchs",
+    "x-mappings": {
+      "dc": {
+        "relation": "skos:exactMatch",
+        "property": "dc:title"
+      },
+      "dcterms": {
+        "relation": "skos:exactMatch",
+        "property": "dcterms:title"
+      },
+      "lrmi": null,
+      "modalia": null,
+      "schema": {
+        "relation": "skos:exactMatch",
+        "property": "schema:name"
+      }
+    }
+  }
+}
+```
+
+#### Target Vocabularies
+
+- **dc**: [Dublin Core Elements](http://purl.org/dc/elements/1.1/)
+- **dcterms**: [DCMI Metadata Terms](http://purl.org/dc/terms/)
+- **lrmi**: [Learning Resource Metadata Initiative](http://purl.org/dcx/lrmi-terms/)
+- **modalia**: [Modalia ontology](https://purl.org/ontology/modalia#)
+- **schema**: [Schema.org](http://schema.org/)
+
+#### SKOS Relation Types
+
+Mappings use [SKOS mapping relations](https://www.w3.org/TR/skos-reference/#mapping)
+to indicate semantic relationships:
+
+- `skos:exactMatch`: Properties are semantically equivalent
+- `skos:closeMatch`: Properties are closely related but not identical
+- `skos:broadMatch`: Target property is broader in meaning
+- `skos:narrowMatch`: Target property is narrower in meaning
+- `skos:relatedMatch`: Properties are related but not hierarchically
+
+Use `null` when no appropriate mapping was identified for a vocabulary.
+
+#### Meta-Schema
+
+The `x-mappings` structure is validated by
+[x-mappings-meta-schema.json](./x-mappings-meta-schema.json), which ensures
+consistent mapping documentation across all schema files.
 
 ## Documentation
 
