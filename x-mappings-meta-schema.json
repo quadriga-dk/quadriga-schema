@@ -6,60 +6,124 @@
   "type": "object",
   "properties": {
     "dc": {
-      "$ref": "#/$defs/mapping-entry",
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/dc-mapping-entry" }
+      ],
       "description": "Mapping to Dublin Core Elements (http://purl.org/dc/elements/1.1/)"
     },
     "dcterms": {
-      "$ref": "#/$defs/mapping-entry",
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/dcterms-mapping-entry" }
+      ],
       "description": "Mapping to DCMI Metadata Terms (http://purl.org/dc/terms/)"
     },
     "lrmi": {
-      "$ref": "#/$defs/mapping-entry",
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/lrmi-mapping-entry" }
+      ],
       "description": "Mapping to Learning Resource Metadata Initiative terms (http://purl.org/dcx/lrmi-terms/)"
     },
     "modalia": {
-      "$ref": "#/$defs/mapping-entry",
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/modalia-mapping-entry" }
+      ],
       "description": "Mapping to Modalia ontology (https://purl.org/ontology/modalia#)"
     },
     "schema": {
-      "$ref": "#/$defs/mapping-entry",
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/schema-mapping-entry" }
+      ],
       "description": "Mapping to Schema.org vocabulary (http://schema.org/)"
     }
   },
   "additionalProperties": false,
   "required": ["dc", "dcterms", "lrmi", "modalia", "schema"],
   "$defs": {
-    "mapping-entry": {
-      "oneOf": [
-        {
-          "type": "null",
-          "description": "No mapping exists for this vocabulary"
-        },
-        {
-          "type": "object",
-          "description": "A mapping to a property in the target vocabulary",
-          "properties": {
-            "relation": {
-              "type": "string",
-              "enum": [
-                "skos:exactMatch",
-                "skos:closeMatch",
-                "skos:broadMatch",
-                "skos:narrowMatch",
-                "skos:relatedMatch"
-              ],
-              "description": "SKOS mapping relation type indicating the semantic relationship between the schema property and the target vocabulary property. See https://www.w3.org/TR/skos-reference/#mapping"
-            },
-            "property": {
-              "type": "string",
-              "pattern": "^[a-z]+:[a-zA-Z]+$",
-              "description": "The target property in namespace:property format (e.g., 'dc:title', 'schema:name')"
-            }
-          },
-          "required": ["relation", "property"],
-          "additionalProperties": false
+    "relation": {
+      "type": "string",
+      "enum": [
+        "skos:exactMatch",
+        "skos:closeMatch",
+        "skos:broadMatch",
+        "skos:narrowMatch",
+        "skos:relatedMatch"
+      ],
+      "description": "SKOS mapping relation type indicating the semantic relationship between the schema property and the target vocabulary property. See https://www.w3.org/TR/skos-reference/#mapping"
+    },
+    "dc-mapping-entry": {
+      "type": "object",
+      "description": "A mapping to a Dublin Core property",
+      "properties": {
+        "relation": { "$ref": "#/$defs/relation" },
+        "property": {
+          "type": "string",
+          "pattern": "^dc:[a-zA-Z]+$",
+          "description": "The target property in namespace:property format (e.g., 'dc:title')"
         }
-      ]
+      },
+      "required": ["relation", "property"],
+      "additionalProperties": false
+    },
+    "dcterms-mapping-entry": {
+      "type": "object",
+      "description": "A mapping to a DCMI Terms property",
+      "properties": {
+        "relation": { "$ref": "#/$defs/relation" },
+        "property": {
+          "type": "string",
+          "pattern": "^dcterms:[a-zA-Z]+$",
+          "description": "The target property in namespace:property format (e.g., 'dcterms:created')"
+        }
+      },
+      "required": ["relation", "property"],
+      "additionalProperties": false
+    },
+    "lrmi-mapping-entry": {
+      "type": "object",
+      "description": "A mapping to an LRMI property",
+      "properties": {
+        "relation": { "$ref": "#/$defs/relation" },
+        "property": {
+          "type": "string",
+          "pattern": "^lrmi:[a-zA-Z]+$",
+          "description": "The target property in namespace:property format (e.g., 'lrmi:educationalLevel')"
+        }
+      },
+      "required": ["relation", "property"],
+      "additionalProperties": false
+    },
+    "modalia-mapping-entry": {
+      "type": "object",
+      "description": "A mapping to a Modalia property",
+      "properties": {
+        "relation": { "$ref": "#/$defs/relation" },
+        "property": {
+          "type": "string",
+          "pattern": "^modalia:[a-zA-Z]+$",
+          "description": "The target property in namespace:property format (e.g., 'modalia:modality')"
+        }
+      },
+      "required": ["relation", "property"],
+      "additionalProperties": false
+    },
+    "schema-mapping-entry": {
+      "type": "object",
+      "description": "A mapping to a Schema.org property",
+      "properties": {
+        "relation": { "$ref": "#/$defs/relation" },
+        "property": {
+          "type": "string",
+          "pattern": "^schema:[a-zA-Z]+$",
+          "description": "The target property in namespace:property format (e.g., 'schema:name')"
+        }
+      },
+      "required": ["relation", "property"],
+      "additionalProperties": false
     }
   }
 }
