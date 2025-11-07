@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/context-of-creation.json",
+  "description": "Verweis auf QUADRIGA",
   "type": "string",
   "enum": [
     "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
   ],
-  "description": "Verweis auf QUADRIGA",
   "x-mappings": {
     "dc": null,
     "dcterms": null,

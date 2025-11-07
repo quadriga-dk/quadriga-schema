@@ -4,13 +4,13 @@
   "description": "Sprache des Buchs als ISO639-1 Sprachcode.",
   "oneOf": [
     {
+      "description": "Einzelne Sprache als ISO639-1 Code",
       "type": "string",
-      "pattern": "^[a-z]{2}$",
-      "description": "Einzelne Sprache als ISO639-1 Code"
+      "pattern": "^[a-z]{2}$"
     },
     {
-      "type": "array",
       "description": "Mehrere Sprachen als ISO639-1 Codes",
+      "type": "array",
       "minItems": 1,
       "uniqueItems": true,
       "items": {

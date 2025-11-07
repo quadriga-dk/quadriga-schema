@@ -5,17 +5,17 @@
   "required": ["person", "date", "description"],
   "properties": {
     "person": {
-      "$ref": "person.json",
-      "description": "Für die Qualitätssicherungsmaßnahme verantwortliche Person."
+      "description": "Für die Qualitätssicherungsmaßnahme verantwortliche Person.",
+      "$ref": "person.json"
     },
     "date": {
+      "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde.",
       "type": "string",
-      "format": "date",
-      "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde."
+      "format": "date"
     },
     "description": {
-      "$ref": "multilingual-text.json",
-      "description": "Beschreibung der Qualitätssicherungsmaßnahme. Ggf. mit Verweis auf Checklisten, Ergebnisprotokolle o.ä."
+      "description": "Beschreibung der Qualitätssicherungsmaßnahme. Ggf. mit Verweis auf Checklisten, Ergebnisprotokolle o.ä.",
+      "$ref": "multilingual-text.json"
     }
   }
 }

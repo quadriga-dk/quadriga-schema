@@ -1,8 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
-  "title": "QUADRIGA OER",
-  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
@@ -11,6 +8,9 @@
     "schema": "http://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#"
   },
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
+  "title": "QUADRIGA OER",
+  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
   "type": "object",
   "required": [
     "authors",
