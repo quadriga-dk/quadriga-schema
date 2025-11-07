@@ -7,11 +7,7 @@
   "additionalProperties": false,
   "properties": {
     "title": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Titel oder Name des verlinkten Werks."
     },
     "url": {
@@ -19,11 +15,7 @@
       "format": "uri"
     },
     "note": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Optionale Anmerkung zur Verwendung oder Beziehung des Werks zum Buch/Kapitel."
     }
   },

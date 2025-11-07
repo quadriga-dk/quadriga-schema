@@ -11,19 +11,11 @@
   ],
   "properties": {
     "title": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Kapitelüberschrift"
     },
     "description": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Beschreibung des Kapitelinhalts."
     },
     "url": {
@@ -32,28 +24,16 @@
       "format": "uri"
     },
     "time-required": {
-      "allOf": [
-        {
-          "$ref": "time-required.json"
-        }
-      ],
+      "$ref": "time-required.json",
       "description": "Geschätzte Bearbeitungsdauer des Kapitels."
     },
     "learning-objectives": {
-      "allOf": [
-        {
-          "$ref": "learning-objectives.json"
-        }
-      ],
+      "$ref": "learning-objectives.json",
       "description": "Liste der Feinlernziele des Kapitels.",
       "$comment": "Ähnlich zu schema:teaches."
     },
     "learning-goal": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Kurze Benennung des Groblernziels des Kapitels.",
       "$comment": "Ähnlich zu schema:teaches."
     },
@@ -67,18 +47,10 @@
           "items": {
             "oneOf": [
               {
-                "allOf": [
-                  {
-                    "$ref": "multilingual-text.json"
-                  }
-                ]
+                "$ref": "multilingual-text.json"
               },
               {
-                "allOf": [
-                  {
-                    "$ref": "supplemental-material.json"
-                  }
-                ]
+                "$ref": "supplemental-material.json"
               }
             ]
           }
@@ -86,18 +58,10 @@
         {
           "oneOf": [
             {
-              "allOf": [
-                {
-                  "$ref": "multilingual-text.json"
-                }
-              ]
+              "$ref": "multilingual-text.json"
             },
             {
-              "allOf": [
-                {
-                  "$ref": "supplemental-material.json"
-                }
-              ]
+              "$ref": "supplemental-material.json"
             }
           ]
         }
@@ -105,11 +69,7 @@
       "$comment": "Ähnlich zu dcterms:relation."
     },
     "language": {
-      "allOf": [
-        {
-          "$ref": "language.json"
-        }
-      ],
+      "$ref": "language.json",
       "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel."
     }
   },

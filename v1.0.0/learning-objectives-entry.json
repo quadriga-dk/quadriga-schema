@@ -11,11 +11,7 @@
   "additionalProperties": false,
   "properties": {
     "learning-objective": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Formulierung des Lernziels."
     },
     "competency": {
@@ -28,11 +24,7 @@
       "$ref": "blooms-category.json"
     },
     "assessment": {
-      "allOf": [
-        {
-          "$ref": "multilingual-text.json"
-        }
-      ],
+      "$ref": "multilingual-text.json",
       "description": "Beschreibung der Art der Überprüfung des Lernziels."
     },
     "jupyter-book-glue-id": {

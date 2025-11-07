@@ -1,12 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/author.json",
+  "$ref": "person.json",
   "description": "Ein:e Autor:in des Buchs. Idealerweise wird die Person strukturiert mit Nachname(n), Vorname(n), ORCID und CRediT-Rolle angegeben.",
-  "allOf": [
-    {
-      "$ref": "person.json"
-    }
-  ],
   "x-mappings": {
     "dc": {
       "relation": "skos:broadMatch",
