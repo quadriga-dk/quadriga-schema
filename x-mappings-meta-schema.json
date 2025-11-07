@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/x-mappings-meta-schema.json",
+  "title": "QUADRIGA x-mappings Meta-Schema",
+  "description": "Meta-schema for validating x-mappings vocabulary crosswalk annotations in QUADRIGA JSON Schema files. The x-mappings extension documents how schema properties map to standard vocabularies (Dublin Core, DCMI Terms, LRMI, Schema.org, Modalia) using SKOS relationship types.",
+  "type": "object",
+  "properties": {
+    "dc": {
+      "$ref": "#/$defs/mapping-entry",
+      "description": "Mapping to Dublin Core Elements (http://purl.org/dc/elements/1.1/)"
+    },
+    "dcterms": {
+      "$ref": "#/$defs/mapping-entry",
+      "description": "Mapping to DCMI Metadata Terms (http://purl.org/dc/terms/)"
+    },
+    "lrmi": {
+      "$ref": "#/$defs/mapping-entry",
+      "description": "Mapping to Learning Resource Metadata Initiative terms (http://purl.org/dcx/lrmi-terms/)"
+    },
+    "modalia": {
+      "$ref": "#/$defs/mapping-entry",
+      "description": "Mapping to Modalia ontology (https://purl.org/ontology/modalia#)"
+    },
+    "schema": {
+      "$ref": "#/$defs/mapping-entry",
+      "description": "Mapping to Schema.org vocabulary (http://schema.org/)"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["dc", "dcterms", "lrmi", "modalia", "schema"],
+  "$defs": {
+    "mapping-entry": {
+      "oneOf": [
+        {
+          "type": "null",
+          "description": "No mapping exists for this vocabulary"
+        },
+        {
+          "type": "object",
+          "description": "A mapping to a property in the target vocabulary",
+          "properties": {
+            "relation": {
+              "type": "string",
+              "enum": [
+                "skos:exactMatch",
+                "skos:closeMatch",
+                "skos:broadMatch",
+                "skos:narrowMatch",
+                "skos:relatedMatch"
+              ],
+              "description": "SKOS mapping relation type indicating the semantic relationship between the schema property and the target vocabulary property. See https://www.w3.org/TR/skos-reference/#mapping"
+            },
+            "property": {
+              "type": "string",
+              "pattern": "^[a-z]+:[a-zA-Z]+$",
+              "description": "The target property in namespace:property format (e.g., 'dc:title', 'schema:name')"
+            }
+          },
+          "required": ["relation", "property"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
