@@ -4,13 +4,13 @@
   "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.",
   "oneOf": [
     {
-      "type": "string",
-      "description": "Vollständiger Name der Person."
+      "description": "Vollständiger Name der Person.",
+      "type": "string"
     },
     {
-      "type": "object",
       "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.",
       "$comment": "Andere Schlüssel können nach Bedarf angelegt werden.",
+      "type": "object",
       "required": ["given-names", "family-names"],
       "additionalProperties": true,
       "properties": {

@@ -11,12 +11,12 @@
   ],
   "properties": {
     "title": {
-      "$ref": "multilingual-text.json",
-      "description": "Kapitelüberschrift"
+      "description": "Kapitelüberschrift",
+      "$ref": "multilingual-text.json"
     },
     "description": {
-      "$ref": "multilingual-text.json",
-      "description": "Beschreibung des Kapitelinhalts."
+      "description": "Beschreibung des Kapitelinhalts.",
+      "$ref": "multilingual-text.json"
     },
     "url": {
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
@@ -24,21 +24,22 @@
       "format": "uri"
     },
     "time-required": {
-      "$ref": "time-required.json",
-      "description": "Geschätzte Bearbeitungsdauer des Kapitels."
+      "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
+      "$ref": "time-required.json"
     },
     "learning-objectives": {
-      "$ref": "learning-objectives.json",
       "description": "Liste der Feinlernziele des Kapitels.",
+      "$ref": "learning-objectives.json",
       "$comment": "Ähnlich zu schema:teaches."
     },
     "learning-goal": {
-      "$ref": "multilingual-text.json",
       "description": "Kurze Benennung des Groblernziels des Kapitels.",
+      "$ref": "multilingual-text.json",
       "$comment": "Ähnlich zu schema:teaches."
     },
     "supplemented-by": {
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
+      "$comment": "Ähnlich zu dcterms:relation.",
       "oneOf": [
         {
           "type": "array",
@@ -65,12 +66,11 @@
             }
           ]
         }
-      ],
-      "$comment": "Ähnlich zu dcterms:relation."
+      ]
     },
     "language": {
-      "$ref": "language.json",
-      "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel."
+      "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel.",
+      "$ref": "language.json"
     }
   },
   "x-mappings": {

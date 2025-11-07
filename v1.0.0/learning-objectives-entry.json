@@ -11,8 +11,8 @@
   "additionalProperties": false,
   "properties": {
     "learning-objective": {
-      "$ref": "multilingual-text.json",
-      "description": "Formulierung des Lernziels."
+      "description": "Formulierung des Lernziels.",
+      "$ref": "multilingual-text.json"
     },
     "competency": {
       "$ref": "competency.json"
@@ -24,12 +24,12 @@
       "$ref": "blooms-category.json"
     },
     "assessment": {
-      "$ref": "multilingual-text.json",
-      "description": "Beschreibung der Art der Überprüfung des Lernziels."
+      "description": "Beschreibung der Art der Überprüfung des Lernziels.",
+      "$ref": "multilingual-text.json"
     },
     "jupyter-book-glue-id": {
-      "type": "string",
-      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`. Nur für die interne Verwendung beim Schreiben der OER."
+      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`. Nur für die interne Verwendung beim Schreiben der OER.",
+      "type": "string"
     }
   },
   "x-mappings": {

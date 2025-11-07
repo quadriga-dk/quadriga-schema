@@ -8,8 +8,8 @@
       "minLength": 1
     },
     {
-      "type": "object",
       "description": "Sollen Metadaten mehrsprachig definiert werden, so wird als Key der Sprachcode nach ISO639-1 verwendet.",
+      "type": "object",
       "additionalProperties": false,
       "minProperties": 1,
       "patternProperties": {

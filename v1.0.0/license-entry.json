@@ -3,13 +3,13 @@
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/license-entry.json",
   "oneOf": [
     {
+      "description": "URL zur Lizenz",
       "type": "string",
-      "format": "uri",
-      "description": "URL zur Lizenz"
+      "format": "uri"
     },
     {
-      "type": "object",
       "description": "Lizenzname und URL zur Lizenz",
+      "type": "object",
       "required": ["name", "url"],
       "additionalProperties": false,
       "properties": {

@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/git.json",
+  "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
   "type": "string",
   "format": "uri",
-  "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
   "x-mappings": {
     "dc": null,
     "dcterms": null,

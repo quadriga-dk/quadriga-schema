@@ -1,17 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/license.json",
-  "type": "object",
   "description": "Lizenz des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
+  "type": "object",
   "required": ["content"],
   "properties": {
     "content": {
-      "$ref": "license-entry.json",
-      "description": "Lizenz des Buchs"
+      "description": "Lizenz des Buchs",
+      "$ref": "license-entry.json"
     },
     "code": {
-      "$ref": "license-entry.json",
-      "description": "Lizenz des Codes"
+      "description": "Lizenz des Codes",
+      "$ref": "license-entry.json"
     }
   }
 }
