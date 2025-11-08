@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/quality-assurance.json",
+  "title": "quality-assurance – Qualitätssicherung",
   "description": "Liste der Qualitätsmanagementhandlungen/-maßnahmen, die durchgeführt wurden. Durchführende Person sowie Datum der Durchführung sind jeweils verpflichtend. Eine Beschreibung der QM-Handlung wird empfohlen.",
   "type": "array",
   "minItems": 1,

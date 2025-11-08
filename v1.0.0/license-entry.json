@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/license-entry.json",
+  "title": "license-entry – Lizenzangabe",
+  "description": "Angabe einer Lizenz als URL oder als Kombination aus Lizenzname und URL.",
   "oneOf": [
     {
       "description": "URL zur Lizenz",

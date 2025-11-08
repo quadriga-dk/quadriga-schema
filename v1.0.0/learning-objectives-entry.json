@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/learning-objectives-entry.json",
+  "title": "learning-objectives-entry – Lernzielbeschreibung",
+  "description": "Umfassende Beschreibung eines einzelnen Lernziels mit zugehöriger Kompetenz, Datenflussschritt und Bloom'scher Kategorie.",
   "type": "object",
   "required": [
     "learning-objective",

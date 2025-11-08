@@ -9,7 +9,7 @@
     "skos": "http://www.w3.org/2004/02/skos/core#"
   },
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
-  "title": "QUADRIGA OER",
+  "title": "QUADRIGA Jupyter Book",
   "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
   "type": "object",
   "required": [

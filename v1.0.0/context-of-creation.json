@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/context-of-creation.json",
-  "description": "Verweis auf QUADRIGA",
+  "title": "context-of-creation – Entstehungskontext",
+  "description": "Beschreibung des Rahmens, in dem das Buch / die OER entstanden sind.\n\nFür QUADRIGA gibt es eine fest definierte formulierung.",
   "type": "string",
   "enum": [
     "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
@@ -11,7 +12,7 @@
     "dcterms": null,
     "lrmi": null,
     "modalia": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:closeMatch",
       "property": "modalia:Community"
     },
     "schema": null
