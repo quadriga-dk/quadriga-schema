@@ -23,9 +23,6 @@
     },
     "lrmi": null,
     "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:keywords"
-    }
+    "schema": null
   }
 }
