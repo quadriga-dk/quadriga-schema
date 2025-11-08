@@ -59,5 +59,15 @@
         }
       }
     ]
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:roleName"
+    }
   }
 }

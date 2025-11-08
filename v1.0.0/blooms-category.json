@@ -12,18 +12,5 @@
     "5 Bewerten",
     "6 Erschaffen",
     "nicht anwendbar"
-  ],
-  "x-mappings": {
-    "dc": null,
-    "dcterms": null,
-    "lrmi": {
-      "relation": "skos:exactMatch",
-      "property": "lrmi:educationalFramework"
-    },
-    "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:educationalFramework"
-    }
-  }
+  ]
 }

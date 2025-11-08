@@ -26,10 +26,16 @@
   },
   "x-mappings": {
     "dc": null,
-    "dcterms": {
-      "relation": "skos:closeMatch",
-      "property": "dcterms:relation"
-    },
+    "dcterms": [
+      {
+        "relation": "skos:closeMatch",
+        "property": "dcterms:relation"
+      },
+      {
+        "relation": "skos:closeMatch",
+        "property": "dcterms:references"
+      }
+    ],
     "lrmi": null,
     "modalia": null,
     "schema": {

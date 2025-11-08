@@ -109,5 +109,18 @@
     "used-tools": {
       "$ref": "used-tools.json"
     }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "property": "lrmi:LearningResource"
+    },
+    "modalia": null,
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:Book"
+    }
   }
 }

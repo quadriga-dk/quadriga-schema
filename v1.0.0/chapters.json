@@ -8,5 +8,18 @@
   "uniqueItems": true,
   "items": {
     "$ref": "chapter.json"
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "property": "dcterms:hasPart"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:hasPart"
+    }
   }
 }

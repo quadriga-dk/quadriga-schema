@@ -7,7 +7,10 @@
   "format": "uri",
   "x-mappings": {
     "dc": null,
-    "dcterms": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "property": "dcterms:source"
+    },
     "lrmi": null,
     "modalia": null,
     "schema": {

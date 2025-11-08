@@ -6,11 +6,11 @@
   "$ref": "person.json",
   "x-mappings": {
     "dc": {
-      "relation": "skos:broadMatch",
+      "relation": "skos:exactMatch",
       "property": "dc:contributor"
     },
     "dcterms": {
-      "relation": "skos:broadMatch",
+      "relation": "skos:exactMatch",
       "property": "dcterms:contributor"
     },
     "lrmi": null,
