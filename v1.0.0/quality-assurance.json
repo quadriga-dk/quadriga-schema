@@ -7,5 +7,15 @@
   "minItems": 1,
   "items": {
     "$ref": "quality-assurance-event.json"
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "property": "dcterms:provenance"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
   }
 }

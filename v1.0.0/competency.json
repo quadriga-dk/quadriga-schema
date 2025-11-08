@@ -24,17 +24,11 @@
   "x-mappings": {
     "dc": null,
     "dcterms": null,
-    "lrmi": {
-      "relation": "skos:closeMatch",
-      "property": "lrmi:educationalFramework"
-    },
+    "lrmi": null,
     "modalia": {
       "relation": "skos:closeMatch",
       "property": "modalia:Skill"
     },
-    "schema": {
-      "relation": "skos:closeMatch",
-      "property": "schema:educationalFramework"
-    }
+    "schema": null
   }
 }

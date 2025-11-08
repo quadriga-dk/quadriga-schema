@@ -14,5 +14,21 @@
       "description": "Lizenz des Codes",
       "$ref": "license-entry.json"
     }
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:rights"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:license"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:license"
+    }
   }
 }

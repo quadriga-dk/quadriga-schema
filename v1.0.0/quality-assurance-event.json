@@ -16,7 +16,7 @@
       "format": "date",
       "x-mappings": {
         "dc": {
-          "relation": "skos:exactMatch",
+          "relation": "skos:broadMatch",
           "property": "dc:date"
         },
         "dcterms": null,
