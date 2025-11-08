@@ -15,6 +15,7 @@
       "minItems": 1,
       "uniqueItems": true,
       "items": {
+        "description": "Einzelne Sprache als ISO639-1 Code.",
         "type": "string",
         "pattern": "^[a-z]{2}$"
       }

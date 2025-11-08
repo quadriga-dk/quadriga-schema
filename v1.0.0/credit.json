@@ -29,7 +29,10 @@
         "type": "object",
         "properties": {
           "role": {
+            "title": "role – CRediT Rolle",
+            "description": "CRediT-Rolle als URL.",
             "type": "string",
+            "format": "url",
             "enum": [
               "https://credit.niso.org/contributor-roles/conceptualization/",
               "https://credit.niso.org/contributor-roles/data-curation/",
@@ -48,6 +51,8 @@
             ]
           },
           "degree": {
+            "title": "degree – Beitragsstärke",
+            "description": "Anteil des Beitrags in der angegebenen Rolle. Diese Angaben zur Beitragsstärke beschreiben den Umfang der Beteiligung und nicht hierarchische Ordnungen.",
             "type": "string",
             "enum": ["lead", "equal", "supporting"]
           }

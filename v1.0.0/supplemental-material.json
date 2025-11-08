@@ -8,14 +8,18 @@
   "additionalProperties": false,
   "properties": {
     "title": {
+      "title": "title – Titel / Name",
       "description": "Titel oder Name des verlinkten Werks.",
       "$ref": "multilingual-text.json"
     },
     "url": {
+      "title": "url – URL des Werks",
+      "description": "URL des genutzten / referenzierten Werks. Diese URL sollte direkt zum Werk oder zu einer, das Werk beschreibenden Seite führen.",
       "type": "string",
       "format": "uri"
     },
     "note": {
+      "title": "note – Anmerkung",
       "description": "Optionale Anmerkung zur Verwendung oder Beziehung des Werks zum Buch/Kapitel.",
       "$ref": "multilingual-text.json"
     }

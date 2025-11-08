@@ -16,9 +16,13 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "title": "name – Name der Lizenz",
+          "description": "Name der Lizenz. Idealerweise nach [SPDX](https://spdx.org/licenses/) oder einem ähnlichen Verzeichnis benannt.",
           "type": "string"
         },
         "url": {
+          "title": "url – URL der Lizenz",
+          "description": "URL zum Lizenztext in der hier genutzten Fassung.",
           "type": "string",
           "format": "uri"
         }

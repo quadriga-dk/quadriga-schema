@@ -13,33 +13,49 @@
   ],
   "properties": {
     "title": {
-      "description": "Kapitelüberschrift",
+      "title": "title – Kapitelüberschrift",
+      "description": "Kapitelüberschrift.\n\nDieser Titel sollte beim Zitieren eine Kapitels genutzt werden.",
       "$ref": "multilingual-text.json"
     },
     "description": {
+      "title": "description – Kapitelinhaltsbeschreibung",
       "description": "Beschreibung des Kapitelinhalts.",
       "$ref": "multilingual-text.json"
     },
     "url": {
+      "title": "url – URL der Web-Ansicht",
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
       "type": "string",
       "format": "uri"
     },
     "time-required": {
+      "title": "time-required – Bearbeitungszeit (Kapitel)",
       "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
       "$ref": "time-required.json"
     },
     "learning-objectives": {
-      "description": "Liste der Feinlernziele des Kapitels.",
-      "$ref": "learning-objectives.json",
-      "$comment": "Ähnlich zu schema:teaches."
+      "$ref": "learning-objectives.json"
     },
     "learning-goal": {
+      "title": "learning-goal – Groblernziel",
       "description": "Kurze Benennung des Groblernziels des Kapitels.",
       "$ref": "multilingual-text.json",
-      "$comment": "Ähnlich zu schema:teaches."
+      "x-mappings": {
+        "dc": null,
+        "dcterms": null,
+        "lrmi": {
+          "relation": "skos:closeMatch",
+          "property": "lrmi:teaches"
+        },
+        "modalia": null,
+        "schema": {
+          "relation": "skos:closeMatch",
+          "property": "schema:teaches"
+        }
+      }
     },
     "supplemented-by": {
+      "title": "supplemented-by – Ergänzende / Genutzte Materialien",
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
       "$comment": "Ähnlich zu dcterms:relation.",
       "oneOf": [
@@ -71,6 +87,7 @@
       ]
     },
     "language": {
+      "title": "language – Kapitelsprache",
       "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel.",
       "$ref": "language.json"
     }

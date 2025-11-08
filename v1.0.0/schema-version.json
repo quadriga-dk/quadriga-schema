@@ -4,5 +4,15 @@
   "title": "schema-version – Schemaversion",
   "description": "Versionsnummer des QUADRIGA-Metadatenschemas",
   "type": "string",
-  "enum": ["1.0.0"]
+  "enum": ["1.0.0"],
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:version"
+    }
+  }
 }

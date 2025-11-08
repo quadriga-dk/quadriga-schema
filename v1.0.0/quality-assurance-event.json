@@ -11,9 +11,19 @@
       "$ref": "person.json"
     },
     "date": {
-      "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde.",
+      "description": "Datum, an dem die Qualitätssicherungsmaßnahme stattfand bzw. abgeschlossen wurde. Datumsangabe im ISO8601-Format.",
       "type": "string",
-      "format": "date"
+      "format": "date",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:exactMatch",
+          "property": "dc:date"
+        },
+        "dcterms": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
     },
     "description": {
       "description": "Beschreibung der Qualitätssicherungsmaßnahme. Ggf. mit Verweis auf Checklisten, Ergebnisprotokolle o.ä.",
