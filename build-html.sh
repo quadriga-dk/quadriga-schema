@@ -26,7 +26,7 @@ for version_dir in v*/; do
   if [ -d "$version_dir" ] && [ -f "$version_dir/schema.json" ]; then
     echo "Building HTML for $version_dir"
     mkdir -p "_build/$version_dir"
-    generate-schema-doc --config template_name=js "$version_dir/schema.json" "_build/$version_dir/schema.html"
+    generate-schema-doc --config custom_template_path=templates/js/base.html "$version_dir/schema.json" "_build/$version_dir/schema.html"
     # Create index.html redirect in version folder
     echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > "_build/$version_dir/index.html"
   fi
@@ -36,7 +36,7 @@ done
 if [ -f "latest/schema.json" ]; then
   echo "Building HTML for latest"
   mkdir -p "_build/latest"
-  generate-schema-doc --config template_name=js "latest/schema.json" "_build/latest/schema.html"
+  generate-schema-doc --config custom_template_path=templates/js/base.html "latest/schema.json" "_build/latest/schema.html"
   # Create index.html redirect in latest folder
   echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > "_build/latest/index.html"
 fi
