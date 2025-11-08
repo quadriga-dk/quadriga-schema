@@ -4,6 +4,18 @@
 
 set -e  # Exit on error
 
+# Function to create HTML redirect files for extensionless URLs
+# Usage: create_extensionless_redirects <directory>
+create_extensionless_redirects() {
+  local dir="$1"
+  for json_file in "$dir"*.json; do
+    if [ -f "$json_file" ]; then
+      basename_no_ext=$(basename "$json_file" .json)
+      echo "<meta http-equiv=\"Refresh\" content=\"0; url=${basename_no_ext}.json\" />" > "${dir}${basename_no_ext}"
+    fi
+  done
+}
+
 # Validate x-mappings before building
 echo "Validating x-mappings..."
 python3 validate-x-mappings.py
@@ -46,12 +58,18 @@ echo "Copying version folders..."
 for version_dir in v*/; do
   if [ -d "$version_dir" ]; then
     cp -r "$version_dir" _build/
+    # Create HTML redirect files for extensionless URLs in version folders
+    create_extensionless_redirects "_build/${version_dir}"
   fi
 done
 
 # Copy latest folder contents (HTML was already built, now copy JSON files)
 echo "Copying latest folder JSON files..."
 cp latest/*.json _build/latest/
+
+# Create HTML redirect files for extensionless URLs
+echo "Creating redirect files for extensionless URLs..."
+create_extensionless_redirects "_build/latest/"
 
 # Copy examples
 echo "Copying examples..."
