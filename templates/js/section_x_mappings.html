@@ -25,9 +25,9 @@
             </thead>
             <tbody>
             {%- for vocab, mapping_node in x_mappings_node.keywords.items() -%}
-                {%- if mapping_node and mapping_node.items -%}
+                {%- if mapping_node and mapping_node.array_items -%}
                     {# Handle array of mappings #}
-                    {%- for mapping_item in mapping_node.items -%}
+                    {%- for mapping_item in mapping_node.array_items -%}
                         {%- set property_node = mapping_item.keywords.get('property') -%}
                         {%- set relation_node = mapping_item.keywords.get('relation') -%}
                         <tr>
