@@ -31,13 +31,15 @@
                         {%- set property_node = mapping_item.keywords.get('property') -%}
                         {%- set relation_node = mapping_item.keywords.get('relation') -%}
                         <tr>
-                            <td>
+                            {%- if loop.first -%}
+                            <td rowspan="{{ mapping_node.array_items|length }}">
                             {%- if vocab in context_mapping -%}
                                 <a href="{{ context_mapping[vocab] }}" target="_blank" rel="noopener noreferrer"><code>{{ vocab }}</code></a>
                             {%- else -%}
                                 <code>{{ vocab }}</code>
                             {%- endif -%}
                             </td>
+                            {%- endif -%}
                             <td>
                             {%- if relation_node -%}
                                 {%- set relation_parts = relation_node.literal.split(':') -%}
