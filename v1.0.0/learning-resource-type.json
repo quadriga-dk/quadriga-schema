@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/learning-resource-type.json",
+  "title": "learning-resource-type – Typ der Lernressource",
+  "description": "Typ der Lernressource. Für QUADRIGA ist dies immer \"Jupyter Book\".",
   "type": "string",
   "enum": ["Jupyter Book"],
   "x-mappings": {

@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/chapter.json",
+  "title": "chapter – Kapitel",
+  "description": "Beschreibung eines Kapitels.",
   "type": "object",
   "required": [
     "title",

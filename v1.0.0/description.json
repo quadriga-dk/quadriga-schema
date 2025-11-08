@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/description.json",
+  "title": "description – Beschreibung",
   "description": "Beschreibung des Buchs.",
   "$ref": "multilingual-text.json",
   "x-mappings": {

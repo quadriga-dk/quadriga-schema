@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/quality-assurance-event.json",
+  "title": "quality-assurance-event – Qualitätssicherungsmaßnahme",
+  "description": "Beschreibung einer durchgeführten Qualitätssicherungsmaßnahme mit verantwortlicher Person, Datum und Beschreibung.",
   "type": "object",
   "required": ["person", "date", "description"],
   "properties": {

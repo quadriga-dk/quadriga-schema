@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/contributor.json",
-  "description": "CRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.",
+  "title": "contributor – Mitarbeiter*in / Beitragende*r",
+  "description": "Person, die an dem Buch mitgewirkt hat, jedoch keine Autor*in ist.\n\nCRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden.",
   "$ref": "person.json",
   "x-mappings": {
     "dc": {

@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/used-tools.json",
+  "title": "used-tools – Verwendete Werkzeuge",
   "description": "Liste von Software-Tools, die bei der Erstellung des Buchs verwendet wurden.",
   "type": "array",
   "minItems": 1,

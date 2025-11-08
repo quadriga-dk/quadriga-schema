@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/identifier.json",
-  "description": "Eindeutiger Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
+  "title": "identifier – Persistenter Identifier",
+  "description": "Persistenter Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
   "type": "string",
   "format": "uri",
   "x-mappings": {
