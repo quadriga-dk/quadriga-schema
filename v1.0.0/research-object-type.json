@@ -8,5 +8,12 @@
   "maxItems": 2,
   "items": {
     "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
   }
 }

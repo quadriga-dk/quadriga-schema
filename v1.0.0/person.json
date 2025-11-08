@@ -2,15 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/person.json",
   "title": "person – Person",
-  "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.",
+  "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.\n\nDie Nutzung der strukturierten Angabe wird ausdrücklich empfohlen.",
   "oneOf": [
     {
       "description": "Vollständiger Name der Person.",
       "type": "string"
     },
     {
-      "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.",
-      "$comment": "Andere Schlüssel können nach Bedarf angelegt werden.",
+      "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.\n\nDie Angabe von ORCID und CRediT wird empfohlen. Weitere Unterfelder können bei Bedarf definiert werden.",
       "type": "object",
       "required": ["given-names", "family-names"],
       "additionalProperties": true,

@@ -12,9 +12,13 @@
       "description": "Strukturierte Angabe des Tools",
       "properties": {
         "name": {
+          "title": "name – Name des Tools",
+          "description": "Name / Titel des genutzten Software-Tools.",
           "$ref": "multilingual-text.json"
         },
         "url": {
+          "title": "url – URL des Tools",
+          "description": "URL, die zum Tool (bspw. (Hersteller-)Website, Download-Seite, …) führt.",
           "type": "string",
           "format": "uri"
         }

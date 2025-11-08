@@ -19,7 +19,7 @@
       "property": "lrmi:learningResourceType"
     },
     "modalia": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:closeMatch",
       "property": "modalia:LearningResourceType"
     },
     "schema": {
