@@ -1,0 +1,87 @@
+{# Try to find x-mappings in the current schema or in a referred schema #}
+{%- set target_schema = schema.refers_to_merged if schema.refers_to_merged else schema -%}
+{%- set x_mappings_node = target_schema.keywords.get('x-mappings') -%}
+
+{# Define context mapping from @context in schema.json #}
+{%- set context_mapping = {
+    'dc': 'http://purl.org/dc/elements/1.1/',
+    'dcterms': 'http://purl.org/dc/terms/',
+    'lrmi': 'http://purl.org/dcx/lrmi-terms/',
+    'modalia': 'https://purl.org/ontology/modalia#',
+    'schema': 'http://schema.org/',
+    'skos': 'http://www.w3.org/2004/02/skos/core#'
+} -%}
+
+{%- if x_mappings_node and x_mappings_node.keywords -%}
+    <div class="x-mappings-section">
+        <div class="badge badge-info">Vocabulary Mappings</div>
+        <table class="table table-sm table-bordered mt-2">
+            <thead>
+                <tr>
+                    <th>Vocabulary</th>
+                    <th>Relationship</th>
+                    <th>Property</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%- for vocab, mapping_node in x_mappings_node.keywords.items() -%}
+                {%- if mapping_node and mapping_node.keywords -%}
+                    {%- set property_node = mapping_node.keywords.get('property') -%}
+                    {%- set relation_node = mapping_node.keywords.get('relation') -%}
+                    <tr>
+                        <td>
+                        {%- if vocab in context_mapping -%}
+                            <a href="{{ context_mapping[vocab] }}" target="_blank" rel="noopener noreferrer"><code>{{ vocab }}</code></a>
+                        {%- else -%}
+                            <code>{{ vocab }}</code>
+                        {%- endif -%}
+                        </td>
+                        <td>
+                        {%- if relation_node -%}
+                            {%- set relation_parts = relation_node.literal.split(':') -%}
+                            {%- if relation_parts|length == 2 and relation_parts[0] in context_mapping -%}
+                                {%- set relation_url = context_mapping[relation_parts[0]] ~ relation_parts[1] -%}
+                                <a href="{{ relation_url }}" target="_blank" rel="noopener noreferrer">
+                                    <span class="badge badge-secondary">{{ relation_node.literal }}</span>
+                                </a>
+                            {%- else -%}
+                                <span class="badge badge-secondary">{{ relation_node.literal }}</span>
+                            {%- endif -%}
+                        {%- else -%}
+                            <span class="text-muted">N/A</span>
+                        {%- endif -%}
+                        </td>
+                        <td>
+                        {%- if property_node -%}
+                            {%- set property_parts = property_node.literal.split(':') -%}
+                            {%- if property_parts|length == 2 and property_parts[0] in context_mapping -%}
+                                {%- set property_url = context_mapping[property_parts[0]] ~ property_parts[1] -%}
+                                <a href="{{ property_url }}" target="_blank" rel="noopener noreferrer">
+                                    <code>{{ property_node.literal }}</code>
+                                </a>
+                            {%- else -%}
+                                <code>{{ property_node.literal }}</code>
+                            {%- endif -%}
+                        {%- else -%}
+                            <span class="text-muted">N/A</span>
+                        {%- endif -%}
+                        </td>
+                    </tr>
+                {%- else -%}
+                    <tr>
+                        <td>
+                        {%- if vocab in context_mapping -%}
+                            <a href="{{ context_mapping[vocab] }}" target="_blank" rel="noopener noreferrer"><code>{{ vocab }}</code></a>
+                        {%- else -%}
+                            <code>{{ vocab }}</code>
+                        {%- endif -%}
+                        </td>
+                        <td><span class="text-muted">N/A</span></td>
+                        <td><span class="text-muted">N/A</span></td>
+                    </tr>
+                {%- endif -%}
+            {%- endfor -%}
+            </tbody>
+        </table>
+    </div>
+{%- endif -%}
