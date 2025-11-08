@@ -8,35 +8,65 @@
     "dc": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/dc-mapping-entry" }
+        { "$ref": "#/$defs/dc-mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/dc-mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to Dublin Core properties"
+        }
       ],
       "description": "Mapping to Dublin Core Elements (http://purl.org/dc/elements/1.1/)"
     },
     "dcterms": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/dcterms-mapping-entry" }
+        { "$ref": "#/$defs/dcterms-mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/dcterms-mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to DCMI Terms properties"
+        }
       ],
       "description": "Mapping to DCMI Metadata Terms (http://purl.org/dc/terms/)"
     },
     "lrmi": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/lrmi-mapping-entry" }
+        { "$ref": "#/$defs/lrmi-mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/lrmi-mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to LRMI properties"
+        }
       ],
       "description": "Mapping to Learning Resource Metadata Initiative terms (http://purl.org/dcx/lrmi-terms/)"
     },
     "modalia": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/modalia-mapping-entry" }
+        { "$ref": "#/$defs/modalia-mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/modalia-mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to Modalia properties"
+        }
       ],
       "description": "Mapping to Modalia ontology (https://purl.org/ontology/modalia#)"
     },
     "schema": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/schema-mapping-entry" }
+        { "$ref": "#/$defs/schema-mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/schema-mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to Schema.org properties"
+        }
       ],
       "description": "Mapping to Schema.org vocabulary (http://schema.org/)"
     }

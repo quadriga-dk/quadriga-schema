@@ -41,8 +41,14 @@ def load_json_file(filepath: Path) -> dict[str, object]:
         sys.exit(1)
 
 
-def validate_mapping_entry(entry: object, vocab: str) -> list[str]:
-    """Validate a single mapping entry against the meta-schema rules."""
+def validate_mapping_entry(entry: object, vocab: str, vocab_namespace: str) -> list[str]:
+    """Validate a single mapping entry against the meta-schema rules.
+
+    Args:
+        entry: The mapping entry to validate
+        vocab: The vocabulary identifier for error messages (e.g., "schema[0]", "dc")
+        vocab_namespace: The actual vocabulary namespace for pattern matching (e.g., "schema", "dc")
+    """
     errors = []
 
     # Must be null or an object
@@ -87,12 +93,12 @@ def validate_mapping_entry(entry: object, vocab: str) -> list[str]:
         if not isinstance(entry["property"], str):
             errors.append(f"  {vocab}.property: must be a string")
         else:
-            # Pattern: ^{vocab}:[a-zA-Z]+$ (property must start with the vocabulary namespace)
-            pattern = re.compile(rf"^{re.escape(vocab)}:[a-zA-Z]+$")
+            # Pattern: ^{vocab_namespace}:[a-zA-Z]+$ (property must start with the vocabulary namespace)
+            pattern = re.compile(rf"^{re.escape(vocab_namespace)}:[a-zA-Z]+$")
             if not pattern.match(entry["property"]):
                 errors.append(
                     f"  {vocab}.property: '{entry['property']}' does not match "
-                    f"pattern '^{vocab}:[a-zA-Z]+$' (must start with vocabulary namespace)"
+                    f"pattern '^{vocab_namespace}:[a-zA-Z]+$' (must start with vocabulary namespace)"
                 )
 
     return errors
@@ -116,11 +122,22 @@ def validate_x_mappings(x_mappings: object) -> list[str]:
     if extra_vocabs:
         errors.append(f"Unexpected vocabularies: {extra_vocabs}")
 
-    # Validate each mapping entry
+    # Validate each mapping entry (can be null, object, or array of objects)
     for vocab in required_vocabs:
         if vocab in x_mappings:
-            entry_errors = validate_mapping_entry(x_mappings[vocab], vocab)
-            errors.extend(entry_errors)
+            entry = x_mappings[vocab]
+
+            # Handle array of mappings
+            if isinstance(entry, list):
+                if len(entry) == 0:
+                    errors.append(f"{vocab}: array must have at least 1 item")
+                for idx, mapping in enumerate(entry):
+                    entry_errors = validate_mapping_entry(mapping, f"{vocab}[{idx}]", vocab)
+                    errors.extend(entry_errors)
+            else:
+                # Handle single mapping (object or null)
+                entry_errors = validate_mapping_entry(entry, vocab, vocab)
+                errors.extend(entry_errors)
 
     return errors
 
