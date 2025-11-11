@@ -1,3 +1,12 @@
+/* QUADRIGA Color Variables */
+:root {
+    --quadriga-main: #00305e;
+    --quadriga-main-45: #818bac;
+    --quadriga-main-web: #c1d3e0;
+    --quadriga-orange: #f2a541;
+    --quadriga-orange-dark: #d88a1c;
+}
+
 body {
   font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
   color: #333;
@@ -87,6 +96,34 @@ body {
     font-size: 100%;
     margin-left: 10px;
 }
+
+/* QUADRIGA Badge Color Overrides */
+
+/* Type badge - QUADRIGA primary */
+.badge.badge-dark {
+    background-color: var(--quadriga-main) !important;
+    color: #ffffff !important;
+}
+
+/* Format and info badges - QUADRIGA light */
+.badge.badge-info {
+    background-color: var(--quadriga-main-web) !important;
+    color: var(--quadriga-main) !important;
+}
+
+/* Required property - Orange/Keypoint */
+.badge.badge-warning {
+    background-color: var(--quadriga-orange) !important;
+    color: #000000 !important;
+}
+
+/* Examples and secondary badges - QUADRIGA medium */
+.badge.badge-secondary {
+    background-color: var(--quadriga-main-45) !important;
+    color: #ffffff !important;
+}
+
+/* Keep success (green) and danger (red) as-is for semantic clarity */
 
 .accordion div.card:only-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -184,8 +221,8 @@ body {
 .x-mappings-section {
     margin: 1rem 0;
     padding: 0.5rem;
-    background-color: #f8f9fa;
-    border-left: 3px solid #17a2b8;
+    background-color: #f7fbff;
+    border-left: 3px solid var(--quadriga-main);
 }
 
 .x-mappings-section table {
@@ -206,9 +243,9 @@ body {
 }
 
 .x-mappings-section a code {
-    color: #007bff;
+    color: var(--quadriga-main);
 }
 
 .x-mappings-section a:hover code {
-    color: #0056b3;
+    color: var(--quadriga-main-45);
 }
