@@ -10,7 +10,7 @@
   },
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
   "title": "QUADRIGA Jupyter Book",
-  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.",
+  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.\n\nDieses Schema ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.",
   "type": "object",
   "required": [
     "authors",
