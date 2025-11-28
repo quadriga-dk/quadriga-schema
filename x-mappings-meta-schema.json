@@ -69,6 +69,10 @@
         }
       ],
       "description": "Mapping to Schema.org vocabulary (http://schema.org/)"
+    },
+    "$comment": {
+      "type": "string",
+      "description": "Optional comment explaining mapping decisions or providing additional context about the x-mappings in this schema"
     }
   },
   "additionalProperties": false,

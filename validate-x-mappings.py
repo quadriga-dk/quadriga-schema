@@ -117,8 +117,9 @@ def validate_x_mappings(x_mappings: object) -> list[str]:
     missing_vocabs = [vocab for vocab in required_vocabs if vocab not in x_mappings]
     errors.extend(f"Missing required vocabulary: {vocab}" for vocab in missing_vocabs)
 
-    # Check for additional vocabularies
-    extra_vocabs = set(x_mappings.keys()) - set(required_vocabs)
+    # Check for additional vocabularies (allow $comment for documentation)
+    allowed_keys = set(required_vocabs) | {"$comment"}
+    extra_vocabs = set(x_mappings.keys()) - allowed_keys
     if extra_vocabs:
         errors.append(f"Unexpected vocabularies: {extra_vocabs}")
 
