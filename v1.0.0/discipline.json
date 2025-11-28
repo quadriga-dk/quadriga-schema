@@ -16,6 +16,7 @@
     ]
   },
   "x-mappings": {
+    "$comment": "modalia:Discipline is an RDF class (type), not a property, so cannot be mapped here. The discipline values themselves can be typed as modalia:Discipline instances, but there's no direct property equivalent in MoDALIA for the 'discipline' field itself.",
     "dc": {
       "relation": "skos:broadMatch",
       "property": "dc:subject"
@@ -25,10 +26,7 @@
       "property": "dcterms:subject"
     },
     "lrmi": null,
-    "modalia": {
-      "relation": "skos:exactMatch",
-      "property": "modalia:Discipline"
-    },
+    "modalia": null,
     "schema": {
       "relation": "skos:closeMatch",
       "property": "schema:about"
