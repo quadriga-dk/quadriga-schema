@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/time-required.json",
   "title": "time-required – Bearbeitungsdauer",
-  "description": "Angedachte Bearbeitungsdauer für Lernende.",
-  "type": "string",
+  "description": "Angedachte Bearbeitungsdauer für Lernende.\n\nIm ISO8601 Format. Typische Werte sind `PT1H` (eine Stunde), `PT15M` (15 Minuten), `PT01H25M` (eine Stunde und 25 Minuten oder 85 Minuten) oder `PT90M` (90 Minuten). Ebenfalls möglich sind längere Zeiträume wie bspw. `P1W1DT13H27M` für 1 Woche und 1 Tag und 13 Stunden und 27 Minuten.",
+  "types": "string",
   "format": "duration",
   "x-mappings": {
     "dc": null,
