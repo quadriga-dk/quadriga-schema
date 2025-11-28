@@ -13,6 +13,10 @@
     "code": {
       "description": "Lizenz des Codes",
       "$ref": "license-entry.json"
+    },
+    "data": {
+      "description": "Lizenz der Daten.\n\nWird genutzt, falls die Daten einer anderen Lizenz unterliegen als der Inhalt (siehe `license.content`) oder falls die Daten-Lizenz explizit dargestellt werden soll.\nWird die Datenlizenz angegeben, so sollte diese als `LICENSE.txt` o.ä. im Unterordner der Daten liegen bzw. es sollte eine `LICENSE-DATA.txt` existieren, die auflistet, welche Inhalte genau der Datenlizenz unterliegen.",
+      "$ref": "license-entry.json"
     }
   },
   "x-mappings": {
