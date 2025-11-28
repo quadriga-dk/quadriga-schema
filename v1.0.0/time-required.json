@@ -8,8 +8,14 @@
   "x-mappings": {
     "dc": null,
     "dcterms": null,
-    "lrmi": null,
-    "modalia": null,
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "property": "lrmi:timeRequired"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "property": "modalia:timeRequired"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "property": "schema:timeRequired"

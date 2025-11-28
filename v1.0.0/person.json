@@ -30,13 +30,11 @@
     }
   ],
   "x-mappings": {
+    "$comment": "schema:Person is an RDF class (type), not a property, so cannot be mapped here. Person data should be typed as schema:Person through RDF typing, not via property mappings.",
     "dc": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:Person"
-    }
+    "schema": null
   }
 }

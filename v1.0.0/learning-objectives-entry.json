@@ -57,7 +57,10 @@
       "relation": "skos:closeMatch",
       "property": "lrmi:teaches"
     },
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "property": "modalia:hasLearningObjective"
+    },
     "schema": {
       "relation": "skos:closeMatch",
       "property": "schema:teaches"

@@ -20,7 +20,7 @@
     },
     "modalia": {
       "relation": "skos:closeMatch",
-      "property": "modalia:LearningResourceType"
+      "property": "modalia:hasLearningType"
     },
     "schema": {
       "relation": "skos:closeMatch",

@@ -26,6 +26,7 @@
     }
   ],
   "x-mappings": {
+    "$comment": "Schema.org has no property for software tools used in resource creation. schema:SoftwareApplication is a Type (class), not a property, so cannot be mapped. The schema:instrument property is for physical tools/instruments in Action types, not applicable to CreativeWork metadata.",
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
@@ -33,9 +34,6 @@
     },
     "lrmi": null,
     "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:SoftwareApplication"
-    }
+    "schema": null
   }
 }

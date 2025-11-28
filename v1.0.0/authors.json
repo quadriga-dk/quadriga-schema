@@ -8,5 +8,21 @@
   "uniqueItems": true,
   "items": {
     "$ref": "author.json"
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "property": "dc:creator"
+    },
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "property": "dcterms:creator"
+    },
+    "lrmi": null,
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "property": "schema:author"
+    }
   }
 }

@@ -12,5 +12,13 @@
     "5 Bewerten",
     "6 Erschaffen",
     "nicht anwendbar"
-  ]
+  ],
+  "x-mappings": {
+    "$comment": "Bloom's taxonomy categories describe cognitive complexity of learning (Remember → Create), not educational level progression. LRMI/Schema.org educationalLevel describes where learners are in their educational journey (e.g., 'Grade 2', 'undergraduate'). These are orthogonal concepts with no appropriate simple property mapping. Use educationalAlignment with AlignmentObject for proper Bloom's taxonomy representation.",
+    "dc": null,
+    "dcterms": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
+  }
 }

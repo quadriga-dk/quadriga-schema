@@ -12,13 +12,17 @@
     "$ref": "multilingual-text.json"
   },
   "x-mappings": {
+    "$comment": "lrmi:teaches describes what learners WILL learn (resource → outcome), while prerequisites describe what learners MUST ALREADY know (prior knowledge → resource). These are inverse relationships, so no mapping is appropriate.",
     "dc": null,
     "dcterms": {
       "relation": "skos:broadMatch",
       "property": "dcterms:requires"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "property": "modalia:requiresKnowledge"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "property": "schema:coursePrerequisites"

@@ -25,7 +25,7 @@
     },
     "modalia": {
       "relation": "skos:exactMatch",
-      "property": "modalia:TargetGroup"
+      "property": "modalia:hasTargetGroup"
     },
     "schema": {
       "relation": "skos:closeMatch",

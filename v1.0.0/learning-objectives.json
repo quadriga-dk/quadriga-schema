@@ -8,5 +8,21 @@
   "uniqueItems": true,
   "items": {
     "$ref": "learning-objectives-entry.json"
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "property": "lrmi:teaches"
+    },
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "property": "modalia:hasLearningObjective"
+    },
+    "schema": {
+      "relation": "skos:closeMatch",
+      "property": "schema:teaches"
+    }
   }
 }

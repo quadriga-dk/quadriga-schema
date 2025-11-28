@@ -47,7 +47,10 @@
           "relation": "skos:closeMatch",
           "property": "lrmi:teaches"
         },
-        "modalia": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "property": "modalia:hasLearningObjective"
+        },
         "schema": {
           "relation": "skos:closeMatch",
           "property": "schema:teaches"
@@ -93,16 +96,11 @@
     }
   },
   "x-mappings": {
+    "$comment": "lrmi:LearningResource, modalia:LearningResource, and schema:LearningResource are RDF classes/types, not properties, so cannot be mapped here. The chapter schema itself represents a learning resource type, which should be indicated through RDF typing mechanisms, not property mappings.",
     "dc": null,
     "dcterms": null,
-    "lrmi": {
-      "relation": "skos:exactMatch",
-      "property": "lrmi:LearningResource"
-    },
+    "lrmi": null,
     "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:LearningResource"
-    }
+    "schema": null
   }
 }
