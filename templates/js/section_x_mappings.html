@@ -24,7 +24,7 @@
                 </tr>
             </thead>
             <tbody>
-            {%- for vocab, mapping_node in x_mappings_node.keywords.items() -%}
+            {%- for vocab, mapping_node in x_mappings_node.keywords.items() if not vocab.startswith('$') -%}
                 {%- if mapping_node and mapping_node.array_items -%}
                     {# Handle array of mappings #}
                     {%- for mapping_item in mapping_node.array_items -%}
