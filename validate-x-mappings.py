@@ -62,11 +62,11 @@ def validate_mapping_entry(entry: object, vocab: str, vocab_namespace: str) -> l
     # Check required properties
     if "relation" not in entry:
         errors.append(f"  {vocab}: missing required property 'relation'")
-    if "property" not in entry:
-        errors.append(f"  {vocab}: missing required property 'property'")
+    if "target" not in entry:
+        errors.append(f"  {vocab}: missing required property 'target'")
 
     # Check for additional properties
-    allowed_props = {"relation", "property"}
+    allowed_props = {"relation", "target"}
     extra_props = set(entry.keys()) - allowed_props
     if extra_props:
         errors.append(f"  {vocab}: unexpected properties {extra_props}")
@@ -88,16 +88,16 @@ def validate_mapping_entry(entry: object, vocab: str, vocab_namespace: str) -> l
                 f"must be one of {valid_relations}"
             )
 
-    # Validate property pattern
-    if "property" in entry:
-        if not isinstance(entry["property"], str):
-            errors.append(f"  {vocab}.property: must be a string")
+    # Validate target pattern
+    if "target" in entry:
+        if not isinstance(entry["target"], str):
+            errors.append(f"  {vocab}.target: must be a string")
         else:
-            # Pattern: ^{vocab_namespace}:[a-zA-Z]+$ (property must start with the vocabulary namespace)
+            # Pattern: ^{vocab_namespace}:[a-zA-Z]+$ (target must start with the vocabulary namespace)
             pattern = re.compile(rf"^{re.escape(vocab_namespace)}:[a-zA-Z]+$")
-            if not pattern.match(entry["property"]):
+            if not pattern.match(entry["target"]):
                 errors.append(
-                    f"  {vocab}.property: '{entry['property']}' does not match "
+                    f"  {vocab}.target: '{entry['target']}' does not match "
                     f"pattern '^{vocab_namespace}:[a-zA-Z]+$' (must start with vocabulary namespace)"
                 )
 

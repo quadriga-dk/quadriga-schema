@@ -99,13 +99,13 @@ a specific `schema-version` like `v1.0.0`.
 ### Vocabulary Mappings (x-mappings)
 
 The QUADRIGA schema uses a custom `x-mappings` extension field to document how
-each property maps to standard vocabularies. This approach co-locates crosswalk
-mappings directly within the schema definition, making them machine-readable
-and version-controlled alongside the schema itself.
+schema elements (properties or types) map to standard vocabularies. This approach
+co-locates crosswalk mappings directly within the schema definition, making them
+machine-readable and version-controlled alongside the schema itself.
 
 #### Structure
 
-Each schema property can include an `x-mappings` field that maps to five target
+Each schema element can include an `x-mappings` field that maps to five target
 vocabularies:
 
 ```json
@@ -116,17 +116,17 @@ vocabularies:
     "x-mappings": {
       "dc": {
         "relation": "skos:exactMatch",
-        "property": "dc:title"
+        "target": "dc:title"
       },
       "dcterms": {
         "relation": "skos:exactMatch",
-        "property": "dcterms:title"
+        "target": "dcterms:title"
       },
       "lrmi": null,
       "modalia": null,
       "schema": {
         "relation": "skos:exactMatch",
-        "property": "schema:name"
+        "target": "schema:name"
       }
     }
   }

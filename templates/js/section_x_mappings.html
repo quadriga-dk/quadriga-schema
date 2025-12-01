@@ -20,7 +20,7 @@
                 <tr>
                     <th>Vocabulary</th>
                     <th>Relationship</th>
-                    <th>Property</th>
+                    <th>Target</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +28,7 @@
                 {%- if mapping_node and mapping_node.array_items -%}
                     {# Handle array of mappings #}
                     {%- for mapping_item in mapping_node.array_items -%}
-                        {%- set property_node = mapping_item.keywords.get('property') -%}
+                        {%- set target_node = mapping_item.keywords.get('target') -%}
                         {%- set relation_node = mapping_item.keywords.get('relation') -%}
                         <tr>
                             {%- if loop.first -%}
@@ -56,15 +56,15 @@
                             {%- endif -%}
                             </td>
                             <td>
-                            {%- if property_node -%}
-                                {%- set property_parts = property_node.literal.split(':') -%}
-                                {%- if property_parts|length == 2 and property_parts[0] in context_mapping -%}
-                                    {%- set property_url = context_mapping[property_parts[0]] ~ property_parts[1] -%}
-                                    <a href="{{ property_url }}" target="_blank" rel="noopener noreferrer">
-                                        <code>{{ property_node.literal }}</code>
+                            {%- if target_node -%}
+                                {%- set target_parts = target_node.literal.split(':') -%}
+                                {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
+                                    {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
+                                    <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                                        <code>{{ target_node.literal }}</code>
                                     </a>
                                 {%- else -%}
-                                    <code>{{ property_node.literal }}</code>
+                                    <code>{{ target_node.literal }}</code>
                                 {%- endif -%}
                             {%- else -%}
                                 <span class="text-muted">N/A</span>
@@ -74,7 +74,7 @@
                     {%- endfor -%}
                 {%- elif mapping_node and mapping_node.keywords -%}
                     {# Handle single mapping object #}
-                    {%- set property_node = mapping_node.keywords.get('property') -%}
+                    {%- set target_node = mapping_node.keywords.get('target') -%}
                     {%- set relation_node = mapping_node.keywords.get('relation') -%}
                     <tr>
                         <td>
@@ -100,15 +100,15 @@
                         {%- endif -%}
                         </td>
                         <td>
-                        {%- if property_node -%}
-                            {%- set property_parts = property_node.literal.split(':') -%}
-                            {%- if property_parts|length == 2 and property_parts[0] in context_mapping -%}
-                                {%- set property_url = context_mapping[property_parts[0]] ~ property_parts[1] -%}
-                                <a href="{{ property_url }}" target="_blank" rel="noopener noreferrer">
-                                    <code>{{ property_node.literal }}</code>
+                        {%- if target_node -%}
+                            {%- set target_parts = target_node.literal.split(':') -%}
+                            {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
+                                {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
+                                <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                                    <code>{{ target_node.literal }}</code>
                                 </a>
                             {%- else -%}
-                                <code>{{ property_node.literal }}</code>
+                                <code>{{ target_node.literal }}</code>
                             {%- endif -%}
                         {%- else -%}
                             <span class="text-muted">N/A</span>

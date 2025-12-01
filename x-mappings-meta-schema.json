@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/x-mappings-meta-schema.json",
   "title": "QUADRIGA x-mappings Meta-Schema",
-  "description": "Meta-schema for validating x-mappings vocabulary crosswalk annotations in QUADRIGA JSON Schema files. The x-mappings extension documents how schema properties map to standard vocabularies (Dublin Core, DCMI Terms, LRMI, Schema.org, Modalia) using SKOS relationship types.",
+  "description": "Meta-schema for validating x-mappings vocabulary crosswalk annotations in QUADRIGA JSON Schema files. The x-mappings extension documents how schema elements (properties or types) map to standard vocabularies (Dublin Core, DCMI Terms, LRMI, Schema.org, Modalia) using SKOS relationship types.",
   "type": "object",
   "properties": {
     "dc": {
@@ -87,76 +87,76 @@
         "skos:narrowMatch",
         "skos:relatedMatch"
       ],
-      "description": "SKOS mapping relation type indicating the semantic relationship between the schema property and the target vocabulary property. See https://www.w3.org/TR/skos-reference/#mapping"
+      "description": "SKOS mapping relation type indicating the semantic relationship between the schema element and the target vocabulary term. See https://www.w3.org/TR/skos-reference/#mapping"
     },
     "dc-mapping-entry": {
       "type": "object",
-      "description": "A mapping to a Dublin Core property",
+      "description": "A mapping to a Dublin Core term",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
-        "property": {
+        "target": {
           "type": "string",
           "pattern": "^dc:[a-zA-Z]+$",
-          "description": "The target property in namespace:property format (e.g., 'dc:title')"
+          "description": "The target vocabulary term in namespace:term format (e.g., 'dc:title')"
         }
       },
-      "required": ["relation", "property"],
+      "required": ["relation", "target"],
       "additionalProperties": false
     },
     "dcterms-mapping-entry": {
       "type": "object",
-      "description": "A mapping to a DCMI Terms property",
+      "description": "A mapping to a DCMI Terms term",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
-        "property": {
+        "target": {
           "type": "string",
           "pattern": "^dcterms:[a-zA-Z]+$",
-          "description": "The target property in namespace:property format (e.g., 'dcterms:created')"
+          "description": "The target vocabulary term in namespace:term format (e.g., 'dcterms:created')"
         }
       },
-      "required": ["relation", "property"],
+      "required": ["relation", "target"],
       "additionalProperties": false
     },
     "lrmi-mapping-entry": {
       "type": "object",
-      "description": "A mapping to an LRMI property",
+      "description": "A mapping to an LRMI term",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
-        "property": {
+        "target": {
           "type": "string",
           "pattern": "^lrmi:[a-zA-Z]+$",
-          "description": "The target property in namespace:property format (e.g., 'lrmi:educationalLevel')"
+          "description": "The target vocabulary term in namespace:term format (e.g., 'lrmi:educationalLevel')"
         }
       },
-      "required": ["relation", "property"],
+      "required": ["relation", "target"],
       "additionalProperties": false
     },
     "modalia-mapping-entry": {
       "type": "object",
-      "description": "A mapping to a Modalia property",
+      "description": "A mapping to a Modalia term",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
-        "property": {
+        "target": {
           "type": "string",
           "pattern": "^modalia:[a-zA-Z]+$",
-          "description": "The target property in namespace:property format (e.g., 'modalia:modality')"
+          "description": "The target vocabulary term in namespace:term format (e.g., 'modalia:modality')"
         }
       },
-      "required": ["relation", "property"],
+      "required": ["relation", "target"],
       "additionalProperties": false
     },
     "schema-mapping-entry": {
       "type": "object",
-      "description": "A mapping to a Schema.org property",
+      "description": "A mapping to a Schema.org term",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
-        "property": {
+        "target": {
           "type": "string",
           "pattern": "^schema:[a-zA-Z]+$",
-          "description": "The target property in namespace:property format (e.g., 'schema:name')"
+          "description": "The target vocabulary term in namespace:term format (e.g., 'schema:name')"
         }
       },
-      "required": ["relation", "property"],
+      "required": ["relation", "target"],
       "additionalProperties": false
     }
   }
