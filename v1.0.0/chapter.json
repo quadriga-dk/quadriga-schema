@@ -96,11 +96,23 @@
     }
   },
   "x-mappings": {
-    "$comment": "lrmi:LearningResource, modalia:LearningResource, and schema:LearningResource are RDF classes/types, not properties, so cannot be mapped here. The chapter schema itself represents a learning resource type, which should be indicated through RDF typing mechanisms, not property mappings.",
+    "$comment": "Ein Kapitel ist selbst wieder eine Lernresource, weshalb hier das Mapping auf `schema:LearningResource` korrekt ist. Mappings bpsw. auf `lrmi:learningResourceType` wurden nicht vorgenommen, weil es sich hier jeweils um eine konkrete Instanz und nicht um einen Typ handelt.",
     "dc": null,
     "dcterms": null,
     "lrmi": null,
-    "modalia": null,
-    "schema": null
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "modalia:CodeNotebook"
+    },
+    "schema": [
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:LearningResource"
+      },
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:Chapter"
+      }
+    ]
   }
 }
