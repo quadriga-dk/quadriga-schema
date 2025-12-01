@@ -10,19 +10,16 @@
     "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
   },
   "x-mappings": {
-    "dc": {
-      "relation": "skos:broadMatch",
-      "property": "dc:type"
-    },
-    "dcterms": {
-      "relation": "skos:broadMatch",
-      "property": "dcterms:type"
-    },
+    "dc": null,
+    "dcterms": null,
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "modalia:coversManagementOfDataKind"
+    },
     "schema": {
       "relation": "skos:broadMatch",
-      "property": "schema:about"
+      "target": "schema:about"
     }
   }
 }
