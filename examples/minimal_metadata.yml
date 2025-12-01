@@ -27,7 +27,7 @@ chapters:
         data-flow: übergreifend
         blooms-category: 1 Erinnern
 git: https://github.com/quadriga-dk/quadriga-schema
-context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.<br><br>Förderkennzeichen: 16DKZ2034"
+context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
 time-required: PT1H # Duration formatted in ISO8601
 discipline:
   - übergreifend
