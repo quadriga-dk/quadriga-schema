@@ -35,12 +35,12 @@
         "dcterms": null,
         "lrmi": {
           "relation": "skos:closeMatch",
-          "property": "lrmi:assesses"
+          "target": "lrmi:assesses"
         },
         "modalia": null,
         "schema": {
           "relation": "skos:closeMatch",
-          "property": "schema:assesses"
+          "target": "schema:assesses"
         }
       }
     },
@@ -54,16 +54,16 @@
     "dc": null,
     "dcterms": null,
     "lrmi": {
-      "relation": "skos:closeMatch",
-      "property": "lrmi:teaches"
+      "relation": "skos:exactMatch",
+      "target": "lrmi:teaches"
     },
     "modalia": {
-      "relation": "skos:closeMatch",
-      "property": "modalia:hasLearningObjective"
+      "relation": "skos:exactMatch",
+      "target": "modalia:hasLearningObjective"
     },
     "schema": {
-      "relation": "skos:closeMatch",
-      "property": "schema:teaches"
+      "relation": "skos:exactMatch",
+      "target": "schema:teaches"
     }
   }
 }
