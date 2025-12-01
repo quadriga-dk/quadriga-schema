@@ -8,7 +8,7 @@
     "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
   ],
   "x-mappings": {
-    "$comment": "modalia:Community is an RDF class (type), not a property, so cannot be mapped here. The context-of-creation field describes the organizational/project context, which doesn't have a direct property equivalent in standard vocabularies. This is domain-specific metadata for QUADRIGA.",
+    "$comment": "Ein Mapping zu `modalia:Community` wurde angedacht, ist jedoch nicht korrekt.",
     "dc": null,
     "dcterms": null,
     "lrmi": null,
