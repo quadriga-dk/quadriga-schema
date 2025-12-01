@@ -6,18 +6,18 @@
   "$ref": "person.json",
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:creator"
+      "relation": "skos:broadMatch",
+      "target": "dc:creator"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
-      "property": "dcterms:creator"
+      "relation": "skos:broadMatch",
+      "target": "dcterms:creator"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:author"
+      "target": "schema:author"
     }
   }
 }
