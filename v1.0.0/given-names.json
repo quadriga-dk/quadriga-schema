@@ -11,7 +11,7 @@
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:givenName"
+      "target": "schema:givenName"
     }
   }
 }

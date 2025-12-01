@@ -12,7 +12,7 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
-      "property": "dcterms:provenance"
+      "target": "dcterms:provenance"
     },
     "lrmi": null,
     "modalia": null,

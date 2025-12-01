@@ -30,11 +30,11 @@
     "dcterms": [
       {
         "relation": "skos:closeMatch",
-        "property": "dcterms:relation"
+        "target": "dcterms:relation"
       },
       {
         "relation": "skos:closeMatch",
-        "property": "dcterms:references"
+        "target": "dcterms:references"
       }
     ],
     "lrmi": null,

@@ -14,15 +14,15 @@
     "dcterms": null,
     "lrmi": {
       "relation": "skos:closeMatch",
-      "property": "lrmi:teaches"
+      "target": "lrmi:teaches"
     },
     "modalia": {
       "relation": "skos:closeMatch",
-      "property": "modalia:hasLearningObjective"
+      "target": "modalia:hasLearningObjective"
     },
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:teaches"
+      "target": "schema:teaches"
     }
   }
 }

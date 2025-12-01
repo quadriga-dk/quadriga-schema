@@ -17,7 +17,7 @@
       "x-mappings": {
         "dc": {
           "relation": "skos:broadMatch",
-          "property": "dc:date"
+          "target": "dc:date"
         },
         "dcterms": null,
         "lrmi": null,

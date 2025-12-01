@@ -8,23 +8,23 @@
   "x-mappings": {
     "dc": {
       "relation": "skos:broadMatch",
-      "property": "dc:type"
+      "target": "dc:type"
     },
     "dcterms": {
       "relation": "skos:broadMatch",
-      "property": "dcterms:type"
+      "target": "dcterms:type"
     },
     "lrmi": {
       "relation": "skos:closeMatch",
-      "property": "lrmi:learningResourceType"
+      "target": "lrmi:learningResourceType"
     },
     "modalia": {
       "relation": "skos:closeMatch",
-      "property": "modalia:hasLearningType"
+      "target": "modalia:hasLearningType"
     },
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:learningResourceType"
+      "target": "schema:learningResourceType"
     }
   }
 }

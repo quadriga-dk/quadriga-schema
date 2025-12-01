@@ -17,19 +17,19 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
-      "property": "dcterms:audience"
+      "target": "dcterms:audience"
     },
     "lrmi": {
       "relation": "skos:closeMatch",
-      "property": "lrmi:educationalAudience"
+      "target": "lrmi:educationalAudience"
     },
     "modalia": {
       "relation": "skos:exactMatch",
-      "property": "modalia:hasTargetGroup"
+      "target": "modalia:hasTargetGroup"
     },
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:audience"
+      "target": "schema:audience"
     }
   }
 }

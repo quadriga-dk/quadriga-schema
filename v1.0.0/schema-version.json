@@ -12,7 +12,7 @@
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:version"
+      "target": "schema:version"
     }
   }
 }

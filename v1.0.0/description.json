@@ -7,17 +7,17 @@
   "x-mappings": {
     "dc": {
       "relation": "skos:exactMatch",
-      "property": "dc:description"
+      "target": "dc:description"
     },
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:description"
+      "target": "dcterms:description"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:description"
+      "target": "schema:description"
     }
   }
 }
