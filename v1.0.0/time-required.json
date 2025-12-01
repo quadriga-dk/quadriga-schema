@@ -7,18 +7,18 @@
   "format": "duration",
   "x-mappings": {
     "dc": null,
-    "dcterms": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "target": "dcterms:extent"
+    },
     "lrmi": {
       "relation": "skos:exactMatch",
-      "property": "lrmi:timeRequired"
+      "target": "lrmi:timeRequired"
     },
-    "modalia": {
-      "relation": "skos:exactMatch",
-      "property": "modalia:timeRequired"
-    },
+    "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:timeRequired"
+      "target": "schema:timeRequired"
     }
   }
 }
