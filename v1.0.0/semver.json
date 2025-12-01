@@ -4,15 +4,5 @@
   "title": "semver – Semantische Versionsnummer",
   "description": "Semantic Versioning 2.0.0 (https://semver.org)",
   "type": "string",
-  "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
-  "x-mappings": {
-    "dc": null,
-    "dcterms": null,
-    "lrmi": null,
-    "modalia": null,
-    "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:version"
-    }
-  }
+  "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
 }
