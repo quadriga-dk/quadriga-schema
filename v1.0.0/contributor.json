@@ -7,17 +7,20 @@
   "x-mappings": {
     "dc": {
       "relation": "skos:exactMatch",
-      "property": "dc:contributor"
+      "target": "dc:contributor"
     },
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:contributor"
+      "target": "dcterms:contributor"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:relatedMatch",
+      "target": "modalia:Contributor"
+    },
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:contributor"
+      "target": "schema:contributor"
     }
   }
 }
