@@ -10,7 +10,7 @@
   },
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
   "title": "QUADRIGA Jupyter Book",
-  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.\n\nDieses Schema ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.",
+  "description": "Ein Jupyter Book (Buch, Sammlung von OERs), das nach dem QUADRIGA-Metadatenschema beschrieben wird.\n\nDieses Schema ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.\n\nEs werden Mappings zu gebräuchlichen Metadatenschemata für mehrere hier definierte (Unter-)Felder definiert.\n\n(Unter-)Felder können selbst wieder Entitäten sein (so bspw. eine Person, welche die Rolle Autor:in einnimmt.)",
   "type": "object",
   "required": [
     "authors",
@@ -114,8 +114,20 @@
     "$comment": "lrmi:LearningResource, modalia:LearningResource are RDF classes (types), not properties, so cannot be mapped here. The schema represents a Book/collection, which is appropriately mapped to schema:Book type via the schema itself, not via x-mappings.",
     "dc": null,
     "dcterms": null,
-    "lrmi": null,
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "target": "lrmi:LearningResource"
+    },
     "modalia": null,
-    "schema": null
+    "schema": [
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:LearningResource"
+      },
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:Book"
+      }
+    ]
   }
 }
