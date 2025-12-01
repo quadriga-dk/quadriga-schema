@@ -8,10 +8,13 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:tableOfContents"
+      "target": "dcterms:tableOfContents"
     },
     "lrmi": null,
     "modalia": null,
-    "schema": null
+    "schema": {
+      "relation": "skos:relatedMatch",
+      "target": "schema:HyperToc"
+    }
   }
 }
