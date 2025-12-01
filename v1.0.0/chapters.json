@@ -13,13 +13,13 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
-      "property": "dcterms:hasPart"
+      "target": "dcterms:hasPart"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:hasPart"
+      "target": "schema:hasPart"
     }
   }
 }
