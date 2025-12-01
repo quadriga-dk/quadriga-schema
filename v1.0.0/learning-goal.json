@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/learning-goal.json",
+  "title": "learning-goal – Groblernziel",
+  "description": "Kurze Benennung des Groblernziels des Kapitels.",
+  "$ref": "multilingual-text.json",
+  "x-mappings": {
+    "dc": null,
+    "dcterms": null,
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "target": "lrmi:teaches"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "modalia:hasLearningObjective"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:teaches"
+    }
+  }
+}

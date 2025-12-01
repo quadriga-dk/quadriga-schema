@@ -36,27 +36,6 @@
     "learning-objectives": {
       "$ref": "learning-objectives.json"
     },
-    "learning-goal": {
-      "title": "learning-goal – Groblernziel",
-      "description": "Kurze Benennung des Groblernziels des Kapitels.",
-      "$ref": "multilingual-text.json",
-      "x-mappings": {
-        "dc": null,
-        "dcterms": null,
-        "lrmi": {
-          "relation": "skos:closeMatch",
-          "property": "lrmi:teaches"
-        },
-        "modalia": {
-          "relation": "skos:closeMatch",
-          "property": "modalia:hasLearningObjective"
-        },
-        "schema": {
-          "relation": "skos:closeMatch",
-          "property": "schema:teaches"
-        }
-      }
-    },
     "supplemented-by": {
       "title": "supplemented-by – Ergänzende / Genutzte Materialien",
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
