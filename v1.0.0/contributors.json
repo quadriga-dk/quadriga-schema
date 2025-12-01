@@ -10,19 +10,23 @@
     "$ref": "contributor.json"
   },
   "x-mappings": {
+    "$comment": "Wie bei der Liste der Autor*innen ist auch die Liste der Beitragenden nur ein closeMatch zu Definitionen für einzelne Beitragende.",
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:contributor"
+      "relation": "skos:closeMatch",
+      "target": "dc:contributor"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
-      "property": "dcterms:contributor"
+      "relation": "skos:closeMatch",
+      "target": "dcterms:contributor"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:relatedMatch",
+      "target": "modalia:Contributor"
+    },
     "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:contributor"
+      "relation": "skos:closeMatch",
+      "target": "schema:contributor"
     }
   }
 }
