@@ -16,20 +16,23 @@
     ]
   },
   "x-mappings": {
-    "$comment": "modalia:Discipline is an RDF class (type), not a property, so cannot be mapped here. The discipline values themselves can be typed as modalia:Discipline instances, but there's no direct property equivalent in MoDALIA for the 'discipline' field itself.",
+    "$comment": "Die Disziplin ist im Rahmen von QUADRIGA auch eine inhaltliche Beschreibung, weshalb `dc:subject` oder `schema:about` passen kann.",
     "dc": {
-      "relation": "skos:broadMatch",
-      "property": "dc:subject"
+      "relation": "skos:closeMatch",
+      "target": "dc:subject"
     },
     "dcterms": {
-      "relation": "skos:broadMatch",
-      "property": "dcterms:subject"
+      "relation": "skos:closeMatch",
+      "target": "dcterms:subject"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "modalia:hasDiscipline"
+    },
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:about"
+      "target": "schema:about"
     }
   }
 }
