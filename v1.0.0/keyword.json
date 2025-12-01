@@ -15,14 +15,17 @@
   "x-mappings": {
     "dc": {
       "relation": "skos:exactMatch",
-      "property": "dc:subject"
+      "target": "dc:subject"
     },
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:subject"
+      "target": "dcterms:subject"
     },
     "lrmi": null,
     "modalia": null,
-    "schema": null
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:about"
+    }
   }
 }
