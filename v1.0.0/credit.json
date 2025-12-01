@@ -52,7 +52,7 @@
           },
           "degree": {
             "title": "degree – Beitragsstärke",
-            "description": "Anteil des Beitrags in der angegebenen Rolle. Diese Angaben zur Beitragsstärke beschreiben den Umfang der Beteiligung und nicht hierarchische Ordnungen.",
+            "description": "Anteil des Beitrags in der angegebenen Rolle. Diese Angaben zur Beitragsstärke beschreiben den Umfang der Beteiligung und nicht hierarchische Ordnungen. (https://credit.niso.org/contributor-roles/#:~:text=An%20individual%20contributor,confirm%20assigned%20roles.)",
             "type": "string",
             "enum": ["lead", "equal", "supporting"]
           }
@@ -67,7 +67,7 @@
     "modalia": null,
     "schema": {
       "relation": "skos:closeMatch",
-      "property": "schema:roleName"
+      "target": "schema:roleName"
     }
   }
 }
