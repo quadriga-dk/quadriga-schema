@@ -10,23 +10,23 @@
   },
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:subject"
+      "relation": "skos:closeMatch",
+      "target": "dc:subject"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
-      "property": "dcterms:subject"
+      "relation": "skos:closeMatch",
+      "target": "dcterms:subject"
     },
     "lrmi": null,
     "modalia": null,
     "schema": [
       {
         "relation": "skos:exactMatch",
-        "property": "schema:keywords"
+        "target": "schema:keywords"
       },
       {
         "relation": "skos:closeMatch",
-        "property": "schema:about"
+        "target": "schema:about"
       }
     ]
   }
