@@ -7,32 +7,35 @@
   "required": ["content"],
   "properties": {
     "content": {
-      "description": "Lizenz des Buchs",
+      "description": "Lizenz des Buchs.",
       "$ref": "license-entry.json"
     },
     "code": {
-      "description": "Lizenz des Codes",
+      "description": "Lizenz des Codes.",
       "$ref": "license-entry.json"
     },
     "data": {
-      "description": "Lizenz der Daten.\n\nWird genutzt, falls die Daten einer anderen Lizenz unterliegen als der Inhalt (siehe `license.content`) oder falls die Daten-Lizenz explizit dargestellt werden soll.\nWird die Datenlizenz angegeben, so sollte diese als `LICENSE.txt` o.ä. im Unterordner der Daten liegen bzw. es sollte eine `LICENSE-DATA.txt` existieren, die auflistet, welche Inhalte genau der Datenlizenz unterliegen.",
+      "description": "Lizenz der Daten.\n\nWird genutzt, falls die genutzten/erstellten Daten einer anderen Lizenz unterliegen als der Inhalt (siehe `license.content`) oder falls die Daten-Lizenz explizit dargestellt werden soll.\nWird die Datenlizenz angegeben, so sollte diese als `LICENSE.txt` o.ä. im Unterordner der Daten liegen bzw. es sollte eine `LICENSE-DATA.txt` existieren, die auflistet, welche Inhalte genau der Datenlizenz unterliegen.",
       "$ref": "license-entry.json"
     }
   },
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:rights"
+      "relation": "skos:broadMatch",
+      "target": "dc:rights"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
-      "property": "dcterms:license"
+      "relation": "skos:closeMatch",
+      "target": "dcterms:license"
     },
-    "lrmi": null,
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "target": "lrmi:useRightsUrl"
+    },
     "modalia": null,
     "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:license"
+      "relation": "skos:closeMatch",
+      "target": "schema:license"
     }
   }
 }

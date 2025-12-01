@@ -31,18 +31,21 @@
   ],
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:rights"
+      "relation": "skos:broadMatch",
+      "target": "dc:rights"
     },
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:license"
+      "target": "dcterms:license"
     },
-    "lrmi": null,
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "target": "lrmi:useRightsUrl"
+    },
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:license"
+      "target": "schema:license"
     }
   }
 }
