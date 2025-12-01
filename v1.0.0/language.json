@@ -24,17 +24,17 @@
   "x-mappings": {
     "dc": {
       "relation": "skos:exactMatch",
-      "property": "dc:language"
+      "target": "dc:language"
     },
     "dcterms": {
       "relation": "skos:exactMatch",
-      "property": "dcterms:language"
+      "target": "dcterms:language"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:inLanguage"
+      "target": "schema:inLanguage"
     }
   }
 }

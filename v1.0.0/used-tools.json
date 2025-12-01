@@ -13,7 +13,7 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
-      "property": "dcterms:requires"
+      "target": "dcterms:requires"
     },
     "lrmi": null,
     "modalia": null,

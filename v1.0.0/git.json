@@ -9,13 +9,13 @@
     "dc": null,
     "dcterms": {
       "relation": "skos:closeMatch",
-      "property": "dcterms:source"
+      "target": "dcterms:source"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
       "relation": "skos:exactMatch",
-      "property": "schema:codeRepository"
+      "target": "schema:codeRepository"
     }
   }
 }
