@@ -22,7 +22,7 @@
     "nicht anwendbar"
   ],
   "x-mappings": {
-    "$comment": "modalia:Skill is an owl:Class (type), not a property, so cannot be mapped here. The QUADRIGA competency framework is domain-specific and has no direct property equivalent in MoDALIA. Related MoDALIA properties like modalia:teachesSkill or modalia:competencyRequired would apply to learning objectives/resources, not to the competency values themselves.",
+    "$comment": "Die Einordnung in das QUADRIGA DKF kann nicht gemappt werden. Die darüberliegende Beschreibung des Lernziels ist gemappt.",
     "dc": null,
     "dcterms": null,
     "lrmi": null,
