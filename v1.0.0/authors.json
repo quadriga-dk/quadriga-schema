@@ -10,19 +10,20 @@
     "$ref": "author.json"
   },
   "x-mappings": {
+    "$comment": "Die Liste der Autor*innen ist nur ein closeMatch zur Definition einer einzelnen Autor*in.",
     "dc": {
-      "relation": "skos:exactMatch",
-      "property": "dc:creator"
+      "relation": "skos:closeMatch",
+      "target": "dc:creator"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
-      "property": "dcterms:creator"
+      "relation": "skos:closeMatch",
+      "target": "dcterms:creator"
     },
     "lrmi": null,
     "modalia": null,
     "schema": {
-      "relation": "skos:exactMatch",
-      "property": "schema:author"
+      "relation": "skos:closeMatch",
+      "target": "schema:author"
     }
   }
 }
