@@ -33,6 +33,9 @@
       "description": "Geschätzte Bearbeitungsdauer des Kapitels.",
       "$ref": "time-required.json"
     },
+    "learning-goal": {
+      "$ref": "learning-goal.json"
+    },
     "learning-objectives": {
       "$ref": "learning-objectives.json"
     },
