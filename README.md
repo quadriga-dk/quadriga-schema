@@ -119,42 +119,42 @@ example:
 
 ```yaml
 # yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json
-schema-version: 1.0.0
 title: Title of the whole book
-identifier: DOI of the book as a whole
 authors:
   - given-names: test
     family-names: author
-    orcid: https://orcid.org/0000-0000-0000-0000
+    orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly advised
 contributors:
-  - Test Mitarbeiter*in
-description: Description of the whole book
-table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
-date-modified: 2025-10-23
+  - Test Mitarbeiter\*in
+identifier: DOI of the book as a whole
 date-issued: 2025-06-24
+date-modified: 2025-10-23
 version: 0.1.0
-language: de
-license:
-  content: https://creativecommons.org/licenses/by-sa/4.0/
+description: Description of the whole book
+time-required: PT1H # Duration formatted in ISO8601
+table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
 chapters:
   - title: The title of the chapter
     description: A short description of the chapter and its contents.
     learning-goal: Overarching learning goal of the chapter as a whole.
-    time-required: PT1H
+    time-required: PT1H # Duration formatted in ISO8601
     learning-objectives:
       - learning-objective: one specific learning objective
         competency: Orientierungswissen
         data-flow: übergreifend
         blooms-category: 1 Erinnern
-git: https://github.com/quadriga-dk/quadriga-schema
-context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.<br><br>Förderkennzeichen: 16DKZ2034"
-time-required: PT1H
-discipline:
-  - übergreifend
 research-object-type:
+  - übergreifend
+discipline:
   - übergreifend
 target-group:
   - Promovierende
+context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
+language: de
+license:
+  content: https://creativecommons.org/licenses/by-sa/4.0/
+git: https://github.com/quadriga-dk/nonexistant_case_study
+schema-version: 1.0.0
 ```
 
 You can use `latest` in the schema URL, but in production we recommend picking
