@@ -54,17 +54,26 @@ The following order of elements is recommended (required fields have an asterisk
   - (definition of each author)
     - famliy-name*
     - given-name*
+- keywords
+- description*
+- table-of-contents*
+- discipline*
+- research-object-type*
+- target-group*
+- time-required*
+- language*
 - contributors*
   - (definition of each contributor)
     - famliy-name*
     - given-name*
 - identifier*
-- date-issued*
-- date-modified*
-- version*
-- description*
-- time-required*
-- table-of-contents*
+- git
+- url
+- prerequisites
+- used-tools
+  - (definition for each tool)
+    - name
+    - url
 - chapters*
   - (definition of each chapter)
     - title*
@@ -86,26 +95,16 @@ The following order of elements is recommended (required fields have an asterisk
         - url*
         - note
     - language (only allowed if it overwrites the books language)
-- research-object-type*
-- discipline*
-- target-group*
-- prerequisites
-- used-tools
-  - (definition for each tool)
-    - name
-    - url
+- date-issued*
+- date-modified*
+- version*
 - context-of-creation*
+- quality-assurance (still to be renamed/reworked)
 - learning-resource-type
-- keywords
-- language*
+- schema-version*
 - license*
   - content*
   - code
-  - data
-- git
-- url
-- quality-assurance (still to be renamed/reworked)
-- schema-version*
 ```
 
 
