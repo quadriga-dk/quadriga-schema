@@ -46,6 +46,70 @@ The schema describes educational resources with the following key components:
 See `examples/minimal_metadata.yml` for a complete example showing how these
 elements work together to describe an educational resource.
 
+The following order of elements is recommended (required fields have an asterisk after their name):
+
+```
+- title*
+- authors*
+  - (definition of each author)
+    - famliy-name*
+    - given-name*
+- contributors*
+  - (definition of each contributor)
+    - famliy-name*
+    - given-name*
+- identifier*
+- date-issued*
+- date-modified*
+- version*
+- description*
+- time-required*
+- table-of-contents*
+- chapters*
+  - (definition of each chapter)
+    - title*
+    - description*
+    - url
+    - time-required*
+    - learning-goal*
+    - learning-objectives*
+      - (definition for each learning-objective)
+        - learning-objective*
+        - competency*
+        - data-flow*
+        - blooms-category*
+        - assessment
+        - jupyter-book-glue-id (only for internal use)
+    - supplemented-by
+      - (definition for each supplemental material)
+        - title*
+        - url*
+        - note
+    - language (only allowed if it overwrites the books language)
+- research-object-type*
+- discipline*
+- target-group*
+- prerequisites
+- used-tools
+  - (definition for each tool)
+    - name
+    - url
+- context-of-creation*
+- learning-resource-type
+- keywords
+- language*
+- license*
+  - content*
+  - code
+  - data
+- git
+- url
+- quality-assurance (still to be renamed/reworked)
+- schema-version*
+```
+
+
+
 ## Usage
 
 ### Creating Metadata Files
