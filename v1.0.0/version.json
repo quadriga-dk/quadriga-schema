@@ -7,6 +7,10 @@
   "type": "string",
   "x-mappings": {
     "dc": null,
+    "dcat": {
+      "relation": "skos:exactMatch",
+      "target": "dcat:version"
+    },
     "dcterms": null,
     "lrmi": null,
     "modalia": {

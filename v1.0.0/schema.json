@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "dcat": "http://www.w3.org/ns/dcat#",
     "dcterms": "http://purl.org/dc/terms/",
     "lrmi": "http://purl.org/dcx/lrmi-terms/",
     "modalia": "https://purl.org/ontology/modalia#",
@@ -119,6 +120,10 @@
   },
   "x-mappings": {
     "dc": null,
+    "dcat": {
+      "relation": "skos:closeMatch",
+      "target": "dcat:Dataset"
+    },
     "dcterms": null,
     "lrmi": {
       "relation": "skos:exactMatch",

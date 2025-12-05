@@ -21,6 +21,10 @@
       "relation": "skos:closeMatch",
       "target": "dc:subject"
     },
+    "dcat": {
+      "relation": "skos:closeMatch",
+      "target": "dcat:theme"
+    },
     "dcterms": {
       "relation": "skos:closeMatch",
       "target": "dcterms:subject"
