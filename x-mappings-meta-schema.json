@@ -2,9 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/x-mappings-meta-schema.json",
   "title": "QUADRIGA x-mappings Meta-Schema",
-  "description": "Meta-schema for validating x-mappings vocabulary crosswalk annotations in QUADRIGA JSON Schema files. The x-mappings extension documents how schema elements (properties or types) map to standard vocabularies (Dublin Core, DCAT, DCMI Terms, LRMI, Schema.org, Modalia) using SKOS relationship types.",
+  "description": "Meta-schema for validating x-mappings vocabulary crosswalk annotations in QUADRIGA JSON Schema files. The x-mappings extension documents how schema elements (properties or types) map to standard vocabularies (Dublin Core, DCAT, DCMI Terms, LRMI, Schema.org, Modalia, HERMES) using SKOS relationship types.",
   "type": "object",
   "properties": {
+    "$comment": {
+      "type": "string",
+      "description": "Optional comment explaining mapping decisions or providing additional context about the x-mappings in this schema"
+    },
     "dc": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
@@ -44,6 +48,19 @@
       ],
       "description": "Mapping to DCMI Metadata Terms (http://purl.org/dc/terms/)"
     },
+    "hermes": {
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to HERMES OER metadata properties"
+        }
+      ],
+      "description": "Mapping to HERMES OER metadata schema (https://zenodo.org/records/17279619)"
+    },
     "lrmi": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
@@ -82,14 +99,10 @@
         }
       ],
       "description": "Mapping to Schema.org vocabulary (http://schema.org/)"
-    },
-    "$comment": {
-      "type": "string",
-      "description": "Optional comment explaining mapping decisions or providing additional context about the x-mappings in this schema"
     }
   },
   "additionalProperties": false,
-  "required": ["dc", "dcat", "dcterms", "lrmi", "modalia", "schema"],
+  "required": ["dc", "dcat", "dcterms", "hermes", "lrmi", "modalia", "schema"],
   "$defs": {
     "relation": {
       "type": "string",
