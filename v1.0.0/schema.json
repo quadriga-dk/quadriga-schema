@@ -125,6 +125,7 @@
       "target": "dcat:Dataset"
     },
     "dcterms": null,
+    "hermes": null,
     "lrmi": {
       "relation": "skos:exactMatch",
       "target": "lrmi:LearningResource"

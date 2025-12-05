@@ -12,6 +12,11 @@
       "target": "dcat:version"
     },
     "dcterms": null,
+    "hermes": {
+      "$comment": "HERMES Attribut #17: Version",
+      "relation": "skos:exactMatch",
+      "target": "schema:version"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

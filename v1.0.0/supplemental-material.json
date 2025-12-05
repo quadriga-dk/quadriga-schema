@@ -41,6 +41,7 @@
         "target": "dcterms:references"
       }
     ],
+    "hermes": null,
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

@@ -15,6 +15,11 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:modified"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #18: Modifizierung",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:modified"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

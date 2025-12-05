@@ -57,6 +57,7 @@
     "dc": null,
     "dcat": null,
     "dcterms": null,
+    "hermes": null,
     "lrmi": {
       "relation": "skos:exactMatch",
       "target": "lrmi:teaches"

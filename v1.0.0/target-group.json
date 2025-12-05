@@ -20,6 +20,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:audience"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #8: Zielgruppe",
+      "relation": "skos:closeMatch",
+      "target": "dcterms:audience"
+    },
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:educationalAudience"

@@ -119,6 +119,10 @@
       "type": "object",
       "description": "A mapping to a vocabulary term. The target can be either a prefixed term (e.g., 'schema:name') or a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource'). This allows ontologies to reuse definitions from other schemas.",
       "properties": {
+        "$comment": {
+          "type": "string",
+          "description": "Optional comment explaining this specific mapping, such as the source vocabulary attribute name or semantic differences"
+        },
         "relation": { "$ref": "#/$defs/relation" },
         "target": {
           "type": "string",

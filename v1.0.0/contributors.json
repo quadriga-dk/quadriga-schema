@@ -20,6 +20,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:contributor"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #5: Mitwirkende",
+      "relation": "skos:closeMatch",
+      "target": "dcterms:contributor"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:relatedMatch",

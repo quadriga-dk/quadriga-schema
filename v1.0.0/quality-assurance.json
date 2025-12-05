@@ -48,6 +48,7 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:provenance"
     },
+    "hermes": null,
     "lrmi": null,
     "modalia": {
       "relation": "skos:relatedMatch",

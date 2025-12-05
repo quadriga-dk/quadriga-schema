@@ -17,6 +17,11 @@
       "relation": "skos:broadMatch",
       "target": "dcterms:type"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #7: Format",
+      "relation": "skos:closeMatch",
+      "target": "modalia:hasLearningType"
+    },
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:learningResourceType"

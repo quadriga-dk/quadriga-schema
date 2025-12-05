@@ -13,6 +13,7 @@
     "dc": null,
     "dcat": null,
     "dcterms": null,
+    "hermes": null,
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:teaches"

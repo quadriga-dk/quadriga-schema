@@ -12,6 +12,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:extent"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #12: Dauer",
+      "relation": "skos:closeMatch",
+      "target": "schema:duration"
+    },
     "lrmi": {
       "relation": "skos:exactMatch",
       "target": "lrmi:timeRequired"

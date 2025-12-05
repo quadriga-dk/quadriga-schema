@@ -42,6 +42,7 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:license"
     },
+    "hermes": null,
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"

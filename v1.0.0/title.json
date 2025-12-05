@@ -14,6 +14,11 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:title"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #1: Titel",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:title"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

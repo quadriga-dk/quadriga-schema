@@ -15,6 +15,18 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:identifier"
     },
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #20: ID",
+        "relation": "skos:exactMatch",
+        "target": "schema:identifier"
+      },
+      {
+        "$comment": "HERMES Attribut #20: ID",
+        "relation": "skos:exactMatch",
+        "target": "dcterms:identifier"
+      }
+    ],
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

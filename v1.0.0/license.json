@@ -27,6 +27,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:license"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #19: Lizenz",
+      "relation": "skos:closeMatch",
+      "target": "dcterms:license"
+    },
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"
