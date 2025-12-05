@@ -13,7 +13,7 @@
     }
   ],
   "x-mappings": {
-      "$comment": "dcat:keyword has the value range of rdfs:Literal so URIs are not allowed."
+    "$comment": "dcat:keyword has the value range of rdfs:Literal so URIs are not allowed.",
     "dc": {
       "relation": "skos:exactMatch",
       "target": "dc:subject"
