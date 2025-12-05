@@ -57,14 +57,21 @@
                             </td>
                             <td>
                             {%- if target_node -%}
-                                {%- set target_parts = target_node.literal.split(':') -%}
-                                {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
-                                    {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
-                                    <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                                {%- if target_node.literal.startswith('http://') or target_node.literal.startswith('https://') -%}
+                                    {# Full URI - make it clickable #}
+                                    <a href="{{ target_node.literal }}" target="_blank" rel="noopener noreferrer">
                                         <code>{{ target_node.literal }}</code>
                                     </a>
                                 {%- else -%}
-                                    <code>{{ target_node.literal }}</code>
+                                    {%- set target_parts = target_node.literal.split(':') -%}
+                                    {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
+                                        {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
+                                        <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                                            <code>{{ target_node.literal }}</code>
+                                        </a>
+                                    {%- else -%}
+                                        <code>{{ target_node.literal }}</code>
+                                    {%- endif -%}
                                 {%- endif -%}
                             {%- else -%}
                                 <span class="text-muted">N/A</span>
@@ -101,14 +108,21 @@
                         </td>
                         <td>
                         {%- if target_node -%}
-                            {%- set target_parts = target_node.literal.split(':') -%}
-                            {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
-                                {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
-                                <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                            {%- if target_node.literal.startswith('http://') or target_node.literal.startswith('https://') -%}
+                                {# Full URI - make it clickable #}
+                                <a href="{{ target_node.literal }}" target="_blank" rel="noopener noreferrer">
                                     <code>{{ target_node.literal }}</code>
                                 </a>
                             {%- else -%}
-                                <code>{{ target_node.literal }}</code>
+                                {%- set target_parts = target_node.literal.split(':') -%}
+                                {%- if target_parts|length == 2 and target_parts[0] in context_mapping -%}
+                                    {%- set target_url = context_mapping[target_parts[0]] ~ target_parts[1] -%}
+                                    <a href="{{ target_url }}" target="_blank" rel="noopener noreferrer">
+                                        <code>{{ target_node.literal }}</code>
+                                    </a>
+                                {%- else -%}
+                                    <code>{{ target_node.literal }}</code>
+                                {%- endif -%}
                             {%- endif -%}
                         {%- else -%}
                             <span class="text-muted">N/A</span>
