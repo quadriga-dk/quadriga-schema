@@ -16,6 +16,7 @@
       "relation": "skos:broadMatch",
       "target": "dcterms:identifier"
     },
+    "hermes": null,
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

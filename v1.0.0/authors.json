@@ -20,6 +20,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:creator"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #3: Autor*innen",
+      "relation": "skos:closeMatch",
+      "target": "dcterms:creator"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

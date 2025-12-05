@@ -22,6 +22,18 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:subject"
     },
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #9: Hauptthema",
+        "relation": "skos:closeMatch",
+        "target": "dcterms:subject"
+      },
+      {
+        "$comment": "HERMES Attribut #9: Hauptthema",
+        "relation": "skos:exactMatch",
+        "target": "schema:keywords"
+      }
+    ],
     "lrmi": null,
     "modalia": {
       "relation": "skos:narrowMatch",

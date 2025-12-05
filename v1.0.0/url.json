@@ -12,6 +12,7 @@
       "target": "dcat:landingPage"
     },
     "dcterms": null,
+    "hermes": null,
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

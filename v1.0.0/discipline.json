@@ -29,6 +29,23 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:subject"
     },
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #11: Fachdisziplin",
+        "relation": "skos:closeMatch",
+        "target": "http://purl.org/spar/fabio/hasDiscipline"
+      },
+      {
+        "$comment": "HERMES Attribut #11: Fachdisziplin",
+        "relation": "skos:closeMatch",
+        "target": "http://purl.org/spar/fabio/SubjectDiscipline"
+      },
+      {
+        "$comment": "HERMES Attribut #11: Fachdisziplin",
+        "relation": "skos:closeMatch",
+        "target": "schema:discipline"
+      }
+    ],
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",

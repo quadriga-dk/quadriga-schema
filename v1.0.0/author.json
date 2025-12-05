@@ -15,6 +15,11 @@
       "relation": "skos:broadMatch",
       "target": "dcterms:creator"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #3: Autor*innen",
+      "relation": "skos:broadMatch",
+      "target": "dcterms:creator"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:closeMatch",

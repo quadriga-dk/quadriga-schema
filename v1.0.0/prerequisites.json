@@ -15,6 +15,18 @@
     "dc": null,
     "dcat": null,
     "dcterms": null,
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #14: Vorkenntnisse",
+        "relation": "skos:closeMatch",
+        "target": "modalia:hasProficiencyLevel"
+      },
+      {
+        "$comment": "HERMES Attribut #14: Vorkenntnisse",
+        "relation": "skos:closeMatch",
+        "target": "schema:educationalLevel"
+      }
+    ],
     "lrmi": null,
     "modalia": [
       {

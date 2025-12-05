@@ -18,6 +18,18 @@
     "dc": null,
     "dcat": null,
     "dcterms": null,
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #21: Medientyp",
+        "relation": "skos:closeMatch",
+        "target": "dcterms:type"
+      },
+      {
+        "$comment": "HERMES Attribut #21: Medientyp",
+        "relation": "skos:closeMatch",
+        "target": "schema:mediaObject"
+      }
+    ],
     "lrmi": null,
     "modalia": {
       "relation": "skos:closeMatch",

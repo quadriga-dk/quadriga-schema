@@ -12,6 +12,7 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:source"
     },
+    "hermes": null,
     "lrmi": {
       "relation": "skos:relatedMatch",
       "target": "lrmi:isBasedOnUrl"

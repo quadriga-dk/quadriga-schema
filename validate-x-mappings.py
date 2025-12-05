@@ -90,7 +90,7 @@ def validate_mapping_entry(
         errors.append(f"  {vocab}: missing required property 'target'")
 
     # Check for additional properties
-    allowed_props = {"relation", "target"}
+    allowed_props = {"$comment", "relation", "target"}
     extra_props = set(entry.keys()) - allowed_props
     if extra_props:
         errors.append(f"  {vocab}: unexpected properties {extra_props}")

@@ -15,6 +15,11 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:issued"
     },
+    "hermes": {
+      "$comment": "HERMES Attribut #16: Veröffentlichung",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:issued"
+    },
     "lrmi": null,
     "modalia": {
       "relation": "skos:exactMatch",
