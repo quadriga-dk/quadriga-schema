@@ -4,9 +4,7 @@
   "title": "license – Lizenz(en)",
   "description": "Lizenz(en) des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
   "type": "object",
-  "required": [
-    "content"
-  ],
+  "required": ["content"],
   "properties": {
     "content": {
       "description": "Lizenz des Buchs.",
@@ -27,11 +25,18 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:license"
     },
-    "hermes": {
-      "$comment": "HERMES Attribut #19: Lizenz",
-      "relation": "skos:closeMatch",
-      "target": "dcterms:license"
-    },
+    "hermes": [
+      {
+        "$comment": "HERMES Attribut #19: Lizenz",
+        "relation": "skos:closeMatch",
+        "target": "dcterms:license"
+      },
+      {
+        "$comment": "HERMES Attribut #27: Bildrechte",
+        "relation": "skos:relatedMatch",
+        "target": "dcterms:rights"
+      }
+    ],
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"

@@ -13,12 +13,12 @@
     }
   ],
   "x-mappings": {
-    "$comment": "dcat:keyword has the value range of rdfs:Literal so URIs are not allowed.",
     "dc": {
       "relation": "skos:exactMatch",
       "target": "dc:subject"
     },
     "dcat": {
+      "$comment": "dcat:keyword has the value range of rdfs:Literal so URIs are not allowed.",
       "relation": "skos:narrowMatch",
       "target": "dcat:keyword"
     },
@@ -28,12 +28,12 @@
     },
     "hermes": [
       {
-        "$comment": "HERMES Attribut #9: Hauptthema",
-        "relation": "skos:exactMatch",
+        "$comment": "HERMES Attribut #9: Hauptthema. Nur Werte aus der vorgegebenen Picklist erlaubt.",
+        "relation": "skos:narrowMatch",
         "target": "dcterms:subject"
       },
       {
-        "$comment": "HERMES Attribut #9: Hauptthema",
+        "$comment": "HERMES Attribut #9: Hauptthema. Nur Werte aus der vorgegebenen Picklist erlaubt.",
         "relation": "skos:closeMatch",
         "target": "schema:keywords"
       }
