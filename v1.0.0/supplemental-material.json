@@ -25,7 +25,7 @@
     }
   },
   "x-mappings": {
-    "$comment": "schema:isRelatedTo has domain restrictions (Product/Service only), cannot be used with CreativeWork/Book types. No appropriate general 'related resource' property exists in Schema.org for educational materials.",
+    "$comment": "schema:isRelatedTo ist nur für schema:Product oder schema:Service definiert, nicht für schema:LearningResource. Daher ist die Beziehung nur skos:relatedMatch.",
     "dc": null,
     "dcterms": [
       {
@@ -39,6 +39,9 @@
     ],
     "lrmi": null,
     "modalia": null,
-    "schema": null
+    "schema": {
+      "relation": "skos:relatedMatch",
+      "target": "schema:isRelatedTo"
+    }
   }
 }

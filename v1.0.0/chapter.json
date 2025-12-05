@@ -42,7 +42,6 @@
     "supplemented-by": {
       "title": "supplemented-by – Ergänzende / Genutzte Materialien",
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
-      "$comment": "Ähnlich zu dcterms:relation.",
       "oneOf": [
         {
           "type": "array",
@@ -78,23 +77,13 @@
     }
   },
   "x-mappings": {
-    "$comment": "Ein Kapitel ist selbst wieder eine Lernresource, weshalb hier das Mapping auf `schema:LearningResource` korrekt ist. Mappings bpsw. auf `lrmi:learningResourceType` wurden nicht vorgenommen, weil es sich hier jeweils um eine konkrete Instanz und nicht um einen Typ handelt.",
     "dc": null,
     "dcterms": null,
     "lrmi": null,
-    "modalia": {
-      "relation": "skos:closeMatch",
-      "target": "modalia:CodeNotebook"
-    },
-    "schema": [
-      {
-        "relation": "skos:exactMatch",
-        "target": "schema:LearningResource"
-      },
-      {
-        "relation": "skos:exactMatch",
-        "target": "schema:Chapter"
-      }
-    ]
+    "modalia": null,
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:Chapter"
+    }
   }
 }

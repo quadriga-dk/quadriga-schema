@@ -118,7 +118,6 @@
     }
   },
   "x-mappings": {
-    "$comment": "lrmi:LearningResource, modalia:LearningResource are RDF classes (types), not properties, so cannot be mapped here. The schema represents a Book/collection, which is appropriately mapped to schema:Book type via the schema itself, not via x-mappings.",
     "dc": null,
     "dcterms": null,
     "lrmi": {
