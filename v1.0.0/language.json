@@ -31,7 +31,10 @@
       "target": "dcterms:language"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:language"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:inLanguage"

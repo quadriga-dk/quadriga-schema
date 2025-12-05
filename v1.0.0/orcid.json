@@ -8,17 +8,20 @@
   "pattern": "^https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$",
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:broadMatch",
       "target": "dc:identifier"
     },
     "dcterms": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:broadMatch",
       "target": "dcterms:identifier"
     },
     "lrmi": null,
-    "modalia": null,
-    "schema": {
+    "modalia": {
       "relation": "skos:exactMatch",
+      "target": "http://w3id.org/nfdi4ing/metadata4ing#orcidId"
+    },
+    "schema": {
+      "relation": "skos:broadMatch",
       "target": "schema:identifier"
     }
   }

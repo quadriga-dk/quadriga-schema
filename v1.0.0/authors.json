@@ -10,7 +10,7 @@
     "$ref": "author.json"
   },
   "x-mappings": {
-    "$comment": "Die Liste der Autor*innen ist nur ein closeMatch zur Definition einer einzelnen Autor*in.",
+    "$comment": "Die Liste der Autor*innen ist nur ein closeMatch zur Definition einer einzelnen Autor*in. MoDALIA re-definiert schema:author zur Liste der Autor:innen.",
     "dc": {
       "relation": "skos:closeMatch",
       "target": "dc:creator"
@@ -20,7 +20,10 @@
       "target": "dcterms:creator"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:author"
+    },
     "schema": {
       "relation": "skos:closeMatch",
       "target": "schema:author"

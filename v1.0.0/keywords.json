@@ -18,7 +18,10 @@
       "target": "dcterms:subject"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:narrowMatch",
+      "target": "schema:keywords"
+    },
     "schema": [
       {
         "relation": "skos:exactMatch",

@@ -37,7 +37,10 @@
           "relation": "skos:closeMatch",
           "target": "lrmi:assesses"
         },
-        "modalia": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "https://w3id.org/kim/hcrt/assessment"
+        },
         "schema": {
           "relation": "skos:closeMatch",
           "target": "schema:assesses"

@@ -63,7 +63,10 @@
     "dc": null,
     "dcterms": null,
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "http://id.loc.gov/ontologies/bibframe/Role"
+    },
     "schema": {
       "relation": "skos:closeMatch",
       "target": "schema:roleName"

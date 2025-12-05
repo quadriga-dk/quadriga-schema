@@ -124,7 +124,10 @@
       "relation": "skos:exactMatch",
       "target": "lrmi:LearningResource"
     },
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "https://github.com/tibonto/educor#EducationalResource"
+    },
     "schema": [
       {
         "relation": "skos:exactMatch",

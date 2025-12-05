@@ -34,7 +34,10 @@
     "dc": null,
     "dcterms": null,
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:Person"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:Person"

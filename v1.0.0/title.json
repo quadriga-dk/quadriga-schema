@@ -14,7 +14,10 @@
       "target": "dcterms:title"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:title"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:name"

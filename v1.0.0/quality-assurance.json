@@ -48,7 +48,13 @@
       "target": "dcterms:provenance"
     },
     "lrmi": null,
-    "modalia": null,
-    "schema": null
+    "modalia": {
+      "relation": "skos:relatedMatch",
+      "target": "modalia:hasQuality"
+    },
+    "schema": {
+      "relation": "skos:relatedMatch",
+      "target": "schema:CheckAction"
+    }
   }
 }

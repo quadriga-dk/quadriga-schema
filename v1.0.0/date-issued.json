@@ -15,7 +15,10 @@
       "target": "dcterms:issued"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:datePublished"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:datePublished"

@@ -38,7 +38,10 @@
       }
     ],
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "https://w3id.org/citedcat-ap/isSupplementedBy"
+    },
     "schema": {
       "relation": "skos:relatedMatch",
       "target": "schema:isRelatedTo"

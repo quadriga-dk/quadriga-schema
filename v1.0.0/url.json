@@ -9,7 +9,10 @@
     "dc": null,
     "dcterms": null,
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:url"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:url"
