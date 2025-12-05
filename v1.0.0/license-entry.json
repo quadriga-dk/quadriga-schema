@@ -12,7 +12,10 @@
     {
       "description": "Lizenzname und URL zur Lizenz",
       "type": "object",
-      "required": ["name", "url"],
+      "required": [
+        "name",
+        "url"
+      ],
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -34,6 +37,7 @@
       "relation": "skos:broadMatch",
       "target": "dc:rights"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:license"

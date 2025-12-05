@@ -11,7 +11,10 @@
     {
       "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.\n\nDie Angabe von ORCID und CRediT wird empfohlen. Weitere Unterfelder können bei Bedarf definiert werden (siehe bspw. https://schema.org/Person).",
       "type": "object",
-      "required": ["given-names", "family-names"],
+      "required": [
+        "given-names",
+        "family-names"
+      ],
       "additionalProperties": true,
       "properties": {
         "given-names": {
@@ -32,6 +35,7 @@
   "x-mappings": {
     "$comment": "Dieses Element beschreibt eine Person, die über eine Beziehung (bspw. Autor:in) mit der beschriebenen OER in Verbindung steht.",
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": {

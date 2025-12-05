@@ -10,6 +10,7 @@
       "relation": "skos:exactMatch",
       "target": "dc:identifier"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:identifier"

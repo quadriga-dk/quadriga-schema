@@ -10,6 +10,7 @@
       "relation": "skos:broadMatch",
       "target": "dc:date"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:issued"

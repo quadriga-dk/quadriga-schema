@@ -10,6 +10,7 @@
       "relation": "skos:broadMatch",
       "target": "dc:creator"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:broadMatch",
       "target": "dcterms:creator"

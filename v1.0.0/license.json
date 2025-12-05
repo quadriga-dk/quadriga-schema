@@ -4,7 +4,9 @@
   "title": "license – Lizenz(en)",
   "description": "Lizenz(en) des Buchs und des Codes jeweils als URL oder als Kombination aus Lizenznname und URL.",
   "type": "object",
-  "required": ["content"],
+  "required": [
+    "content"
+  ],
   "properties": {
     "content": {
       "description": "Lizenz des Buchs.",
@@ -20,6 +22,7 @@
       "relation": "skos:broadMatch",
       "target": "dc:rights"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:closeMatch",
       "target": "dcterms:license"

@@ -9,6 +9,7 @@
       "relation": "skos:exactMatch",
       "target": "dc:description"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:description"
