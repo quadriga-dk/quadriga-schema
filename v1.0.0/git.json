@@ -11,8 +11,14 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:source"
     },
-    "lrmi": null,
-    "modalia": null,
+    "lrmi": {
+      "relation": "skos:relatedMatch",
+      "target": "lrmi:isBasedOnUrl"
+    },
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "modalia:hasSourceCode"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:codeRepository"

@@ -15,7 +15,10 @@
       "relation": "skos:exactMatch",
       "target": "lrmi:timeRequired"
     },
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:timeRequired"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:timeRequired"

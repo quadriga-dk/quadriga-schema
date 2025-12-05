@@ -12,13 +12,16 @@
   "x-mappings": {
     "dc": null,
     "dcterms": {
-      "relation": "skos:closeMatch",
+      "relation": "skos:exactMatch",
       "target": "dcterms:hasPart"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:hasPart"
+    },
     "schema": {
-      "relation": "skos:closeMatch",
+      "relation": "skos:exactMatch",
       "target": "schema:hasPart"
     }
   }

@@ -42,7 +42,10 @@
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"
     },
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:license"

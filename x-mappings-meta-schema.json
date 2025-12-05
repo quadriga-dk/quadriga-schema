@@ -8,10 +8,10 @@
     "dc": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/dc-mapping-entry" },
+        { "$ref": "#/$defs/mapping-entry" },
         {
           "type": "array",
-          "items": { "$ref": "#/$defs/dc-mapping-entry" },
+          "items": { "$ref": "#/$defs/mapping-entry" },
           "minItems": 1,
           "description": "Array of mappings to Dublin Core properties"
         }
@@ -21,10 +21,10 @@
     "dcterms": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/dcterms-mapping-entry" },
+        { "$ref": "#/$defs/mapping-entry" },
         {
           "type": "array",
-          "items": { "$ref": "#/$defs/dcterms-mapping-entry" },
+          "items": { "$ref": "#/$defs/mapping-entry" },
           "minItems": 1,
           "description": "Array of mappings to DCMI Terms properties"
         }
@@ -34,10 +34,10 @@
     "lrmi": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/lrmi-mapping-entry" },
+        { "$ref": "#/$defs/mapping-entry" },
         {
           "type": "array",
-          "items": { "$ref": "#/$defs/lrmi-mapping-entry" },
+          "items": { "$ref": "#/$defs/mapping-entry" },
           "minItems": 1,
           "description": "Array of mappings to LRMI properties"
         }
@@ -47,23 +47,23 @@
     "modalia": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/modalia-mapping-entry" },
+        { "$ref": "#/$defs/mapping-entry" },
         {
           "type": "array",
-          "items": { "$ref": "#/$defs/modalia-mapping-entry" },
+          "items": { "$ref": "#/$defs/mapping-entry" },
           "minItems": 1,
-          "description": "Array of mappings to Modalia properties"
+          "description": "Array of mappings to Modalia properties (can reference other ontologies like educor)"
         }
       ],
-      "description": "Mapping to Modalia ontology (https://purl.org/ontology/modalia#)"
+      "description": "Mapping to Modalia ontology (https://purl.org/ontology/modalia#) or related ontologies that Modalia reuses"
     },
     "schema": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
-        { "$ref": "#/$defs/schema-mapping-entry" },
+        { "$ref": "#/$defs/mapping-entry" },
         {
           "type": "array",
-          "items": { "$ref": "#/$defs/schema-mapping-entry" },
+          "items": { "$ref": "#/$defs/mapping-entry" },
           "minItems": 1,
           "description": "Array of mappings to Schema.org properties"
         }
@@ -89,71 +89,15 @@
       ],
       "description": "SKOS mapping relation type indicating the semantic relationship between the schema element and the target vocabulary term. See https://www.w3.org/TR/skos-reference/#mapping"
     },
-    "dc-mapping-entry": {
+    "mapping-entry": {
       "type": "object",
-      "description": "A mapping to a Dublin Core term",
+      "description": "A mapping to a vocabulary term. The target can be either a prefixed term (e.g., 'schema:name') or a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource'). This allows ontologies to reuse definitions from other schemas.",
       "properties": {
         "relation": { "$ref": "#/$defs/relation" },
         "target": {
           "type": "string",
-          "pattern": "^dc:[a-zA-Z]+$",
-          "description": "The target vocabulary term in namespace:term format (e.g., 'dc:title')"
-        }
-      },
-      "required": ["relation", "target"],
-      "additionalProperties": false
-    },
-    "dcterms-mapping-entry": {
-      "type": "object",
-      "description": "A mapping to a DCMI Terms term",
-      "properties": {
-        "relation": { "$ref": "#/$defs/relation" },
-        "target": {
-          "type": "string",
-          "pattern": "^dcterms:[a-zA-Z]+$",
-          "description": "The target vocabulary term in namespace:term format (e.g., 'dcterms:created')"
-        }
-      },
-      "required": ["relation", "target"],
-      "additionalProperties": false
-    },
-    "lrmi-mapping-entry": {
-      "type": "object",
-      "description": "A mapping to an LRMI term",
-      "properties": {
-        "relation": { "$ref": "#/$defs/relation" },
-        "target": {
-          "type": "string",
-          "pattern": "^lrmi:[a-zA-Z]+$",
-          "description": "The target vocabulary term in namespace:term format (e.g., 'lrmi:educationalLevel')"
-        }
-      },
-      "required": ["relation", "target"],
-      "additionalProperties": false
-    },
-    "modalia-mapping-entry": {
-      "type": "object",
-      "description": "A mapping to a Modalia term",
-      "properties": {
-        "relation": { "$ref": "#/$defs/relation" },
-        "target": {
-          "type": "string",
-          "pattern": "^modalia:[a-zA-Z]+$",
-          "description": "The target vocabulary term in namespace:term format (e.g., 'modalia:modality')"
-        }
-      },
-      "required": ["relation", "target"],
-      "additionalProperties": false
-    },
-    "schema-mapping-entry": {
-      "type": "object",
-      "description": "A mapping to a Schema.org term",
-      "properties": {
-        "relation": { "$ref": "#/$defs/relation" },
-        "target": {
-          "type": "string",
-          "pattern": "^schema:[a-zA-Z]+$",
-          "description": "The target vocabulary term in namespace:term format (e.g., 'schema:name')"
+          "pattern": "^((dc|dcterms|lrmi|modalia|schema|skos):[a-zA-Z]+|https?://.+)$",
+          "description": "The target vocabulary term, either in namespace:term format using a namespace from @context (dc, dcterms, lrmi, modalia, schema, skos) or as a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource')"
         }
       },
       "required": ["relation", "target"],

@@ -15,7 +15,10 @@
       "target": "dcterms:modified"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:modified"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:dateModified"

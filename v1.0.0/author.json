@@ -5,6 +5,7 @@
   "description": "Ein:e Autor:in des Buchs. Idealerweise wird die Person strukturiert mit Nachname(n), Vorname(n), ORCID und CRediT-Rolle angegeben.",
   "$ref": "person.json",
   "x-mappings": {
+    "$comment": "MoDALIA re-definiert schema:author zur Liste der Autor:innen.",
     "dc": {
       "relation": "skos:broadMatch",
       "target": "dc:creator"
@@ -14,7 +15,10 @@
       "target": "dcterms:creator"
     },
     "lrmi": null,
-    "modalia": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "schema:author"
+    },
     "schema": {
       "relation": "skos:exactMatch",
       "target": "schema:author"
