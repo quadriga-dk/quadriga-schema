@@ -2,11 +2,44 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/quality-assurance.json",
   "title": "quality-assurance – Qualitätssicherung",
-  "description": "Liste der Qualitätsmanagementhandlungen/-maßnahmen, die durchgeführt wurden. Durchführende Person sowie Datum der Durchführung sind jeweils verpflichtend. Eine Beschreibung der QM-Handlung wird empfohlen.",
-  "type": "array",
-  "minItems": 1,
-  "items": {
-    "$ref": "quality-assurance-event.json"
+  "description": "Nachweis der Durchführung von Qualitätssicherungsmaßnahmen. Diese werden mit einer Beschreibung (vorzugsweise ein DOI zum publizierten Qualitätssicherungsverfahren) und dem Datum der abschließenden Prüfung nachgewiesen.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "DOI des Qualitätssicherungsverfahrens."
+        },
+        {
+          "$ref": "multilingual-text.json",
+          "description": "Beschreibung des Qualitätssicherungsverfahrens."
+        }
+      ]
+    },
+    "date": {
+      "description": "Datum an dem das Qualitätssicherungsverfahren abgeschlossen wurde.",
+      "type": "string",
+      "format": "date",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:date"
+        },
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:date"
+        },
+        "lrmi": null,
+        "modalia": null,
+        "schema": {
+          "relation": "skos:broadMatch",
+          "target": "schema:Date"
+        }
+      }
+    }
   },
   "x-mappings": {
     "dc": null,
