@@ -4,7 +4,10 @@
   "title": "supplemental-material – Ergänzende / genutzte Materialien",
   "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Titel; optional kann die Beziehung zum Buch in einer Anmerkung beschrieben werden.",
   "type": "object",
-  "required": ["url", "title"],
+  "required": [
+    "url",
+    "title"
+  ],
   "additionalProperties": false,
   "properties": {
     "title": {
@@ -27,6 +30,7 @@
   "x-mappings": {
     "$comment": "schema:isRelatedTo ist nur für schema:Product oder schema:Service definiert, nicht für schema:LearningResource. Daher ist die Beziehung nur skos:relatedMatch.",
     "dc": null,
+    "dcat": null,
     "dcterms": [
       {
         "relation": "skos:closeMatch",

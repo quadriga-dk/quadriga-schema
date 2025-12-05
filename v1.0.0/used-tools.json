@@ -10,6 +10,7 @@
   },
   "x-mappings": {
     "dc": null,
+    "dcat": null,
     "dcterms": {
       "relation": "skos:closeMatch",
       "target": "dcterms:requires"

@@ -24,6 +24,7 @@
   "x-mappings": {
     "$comment": "Die Einordnung in das QUADRIGA DKF kann nicht gemappt werden. Die darüberliegende Beschreibung des Lernziels ist gemappt.",
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": null,

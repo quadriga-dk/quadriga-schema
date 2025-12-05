@@ -6,6 +6,7 @@
   "type": "string",
   "x-mappings": {
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": {

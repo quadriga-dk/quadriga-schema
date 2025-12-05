@@ -16,6 +16,7 @@
   "x-mappings": {
     "$comment": "Die Bloomsche Taxonomie beschreibt kognitive Komplexität und nicht eine Abstufung nach Lernstufen. Daher passen die Variationen von `educationalLevel` in den Schemata nicht. `educationalAlignment` würde genutzt, wenn es bspw. ein Standard-Curriculum gäbe, was hier auch nicht der Fall ist.",
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": null,

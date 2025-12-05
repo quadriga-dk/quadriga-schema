@@ -4,12 +4,15 @@
   "title": "learning-resource-type – Typ der Lernressource",
   "description": "Typ der Lernressource. Für QUADRIGA ist dies immer \"Jupyter Book\".",
   "type": "string",
-  "enum": ["Jupyter Book"],
+  "enum": [
+    "Jupyter Book"
+  ],
   "x-mappings": {
     "dc": {
       "relation": "skos:broadMatch",
       "target": "dc:type"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:broadMatch",
       "target": "dcterms:type"

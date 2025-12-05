@@ -7,10 +7,16 @@
   "minItems": 1,
   "maxItems": 2,
   "items": {
-    "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"]
+    "enum": [
+      "Text",
+      "Tabelle",
+      "Bewegtes Bild",
+      "übergreifend"
+    ]
   },
   "x-mappings": {
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": null,
     "modalia": {

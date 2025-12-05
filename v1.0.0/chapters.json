@@ -11,6 +11,7 @@
   },
   "x-mappings": {
     "dc": null,
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:hasPart"

@@ -26,6 +26,7 @@
       "relation": "skos:exactMatch",
       "target": "dc:language"
     },
+    "dcat": null,
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:language"

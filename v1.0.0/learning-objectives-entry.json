@@ -55,6 +55,7 @@
   },
   "x-mappings": {
     "dc": null,
+    "dcat": null,
     "dcterms": null,
     "lrmi": {
       "relation": "skos:exactMatch",

@@ -9,9 +9,14 @@
     "$ref": "keyword.json"
   },
   "x-mappings": {
+    "$comment": "MoDALIA only allows for the definition of a list of keywords as strings.",
     "dc": {
       "relation": "skos:closeMatch",
       "target": "dc:subject"
+    },
+    "dcat": {
+      "relation": "skos:closeMatch",
+      "target": "dcat:keyword"
     },
     "dcterms": {
       "relation": "skos:closeMatch",
