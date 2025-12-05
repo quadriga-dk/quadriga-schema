@@ -32,7 +32,9 @@
       "$ref": "multilingual-text.json",
       "x-mappings": {
         "dc": null,
+        "dcat": null,
         "dcterms": null,
+        "hermes": null,
         "lrmi": {
           "relation": "skos:closeMatch",
           "target": "lrmi:assesses"

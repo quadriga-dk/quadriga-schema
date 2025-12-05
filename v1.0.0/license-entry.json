@@ -12,10 +12,7 @@
     {
       "description": "Lizenzname und URL zur Lizenz",
       "type": "object",
-      "required": [
-        "name",
-        "url"
-      ],
+      "required": ["name", "url"],
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -42,7 +39,11 @@
       "relation": "skos:exactMatch",
       "target": "dcterms:license"
     },
-    "hermes": null,
+    "hermes": {
+      "$comment": "HERMES Attribut #19: Lizenz",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"
