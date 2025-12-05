@@ -99,7 +99,7 @@ The following order of elements is recommended (required fields have an asterisk
 - date-modified*
 - version*
 - context-of-creation*
-- quality-assurance (still to be renamed/reworked)
+- quality-assurance
 - learning-resource-type
 - schema-version*
 - license*
