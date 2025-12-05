@@ -27,6 +27,9 @@ and reference.
 **Licensing:** The schema is licensed under CC0 (see `LICENSE-SCHEMA.txt`). Any
 code in this repository is licensed under MIT (see `LICENSE-CODE.txt`).
 
+**Archiving:** The schema is archived on Zenodo for long-term preservation and
+citable DOI assignment. Zenodo metadata is maintained in `.zenodo.json`.
+
 ## Schema Structure
 
 The schema describes educational resources with the following key components:
@@ -168,7 +171,7 @@ machine-readable and version-controlled alongside the schema itself.
 
 #### Structure
 
-Each schema element can include an `x-mappings` field that maps to five target
+Each schema element can include an `x-mappings` field that maps to seven target
 vocabularies:
 
 ```json
@@ -181,9 +184,14 @@ vocabularies:
         "relation": "skos:exactMatch",
         "target": "dc:title"
       },
+      "dcat": null,
       "dcterms": {
         "relation": "skos:exactMatch",
         "target": "dcterms:title"
+      },
+      "hermes": {
+        "relation": "skos:exactMatch",
+        "target": "hermes:title"
       },
       "lrmi": null,
       "modalia": null,
@@ -199,7 +207,9 @@ vocabularies:
 #### Target Vocabularies
 
 - **dc**: [Dublin Core Elements](http://purl.org/dc/elements/1.1/)
+- **dcat**: [Data Catalog Vocabulary](http://www.w3.org/ns/dcat#)
 - **dcterms**: [DCMI Metadata Terms](http://purl.org/dc/terms/)
+- **hermes**: [HERMES OER metadata schema](https://zenodo.org/records/17279619)
 - **lrmi**: [Learning Resource Metadata Initiative](http://purl.org/dcx/lrmi-terms/)
 - **modalia**: [Modalia ontology](https://purl.org/ontology/modalia#)
 - **schema**: [Schema.org](http://schema.org/)
