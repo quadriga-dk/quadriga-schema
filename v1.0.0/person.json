@@ -2,36 +2,24 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/person.json",
   "title": "person – Person",
-  "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.\n\nDie Nutzung der strukturierten Angabe wird ausdrücklich empfohlen.",
-  "oneOf": [
-    {
-      "description": "Vollständiger Name der Person.",
-      "type": "string"
+  "description": "Eine Person, die an der Erstellung des Buchs beteiligt war.\n\nStrukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.\n\nDie Angabe von ORCID und CRediT wird empfohlen. Weitere Unterfelder wie `affiliation` o.ä. können bei Bedarf definiert werden (siehe auch https://schema.org/Person).",
+  "type": "object",
+  "required": ["given-names", "family-names"],
+  "additionalProperties": true,
+  "properties": {
+    "given-names": {
+      "$ref": "given-names.json"
     },
-    {
-      "description": "Strukturierte Angabe der Person bestehend mindestens aus Vor- und Nachname.\n\nDie Angabe von ORCID und CRediT wird empfohlen. Weitere Unterfelder können bei Bedarf definiert werden (siehe bspw. https://schema.org/Person).",
-      "type": "object",
-      "required": [
-        "given-names",
-        "family-names"
-      ],
-      "additionalProperties": true,
-      "properties": {
-        "given-names": {
-          "$ref": "given-names.json"
-        },
-        "family-names": {
-          "$ref": "family-names.json"
-        },
-        "orcid": {
-          "$ref": "orcid.json"
-        },
-        "credit": {
-          "$ref": "credit.json"
-        }
-      }
+    "family-names": {
+      "$ref": "family-names.json"
+    },
+    "orcid": {
+      "$ref": "orcid.json"
+    },
+    "credit": {
+      "$ref": "credit.json"
     }
-  ],
+  },
   "x-mappings": {
     "$comment": "Dieses Element beschreibt eine Person, die über eine Beziehung (bspw. Autor:in) mit der beschriebenen OER in Verbindung steht.",
     "dc": null,

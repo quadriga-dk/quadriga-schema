@@ -5,12 +5,12 @@
   "description": "Angabe einer Lizenz als URL oder als Kombination aus Lizenzname und URL.",
   "oneOf": [
     {
-      "description": "URL zur Lizenz",
+      "description": "URL zur Lizenz.",
       "type": "string",
       "format": "uri"
     },
     {
-      "description": "Lizenzname und URL zur Lizenz",
+      "description": "Lizenzname und URL zur Lizenz.",
       "type": "object",
       "required": ["name", "url"],
       "additionalProperties": false,
