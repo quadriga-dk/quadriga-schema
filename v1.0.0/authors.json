@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/authors.json",
-  "title": "authors – Autor*innen",
+  "title": "authors – Autor:innen",
   "description": "Liste der Autor:innen des Buchs.",
   "type": "array",
   "minItems": 1,
@@ -10,7 +10,7 @@
     "$ref": "author.json"
   },
   "x-mappings": {
-    "$comment": "Die Liste der Autor*innen ist nur ein closeMatch zur Definition einer einzelnen Autor*in.",
+    "$comment": "Die Liste der Autor:innen ist nur ein `skos:closeMatch` zur Definition einer einzelnen Autor:in.",
     "dc": {
       "relation": "skos:closeMatch",
       "target": "dc:creator"
@@ -21,13 +21,13 @@
       "target": "dcterms:creator"
     },
     "hermes": {
-      "$comment": "HERMES Attribut #3: Autor*innen",
+      "$comment": "HERMES Attribut #3: Autor:innen",
       "relation": "skos:closeMatch",
       "target": "dcterms:creator"
     },
     "lrmi": null,
     "modalia": {
-      "$comment": "MoDALIA re-definiert schema:author zur Liste der Autor:innen. Nach dieser Redefinition ist schema:authors exakt gleich zu unserem authors Feld.",
+      "$comment": "MoDALIA re-definiert `schema:author` zur Liste der Autor:innen. Nach dieser Redefinition ist `schema:authors` exakt gleich zu unserem `authors` Feld.",
       "relation": "skos:exactMatch",
       "target": "schema:author"
     },
