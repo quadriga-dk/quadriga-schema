@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/family-names.json",
   "title": "family-names – Nachname(n)",
-  "description": "Nachname(n) der Person",
+  "description": "Nachname(n) der Person.",
   "type": "string",
   "x-mappings": {
     "dc": null,
