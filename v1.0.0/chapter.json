@@ -7,6 +7,7 @@
   "required": [
     "title",
     "description",
+    "url",
     "time-required",
     "learning-objectives",
     "learning-goal"
@@ -72,7 +73,7 @@
     },
     "language": {
       "title": "language – Kapitelsprache",
-      "description": "Sprache(n) des Kapitels. Überschreibt die Buchebene für dieses Kapitel.",
+      "description": "Sprache(n) des Kapitels. Überschreibt die auf Buchebene definierte Sprache für dieses Kapitel.",
       "$ref": "language.json"
     }
   },
