@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zenodo/zenodo/482ee72ad501cbbd7f8ce8df9b393c130d1970f7/zenodo/modules/deposit/jsonschemas/deposits/records/legacyrecord.json",
+  "title": "QUADRIGA metadata schema",
+  "description": "Internal metadata schema for the OER authored in the QUADRIGA project. Use this schema to validate the metadata of QUADRIGA case studies.
+
+The schema provides mappings to other schemas and the relationship of those mappings is defined via SKOS relations. These mappings are defined in `x-mappings-meta-schema.json`.",
+  "upload_type": "other",
+  "publication_date": "2025-11-30",
+  "creators": [
+    {
+      "name": "Schnaitter, Hannes",
+      "affiliation": "Humboldt-Universität zu Berlin, Institut für Bibliotheks- und Informationswissenschaft",
+      "orcid": "0000-0002-1602-6032"
+    },
+    {
+      "name": "Walter, Paul",
+      "affiliation": "Fachhochschule Potsdam",
+      "orcid": "0000-0002-9236-3268"
+    },
+    {
+      "name": "Schneemann, Carsten",
+      "orcid": "0000-0002-2683-5853"
+    },
+    {
+      "name": "Neuroth, Heike",
+      "affiliation": "Fachhochschule Potsdam",
+      "orcid": "0000-0002-3637-3154"
+    },
+    {
+      "name": "Petras, Vivien",
+      "affiliation": "Humboldt-Universität zu Berlin, Institut für Bibliotheks- und Informationswissenschaft",
+      "orcid": "0000-0002-8113-1509"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC0-1.0",
+  "keywords": ["metadata", "open educational resources"],
+  "communities": [{ "identifier": "quadriga" }],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/quadriga-dk/quadriga-schema",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://quadriga-dk.github.io/quadriga-schema/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ],
+  "version": "1.0.0"
+}
