@@ -28,10 +28,12 @@
           "relation": "skos:broadMatch",
           "target": "dc:date"
         },
+        "dcat": null,
         "dcterms": {
           "relation": "skos:broadMatch",
           "target": "dcterms:date"
         },
+        "hermes": null,
         "lrmi": null,
         "modalia": null,
         "schema": {
