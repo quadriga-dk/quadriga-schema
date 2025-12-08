@@ -249,3 +249,7 @@ body {
 .x-mappings-section a:hover code {
     color: var(--quadriga-main-45);
 }
+
+.x-mappings-section .mapping-comment {
+    font-size: 0.9em;
+}
