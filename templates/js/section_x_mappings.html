@@ -2,6 +2,14 @@
 {%- set target_schema = schema.refers_to_merged if schema.refers_to_merged else schema -%}
 {%- set x_mappings_node = target_schema.keywords.get('x-mappings') -%}
 
+{# Macro to convert markdown inline code (backticks) to <code> tags #}
+{%- macro render_comment(text) -%}
+{%- set parts = text.split('`') -%}
+{%- for part in parts -%}
+{%- if loop.index is odd -%}{{ part }}{%- else -%}<code>{{ part }}</code>{%- endif -%}
+{%- endfor -%}
+{%- endmacro -%}
+
 {# Define context mapping from @context in schema.json #}
 {%- set context_mapping = {
     'dc': 'http://purl.org/dc/elements/1.1/',
@@ -20,8 +28,8 @@
         <table class="table table-sm table-bordered mt-2">
             <thead>
                 <tr>
-                    <th>Vocabulary</th>
-                    <th>Relationship</th>
+                    <th style="width: 100px;">Vocabulary</th>
+                    <th style="width: 130px;">Relationship</th>
                     <th>Target</th>
                 </tr>
             </thead>
@@ -32,6 +40,7 @@
                     {%- for mapping_item in mapping_node.array_items -%}
                         {%- set target_node = mapping_item.keywords.get('target') -%}
                         {%- set relation_node = mapping_item.keywords.get('relation') -%}
+                        {%- set comment_node = mapping_item.keywords.get('$comment') -%}
                         <tr>
                             {%- if loop.first -%}
                             <td rowspan="{{ mapping_node.array_items|length }}">
@@ -75,6 +84,9 @@
                                         <code>{{ target_node.literal }}</code>
                                     {%- endif -%}
                                 {%- endif -%}
+                                {%- if comment_node and comment_node.literal -%}
+                                <br><em class="text-muted">{{ render_comment(comment_node.literal) }}</em>
+                                {%- endif -%}
                             {%- else -%}
                                 <span class="text-muted">N/A</span>
                             {%- endif -%}
@@ -85,6 +97,7 @@
                     {# Handle single mapping object #}
                     {%- set target_node = mapping_node.keywords.get('target') -%}
                     {%- set relation_node = mapping_node.keywords.get('relation') -%}
+                    {%- set comment_node = mapping_node.keywords.get('$comment') -%}
                     <tr>
                         <td>
                         {%- if vocab in context_mapping -%}
@@ -126,6 +139,9 @@
                                     <code>{{ target_node.literal }}</code>
                                 {%- endif -%}
                             {%- endif -%}
+                            {%- if comment_node and comment_node.literal -%}
+                            <br><em class="text-muted">{{ render_comment(comment_node.literal) }}</em>
+                            {%- endif -%}
                         {%- else -%}
                             <span class="text-muted">N/A</span>
                         {%- endif -%}
@@ -148,5 +164,9 @@
             {%- endfor -%}
             </tbody>
         </table>
+        {%- set table_comment = x_mappings_node.keywords.get('$comment') -%}
+        {%- if table_comment and table_comment.literal -%}
+        <p><em class="text-muted">{{ render_comment(table_comment.literal) }}</em></p>
+        {%- endif -%}
     </div>
 {%- endif -%}
