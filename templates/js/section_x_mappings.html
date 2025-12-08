@@ -85,7 +85,7 @@
                                     {%- endif -%}
                                 {%- endif -%}
                                 {%- if comment_node and comment_node.literal -%}
-                                <br><em class="text-muted">{{ render_comment(comment_node.literal) }}</em>
+                                <br><em class="text-muted mapping-comment">{{ render_comment(comment_node.literal) }}</em>
                                 {%- endif -%}
                             {%- else -%}
                                 <span class="text-muted">N/A</span>
@@ -140,7 +140,7 @@
                                 {%- endif -%}
                             {%- endif -%}
                             {%- if comment_node and comment_node.literal -%}
-                            <br><em class="text-muted">{{ render_comment(comment_node.literal) }}</em>
+                            <br><em class="text-muted mapping-comment">{{ render_comment(comment_node.literal) }}</em>
                             {%- endif -%}
                         {%- else -%}
                             <span class="text-muted">N/A</span>
@@ -166,7 +166,7 @@
         </table>
         {%- set table_comment = x_mappings_node.keywords.get('$comment') -%}
         {%- if table_comment and table_comment.literal -%}
-        <p><em class="text-muted">{{ render_comment(table_comment.literal) }}</em></p>
+        <p><em class="text-muted mapping-comment">{{ render_comment(table_comment.literal) }}</em></p>
         {%- endif -%}
     </div>
 {%- endif -%}
