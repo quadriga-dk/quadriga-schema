@@ -1,0 +1,53 @@
+@startuml keyword
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+interface "keyword" {
+}
+
+note bottom of "keyword"
+  Ein Schlüsselwort oder Fachbegriff.
+  Wird für die Indexierung und Entdeckung
+  von OER-Materialien verwendet.
+end note
+
+class "keyword-text" {
+  multilingual-text value
+}
+
+note bottom of "keyword-text"
+  Mehrsprachiger Text:
+  Schlüsselwort als String
+  oder mehrsprachiges Objekt.
+end note
+
+class "keyword-uri" {
+  URI value
+}
+
+note bottom of "keyword-uri"
+  URI-Form:
+  Link zu einem kontrollierten
+  Vokabular oder Thesaurus-Eintrag.
+end note
+
+"keyword" <|.. "keyword-text"
+"keyword" <|.. "keyword-uri"
+
+@enduml

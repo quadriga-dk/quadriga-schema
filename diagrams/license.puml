@@ -1,0 +1,68 @@
+@startuml license
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+class "license" {
+  license-entry content
+  __
+  <i><color:#666666>license-entry code?</color></i>
+}
+
+note bottom of "license"
+  Lizenzen für Buchinhalte und Code.
+  - content: Lizenz des Buches (erforderlich)
+  - code: Lizenz des Codes (optional)
+end note
+
+interface "license-entry" {
+}
+
+note bottom of "license-entry"
+  Lizenz als URL oder als
+  Kombination aus Name und URL.
+end note
+
+class "license-entry-uri" {
+  URI value
+}
+
+note bottom of "license-entry-uri"
+  Einfache URI-Form:
+  direkter Link zur Lizenz
+  (z. B. SPDX, Creative Commons).
+end note
+
+class "license-entry-object" {
+  string name
+  URI url
+}
+
+note bottom of "license-entry-object"
+  Objekt-Form:
+  - name: lesbar interpretierter Lizenzname
+  - url: Link zur Lizenz
+end note
+
+"license-entry" <|.. "license-entry-uri"
+"license-entry" <|.. "license-entry-object"
+
+"license" --> "license-entry" : content
+"license" --> "license-entry" : code
+
+@enduml
