@@ -1,4 +1,21 @@
 # QUADRIGA Metadata Schema
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [QUADRIGA Metadata Schema](#quadriga-metadata-schema)
+  - [About This Repository](#about-this-repository)
+  - [Schema Structure](#schema-structure)
+  - [Usage](#usage)
+    - [Creating Metadata Files](#creating-metadata-files)
+    - [Vocabulary Mappings (x-mappings)](#vocabulary-mappings-x-mappings)
+      - [Structure](#structure)
+      - [Target Vocabularies](#target-vocabularies)
+      - [SKOS Relation Types](#skos-relation-types)
+      - [Meta-Schema](#meta-schema)
+  - [Documentation](#documentation)
+
+<!-- markdown-toc end -->
+
 
 The QUADRIGA Metadata Schema is a JSON-Schema designed for describing Open
 Educational Resources (OER) in German academic contexts. It provides structured
