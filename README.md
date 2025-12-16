@@ -5,6 +5,8 @@
 - [QUADRIGA Metadata Schema](#quadriga-metadata-schema)
   - [About This Repository](#about-this-repository)
   - [Schema Structure](#schema-structure)
+    - [Canonical order of the elements in `metadata.yml`](#canonical-order-of-the-elements-in-metadatayml)
+    - [Diagrams](#diagrams)
   - [Usage](#usage)
     - [Creating Metadata Files](#creating-metadata-files)
     - [Vocabulary Mappings (x-mappings)](#vocabulary-mappings-x-mappings)
@@ -66,6 +68,7 @@ The schema describes educational resources with the following key components:
 See `examples/minimal_metadata.yml` for a complete example showing how these
 elements work together to describe an educational resource.
 
+### Canonical order of the elements in `metadata.yml`
 The following order of elements is recommended (required fields have an asterisk after their name):
 
 ```
@@ -127,7 +130,9 @@ The following order of elements is recommended (required fields have an asterisk
   - code
 ```
 
+### Diagrams
 
+You can find an approximation of the schema in the form of UML class diagrams in `./diagrams/`.
 
 ## Usage
 
