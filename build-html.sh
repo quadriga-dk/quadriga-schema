@@ -75,4 +75,10 @@ create_extensionless_redirects "_build/latest/"
 echo "Copying examples..."
 cp -r examples _build/
 
+# Copy diagrams
+echo "Copying diagrams..."
+mkdir -p _build/diagrams
+cp diagrams/png/*.png _build/diagrams/
+cp diagrams/index.html _build/diagrams/
+
 echo "Build complete! Output in _build/"

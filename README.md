@@ -132,7 +132,7 @@ The following order of elements is recommended (required fields have an asterisk
 
 ### Diagrams
 
-You can find an approximation of the schema in the form of UML class diagrams in `./diagrams/`.
+You can find an approximation of the schema in the form of UML class diagrams <a href="https://quadriga-dk.github.io/quadriga-schema/diagrams/" target="_blank">here</a>.
 
 To rebuild the diagrams make sure [PlantUML](https://plantuml.com) is installed and run `./build-diagrams.sh`.
 
