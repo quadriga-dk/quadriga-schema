@@ -10,6 +10,9 @@
     },
     {
       "description": "Strukturierte Angabe des Tools",
+      "type": "object",
+      "required": ["name", "url"],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "title": "name – Name des Tools",
