@@ -5,12 +5,22 @@ on:
     branches:
       - main
 
+# Prevent infinite loops when workflow commits changes
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-diagrams:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref }}
+        fetch-depth: 0
 
     - name: Cache PNG diagrams
       id: cache-diagrams
@@ -29,8 +39,24 @@ jobs:
       if: steps.cache-diagrams.outputs.cache-hit != 'true'
       run: ./build-diagrams.sh
 
-    - name: Upload diagrams artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: diagrams
-        path: diagrams/png
+    - name: Stage diagram files
+      if: steps.cache-diagrams.outputs.cache-hit != 'true'
+      run: git add diagrams/png/*.png
+
+    - name: Check if files staged
+      id: check_changes
+      if: steps.cache-diagrams.outputs.cache-hit != 'true'
+      run: |
+        if git diff --cached --quiet; then
+          echo "changes_detected=false" >> $GITHUB_OUTPUT
+        else
+          echo "changes_detected=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit changes
+      if: steps.cache-diagrams.outputs.cache-hit != 'true' && steps.check_changes.outputs.changes_detected == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "[Automated] Update diagram PNG files"
+        git push
