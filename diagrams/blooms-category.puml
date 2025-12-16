@@ -1,0 +1,40 @@
+@startuml blooms-category
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+enum "blooms-category" {
+  1 Erinnern
+  2 Verstehen
+  3 Anwenden
+  4 Analysieren
+  5 Bewerten
+  6 Erschaffen
+  nicht anwendbar
+}
+
+note bottom of "blooms-category"
+  Kategorie der Bloomschen Taxonomie,
+  die einem Lernziel zugeordnet ist.
+  
+  Englisch:
+  1 Remember / 2 Understand / 3 Apply /
+  4 Analyze / 5 Evaluate / 6 Create / not applicable
+end note
+
+@enduml

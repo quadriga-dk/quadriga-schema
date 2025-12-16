@@ -1,0 +1,53 @@
+@startuml multilingual-text
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+interface "multilingual-text" {
+}
+
+note bottom of "multilingual-text"
+  Text als String oder
+  mehrsprachiges Objekt.
+end note
+
+class "multilingual-text-string" {
+  string value
+}
+
+note bottom of "multilingual-text-string"
+  Einfache String-Form:
+  typischerweise in Deutsch.
+end note
+
+class "multilingual-text-object" {
+  Map~ISO639-1, string~ translations
+}
+
+note bottom of "multilingual-text-object"
+  Mehrsprachige Form:
+  Objekt mit ISO639-1-Sprachcodes
+  als Schlüsseln (z. B. de, en, fr, es).
+  
+  Erfordert mindestens eine Sprache.
+end note
+
+"multilingual-text" <|.. "multilingual-text-string"
+"multilingual-text" <|.. "multilingual-text-object"
+
+@enduml

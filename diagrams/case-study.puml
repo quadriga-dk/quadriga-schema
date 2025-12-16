@@ -1,0 +1,63 @@
+@startuml case-study
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+class "case-study" {
+  string title
+  multilingual-text description
+  multilingual-text table-of-contents
+  multilingual-text[] prerequisites
+  author[] authors
+  contributor[] contributors
+  chapter[] chapters
+  keyword[] keywords
+  used-tool[] used-tools
+  discipline[] discipline
+  research-object-type[] research-object-type
+  target-group[] target-group
+  ISODuration time-required
+  language language
+  URI identifier
+  URI git
+  URI url
+  ISODate date-issued
+  ISODate date-modified
+  semver version
+  string context-of-creation
+  quality-assurance quality-assurance
+  string learning-resource-type
+  semver schema-version
+  license license
+}
+
+note bottom of "case-study"
+  Vollständige Beschreibung einer Fallstudie
+  mit Metadaten:
+  
+  Titel, Beschreibung, Inhaltsverzeichnis,
+  Voraussetzungen, Autoren/Beitragende,
+  Kapitel, Schlüsselwörter, Werkzeuge,
+  Disziplin, Forschungsobjekttyp, Zielgruppe,
+  erforderliche Zeit, Sprache, Kennungen,
+  Git-Repository, Website-URL, Daten, Version,
+  Schaffungskontext, Qualitätssicherung,
+  Lernressourcentyp und Lizenzen.
+end note
+
+@enduml
