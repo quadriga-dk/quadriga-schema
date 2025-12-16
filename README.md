@@ -134,6 +134,8 @@ The following order of elements is recommended (required fields have an asterisk
 
 You can find an approximation of the schema in the form of UML class diagrams in `./diagrams/`.
 
+To rebuild the diagrams make sure [PlantUML](https://plantuml.com) is installed and run `./build-diagrams.sh`.
+
 ## Usage
 
 ### Creating Metadata Files
