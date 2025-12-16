@@ -1,0 +1,38 @@
+@startuml supplemental-material
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+class "supplemental-material" {
+  multilingual-text title
+  URI url
+  __
+  <i><color:#666666>multilingual-text note?</color></i>
+}
+
+note bottom of "supplemental-material"
+  Verweis auf ein Werk, Datensatz etc.,
+  das mit dem Buch verbunden ist.
+  
+  - title: Name des referenzierten Werks
+  - url: direkter Link zum Werk oder zur beschreibenden Seite
+  - note (optional): beschreibt die Beziehung oder den
+    Verwendungskontext im Buch/Kapitel
+end note
+
+@enduml

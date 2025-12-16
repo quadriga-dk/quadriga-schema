@@ -1,0 +1,55 @@
+@startuml competency
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+enum "competency" {
+  Orientierungswissen
+  1 Identifikation
+  2 Qualitätssicherung
+  3 Ethik und Recht
+  4 Erhebung
+  5 Validierung
+  6 Aufbereitung
+  7 Organisation
+  8 Erschließung
+  9 Datenanalyse
+  10 Visualisierung
+  11 Interpretation
+  12 Aufbewahrung
+  13 Datenpublikation
+  14 Kommunikation
+  nicht anwendbar
+}
+
+note bottom of "competency"
+  Kompetenz aus dem QUADRIGA
+  Data Competency Framework.
+  Zugeordnet zu Lernzielen.
+  
+  Englische Entsprechung:
+  Orientation / 1 Identification / 2 Quality Assurance /
+  3 Ethics & Rights / 4 Acquisition /
+  5 Validation / 6 (Pre-)processing /
+  7 Organisation / 8 Metadata /
+  9 Data Analysis / 10 Visualisation /
+  11 Interpretation / 12 Preservation /
+  13 Data Publication / 14 Communication / not applicable
+end note
+
+@enduml

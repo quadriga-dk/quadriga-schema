@@ -1,0 +1,52 @@
+@startuml used-tool
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam padding 4
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+interface "used-tool" {
+}
+
+note bottom of "used-tool"
+  Softwarewerkzeug, das bei der
+  Bucherstellen verwendet wird.
+end note
+
+class "used-tool-uri" {
+  URI value
+}
+
+note bottom of "used-tool-uri"
+  Einfache URI-Form:
+  direkter Link zum Werkzeug.
+end note
+
+class "used-tool-object" {
+  multilingual-text name
+  URI url
+}
+
+note bottom of "used-tool-object"
+  Objekt-Form:
+  - name: Titel des Werkzeugs
+  - url: Link zum Werkzeug
+end note
+
+"used-tool" <|.. "used-tool-uri"
+"used-tool" <|.. "used-tool-object"
+
+@enduml
