@@ -5,6 +5,7 @@
   "description": "Nachweis der Durchführung von Qualitätssicherungsmaßnahmen. Diese werden mit einer Beschreibung (vorzugsweise ein DOI zum publizierten Qualitätssicherungsverfahren) und dem Datum der abschließenden Prüfung nachgewiesen.",
   "type": "object",
   "additionalProperties": false,
+  "required": ["description", "date"],
   "properties": {
     "description": {
       "oneOf": [
