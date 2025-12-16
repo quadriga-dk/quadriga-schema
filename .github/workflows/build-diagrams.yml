@@ -1,0 +1,36 @@
+name: Build PlantUML Diagrams
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-diagrams:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Cache PNG diagrams
+      id: cache-diagrams
+      uses: actions/cache@v4
+      with:
+        path: diagrams/png
+        key: diagrams-${{ hashFiles('diagrams/*.puml') }}
+
+    - name: Install PlantUML
+      if: steps.cache-diagrams.outputs.cache-hit != 'true'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y plantuml
+
+    - name: Build diagrams
+      if: steps.cache-diagrams.outputs.cache-hit != 'true'
+      run: ./build-diagrams.sh
+
+    - name: Upload diagrams artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: diagrams
+        path: diagrams/png
