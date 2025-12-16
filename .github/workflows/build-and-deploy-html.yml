@@ -1,13 +1,17 @@
 name: Build and Deploy HTML of QUADRIGA schema
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Build PlantUML Diagrams"]
+    types:
+      - completed
     branches:
       - main
 
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       pages: write
       id-token: write
