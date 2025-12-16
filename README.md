@@ -55,8 +55,8 @@ The following order of elements is recommended (required fields have an asterisk
 - title*
 - authors*
   - (definition of each author)
-    - famliy-name*
-    - given-name*
+    - famliy-names*
+    - given-names*
 - keywords
 - description*
 - table-of-contents*
@@ -67,8 +67,8 @@ The following order of elements is recommended (required fields have an asterisk
 - language*
 - contributors*
   - (definition of each contributor)
-    - famliy-name*
-    - given-name*
+    - famliy-names*
+    - given-names*
 - identifier*
 - git
 - url
