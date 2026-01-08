@@ -1,5 +1,7 @@
 # QUADRIGA Metadata Schema
 
+[![DOI](https://zenodo.org/badge/1007838017.svg)](https://doi.org/10.5281/zenodo.18184772)
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
