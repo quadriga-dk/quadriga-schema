@@ -31,7 +31,7 @@
             "title": "role – CRediT Rolle",
             "description": "CRediT-Rolle als URL.",
             "type": "string",
-            "format": "url",
+            "format": "uri",
             "enum": [
               "https://credit.niso.org/contributor-roles/conceptualization/",
               "https://credit.niso.org/contributor-roles/data-curation/",
