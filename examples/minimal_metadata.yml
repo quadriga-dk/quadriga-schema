@@ -22,7 +22,7 @@ language: de
 contributors:
   - given-names: Test
     family-names: Mitarbeiter*in
-identifier: DOI of the book as a whole
+identifier: https://doi.org/10.XXXX/XXXXXXXX
 git: https://github.com/quadriga-dk/nonexistant_case_study
 url: https://example.com
 chapters:
