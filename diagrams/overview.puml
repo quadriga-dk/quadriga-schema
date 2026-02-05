@@ -1,0 +1,60 @@
+@startuml overview
+top to bottom direction
+scale 1.5
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 12
+skinparam classAttributeFontSize 11
+skinparam padding 3
+skinparam ranksep 40
+skinparam nodesep 25
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+title QUADRIGA Metadata Schema - Entity Overview
+
+' ===== MAIN ENTITY (TOP) =====
+class "case-study" as casestudy <<Fallstudie>> {
+  Root entity (Jupyter Book)
+}
+
+' ===== SECOND ROW: DIRECT CHILDREN =====
+together {
+  class "author" <<Autor:in>> { }
+  class "contributor" <<Mitarbeiter:in>> { }
+  class "chapter" <<Kapitel>> {
+    title
+    description
+    url
+    time-required
+    learning-goal
+  }
+}
+
+' ===== THIRD ROW: CHAPTER CHILDREN =====
+class "learning-objectives-entry" <<Lernziel>> {
+  learning-objective
+  competency
+  data-flow
+  blooms-category
+  assessment?
+}
+
+' ===== RELATIONSHIPS FROM CASE-STUDY =====
+casestudy *-down- "author" : 1..*
+casestudy *-down- "contributor" : 0..*
+casestudy *-down- "chapter" : 1..*
+
+' ===== RELATIONSHIPS FROM CHAPTER =====
+"chapter" *-down- "learning-objectives-entry" : 1..*
+
+@enduml
