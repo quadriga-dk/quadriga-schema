@@ -2,7 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/1007838017.svg)](https://doi.org/10.5281/zenodo.18184772)
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [QUADRIGA Metadata Schema](#quadriga-metadata-schema)
@@ -18,8 +17,6 @@
       - [SKOS Relation Types](#skos-relation-types)
       - [Meta-Schema](#meta-schema)
   - [Documentation](#documentation)
-
-<!-- markdown-toc end -->
 
 
 The QUADRIGA Metadata Schema is a JSON-Schema designed for describing Open
@@ -68,7 +65,7 @@ The schema describes educational resources with the following key components:
 - **Context information**: Discipline, target groups, and research object types
 - **Technical details**: Git repository links and multilingual text support
 
-See `examples/minimal_metadata.yml` for a complete example showing how these
+See [`examples/minimal_metadata.yml`](./examples/minimal_metadata.yml) for a minimal example showing how these
 elements work together to describe an educational resource.
 
 ### Canonical order of the elements in `metadata.yml`
@@ -78,9 +75,9 @@ The following order of elements is recommended (required fields have an asterisk
 - title*
 - authors*
   - (definition of each author)
-    - famliy-names*
+    - family-names*
     - given-names*
-- keywords
+- keywords*
 - description*
 - table-of-contents*
 - discipline*
@@ -90,11 +87,11 @@ The following order of elements is recommended (required fields have an asterisk
 - language*
 - contributors*
   - (definition of each contributor)
-    - famliy-names*
+    - family-names*
     - given-names*
 - identifier*
-- git
-- url
+- git*
+- url*
 - prerequisites
 - used-tools
   - (definition for each tool)
@@ -125,7 +122,7 @@ The following order of elements is recommended (required fields have an asterisk
 - date-modified*
 - version*
 - context-of-creation*
-- quality-assurance
+- quality-assurance*
 - learning-resource-type
 - schema-version*
 - license*
@@ -144,49 +141,7 @@ To rebuild the diagrams make sure [PlantUML](https://plantuml.com) is installed 
 ### Creating Metadata Files
 
 Create a YAML file following the schema structure. Start with the minimal
-example:
-
-```yaml
-# yaml-language-server: $schema=https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json
-title: Title of the whole book
-authors:
-  - given-names: test
-    family-names: author
-    orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly advised
-contributors:
-  - given-names: Test
-    family-names: Mitarbeiter\*in
-identifier: DOI of the book as a whole
-date-issued: 2025-06-24
-date-modified: 2025-10-23
-version: 0.1.0
-description: Description of the whole book
-time-required: PT1H # Duration formatted in ISO8601
-table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
-chapters:
-  - title: The title of the chapter
-    description: A short description of the chapter and its contents.
-    url: example.com
-    time-required: PT1H # Duration formatted in ISO8601
-    learning-goal: Overarching learning goal of the chapter as a whole.
-    learning-objectives:
-      - learning-objective: one specific learning objective
-        competency: Orientierungswissen
-        data-flow: übergreifend
-        blooms-category: 1 Erinnern
-research-object-type:
-  - übergreifend
-discipline:
-  - übergreifend
-target-group:
-  - Promovierende
-context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
-language: de
-license:
-  content: https://creativecommons.org/licenses/by-sa/4.0/
-git: https://github.com/quadriga-dk/nonexistant_case_study
-schema-version: 1.0.0
-```
+example in [`examples/minimal_metadata.yml`](./examples/minimal_metadata.yml).
 
 You can use `latest` in the schema URL, but in production we recommend picking
 a specific `schema-version` like `v1.0.0`.
