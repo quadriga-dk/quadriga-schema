@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/competency_data-flow.json",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/data-flow.json",
   "title": "data-flow – Datenfluss",
   "description": "Schritt im Datenfluss, dem die Kompetenz zugeordnet ist.\n\nenglish translation:\n\n- übergreifend → cross-cutting\n- 1 Planung → 1 planning\n- 2 Erhebung und Aufbereitung → 2 collection and preparation\n- 3 Management → 3 management\n- 4 Analyse → 4 analysis\n- 5 Publikation und Nachnutzung → 5 publication and reuse\n- nicht anwendbar → not applicable",
   "enum": [
