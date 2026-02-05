@@ -2,25 +2,16 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/quality-assurance.json",
   "title": "quality-assurance – Qualitätssicherung",
-  "description": "Nachweis der Durchführung von Qualitätssicherungsmaßnahmen. Diese werden mit einer Beschreibung (entweder einem DOI zum publizierten Qualitätssicherungsverfahren oder einer Textbeschreibung) und dem Datum der abschließenden Prüfung nachgewiesen.",
+  "description": "Nachweis der Durchführung von Qualitätssicherungsmaßnahmen. Auf diese wird per DOI verwiesen und die Durchführung mit dem Datum der abschließenden Prüfung nachgewiesen.",
   "type": "object",
   "additionalProperties": false,
   "required": ["description", "date"],
   "properties": {
     "description": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https://doi\\.org/",
-          "description": "DOI des Qualitätssicherungsverfahrens."
-        },
-        {
-          "$ref": "multilingual-text.json",
-          "not": { "type": "string", "pattern": "^https://doi\\.org/" },
-          "description": "Beschreibung des Qualitätssicherungsverfahrens."
-        }
-      ]
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://doi\\.org/",
+      "description": "DOI des Qualitätssicherungsverfahrens."
     },
     "date": {
       "description": "Datum an dem das Qualitätssicherungsverfahren abgeschlossen wurde.",
