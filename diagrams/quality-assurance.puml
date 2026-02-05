@@ -19,8 +19,8 @@ skinparam note {
 
 
 class "quality-assurance" {
-<i><color:#666666>multilingual-text|URI description</color></i>
-<i><color:#666666>ISODate date</color></i>
+  multilingual-text|URI description
+  ISODate date
 }
 
 note bottom of "quality-assurance"

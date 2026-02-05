@@ -22,12 +22,10 @@ class "case-study" {
   string title
   multilingual-text description
   multilingual-text table-of-contents
-  multilingual-text[] prerequisites
   author[] authors
   contributor[] contributors
   chapter[] chapters
   keyword[] keywords
-  used-tool[] used-tools
   discipline[] discipline
   research-object-type[] research-object-type
   target-group[] target-group
@@ -44,6 +42,9 @@ class "case-study" {
   string learning-resource-type
   semver schema-version
   license license
+  __
+  <i><color:#666666>multilingual-text[] prerequisites?</color></i>
+  <i><color:#666666>used-tool[] used-tools?</color></i>
 }
 
 note bottom of "case-study"
