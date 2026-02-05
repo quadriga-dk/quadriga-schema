@@ -101,7 +101,7 @@ The following order of elements is recommended (required fields have an asterisk
   - (definition of each chapter)
     - title*
     - description*
-    - url
+    - url*
     - time-required*
     - learning-goal*
     - learning-objectives*
@@ -123,7 +123,7 @@ The following order of elements is recommended (required fields have an asterisk
 - version*
 - context-of-creation*
 - quality-assurance*
-- learning-resource-type
+- learning-resource-type*
 - schema-version*
 - license*
   - content*
