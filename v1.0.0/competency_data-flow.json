@@ -11,5 +11,15 @@
     "4 Analyse",
     "5 Publikation und Nachnutzung",
     "nicht anwendbar"
-  ]
+  ],
+  "x-mappings": {
+    "$comment": "Der Datenfluss ist spezifisch zum QUADRIGA DKF und kann nicht gemappt werden. Die darüberliegende Beschreibung des Lernziels ist gemappt.",
+    "dc": null,
+    "dcat": null,
+    "dcterms": null,
+    "hermes": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
+  }
 }
