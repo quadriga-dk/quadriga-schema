@@ -19,18 +19,15 @@ skinparam note {
 
 
 class "quality-assurance" {
-  multilingual-text|URI description
+  URI description
   ISODate date
 }
 
 note bottom of "quality-assurance"
   Nachweise von Qualitätssicherungsmaßnahmen.
   
-  - description: URI der Dokumentation zum Qualitätssicherungsverfahren
-    oder mehrsprachige Textbeschreibung, bevorzugt DOI zu veröffentlichtem QS-Verfahren
+  - description: DOI des Qualitätssicherungsverfahrens (https://doi.org/…)
   - date: wann das QS-Verfahren abgeschlossen wurde
-  
-  In QUADRIGA typischerweise URI zu veröffentlichtem Dokument.
 end note
 
 @enduml
