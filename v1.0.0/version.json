@@ -4,7 +4,6 @@
   "title": "version – Version",
   "description": "Version des Buchs.",
   "$ref": "semver.json",
-  "type": "string",
   "x-mappings": {
     "dc": null,
     "dcat": {
