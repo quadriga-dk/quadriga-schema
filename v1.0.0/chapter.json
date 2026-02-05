@@ -4,6 +4,7 @@
   "title": "chapter – Kapitel",
   "description": "Beschreibung eines Kapitels.",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "title",
     "description",
