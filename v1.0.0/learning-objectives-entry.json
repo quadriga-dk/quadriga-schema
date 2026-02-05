@@ -21,7 +21,7 @@
       "$ref": "competency.json"
     },
     "data-flow": {
-      "$ref": "competency_data-flow.json"
+      "$ref": "data-flow.json"
     },
     "blooms-category": {
       "$ref": "blooms-category.json"
