@@ -22,22 +22,22 @@ jobs:
         ref: ${{ github.ref }}
         fetch-depth: 0
 
+    - name: Get PlantUML version from script
+      id: plantuml-version
+      run: |
+        version=$(grep -oP 'PLANTUML_VERSION="\K[^"]+' build-diagrams.sh)
+        echo "version=${version}" >> $GITHUB_OUTPUT
+
     - name: Cache PNG diagrams
       id: cache-diagrams
       uses: actions/cache@v4
       with:
         path: diagrams/png
-        key: diagrams-${{ hashFiles('diagrams/*.puml') }}
-
-    - name: Install PlantUML
-      if: steps.cache-diagrams.outputs.cache-hit != 'true'
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y plantuml
+        key: diagrams-v${{ steps.plantuml-version.outputs.version }}-${{ hashFiles('diagrams/*.puml') }}
 
     - name: Build diagrams
       if: steps.cache-diagrams.outputs.cache-hit != 'true'
-      run: ./build-diagrams.sh
+      run: ./build-diagrams.sh --docker
 
     - name: Stage diagram files
       if: steps.cache-diagrams.outputs.cache-hit != 'true'
