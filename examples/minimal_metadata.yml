@@ -4,20 +4,31 @@ authors:
   - given-names: test
     family-names: author
     orcid: https://orcid.org/0000-0000-0000-0000 # not necessary but strongly advised
+keywords:
+- OER
+- de: Offene Bildungsmaterialien
+  en: Open Educational Resources
+- metadata
+description: Description of the whole book
+table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
+discipline:
+  - übergreifend
+research-object-type:
+  - übergreifend
+target-group:
+  - Promovierende
+time-required: PT1H15S# Duration formatted in ISO8601 – read as "P"eriod "T"ime "1" "H"our "15" "S"econds
+language: de
 contributors:
   - given-names: Test
-    family-names: Mitarbeiter\*in
+    family-names: Mitarbeiter*in
 identifier: DOI of the book as a whole
-date-issued: 2025-06-24
-date-modified: 2025-10-23
-version: 0.1.0
-description: Description of the whole book
-time-required: PT1H # Duration formatted in ISO8601
-table-of-contents: Table of contents of the whole book. Mostly a list of chapter titles formatted in Markdown.
+git: https://github.com/quadriga-dk/nonexistant_case_study
+url: https://example.com
 chapters:
   - title: The title of the chapter
     description: A short description of the chapter and its contents.
-    url: example.com
+    url: https://example.com
     time-required: PT1H # Duration formatted in ISO8601
     learning-goal: Overarching learning goal of the chapter as a whole.
     learning-objectives:
@@ -25,15 +36,14 @@ chapters:
         competency: Orientierungswissen
         data-flow: übergreifend
         blooms-category: 1 Erinnern
-research-object-type:
-  - übergreifend
-discipline:
-  - übergreifend
-target-group:
-  - Promovierende
+date-issued: 2025-06-24
+date-modified: 2025-10-23
+version: 0.1.0
 context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
-language: de
+quality-assurance:
+  description: https://doi.org/10.XXXX/XXXXXXXX
+  date: 2099-12-31
+learning-resource-type: Jupyter Book
+schema-version: 1.0.0
 license:
   content: https://creativecommons.org/licenses/by-sa/4.0/
-git: https://github.com/quadriga-dk/nonexistant_case_study
-schema-version: 1.0.0
