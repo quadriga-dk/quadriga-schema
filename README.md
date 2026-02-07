@@ -134,7 +134,7 @@ The following order of elements is recommended (required fields have an asterisk
 
 You can find an approximation of the schema in the form of UML class diagrams <a href="https://quadriga-dk.github.io/quadriga-schema/diagrams/" target="_blank">here</a>.
 
-To rebuild the diagrams make sure [PlantUML](https://plantuml.com) is installed and run `./build-diagrams.sh`.
+To rebuild the diagrams make sure [Docker](https://www.docker.com) (recommended) or [PlantUML](https://plantuml.com) is installed and run `just diagrams`.
 
 ## Usage
 
@@ -224,5 +224,24 @@ consistent mapping documentation across all schema files.
 - **Latest Schema:**
   [https://quadriga-dk.github.io/quadriga-schema/latest/schema.json](https://quadriga-dk.github.io/quadriga-schema/latest/schema.json)
 
-To build the HTML documentation locally, run `./build-html.sh` (output will be
-in `_build/`).
+To build the HTML documentation locally, run `just html` (output will be in
+`_build/`).
+
+### Local Development
+
+This project uses [just](https://just.systems) as a command runner. Install it
+with `brew install just` (macOS) or see the
+[installation docs](https://just.systems/man/en/packages.html) for other
+platforms. Run `just --list` to see all available recipes:
+
+```
+just validate           # Validate x-mappings in all schema files
+just diagrams           # Build all PlantUML diagrams (auto-detect Docker vs local)
+just diagrams docker    # Force Docker for building diagrams
+just diagrams list      # List available diagrams
+just diagram <name>     # Build a single diagram by name
+just html               # Build HTML documentation (validates first)
+just build              # Build everything: diagrams + HTML docs
+just serve              # Serve built HTML at http://localhost:8000
+just clean              # Clean build artifacts
+```
