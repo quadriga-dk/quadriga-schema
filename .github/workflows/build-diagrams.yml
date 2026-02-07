@@ -22,11 +22,13 @@ jobs:
         ref: ${{ github.ref }}
         fetch-depth: 0
 
-    - name: Get PlantUML version from script
+    - name: Setup just
+      uses: extractions/setup-just@v2
+
+    - name: Get PlantUML version
       id: plantuml-version
       run: |
-        version=$(grep -oP 'PLANTUML_VERSION="\K[^"]+' build-diagrams.sh)
-        echo "version=${version}" >> $GITHUB_OUTPUT
+        echo "version=$(cat .plantuml-version)" >> $GITHUB_OUTPUT
 
     - name: Cache PNG diagrams
       id: cache-diagrams
@@ -37,7 +39,7 @@ jobs:
 
     - name: Build diagrams
       if: steps.cache-diagrams.outputs.cache-hit != 'true'
-      run: ./build-diagrams.sh --docker
+      run: just diagrams docker
 
     - name: Stage diagram files
       if: steps.cache-diagrams.outputs.cache-hit != 'true'
