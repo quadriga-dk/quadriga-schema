@@ -18,6 +18,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref }}
+
+    - name: Setup just
+      uses: extractions/setup-just@v2
 
     # Python
     - name: Set up Python
@@ -31,7 +36,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Build HTML for all schema versions
-      run: ./build-html.sh
+      run: just html
 
     - name: Upload HTML
       uses: actions/upload-pages-artifact@v3
