@@ -211,6 +211,23 @@ to indicate semantic relationships:
 
 Use `null` when no appropriate mapping was identified for a vocabulary.
 
+#### Mapping Matrix
+
+An interactive mapping matrix showing all schema elements mapped against the
+target vocabularies is available for each schema version:
+
+- **Latest:**
+  [https://quadriga-dk.github.io/quadriga-schema/latest/mapping-matrix.html](https://quadriga-dk.github.io/quadriga-schema/latest/mapping-matrix.html)
+- **v1.0.0:**
+  [https://quadriga-dk.github.io/quadriga-schema/v1.0.0/mapping-matrix.html](https://quadriga-dk.github.io/quadriga-schema/v1.0.0/mapping-matrix.html)
+
+The matrix is color-coded by SKOS relation type (using a colorblind-safe
+palette), includes links to the schema elements and target vocabulary terms,
+and shows mapping comments as tooltips.
+
+To build the mapping matrix locally, run `just mapping-matrix` (output will be
+in `_build/<version>/mapping-matrix.html`).
+
 #### Meta-Schema
 
 The `x-mappings` structure is validated by
@@ -241,7 +258,8 @@ just diagrams docker    # Force Docker for building diagrams
 just diagrams list      # List available diagrams
 just diagram <name>     # Build a single diagram by name
 just html               # Build HTML documentation (validates first)
-just build              # Build everything: diagrams + HTML docs
+just mapping-matrix     # Generate mapping matrix HTML for all versions
+just build              # Build everything: diagrams + HTML docs + mapping matrix
 just serve              # Serve built HTML at http://localhost:8000
 just clean              # Clean build artifacts
 ```
