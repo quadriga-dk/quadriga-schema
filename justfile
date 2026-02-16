@@ -136,11 +136,71 @@ _diagrams-run engine name="":
     done
     echo "Done. Built ${count} diagram(s)."
 
+# ─── Mapping Matrix ───────────────────────────────────────
+
+# Generate mapping matrix HTML for all schema versions
+[group('build')]
+mapping-matrix engine="auto":
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    run_generator() {
+        local version_dir="$1"
+        if [ "$2" = "docker" ]; then
+            docker run --rm \
+                -v "{{ justfile_directory() }}:/work" \
+                -w /work \
+                python:3-slim \
+                python3 generate-mapping-matrix.py "$version_dir"
+        else
+            python3 generate-mapping-matrix.py "$version_dir"
+        fi
+    }
+
+    resolve_engine() {
+        case "{{ engine }}" in
+            docker)  echo docker ;;
+            local)   echo local ;;
+            auto)
+                if command -v docker &>/dev/null && docker info &>/dev/null 2>&1; then
+                    echo docker
+                elif command -v python3 &>/dev/null; then
+                    echo local
+                else
+                    echo "Error: Neither Docker nor Python 3 is available." >&2
+                    exit 1
+                fi
+                ;;
+            *)
+                echo "Error: Unknown engine '{{ engine }}'. Use: auto, docker, local" >&2
+                exit 1
+                ;;
+        esac
+    }
+
+    resolved=$(resolve_engine)
+    echo "Generating mapping matrices using $resolved..."
+
+    for version_dir in v*/; do
+        if [ -d "$version_dir" ] && [ -f "$version_dir/schema.json" ]; then
+            echo "  $version_dir"
+            run_generator "$version_dir" "$resolved"
+        fi
+    done
+
+    # Generate for latest/
+    if [ -f "latest/schema.json" ]; then
+        echo "  latest/"
+        run_generator "latest" "$resolved"
+    fi
+
+    echo "Done."
+
 # ─── HTML Documentation ─────────────────────────────────
 
 # Build HTML documentation (validates first, then generates)
 [group('build')]
-html: validate
+html: validate mapping-matrix
     #!/usr/bin/env bash
     set -euo pipefail
 
