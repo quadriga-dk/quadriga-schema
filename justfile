@@ -148,6 +148,7 @@ mapping-matrix engine="auto":
         local version_dir="$1"
         if [ "$2" = "docker" ]; then
             docker run --rm \
+                --user "$(id -u):$(id -g)" \
                 -v "{{ justfile_directory() }}:/work" \
                 -w /work \
                 python:3-slim \
