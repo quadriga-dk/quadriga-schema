@@ -39,7 +39,8 @@ def load_schemas(version_dir):
         visited.add(filename)
 
         data = get_schema(filename)
-        name = filename.replace(".json", "")
+        # Display "case-study" instead of "schema" for the root element
+        name = "case-study" if filename == "schema.json" else filename.replace(".json", "")
         xm = data.get("x-mappings")
         collect_mappings(xm)
         rows.append((name, xm, depth, filename))
