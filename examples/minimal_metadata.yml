@@ -36,13 +36,13 @@ chapters:
         competency: Orientierungswissen
         data-flow: übergreifend
         blooms-category: 1 Erinnern
-date-issued: 2025-06-24
-date-modified: 2025-10-23
+date-issued: '2025-06-24'
+date-modified: '2025-10-23'
 version: 0.1.0
 context-of-creation: "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034"
 quality-assurance:
   description: https://doi.org/10.XXXX/XXXXXXXX
-  date: 2099-12-31
+  date: '2099-12-31'
 learning-resource-type: Jupyter Book
 schema-version: 1.0.0
 license:
