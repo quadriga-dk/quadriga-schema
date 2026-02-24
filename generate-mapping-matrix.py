@@ -58,6 +58,9 @@ def load_schemas(version_dir):
                 pxm = prop_val["x-mappings"]
                 collect_mappings(pxm)
                 rows.append((prop_name, pxm, depth + 1, filename))
+            elif "$ref" not in prop_val:
+                # Property without x-mappings and not a $ref → internal
+                rows.append((prop_name, None, depth + 1, filename))
             # Follow $ref
             if "$ref" in prop_val:
                 walk(prop_val["$ref"], depth + 1)
