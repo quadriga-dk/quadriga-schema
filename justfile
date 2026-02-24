@@ -205,6 +205,34 @@ html: validate mapping-matrix
     #!/usr/bin/env bash
     set -euo pipefail
 
+    # Re-serialize a JSON file with ASCII-only encoding (non-ASCII → \uXXXX)
+    # so browsers display characters correctly without charset header control.
+    copy_json_ascii() {
+        local src="$1" dest="$2"
+        python3 ascii-escape-json.py "$src" "$dest"
+    }
+
+    # Copy a directory tree, ASCII-escaping all .json files
+    copy_dir_ascii_json() {
+        local src="$1" dest="$2"
+        mkdir -p "$dest"
+        # Copy everything except .json files first
+        find "$src" -mindepth 1 -not -name '*.json' | while read -r item; do
+            local rel="${item#$src/}"
+            if [ -d "$item" ]; then
+                mkdir -p "$dest/$rel"
+            else
+                cp "$item" "$dest/$rel"
+            fi
+        done
+        # Copy .json files with ASCII escaping
+        find "$src" -name '*.json' | while read -r json_file; do
+            local rel="${json_file#$src/}"
+            mkdir -p "$(dirname "$dest/$rel")"
+            copy_json_ascii "$json_file" "$dest/$rel"
+        done
+    }
+
     # Create extensionless redirect files for all .json files in a directory
     create_redirects() {
         local dir="$1"
@@ -249,18 +277,20 @@ html: validate mapping-matrix
         echo '<meta http-equiv="Refresh" content="0; url=schema.html" />' > "{{ build_dir }}/latest/index.html"
     fi
 
-    # Copy all version folders with their JSON files
+    # Copy all version folders with their JSON files (ASCII-escaped)
     echo "Copying version folders..."
     for version_dir in v*/; do
         if [ -d "$version_dir" ]; then
-            cp -r "$version_dir" "{{ build_dir }}/"
+            copy_dir_ascii_json "${version_dir%/}" "{{ build_dir }}/${version_dir%/}"
             create_redirects "{{ build_dir }}/${version_dir%/}"
         fi
     done
 
     # Copy latest folder contents (HTML was already built, now copy JSON files)
-    echo "Copying latest folder JSON files..."
-    cp latest/*.json "{{ build_dir }}/latest/"
+    echo "Copying latest folder JSON files (ASCII-escaped)..."
+    for json_file in latest/*.json; do
+        copy_json_ascii "$json_file" "{{ build_dir }}/latest/$(basename "$json_file")"
+    done
     create_redirects "{{ build_dir }}/latest"
 
     # Copy examples
