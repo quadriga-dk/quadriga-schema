@@ -50,6 +50,19 @@ def load_schemas(version_dir):
             walk(data["$ref"], depth + 1)
 
         # If it has properties, walk them in definition order
+        def collect_refs(obj):
+            """Recursively collect all $ref values from a JSON schema node."""
+            refs = []
+            if isinstance(obj, dict):
+                if "$ref" in obj:
+                    refs.append(obj["$ref"])
+                for v in obj.values():
+                    refs.extend(collect_refs(v))
+            elif isinstance(obj, list):
+                for item in obj:
+                    refs.extend(collect_refs(item))
+            return refs
+
         for prop_name, prop_val in data.get("properties", {}).items():
             if not isinstance(prop_val, dict):
                 continue
@@ -61,9 +74,10 @@ def load_schemas(version_dir):
             elif "$ref" not in prop_val:
                 # Property without x-mappings and not a $ref → internal
                 rows.append((prop_name, None, depth + 1, filename))
-            # Follow $ref
-            if "$ref" in prop_val:
-                walk(prop_val["$ref"], depth + 1)
+            # Follow all $ref pointers (direct, oneOf, items, etc.)
+            for ref in collect_refs(prop_val):
+                if ref not in visited:
+                    walk(ref, depth + 1)
 
         # If it's an array with items.$ref, follow that
         items = data.get("items", {})
