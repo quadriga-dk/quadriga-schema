@@ -212,9 +212,9 @@ def general_comment(xm):
 
 def generate_html(rows, columns, context):
     """Generate a self-contained HTML string."""
-    # Build table rows
+    # Build table rows with tree guide prefixes
     table_rows = []
-    for name, xm, depth, filename in rows:
+    for idx, (name, xm, depth, filename) in enumerate(rows):
         cells = []
         has_mappings = xm is not None
         for col in columns:
@@ -222,10 +222,49 @@ def generate_html(rows, columns, context):
             cells.append(f'<td class="{css_class}">{text}</td>')
         comment = general_comment(xm)
         row_class = ""
-        indent = f'style="padding-left: {8 + depth * 16}px"' if depth > 0 else ""
         element_link = f'<a href="{html_escape(filename)}" target="_blank">{name}</a>'
+
+        indent_step = 20
+        # Check if this row has children (next row is deeper)
+        has_children = idx + 1 < len(rows) and rows[idx + 1][2] > depth
+        if has_children:
+            child_left = (depth + 1) * indent_step - 10
+            start_stub = f'<span class="tree-start" style="left: {child_left}px"></span>'
+        else:
+            start_stub = ""
+        if depth > 0:
+            indent = f'style="padding-left: {depth * indent_step}px"'
+            lines = []
+            # Ancestor vertical continuation lines
+            for level in range(1, depth):
+                has_future = False
+                for future_name, future_xm, future_depth, future_fn in rows[idx + 1:]:
+                    if future_depth < level:
+                        break
+                    if future_depth == level:
+                        has_future = True
+                        break
+                if has_future:
+                    left = level * indent_step - 10
+                    lines.append(f'<span class="tree-vline" style="left: {left}px"></span>')
+            # Connector at current depth (├ or └)
+            is_last = True
+            for future_name, future_xm, future_depth, future_fn in rows[idx + 1:]:
+                if future_depth < depth:
+                    break
+                if future_depth == depth:
+                    is_last = False
+                    break
+            left = depth * indent_step - 10
+            cls = "tree-last" if is_last else "tree-mid"
+            lines.append(f'<span class="{cls}" style="left: {left}px"></span>')
+            tree_html = "".join(lines)
+        else:
+            indent = ""
+            tree_html = ""
+
         table_rows.append(
-            f'  <tr class="{row_class}"><td class="element-name" {indent}>{element_link}{comment}</td>{"".join(cells)}</tr>'
+            f'  <tr class="{row_class}"><td class="element-name" {indent}>{tree_html}{start_stub}{element_link}{comment}</td>{"".join(cells)}</tr>'
         )
 
     col_headers = "".join(f"<th>{c}</th>" for c in columns)
@@ -277,6 +316,42 @@ def generate_html(rows, columns, context):
     text-align: left;
     font-weight: 600;
     z-index: 1;
+  }}
+  .element-name {{ position: relative; }}
+  .tree-start {{
+    position: absolute;
+    top: calc(50% + 10px);
+    bottom: 0;
+    border-left: 1.5px solid #777;
+  }}
+  .tree-vline {{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1.5px solid #777;
+  }}
+  .tree-mid {{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1.5px solid #777;
+  }}
+  .tree-mid::after {{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    border-top: 1.5px solid #777;
+  }}
+  .tree-last {{
+    position: absolute;
+    top: 0;
+    height: 50%;
+    border-left: 1.5px solid #777;
+    border-bottom: 1.5px solid #777;
+    width: 6px;
+    border-bottom-left-radius: 3px;
   }}
   thead th:first-child {{
     z-index: 3;
