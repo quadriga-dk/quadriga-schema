@@ -134,7 +134,7 @@ def cell_content(xm, schema_name, context):
 
     entry = xm.get(schema_name)
     if entry is None:
-        return "null", "null"
+        return "N/A", "na"
 
     # Normalize to list
     entries = entry if isinstance(entry, list) else [entry]
@@ -232,7 +232,7 @@ def generate_html(rows, columns, context):
   .broadmatch {{ background: #f7f0ab; }}  /* tint of #F0E442 yellow */
   .narrowmatch {{ background: #aed5f0; }} /* tint of #56B4E9 sky blue */
   .relatedmatch {{ background: #d9d9d9; }}
-  .null {{ background: #f2f2f2; color: #999; }}
+  .na {{ background: #f2f2f2; color: #999; }}
   .no-mapping {{ background: #fff; }}
   .sub-cell {{
     padding: 3px 6px;
@@ -324,8 +324,8 @@ def generate_html(rows, columns, context):
   <span class="legend-item"><span class="legend-swatch" style="background:#f7f0ab"></span> <a href="http://www.w3.org/2004/02/skos/core#broadMatch" target="_blank">broadMatch</a></span>
   <span class="legend-item"><span class="legend-swatch" style="background:#aed5f0"></span> <a href="http://www.w3.org/2004/02/skos/core#narrowMatch" target="_blank">narrowMatch</a></span>
   <span class="legend-item"><span class="legend-swatch" style="background:#d9d9d9"></span> <a href="http://www.w3.org/2004/02/skos/core#relatedMatch" target="_blank">relatedMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#f2f2f2"></span> null</span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#e8e8e8"></span> no mapping</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:#f2f2f2"></span> N/A</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:#e8e8e8"></span> internal / formatting</span>
 </div>
 <div class="table-wrap">
 <table>
