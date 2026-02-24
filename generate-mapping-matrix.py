@@ -362,7 +362,7 @@ def generate_html(rows, columns, context):
   .closematch {{ background: #56b4e9; }}
   .broadmatch {{ background: #e69f00; }}
   .narrowmatch {{ background: #f0e442; }}
-  .na {{ background: #bbbbbb; }}
+  .na {{ background: #ddd; }}
   .sub-cell {{
     padding: 3px 6px;
     display: flex;
