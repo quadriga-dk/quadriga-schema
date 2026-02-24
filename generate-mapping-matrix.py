@@ -75,7 +75,13 @@ def load_schemas(version_dir):
         if f.name not in visited:
             walk(f.name, depth=0)
 
-    return rows, sorted(mapped_schemas), context
+    # Desired column order for external schemas
+    column_order = ["dc", "dcterms", "schema", "modalia", "hermes", "lrmi", "dcat"]
+    ordered = [c for c in column_order if c in mapped_schemas]
+    # Append any schemas not in the predefined order
+    ordered += sorted(s for s in mapped_schemas if s not in column_order)
+
+    return rows, ordered, context
 
 
 def html_escape(text):
