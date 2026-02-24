@@ -11,7 +11,7 @@
   },
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v1.0.0/schema.json",
   "title": "QUADRIGA Fallstudie",
-  "description": "Eine in QUADRIGA entwickelte Fallstudie (ein Buch, eine Sammlung von OERs, als Jupyter Book implementiert), die nach dem QUADRIGA-Metadatenschema beschrieben wird.\n\nDieses Schema ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.\n\nEs werden Mappings zu gebräuchlichen Metadatenschemata für mehrere hier definierte (Unter-)Felder definiert.\n\n(Unter-)Felder können selbst wieder Entitäten sein (so bspw. eine Person, welche die Rolle Autor:in einnimmt.)",
+  "description": "Eine in QUADRIGA entwickelte Fallstudie (ein Buch, eine Sammlung von OERs, als Jupyter Book implementiert), die nach dem QUADRIGA-Metadatenschema beschrieben wird.\n\nDieses Schema ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.\n\nEs werden Mappings zu gebräuchlichen Metadatenschemata für mehrere hier definierte (Unter-)Felder definiert. Eine Darstellung dieser in einer Matrix-Ansicht existiert ebenfalls: <https://quadriga-dk.github.io/quadriga-schema/v1.0.0/mapping-matrix.html>\n\n(Unter-)Felder können selbst wieder Entitäten sein (so bspw. eine Person, welche die Rolle Autor:in einnimmt.)",
   "type": "object",
   "required": [
     "title",
