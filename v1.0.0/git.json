@@ -13,10 +13,7 @@
       "target": "dcterms:source"
     },
     "hermes": null,
-    "lrmi": {
-      "relation": "skos:relatedMatch",
-      "target": "lrmi:isBasedOnUrl"
-    },
+    "lrmi": null,
     "modalia": {
       "relation": "skos:closeMatch",
       "target": "modalia:hasSourceCode"
