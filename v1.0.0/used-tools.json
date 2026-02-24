@@ -18,9 +18,6 @@
     "hermes": null,
     "lrmi": null,
     "modalia": null,
-    "schema": {
-      "relation": "skos:relatedMatch",
-      "target": "schema:SoftwareApplication"
-    }
+    "schema": null
   }
 }
