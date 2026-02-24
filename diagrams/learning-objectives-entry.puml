@@ -25,7 +25,6 @@ class "learning-objectives-entry" {
   blooms-category blooms-category
   __
   <i><color:#666666>multilingual-text assessment?</color></i>
-  <i><color:#666666>string jupyter-book-glue-id?</color></i>
 }
 
 note bottom of "learning-objectives-entry"
@@ -36,8 +35,6 @@ note bottom of "learning-objectives-entry"
   - data-flow: Schritt im Datenfluss
   - blooms-category: Einordnung in die Bloomsche Taxonomie
   - assessment (optional): Lernstandskontrolle
-  - jupyter-book-glue-id (optional):
-    für interne Verwendung
 end note
 
 @enduml
