@@ -15,7 +15,7 @@
     "lrmi": null,
     "modalia": null,
     "schema": {
-      "relation": "skos:relatedMatch",
+      "relation": "skos:closeMatch",
       "target": "schema:HyperToc"
     }
   }
