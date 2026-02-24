@@ -75,9 +75,14 @@ def load_schemas(version_dir):
                 # Property without x-mappings and not a $ref → internal
                 rows.append((prop_name, None, depth + 1, filename))
             # Follow all $ref pointers (direct, oneOf, items, etc.)
-            for ref in collect_refs(prop_val):
+            nested_refs = collect_refs(prop_val)
+            has_direct_ref = "$ref" in prop_val
+            for ref in nested_refs:
                 if ref not in visited:
-                    walk(ref, depth + 1)
+                    # Direct $ref: child of current schema (depth+1)
+                    # Nested $ref (inside oneOf/items): child of property (depth+2)
+                    ref_depth = depth + 1 if has_direct_ref else depth + 2
+                    walk(ref, ref_depth)
 
         # If it's an array with items.$ref, follow that
         items = data.get("items", {})
@@ -91,6 +96,10 @@ def load_schemas(version_dir):
     for f in sorted(version.glob("*.json")):
         if f.name not in visited:
             walk(f.name, depth=0)
+
+    # Remove reusable value types that are only used internally to specify value ranges
+    internal_types = {"multilingual-text.json", "semver.json"}
+    rows = [r for r in rows if r[3] not in internal_types]
 
     # Desired column order for external schemas
     column_order = ["dc", "dcterms", "schema", "modalia", "hermes", "lrmi", "dcat"]
@@ -153,7 +162,7 @@ def format_sub_cell(entry, context):
 def cell_content(xm, schema_name, context):
     """Return (html_content, td_css_class) for a given mapping entry."""
     if xm is None:
-        return "", "no-mapping"
+        return "", ""
 
     entry = xm.get(schema_name)
     if entry is None:
@@ -192,7 +201,7 @@ def generate_html(rows, columns, context):
             text, css_class = cell_content(xm, col, context)
             cells.append(f'<td class="{css_class}">{text}</td>')
         comment = general_comment(xm)
-        row_class = "no-mappings-row" if not has_mappings else ""
+        row_class = ""
         indent = f'style="padding-left: {8 + depth * 16}px"' if depth > 0 else ""
         element_link = f'<a href="{html_escape(filename)}" target="_blank">{name}</a>'
         table_rows.append(
@@ -223,7 +232,7 @@ def generate_html(rows, columns, context):
     font-size: 0.85rem;
   }}
   th, td {{
-    border: 1.5px solid #999;
+    border: 1.5px solid #333;
     padding: 4px 8px;
     text-align: center;
     white-space: nowrap;
@@ -235,6 +244,7 @@ def generate_html(rows, columns, context):
     background: #333;
     color: #fff;
     z-index: 2;
+    border-color: #333;
   }}
   .element-name {{
     position: sticky;
@@ -261,7 +271,7 @@ def generate_html(rows, columns, context):
     justify-content: center;
   }}
   .sub-cell + .sub-cell {{
-    border-top: 1px solid #ccc;
+    border-top: 1.5px solid #333;
   }}
   .multi {{
     padding: 0;
