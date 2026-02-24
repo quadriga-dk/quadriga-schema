@@ -221,11 +221,15 @@ def generate_html(rows, columns, context):
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 1rem;
     background: #fafafa;
+    text-align: center;
   }}
   h1 {{ font-size: 1.4rem; margin-bottom: 0.5rem; }}
   .table-wrap {{
-    overflow: auto;
+    overflow-x: auto;
     max-height: 90vh;
+  }}
+  .table-wrap table {{
+    margin: 0 auto;
   }}
   table {{
     border-collapse: collapse;
@@ -331,6 +335,7 @@ def generate_html(rows, columns, context):
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 0.75rem;
     font-size: 0.82rem;
     align-items: center;
