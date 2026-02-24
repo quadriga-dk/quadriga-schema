@@ -322,19 +322,19 @@ def generate_html(rows, columns, context):
     position: absolute;
     top: calc(50% + 10px);
     bottom: 0;
-    border-left: 1.5px solid #777;
+    border-left: 1.5px solid #999;
   }}
   .tree-vline {{
     position: absolute;
     top: 0;
     bottom: 0;
-    border-left: 1.5px solid #777;
+    border-left: 1.5px solid #999;
   }}
   .tree-mid {{
     position: absolute;
     top: 0;
     bottom: 0;
-    border-left: 1.5px solid #777;
+    border-left: 1.5px solid #999;
   }}
   .tree-mid::after {{
     content: '';
@@ -342,14 +342,14 @@ def generate_html(rows, columns, context):
     top: 50%;
     left: 0;
     width: 6px;
-    border-top: 1.5px solid #777;
+    border-top: 1.5px solid #999;
   }}
   .tree-last {{
     position: absolute;
     top: 0;
     height: 50%;
-    border-left: 1.5px solid #777;
-    border-bottom: 1.5px solid #777;
+    border-left: 1.5px solid #999;
+    border-bottom: 1.5px solid #999;
     width: 6px;
     border-bottom-left-radius: 3px;
   }}
