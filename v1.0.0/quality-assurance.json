@@ -11,7 +11,16 @@
       "type": "string",
       "format": "uri",
       "pattern": "^https://doi\\.org/",
-      "description": "DOI des Qualitätssicherungsverfahrens."
+      "description": "DOI des Qualitätssicherungsverfahrens.",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
     },
     "date": {
       "description": "Datum an dem das Qualitätssicherungsverfahren abgeschlossen wurde.",
