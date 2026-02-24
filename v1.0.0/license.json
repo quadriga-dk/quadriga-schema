@@ -25,18 +25,11 @@
       "relation": "skos:closeMatch",
       "target": "dcterms:license"
     },
-    "hermes": [
-      {
-        "$comment": "HERMES Attribut #19: Lizenz",
-        "relation": "skos:closeMatch",
-        "target": "dcterms:license"
-      },
-      {
-        "$comment": "HERMES Attribut #27: Bildrechte",
-        "relation": "skos:relatedMatch",
-        "target": "dcterms:rights"
-      }
-    ],
+    "hermes": {
+      "$comment": "HERMES Attribut #19: Lizenz",
+      "relation": "skos:closeMatch",
+      "target": "dcterms:license"
+    },
     "lrmi": {
       "relation": "skos:closeMatch",
       "target": "lrmi:useRightsUrl"
