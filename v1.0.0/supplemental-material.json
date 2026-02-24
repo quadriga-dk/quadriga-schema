@@ -16,7 +16,22 @@
       "title": "url – URL des Werks",
       "description": "URL des genutzten / referenzierten Werks. Diese URL sollte direkt zum Werk oder zu einer, das Werk beschreibenden Seite führen.",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        }
+      }
     },
     "note": {
       "title": "note – Anmerkung",
@@ -27,22 +42,10 @@
   "x-mappings": {
     "dc": null,
     "dcat": null,
-    "dcterms": [
-      {
-        "relation": "skos:closeMatch",
-        "target": "dcterms:relation"
-      },
-      {
-        "relation": "skos:closeMatch",
-        "target": "dcterms:references"
-      }
-    ],
+    "dcterms": null,
     "hermes": null,
     "lrmi": null,
-    "modalia": {
-      "relation": "skos:exactMatch",
-      "target": "https://w3id.org/citedcat-ap/isSupplementedBy"
-    },
+    "modalia": null,
     "schema": null
   }
 }

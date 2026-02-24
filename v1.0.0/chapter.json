@@ -44,6 +44,28 @@
     "supplemented-by": {
       "title": "supplemented-by – Ergänzende / Genutzte Materialien",
       "description": "Liste von Verweisen und jeweils einer kurzen Beschreibung zu im Kapitel genutzten bzw. erwähnten Werken, Datensätzen, …, die für das Durcharbeiten des Kapitels benötigt werden.",
+      "x-mappings": {
+        "$comment": "Die Mappings beziehen sich auf die Beziehung zwischen Kapitel und einzelnem Material. Da `supplemented-by` eine Liste ist, sind die Mappings nur `skos:closeMatch` zu den jeweiligen Per-Item-Prädikaten.",
+        "dc": null,
+        "dcat": null,
+        "dcterms": [
+          {
+            "relation": "skos:closeMatch",
+            "target": "dcterms:relation"
+          },
+          {
+            "relation": "skos:closeMatch",
+            "target": "dcterms:references"
+          }
+        ],
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "https://w3id.org/citedcat-ap/isSupplementedBy"
+        },
+        "schema": null
+      },
       "oneOf": [
         {
           "type": "array",
