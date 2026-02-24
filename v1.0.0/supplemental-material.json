@@ -43,10 +43,6 @@
       "relation": "skos:exactMatch",
       "target": "https://w3id.org/citedcat-ap/isSupplementedBy"
     },
-    "schema": {
-      "$comment": "schema:isRelatedTo ist nur für schema:Product oder schema:Service definiert, nicht für schema:LearningResource. Daher ist die Beziehung nur skos:relatedMatch.",
-      "relation": "skos:relatedMatch",
-      "target": "schema:isRelatedTo"
-    }
+    "schema": null
   }
 }
