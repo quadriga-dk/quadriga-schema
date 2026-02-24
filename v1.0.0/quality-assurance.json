@@ -47,12 +47,9 @@
     "hermes": null,
     "lrmi": null,
     "modalia": {
-      "relation": "skos:relatedMatch",
+      "relation": "skos:closeMatch",
       "target": "modalia:hasQuality"
     },
-    "schema": {
-      "relation": "skos:relatedMatch",
-      "target": "schema:CheckAction"
-    }
+    "schema": null
   }
 }
