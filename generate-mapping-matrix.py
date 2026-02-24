@@ -317,7 +317,6 @@ def generate_html(rows, columns, context):
     font-weight: 600;
     z-index: 1;
   }}
-  .element-name {{ position: relative; }}
   .tree-start {{
     position: absolute;
     top: calc(50% + 10px);
