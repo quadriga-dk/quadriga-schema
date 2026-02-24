@@ -28,7 +28,22 @@
       "title": "url – URL der Web-Ansicht",
       "description": "URL zum direkten Zugriff auf die erste Seite der 'Leseansicht' (Website) des Kapitel.",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        }
+      }
     },
     "time-required": {
       "title": "time-required – Bearbeitungszeit (Kapitel)",
