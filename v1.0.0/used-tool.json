@@ -37,19 +37,7 @@
     },
     "hermes": null,
     "lrmi": null,
-    "modalia": [
-      {
-        "relation": "skos:relatedMatch",
-        "target": "modalia:coversManagementOfDataObtainedWithTool"
-      },
-      {
-        "relation": "skos:relatedMatch",
-        "target": "https://w3id.org/citedcat-ap/isCompiledBy"
-      }
-    ],
-    "schema": {
-      "relation": "skos:relatedMatch",
-      "target": "schema:SoftwareApplication"
-    }
+    "modalia": null,
+    "schema": null
   }
 }
