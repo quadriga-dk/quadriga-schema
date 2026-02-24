@@ -101,6 +101,26 @@ def load_schemas(version_dir):
     internal_types = {"multilingual-text.json", "semver.json"}
     rows = [r for r in rows if r[3] not in internal_types]
 
+    # Move reusable entity types (and their children) to the bottom of the table
+    bottom_types = {"person.json"}
+    bottom_rows = []
+    remaining = []
+    collecting = False
+    collect_depth = 0
+    for name, xm, depth, fn in rows:
+        if fn in bottom_types:
+            collecting = True
+            collect_depth = depth
+            bottom_rows.append((name, xm, 0, fn))
+        elif collecting and depth > collect_depth:
+            # Child row: adjust depth relative to the moved parent
+            bottom_rows.append((name, xm, depth - collect_depth, fn))
+        else:
+            collecting = False
+            remaining.append((name, xm, depth, fn))
+    rows = remaining
+    rows.extend(bottom_rows)
+
     # Desired column order for external schemas
     column_order = ["dc", "dcterms", "schema", "modalia", "hermes", "lrmi", "dcat"]
     ordered = [c for c in column_order if c in mapped_schemas]
