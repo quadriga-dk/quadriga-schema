@@ -48,11 +48,6 @@
           "target": "schema:assesses"
         }
       }
-    },
-    "jupyter-book-glue-id": {
-      "title": "jupyter-book-glue-id – Jupyter Book `glue` ID",
-      "description": "Eindeutige ID des Lernziels für den Zweck der Einbindung im Buch per `glue`. Nur für die interne Verwendung beim Schreiben der OER.",
-      "type": "string"
     }
   },
   "x-mappings": {
