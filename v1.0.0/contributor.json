@@ -21,7 +21,7 @@
     },
     "lrmi": null,
     "modalia": {
-      "relation": "skos:relatedMatch",
+      "relation": "skos:closeMatch",
       "target": "modalia:Contributor"
     },
     "schema": {
