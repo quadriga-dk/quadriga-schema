@@ -87,7 +87,7 @@ def load_schemas(version_dir):
         # If it's an array with items.$ref, follow that
         items = data.get("items", {})
         if isinstance(items, dict) and "$ref" in items:
-            walk(items["$ref"], depth)
+            walk(items["$ref"], depth + 1)
 
     # Start from schema.json (the root)
     walk("schema.json")
