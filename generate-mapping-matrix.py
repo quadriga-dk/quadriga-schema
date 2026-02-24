@@ -57,7 +57,7 @@ def load_schemas(version_dir):
             if "x-mappings" in prop_val:
                 pxm = prop_val["x-mappings"]
                 collect_mappings(pxm)
-                rows.append((f"{name}/{prop_name}", pxm, depth + 1, filename))
+                rows.append((prop_name, pxm, depth + 1, filename))
             # Follow $ref
             if "$ref" in prop_val:
                 walk(prop_val["$ref"], depth + 1)
