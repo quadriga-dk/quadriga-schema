@@ -126,9 +126,9 @@ def format_sub_cell(entry, context):
             target_html = f'<a class="target" href="{html_escape(uri)}" target="_blank">{html_escape(target)}</a>'
         else:
             target_html = f'<span class="target">{html_escape(target)}</span>'
-        content = f'<span class="relation">{short_rel}</span><span class="target-line">{target_html}{tooltip_icon(comment)}</span>'
+        content = f'<span class="label-box"><span class="relation">{short_rel}</span><span class="target-line">{target_html}{tooltip_icon(comment)}</span></span>'
     else:
-        content = f'<span class="relation">{short_rel}</span>{tooltip_icon(comment)}'
+        content = f'<span class="label-box"><span class="relation">{short_rel}</span>{tooltip_icon(comment)}</span>'
 
     return f'<div class="sub-cell {css_class}">{content}</div>'
 
@@ -210,7 +210,7 @@ def generate_html(rows, columns, context):
     padding: 4px 8px;
     text-align: center;
     white-space: nowrap;
-    vertical-align: top;
+    vertical-align: middle;
   }}
   thead th {{
     position: sticky;
@@ -235,16 +235,25 @@ def generate_html(rows, columns, context):
   .exactmatch {{ background: #009e73; }}
   .closematch {{ background: #56b4e9; }}
   .broadmatch {{ background: #e69f00; }}
-  .narrowmatch {{ background: #e2d512; }}
+  .narrowmatch {{ background: #f0e442; }}
   .na {{ background: #bbbbbb; }}
   .sub-cell {{
     padding: 3px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }}
   .sub-cell + .sub-cell {{
     border-top: 1px solid #ccc;
   }}
   .multi {{
     padding: 0;
+  }}
+  .label-box {{
+    display: inline-block;
+    background: rgba(255,255,255,0.45);
+    border-radius: 3px;
+    padding: 1px 3px;
   }}
   .relation {{
     display: block;
