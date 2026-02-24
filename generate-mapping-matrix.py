@@ -225,15 +225,12 @@ def generate_html(rows, columns, context):
     z-index: 3;
     background: #333;
   }}
-  /* relation colors */
-  /* Okabe-Ito colorblind-safe palette (lightened for backgrounds) */
-  .exactmatch {{ background: #b8e4b2; }}  /* tint of #009E73 bluish green */
-  .closematch {{ background: #f5d78e; }}  /* tint of #E69F00 orange */
-  .broadmatch {{ background: #f7f0ab; }}  /* tint of #F0E442 yellow */
-  .narrowmatch {{ background: #aed5f0; }} /* tint of #56B4E9 sky blue */
-  .relatedmatch {{ background: #d9d9d9; }}
-  .na {{ background: #f2f2f2; color: #999; }}
-  .no-mapping {{ background: #fff; }}
+  /* relation colors – Okabe-Ito colorblind-safe palette */
+  .exactmatch {{ background: #009e73; }}
+  .closematch {{ background: #56b4e9; }}
+  .broadmatch {{ background: #e69f00; }}
+  .narrowmatch {{ background: #e2d512; }}
+  .na {{ background: #bbbbbb; }}
   .sub-cell {{
     padding: 3px 6px;
   }}
@@ -246,18 +243,21 @@ def generate_html(rows, columns, context):
   .relation {{
     display: block;
     font-size: 0.75em;
-    color: #666;
   }}
   .target-line {{
     display: block;
   }}
-  a.target {{
+  a.target, a.target:visited {{
     font-weight: 600;
     color: inherit;
     text-decoration: none;
   }}
   a.target:hover {{
     text-decoration: underline;
+  }}
+  .relation {{
+    color: inherit;
+    opacity: 0.8;
   }}
   .element-name a {{
     color: inherit;
@@ -305,27 +305,20 @@ def generate_html(rows, columns, context):
     border-radius: 2px;
     display: inline-block;
   }}
-  .no-mappings-row td {{
-    background: #e8e8e8;
-    color: #aaa;
-  }}
-  .no-mappings-row .element-name {{
-    background: #e0e0e0;
-    color: #999;
-  }}
 </style>
 </head>
 <body>
 <h1>QUADRIGA Schema – Mapping Matrix</h1>
 <div class="legend">
   <span style="font-weight:600">SKOS Relations:</span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#b8e4b2"></span> <a href="http://www.w3.org/2004/02/skos/core#exactMatch" target="_blank">exactMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#f5d78e"></span> <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank">closeMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#f7f0ab"></span> <a href="http://www.w3.org/2004/02/skos/core#broadMatch" target="_blank">broadMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#aed5f0"></span> <a href="http://www.w3.org/2004/02/skos/core#narrowMatch" target="_blank">narrowMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#d9d9d9"></span> <a href="http://www.w3.org/2004/02/skos/core#relatedMatch" target="_blank">relatedMatch</a></span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#f2f2f2"></span> N/A</span>
-  <span class="legend-item"><span class="legend-swatch" style="background:#e8e8e8"></span> internal / formatting</span>
+  <span class="legend-item"><span class="legend-swatch exactmatch"></span> <a href="http://www.w3.org/2004/02/skos/core#exactMatch" target="_blank">exactMatch</a></span>
+  <span class="legend-item"><span class="legend-swatch closematch"></span> <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank">closeMatch</a></span>
+  <span class="legend-item"><span class="legend-swatch broadmatch"></span> <a href="http://www.w3.org/2004/02/skos/core#broadMatch" target="_blank">broadMatch</a></span>
+  <span class="legend-item"><span class="legend-swatch narrowmatch"></span> <a href="http://www.w3.org/2004/02/skos/core#narrowMatch" target="_blank">narrowMatch</a></span>
+  <span class="legend-item"><span class="legend-swatch na"></span>N/A</span>
+</div>
+<div class="legend">
+<p><i>The SKOS relation <a href="http://www.w3.org/2004/02/skos/core#relatedMatch" target="_blank">relatedMatch</a> was not used. Either an element could at least be mapped as <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank">closeMatch</a> or it was not mapped.</i></p>
 </div>
 <div class="table-wrap">
 <table>
