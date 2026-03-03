@@ -359,8 +359,8 @@ def generate_html(rows, columns, context):
   /* relation colors – Okabe-Ito colorblind-safe palette */
   .exactmatch {{ background: #009e73; }}
   .closematch {{ background: #56b4e9; }}
-  .broadmatch {{ background: #e69f00; }}
-  .narrowmatch {{ background: #f0e442; }}
+  .narrowmatch {{ background: #e69f00; }}
+  .broadmatch {{ background: #f0e442; }}
   .na {{ background: #ddd; }}
   .sub-cell {{
     padding: 3px 6px;
