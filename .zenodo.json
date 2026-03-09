@@ -3,7 +3,7 @@
   "title": "QUADRIGA metadata schema",
   "description": "Internal metadata schema for the OER authored in the QUADRIGA project. Use this schema to validate the metadata of QUADRIGA case studies. The schema provides mappings to other schemas and the relationship of those mappings is defined via SKOS relations. These mappings are defined in `x-mappings-meta-schema.json`.",
   "upload_type": "other",
-  "publication_date": "2025-11-30",
+  "publication_date": "2026-03-09",
   "creators": [
     {
       "name": "Schnaitter, Hannes",
