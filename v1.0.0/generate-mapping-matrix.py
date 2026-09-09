@@ -132,7 +132,9 @@ def load_schemas(version_dir):
 
 def html_escape(text):
     """Escape HTML special characters."""
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    return (
+        text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    )
 
 
 def resolve_uri(target, context):
@@ -238,7 +240,7 @@ def generate_html(rows, columns, context):
             # Ancestor vertical continuation lines
             for level in range(1, depth):
                 has_future = False
-                for future_name, future_xm, future_depth, future_fn in rows[idx + 1:]:
+                for future_name, future_xm, future_depth, future_fn in rows[idx + 1 :]:
                     if future_depth < level:
                         break
                     if future_depth == level:
@@ -249,7 +251,7 @@ def generate_html(rows, columns, context):
                     lines.append(f'<span class="tree-vline" style="left: {left}px"></span>')
             # Connector at current depth (├ or └)
             is_last = True
-            for future_name, future_xm, future_depth, future_fn in rows[idx + 1:]:
+            for future_name, future_xm, future_depth, future_fn in rows[idx + 1 :]:
                 if future_depth < depth:
                     break
                 if future_depth == depth:
@@ -449,7 +451,7 @@ def generate_html(rows, columns, context):
 </style>
 </head>
 <body>
-<h1>QUADRIGA Schema – Mapping Matrix</h1>
+<h1>QUADRIGA Schema – Mapping Matrix (<a href="https://quadriga-dk.github.io/quadriga-schema/v1.0.0/" target="_blank">v1.0.0</a>)</h1>
 <div class="legend">
   <span style="font-weight:600">SKOS Relations:</span>
   <span class="legend-item"><span class="legend-swatch exactmatch"></span> <a href="http://www.w3.org/2004/02/skos/core#exactMatch" target="_blank">exactMatch</a></span>
