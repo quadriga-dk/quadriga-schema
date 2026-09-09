@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/license.json",
+  "title": "license – Lizenzangabe",
+  "description": "Angabe einer Lizenz als URL.",
+  "type": "string",
+  "format": "uri",
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:broadMatch",
+      "target": "dc:rights"
+    },
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #19: Lizenz",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
+    "lrmi": {
+      "relation": "skos:closeMatch",
+      "target": "lrmi:useRightsUrl"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:license"
+    }
+  }
+}

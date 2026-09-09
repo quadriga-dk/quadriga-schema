@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/UsedTool.json",
+  "title": "UsedTool – Verwendetes Werkzeug",
+  "description": "Ein bei der Erstellung des Buchs verwendetes Software-Tool.",
+  "type": "object",
+  "required": ["name", "url"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "title": "name – Name des Tools",
+      "description": "Name / Titel des genutzten Software-Tools.",
+      "$ref": "MultilingualText.json",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    },
+    "url": {
+      "title": "url – URL des Tools",
+      "description": "URL, die zum Tool (bspw. (Hersteller-)Website, Download-Seite, …) führt.",
+      "type": "string",
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "target": "dcterms:requires"
+    },
+    "hermes": null,
+    "lrmi": null,
+    "modalia": null,
+    "schema": null
+  }
+}

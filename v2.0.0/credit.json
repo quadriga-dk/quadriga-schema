@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/credit.json",
+  "title": "credit – CRediT-Rolle",
+  "description": "Rolle der Person nach CRediT (siehe https://credit.niso.org/contributor-roles/).",
+  "type": "array",
+  "items": {
+    "enum": [
+      "Conceptualization",
+      "Data curation",
+      "Formal analysis",
+      "Funding acquisition",
+      "Investigation",
+      "Methodology",
+      "Project administration",
+      "Software",
+      "Resources",
+      "Supervision",
+      "Validation",
+      "Visualization",
+      "Writing – original draft",
+      "Writing – review & editing"
+    ]
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcat": null,
+    "dcterms": null,
+    "hermes": null,
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "http://id.loc.gov/ontologies/bibframe/Role"
+    },
+    "schema": {
+      "relation": "skos:closeMatch",
+      "target": "schema:roleName"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/MultilingualText.json",
+  "title": "MultilingualText – Mehrsprachiger Text",
+  "description": "Text als String oder mehrsprachiges Objekt mit ISO639-1-Sprachcodes als Schlüssel. Bei mehrsprachiger Angabe ist mindestens eine Sprache erforderlich.",
+  "oneOf": [
+    {
+      "description": "Einfacher Text; typischerweise in Deutsch verfasst.",
+      "type": "string",
+      "minLength": 1
+    },
+    {
+      "description": "Sollen Metadaten-Werte mehrsprachig definiert werden, so wird als Key der Sprachcode nach ISO639-1 verwendet.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z][a-z]$": {
+          "description": "Text in der Sprache, die durch den Feldnamen (interpretiert als ISO639-1 Sprachcode) definiert ist.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

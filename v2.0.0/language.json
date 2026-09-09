@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/language.json",
+  "title": "language – Sprache",
+  "description": "Sprache des Buchs als ISO639-1 Sprachcode. Für einzelne Kapitel kann die Sprache in Chapter überschrieben werden, falls nötig.",
+  "type": "string",
+  "pattern": "^[a-z]{2}$",
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "target": "dc:language"
+    },
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:language"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #15: Sprache",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:language"
+    },
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:language"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:inLanguage"
+    }
+  }
+}

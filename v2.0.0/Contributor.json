@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/Contributor.json",
+  "title": "Contributor – Mitarbeiter:in / Beitragende:r",
+  "description": "Person, die an dem Buch mitgewirkt hat, jedoch keine Autor:in ist.\n\nCRediT-Rollen sollten für die Spezifizierung der Beiträge Mitarbeitender genutzt werden. ORCID und Affiliation können genutzt werden.",
+  "type": "object",
+  "required": ["givenName", "familyName"],
+  "additionalProperties": false,
+  "properties": {
+    "familyName": {
+      "title": "familyName – Nachname(n)",
+      "description": "Nachname(n) der Person.",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        }
+      }
+    },
+    "givenName": {
+      "title": "givenName – Vorname(n)",
+      "description": "Vorname(n) der Person.",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        }
+      }
+    },
+    "orcid": {
+      "$ref": "orcid.json"
+    },
+    "credit": {
+      "$ref": "credit.json"
+    },
+    "affiliation": {
+      "type": "string"
+      ,"x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    }
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "target": "dc:contributor"
+    },
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:contributor"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #5: Mitwirkende",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:contributor"
+    },
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "modalia:Contributor"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:contributor"
+    }
+  }
+}

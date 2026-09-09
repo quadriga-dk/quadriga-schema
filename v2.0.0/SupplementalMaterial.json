@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/SupplementalMaterial.json",
+  "title": "SupplementalMaterial – Ergänzende / genutzte Materialien",
+  "description": "Verweis auf ein Werk, ein Datensatz, … welcher/s mit dem vorliegenden Buch in einer (genauer zu definierenden) Beziehung steht. Das Werk wird referenziert per URL und Titel; optional kann die Beziehung zum Buch in einer Anmerkung beschrieben werden.",
+  "type": "object",
+  "required": ["url", "title"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "title": "title – Titel / Name",
+      "description": "Titel oder Name des verlinkten Werks.",
+      "$ref": "MultilingualText.json",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    },
+    "url": {
+      "title": "url – URL des Werks",
+      "description": "URL des genutzten / referenzierten Werks. Diese URL sollte direkt zum Werk oder zu einer, das Werk beschreibenden Seite führen.",
+      "type": "string",
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:closeMatch",
+          "target": "dcterms:references"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        }
+      }
+    }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcat": null,
+    "dcterms": null,
+    "hermes": null,
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "https://w3id.org/citedcat-ap/isSupplementedBy"
+    },
+    "schema": null
+  }
+}

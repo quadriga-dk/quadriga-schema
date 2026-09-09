@@ -1,0 +1,770 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "@context": {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "lrmi": "http://purl.org/dcx/lrmi-terms/",
+    "modalia": "https://purl.org/ontology/modalia#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/schema.json",
+  "title": "Open Educational Resource",
+  "description": "Eine Open Educational Resource (OER, offene Lehr-/Lernressource), die nach dem QUADRIGA Metadaten Application Profile beschrieben ist.\n\nDieses AP ist zu finden unter <https://quadriga-dk.github.io/quadriga-schema/v2.0.0/> (diese Seite) bzw. <https://github.com/quadriga-dk/quadriga-schema>.\n\nEs existiert ein Metadaten Crosswalk zu mehreren gebräuchlichen Metadatenschemata. Eine Matrixdarstellung dieses Crosswalks finden sie hier: <https://quadriga-dk.github.io/quadriga-schema/v2.0.0/mapping-matrix.html>\n\nDas QUADRIGA AP definiert Entitäten und deren Eigenschaften, wobei bestimmte Eigenschaften auf andere Entitäten verweisen.",
+  "type": "object",
+  "required": [
+    "title",
+    "authorLIST",
+    "keywordLIST",
+    "description",
+    "tableOfContents",
+    "disciplineLIST",
+    "researchObjectTypeLIST",
+    "targetGroupLIST",
+    "timeRequired",
+    "language",
+    "identifier",
+    "identifierGit",
+    "identifierOER",
+    "chapterLIST",
+    "dateIssued",
+    "dateModified",
+    "version",
+    "contextOfCreation",
+    "qualityAssurance",
+    "learningResourceType",
+    "schemaVersion",
+    "license",
+    "licenseCode"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "title": "title – Titel",
+      "description": "Titel der OER.",
+      "type": "string",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:exactMatch",
+          "target": "dc:title"
+        },
+        "dcat": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:title"
+        },
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:title"
+        },
+        "hermes": {
+          "$comment": "HERMES Attribut #1: Titel",
+          "relation": "skos:exactMatch",
+          "target": "dcterms:title"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:title"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:name"
+        }
+      }
+    },
+    "authorLIST": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "Author.json"
+      },
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    },
+    "keywordLIST": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "keyword – Schlag-/Stichwort",
+        "description": "Ein Schlag-/Stichwort.",
+        "$ref": "MultilingualText.json",
+        "x-mappings": {
+          "dc": {
+            "relation": "skos:exactMatch",
+            "target": "dc:subject"
+          },
+          "dcat": {
+            "$comment": "dcat:keyword has the value range of rdfs:Literal so URIs are not allowed.",
+            "relation": "skos:narrowMatch",
+            "target": "dcat:keyword"
+          },
+          "dcterms": {
+            "relation": "skos:exactMatch",
+            "target": "dcterms:subject"
+          },
+          "hermes": [
+            {
+              "$comment": "HERMES Attribut #9: Hauptthema. Nur Werte aus der vorgegebenen Picklist erlaubt.",
+              "relation": "skos:narrowMatch",
+              "target": "dcterms:subject"
+            },
+            {
+              "$comment": "HERMES Attribut #9: Hauptthema. Nur Werte aus der vorgegebenen Picklist erlaubt.",
+              "relation": "skos:closeMatch",
+              "target": "schema:keywords"
+            }
+          ],
+          "lrmi": null,
+          "modalia": {
+            "relation": "todo",
+            "target": "todo"
+          },
+          "schema": {
+            "relation": "skos:exactMatch",
+            "target": "schema:about"
+          }
+        }
+      }
+    },
+    "description": {
+      "title": "description – Beschreibung",
+      "description": "Beschreibung der OER.",
+      "$ref": "MultilingualText.json",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:exactMatch",
+          "target": "dc:description"
+        },
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:description"
+        },
+        "hermes": {
+          "$comment": "HERMES Attribut #4: Beschreibung",
+          "relation": "skos:exactMatch",
+          "target": "dcterms:description"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:description"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:description"
+        }
+      }
+    },
+    "tableOfContents": {
+      "title": "tableOfContents – Inhaltsverzeichnis",
+      "description": "Inhaltsverzeichnis der OER.",
+      "$ref": "MultilingualText.json",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:tableOfContents"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:HyperToc"
+        }
+      }
+    },
+    "disciplineLIST": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "title": "discipline – Disziplin",
+        "description": "Disziplin, die bei der Erstellung der OER im Fokus stand.\n\nenglish translation:\n\n- Verwaltungswissenschaften → Administrative sciences\n- Digital Humanities → Digital Humanities\n- Informatik → Computer science\n- Informationswissenschaft → Information science\n- übergreifend → Cross-disciplinary",
+        "enum": [
+          "Verwaltungswissenschaften",
+          "Digital Humanities",
+          "Informatik",
+          "Informationswissenschaft",
+          "übergreifend"
+        ],
+        "x-mappings": {
+          "$comment": "Die Disziplin ist im Rahmen von QUADRIGA auch eine inhaltliche Beschreibung, weshalb `dc:subject` oder `schema:about` passen kann.",
+          "dc": {
+            "relation": "skos:closeMatch",
+            "target": "dc:subject"
+          },
+          "dcat": {
+            "relation": "skos:closeMatch",
+            "target": "dcat:theme"
+          },
+          "dcterms": {
+            "relation": "skos:closeMatch",
+            "target": "dcterms:subject"
+          },
+          "hermes": [
+            {
+              "$comment": "HERMES Attribut #11: Fachdisziplin",
+              "relation": "skos:closeMatch",
+              "target": "http://purl.org/spar/fabio/hasDiscipline"
+            },
+            {
+              "$comment": "HERMES Attribut #11: Fachdisziplin",
+              "relation": "skos:closeMatch",
+              "target": "http://purl.org/spar/fabio/SubjectDiscipline"
+            },
+            {
+              "$comment": "HERMES Attribut #11: Fachdisziplin",
+              "relation": "skos:closeMatch",
+              "target": "schema:discipline"
+            }
+          ],
+          "lrmi": null,
+          "modalia": {
+            "relation": "skos:exactMatch",
+            "target": "modalia:hasDiscipline"
+          },
+          "schema": {
+            "relation": "skos:closeMatch",
+            "target": "schema:about"
+          }
+        }
+      }
+    },
+    "researchObjectTypeLIST": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "title": "researchObjectType – Datentyp",
+        "description": "Datentyp, der vorrangig in der OER behandelt wird.\n\nenglish translation:\n\n- Text → Text\n- Tabelle → Table\n- Bewegtes Bild → Moving picture\n- übergreifend → datatype independent",
+        "enum": ["Text", "Tabelle", "Bewegtes Bild", "übergreifend"],
+        "x-mappings": {
+          "dc": {
+            "relation": "skos:broadMatch",
+            "target": "dc:subject"
+          },
+          "dcat": null,
+          "dcterms": {
+            "relation": "skos:broadMatch",
+            "target": "dcterms:subject"
+          },
+          "hermes": null,
+          "lrmi": null,
+          "modalia": {
+            "relation": "skos:narrowMatch",
+            "target": "modalia:coversManagementOfDataKind"
+          },
+          "schema": {
+            "relation": "skos:broadMatch",
+            "target": "schema:about"
+          }
+        }
+      }
+    },
+    "targetGroupLIST": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "targetGroup – Zielgruppe",
+        "description": "Zielgruppe\n\nenglish translation:\n\n- Forschende (PostDoc) → Researchers (PostDoc)\n- Forschende (Projektleitung) → Researchers (Project lead)\n- Promovierende → PhD students\n- Hochschullehrende → University lecturers",
+        "enum": [
+          "Forschende (PostDoc)",
+          "Forschende (Projektleitung)",
+          "Promovierende",
+          "Hochschullehrende"
+        ],
+        "x-mappings": {
+          "dc": null,
+          "dcat": null,
+          "dcterms": {
+            "relation": "skos:closeMatch",
+            "target": "dcterms:audience"
+          },
+          "hermes": {
+            "$comment": "HERMES Attribut #8: Zielgruppe",
+            "relation": "skos:closeMatch",
+            "target": "dcterms:audience"
+          },
+          "lrmi": {
+            "relation": "skos:closeMatch",
+            "target": "lrmi:educationalAudience"
+          },
+          "modalia": {
+            "relation": "skos:exactMatch",
+            "target": "modalia:hasTargetGroup"
+          },
+          "schema": {
+            "relation": "skos:closeMatch",
+            "target": "schema:audience"
+          }
+        }
+      }
+    },
+    "timeRequired": {
+      "$ref": "timeRequired.json"
+    },
+    "language": {
+      "$ref": "language.json"
+    },
+    "contributorLIST": {
+      "type": "array",
+      "description": "Mitarbeiter:in",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "Contributor.json"
+      }
+    },
+    "identifier": {
+      "title": "identifier – Persistenter Identifier",
+      "description": "Persistenter Identifier in Form einer DOI. Die DOI identifiziert das gesamte Buch.",
+      "type": "string",
+      "format": "uri",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:exactMatch",
+          "target": "dc:identifier"
+        },
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:identifier"
+        },
+        "hermes": [
+          {
+            "$comment": "HERMES Attribut #20: ID",
+            "relation": "skos:exactMatch",
+            "target": "schema:identifier"
+          },
+          {
+            "$comment": "HERMES Attribut #20: ID",
+            "relation": "skos:exactMatch",
+            "target": "dcterms:identifier"
+          }
+        ],
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:identifier"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:identifier"
+        }
+      }
+    },
+    "identifierGit": {
+      "title": "identifierGit – Git-Repositorium",
+      "description": "Git-Repositorium, in dem die Buch/OER-Inhalte zu finden sind.",
+      "type": "string",
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:closeMatch",
+          "target": "dcterms:source"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:hasSourceCode"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:codeRepository"
+        }
+      }
+    },
+    "identifierOER": {
+      "title": "identifierOER – OER-URL",
+      "description": "URL zur Web-Ansicht des Buchs.",
+      "type": "string",
+      "format": "uri",
+      "x-mappings": {
+        "dc": null,
+        "dcat": {
+          "relation": "skos:exactMatch",
+          "target": "dcat:landingPage"
+        },
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        }
+      }
+    },
+    "prerequisiteLIST": {
+      "title": "prerequisiteLIST – Voraussetzungen",
+      "description": "Eine Voraussetzung, welche Lernende erfüllen sollten.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "title": "prerequisite – Voraussetzung",
+        "description": "Eine Voraussetzung, welche Lernende erfüllen sollten.",
+        "$ref": "MultilingualText.json",
+        "x-mappings": {
+          "dc": null,
+          "dcat": null,
+          "dcterms": null,
+          "hermes": [
+            {
+              "$comment": "HERMES Attribut #14: Vorkenntnisse",
+              "relation": "skos:closeMatch",
+              "target": "modalia:hasProficiencyLevel"
+            },
+            {
+              "$comment": "HERMES Attribut #14: Vorkenntnisse",
+              "relation": "skos:closeMatch",
+              "target": "schema:educationalLevel"
+            }
+          ],
+          "lrmi": null,
+          "modalia": [
+            {
+              "relation": "skos:closeMatch",
+              "target": "modalia:requiresKnowledge"
+            },
+            {
+              "relation": "skos:closeMatch",
+              "target": "modalia:requiresProficiencyLevel"
+            }
+          ],
+          "schema": {
+            "relation": "skos:closeMatch",
+            "target": "schema:coursePrerequisites"
+          }
+        }
+      }
+    },
+    "usedToolLIST": {
+      "title": "usedToolLIST – Verwendete Werkzeuge",
+      "description": "Ein bei der Erstellung des Buchs verwendetes Software-Tool.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "UsedTool.json"
+      },
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:closeMatch",
+          "target": "dcterms:requires"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    },
+    "chapterLIST": {
+      "title": "chapterLIST – Kapitelliste",
+      "description": "Ein Kapitel.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "Chapter.json"
+      },
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:hasPart"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:hasPart"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:hasPart"
+        }
+      }
+    },
+    "dateIssued": {
+      "title": "dateIssued – Veröffentlichungsdatum",
+      "description": "Datum, an dem das Buch (erst-)veröffentlicht wurde.\n\nVeröffentlichungen von Vorabversionen (Alpha-, Beta-Versionen) gelten nicht als Veröffentlichung.",
+      "type": "string",
+      "format": "date",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:date"
+        },
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:issued"
+        },
+        "hermes": {
+          "$comment": "HERMES Attribut #16: Veröffentlichung",
+          "relation": "skos:exactMatch",
+          "target": "dcterms:issued"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:datePublished"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:datePublished"
+        }
+      }
+    },
+    "dateModified": {
+      "title": "dateModified – Änderungsdatum",
+      "description": "Datum der letzten (großen, inhaltlich umfangreichen) Änderung. Sollte immer mit einer Versionsänderung einhergehen.",
+      "type": "string",
+      "format": "date",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:date"
+        },
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:modified"
+        },
+        "hermes": {
+          "$comment": "HERMES Attribut #18: Modifizierung",
+          "relation": "skos:exactMatch",
+          "target": "dcterms:modified"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:modified"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:dateModified"
+        }
+      }
+    },
+    "version": {
+      "title": "version – Version",
+      "description": "Version des Buchs.",
+      "$ref": "SemVer.json",
+      "x-mappings": {
+        "dc": null,
+        "dcat": {
+          "relation": "skos:exactMatch",
+          "target": "dcat:version"
+        },
+        "dcterms": null,
+        "hermes": {
+          "$comment": "HERMES Attribut #17: Version",
+          "relation": "skos:exactMatch",
+          "target": "schema:version"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:version"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:version"
+        }
+      }
+    },
+    "contextOfCreation": {
+      "title": "contextOfCreation – Entstehungskontext",
+      "description": "Beschreibung des Rahmens, in dem das Buch / die OER entstanden sind.\n\nFür QUADRIGA gibt es eine fest definierte formulierung.",
+      "type": "string",
+      "enum": [
+        "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034A-H"
+      ],
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:Community"
+        },
+        "schema": null
+      }
+    },
+    "qualityAssurance": {
+      "title": "qualityAssurance – Qualitätssicherung",
+      "description": "Nachweis der Durchführung von Qualitätssicherungsmaßnahmen. Auf diese wird per DOI verwiesen und die Durchführung mit dem Datum der abschließenden Prüfung nachgewiesen.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description", "date"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://doi\\.org/",
+          "description": "DOI des Qualitätssicherungsverfahrens.",
+          "x-mappings": {
+            "dc": null,
+            "dcat": null,
+            "dcterms": null,
+            "hermes": null,
+            "lrmi": null,
+            "modalia": null,
+            "schema": null
+          }
+        },
+        "date": {
+          "description": "Datum an dem das Qualitätssicherungsverfahren abgeschlossen wurde.",
+          "type": "string",
+          "format": "date",
+          "x-mappings": {
+            "dc": {
+              "relation": "skos:broadMatch",
+              "target": "dc:date"
+            },
+            "dcat": null,
+            "dcterms": {
+              "relation": "skos:broadMatch",
+              "target": "dcterms:date"
+            },
+            "hermes": null,
+            "lrmi": null,
+            "modalia": null,
+            "schema": {
+              "relation": "skos:broadMatch",
+              "target": "schema:Date"
+            }
+          }
+        }
+      },
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:closeMatch",
+          "target": "dcterms:provenance"
+        },
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:hasQuality"
+        },
+        "schema": null
+      }
+    },
+    "learningResourceType": {
+      "title": "learningResourceType – Typ der Lernressource",
+      "description": "Typ der Lernressource. Für QUADRIGA ist dies immer \"Jupyter Book\".",
+      "type": "string",
+      "enum": ["Jupyter Book"],
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:type"
+        },
+        "dcat": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:type"
+        },
+        "hermes": {
+          "$comment": "HERMES Attribut #7: Format",
+          "relation": "skos:closeMatch",
+          "target": "modalia:hasLearningType"
+        },
+        "lrmi": {
+          "relation": "skos:closeMatch",
+          "target": "lrmi:learningResourceType"
+        },
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:hasLearningType"
+        },
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:learningResourceType"
+        }
+      }
+    },
+    "schemaVersion": {
+      "title": "schemaVersion – Schemaversion",
+      "description": "Versionsnummer des QUADRIGA-Metadatenschemas.",
+      "type": "string",
+      "enum": ["2.0.0"],
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:version"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:version"
+        }
+      }
+    },
+    "license": {
+      "$ref": "license.json"
+    },
+    "licenseCode": {
+      "$ref": "license.json"
+    }
+  },
+  "x-mappings": {
+    "dc": null,
+    "dcat": {
+      "$comment": "Dieses Mapping ist internen Projektanforderungen geschuldet. Besser wäre skos:relatedMatch.",
+      "relation": "skos:closeMatch",
+      "target": "dcat:Dataset"
+    },
+    "dcterms": null,
+    "hermes": null,
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "target": "lrmi:LearningResource"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "https://github.com/tibonto/educor#EducationalResource"
+    },
+    "schema": [
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:LearningResource"
+      },
+      {
+        "relation": "skos:exactMatch",
+        "target": "schema:Book"
+      }
+    ]
+  }
+}

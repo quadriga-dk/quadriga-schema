@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/Author.json",
+  "title": "Author – Autor:in",
+  "description": "Ein:e Autor:in der OER. Die Person wird strukturiert mit Nachname(n), Vorname(n) sowie idealerweise ORCID, CRediT-Rolle und Affiliation angegeben.",
+  "type": "object",
+  "required": ["givenName", "familyName"],
+  "additionalProperties": false,
+  "properties": {
+    "familyName": {
+      "title": "familyName – Nachname(n)",
+      "description": "Nachname(n) der Person.",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        }
+      }
+    },
+    "givenName": {
+      "title": "givenName – Vorname(n)",
+      "description": "Vorname(n) der Person.",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        }
+      }
+    },
+    "orcid": {
+      "$ref": "orcid.json"
+    },
+    "credit": {
+      "$ref": "credit.json"
+    },
+    "affiliation": {
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    }
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:broadMatch",
+      "target": "dc:creator"
+    },
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:broadMatch",
+      "target": "dcterms:creator"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #3: Autor:innen",
+      "relation": "skos:broadMatch",
+      "target": "dcterms:creator"
+    },
+    "lrmi": null,
+    "modalia": {
+      "$comment": "MoDALIA re-definiert `schema:author` zur Liste der Autor:innen. Damit ist dort `schema:author` nicht mehr genau eine Autor:in.",
+      "relation": "skos:closeMatch",
+      "target": "schema:author"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:author"
+    }
+  }
+}
