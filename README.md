@@ -1,12 +1,12 @@
-# QUADRIGA Metadata Schema
+# QUADRIGA Application Profile
 
 [![DOI](https://zenodo.org/badge/1007838017.svg)](https://doi.org/10.5281/zenodo.18184772)
 
 **Table of Contents**
 
-- [QUADRIGA Metadata Schema](#quadriga-metadata-schema)
+- [QUADRIGA Application Profile](#quadriga-application-profile)
   - [About This Repository](#about-this-repository)
-  - [Schema Structure](#schema-structure)
+  - [Structure of the Application Profile](#structure-of-the-application-profile)
     - [Canonical order of the elements in `metadata.yml`](#canonical-order-of-the-elements-in-metadatayml)
     - [Diagrams](#diagrams)
   - [Usage](#usage)
@@ -18,8 +18,7 @@
       - [Meta-Schema](#meta-schema)
   - [Documentation](#documentation)
 
-
-The QUADRIGA Metadata Schema is a JSON-Schema designed for describing Open
+The QUADRIGA Application Profile is a JSON-Schema designed for describing Open
 Educational Resources (OER) in German academic contexts. It provides structured
 metadata for learning materials, integrating competency frameworks, Bloom's
 taxonomy, and multilingual support to enable comprehensive resource description
@@ -27,7 +26,7 @@ and discovery. It is used primarily withing QUADRIGA as ground truth within a
 Jupyter Book repository and to allow the Navigator to ingest this metadata for
 retrieval purposes.
 
-The schema emphasizes semantic web compatibility through [Dublin
+The application profile emphasizes semantic web compatibility through [Dublin
 Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) and
 [Schema.org](https://schema.org/) mappings, while supporting flexible person
 representation, learning objectives tracking, and quality assurance workflows
@@ -35,23 +34,23 @@ tailored for educational content creation and management.
 
 ## About This Repository
 
-This repository contains the complete QUADRIGA schema definition split into
+This repository contains the complete QUADRIGA application profile definition split into
 modular JSON files for maintainability. It features a versioning system with a
 `latest/` symlink pointing to the current version, automated HTML documentation
 generation via GitHub Actions, and deployment to GitHub Pages for easy access
 and reference.
 
-**Entry Point:** `schema.json`
+**Entry Point:** `application profile.json`
 
-**Licensing:** The schema is licensed under CC0 (see `LICENSE-SCHEMA.txt`). Any
+**Licensing:** The application profile is licensed under CC0 (see `LICENSE-SCHEMA.txt`). Any
 code in this repository is licensed under MIT (see `LICENSE-CODE.txt`).
 
-**Archiving:** The schema is archived on Zenodo for long-term preservation and
+**Archiving:** The application profile is archived on Zenodo for long-term preservation and
 citable DOI assignment. Zenodo metadata is maintained in `.zenodo.json`.
 
-## Schema Structure
+## Structure of the Application Profile
 
-The schema describes educational resources with the following key components:
+The application profile describes educational resources with the following key components:
 
 - **Basic metadata**: Title, description, identifiers, publication dates, and
   versioning
@@ -69,6 +68,7 @@ See [`examples/minimal_metadata.yml`](./examples/minimal_metadata.yml) for a min
 elements work together to describe an educational resource.
 
 ### Canonical order of the elements in `metadata.yml`
+
 The following order of elements is recommended (required fields have an asterisk after their name):
 
 ```
@@ -132,7 +132,7 @@ The following order of elements is recommended (required fields have an asterisk
 
 ### Diagrams
 
-You can find an approximation of the schema in the form of UML class diagrams <a href="https://quadriga-dk.github.io/quadriga-schema/diagrams/" target="_blank">here</a>.
+You can find an approximation of the application profile in the form of UML class diagrams <a href="https://quadriga-dk.github.io/quadriga-schema/diagrams/" target="_blank">here</a>.
 
 To rebuild the diagrams make sure [Docker](https://www.docker.com) (recommended) or [PlantUML](https://plantuml.com) is installed and run `just diagrams`.
 
@@ -143,19 +143,19 @@ To rebuild the diagrams make sure [Docker](https://www.docker.com) (recommended)
 Create a YAML file following the schema structure. Start with the minimal
 example in [`examples/minimal_metadata.yml`](./examples/minimal_metadata.yml).
 
-You can use `latest` in the schema URL, but in production we recommend picking
+You can use `latest` in the application profile URL, but in production we recommend picking
 a specific `schema-version` like `v1.0.0`.
 
 ### Vocabulary Mappings (x-mappings)
 
-The QUADRIGA schema uses a custom `x-mappings` extension field to document how
-schema elements (properties or types) map to standard vocabularies. This approach
-co-locates crosswalk mappings directly within the schema definition, making them
-machine-readable and version-controlled alongside the schema itself.
+The QUADRIGA Application Profile uses a custom `x-mappings` extension field to document how
+application profile elements (properties or types) map to standard vocabularies. This approach
+co-locates crosswalk mappings directly within the application profile definition, making them
+machine-readable and version-controlled alongside the application profile itself.
 
 #### Structure
 
-Each schema element can include an `x-mappings` field that maps to seven target
+Each application profile element can include an `x-mappings` field that maps to seven target
 vocabularies:
 
 ```json
@@ -213,8 +213,8 @@ Use `null` when no appropriate mapping was identified for a vocabulary.
 
 #### Mapping Matrix
 
-An interactive mapping matrix showing all schema elements mapped against the
-target vocabularies is available for each schema version:
+An interactive mapping matrix showing all application profile elements mapped against the
+target vocabularies is available for each application profile version:
 
 - **Latest:**
   [https://quadriga-dk.github.io/quadriga-schema/latest/mapping-matrix.html](https://quadriga-dk.github.io/quadriga-schema/latest/mapping-matrix.html)
@@ -222,7 +222,7 @@ target vocabularies is available for each schema version:
   [https://quadriga-dk.github.io/quadriga-schema/v1.0.0/mapping-matrix.html](https://quadriga-dk.github.io/quadriga-schema/v1.0.0/mapping-matrix.html)
 
 The matrix is color-coded by SKOS relation type (using a colorblind-safe
-palette), includes links to the schema elements and target vocabulary terms,
+palette), includes links to the application profile elements and target vocabulary terms,
 and shows mapping comments as tooltips.
 
 To build the mapping matrix locally, run `just mapping-matrix` (output will be
@@ -238,7 +238,7 @@ consistent mapping documentation across all schema files.
 
 - **HTML Documentation:**
   [https://quadriga-dk.github.io/quadriga-schema/](https://quadriga-dk.github.io/quadriga-schema/)
-- **Latest Schema:**
+- **Latest application profile:**
   [https://quadriga-dk.github.io/quadriga-schema/latest/schema.json](https://quadriga-dk.github.io/quadriga-schema/latest/schema.json)
 
 To build the HTML documentation locally, run `just html` (output will be in
@@ -252,7 +252,7 @@ with `brew install just` (macOS) or see the
 platforms. Run `just --list` to see all available recipes:
 
 ```
-just validate           # Validate x-mappings in all schema files
+just validate           # Validate x-mappings in all application profile files
 just diagrams           # Build all PlantUML diagrams (auto-detect Docker vs local)
 just diagrams docker    # Force Docker for building diagrams
 just diagrams list      # List available diagrams
