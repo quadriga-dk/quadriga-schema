@@ -152,9 +152,9 @@ mapping-matrix engine="auto":
                 -v "{{ justfile_directory() }}:/work" \
                 -w /work \
                 python:3-slim \
-                python3 generate-mapping-matrix.py "$version_dir"
+                python3 ./"$version_dir"/generate-mapping-matrix.py "$version_dir"
         else
-            python3 generate-mapping-matrix.py "$version_dir"
+            python3 ./"$version_dir"/generate-mapping-matrix.py "$version_dir"
         fi
     }
 
