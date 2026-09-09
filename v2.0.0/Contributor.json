@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/Contributor.json",
+  "title": "Contributor – Mitarbeiter:in / Beitragende:r",
+  "description": "Ein/eine Beitragende:r im Sinne des Urheberrechts\n\nEine natürliche Person",
+  "type": "object",
+  "required": ["givenName", "familyName"],
+  "additionalProperties": false,
+  "properties": {
+    "familyName": {
+      "title": "familyName – Nachname",
+      "description": "Nachname der/des Beitragenden",
+      "$comment": "Liegt kein Nachname vor, so wird dieses Feld mit einer leeren Zeichenkette belegt und alle Namen werden in das Feld givenName eingetragen.",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:familyName"
+        }
+      }
+    },
+    "givenName": {
+      "title": "givenName – Vorname",
+      "description": "Vorname der/des Beitragenden",
+      "type": "string",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:givenName"
+        }
+      }
+    },
+    "orcid": {
+      "title": "orcid – ORCID",
+      "description": "ORCID der/des Beitragenden als URI (https://orcid.org/XXXX-XXXX-XXXX-XXXX).",
+      "$ref": "orcid.json"
+    },
+    "credit": {
+      "title": "credit – CRediT-Rolle",
+      "description": "Eine in der OER-Entwicklung übernommene Rolle der/des Beitragenden nach CRediT Taxonomie (siehe https://credit.niso.org/).",
+      "$ref": "credit.json"
+    },
+    "affiliation": {
+      "type": "string",
+      "title": "affiliation – Institutionelle Zugehörigkeit",
+      "description": "Institutionelle Zugehörigkeit der/des Beitragenden (nach Möglichkeit mit ROR)",
+      "x-mappings": {
+        "dc": null,
+        "dcat": null,
+        "dcterms": null,
+        "hermes": null,
+        "lrmi": null,
+        "modalia": null,
+        "schema": null
+      }
+    }
+  },
+  "x-mappings": {
+    "dc": {
+      "relation": "skos:exactMatch",
+      "target": "dc:contributor"
+    },
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:contributor"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #5: Mitwirkende",
+      "relation": "skos:exactMatch",
+      "target": "dcterms:contributor"
+    },
+    "lrmi": null,
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "modalia:Contributor"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:contributor"
+    }
+  }
+}

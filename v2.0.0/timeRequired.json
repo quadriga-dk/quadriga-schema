@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/timeRequired.json",
+  "title": "timeRequired – Bearbeitungsdauer",
+  "type": "string",
+  "format": "duration",
+  "x-mappings": {
+    "dc": null,
+    "dcat": null,
+    "dcterms": {
+      "relation": "skos:closeMatch",
+      "target": "dcterms:extent"
+    },
+    "hermes": {
+      "$comment": "HERMES Attribut #12: Dauer",
+      "relation": "skos:closeMatch",
+      "target": "schema:duration"
+    },
+    "lrmi": {
+      "relation": "skos:exactMatch",
+      "target": "lrmi:timeRequired"
+    },
+    "modalia": {
+      "relation": "skos:exactMatch",
+      "target": "schema:timeRequired"
+    },
+    "schema": {
+      "relation": "skos:exactMatch",
+      "target": "schema:timeRequired"
+    }
+  }
+}
