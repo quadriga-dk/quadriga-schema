@@ -1,4 +1,4 @@
-@startuml quality-assurance
+@startuml UsedTool
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,16 +18,16 @@ skinparam note {
 }
 
 
-class "quality-assurance" {
-  URI description
-  ISODate date
+class "UsedTool" {
+  MultilingualText name
+  URI url
 }
 
-note bottom of "quality-assurance"
-  Nachweise von Qualitätssicherungsmaßnahmen.
-  
-  - description: DOI des Qualitätssicherungsverfahrens (https://doi.org/…)
-  - date: wann das QS-Verfahren abgeschlossen wurde
+note bottom of "UsedTool"
+  Ein bei der Erstellung der OER verwendetes Software-Tool.
+
+  - name: Name / Titel des Tools
+  - url: URL zum Tool (bspw. (Hersteller-)Website, Download-Seite, …)
 end note
 
 @enduml

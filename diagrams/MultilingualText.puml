@@ -1,4 +1,4 @@
-@startuml multilingual-text
+@startuml MultilingualText
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,36 +18,36 @@ skinparam note {
 }
 
 
-interface "multilingual-text" {
+interface "MultilingualText" {
 }
 
-note bottom of "multilingual-text"
+note bottom of "MultilingualText"
   Text als String oder
   mehrsprachiges Objekt.
 end note
 
-class "multilingual-text-string" {
+class "MultilingualTextString" {
   string value
 }
 
-note bottom of "multilingual-text-string"
+note bottom of "MultilingualTextString"
   Einfache String-Form:
   typischerweise in Deutsch.
 end note
 
-class "multilingual-text-object" {
+class "MultilingualTextObject" {
   Map~ISO639-1, string~ translations
 }
 
-note bottom of "multilingual-text-object"
+note bottom of "MultilingualTextObject"
   Mehrsprachige Form:
   Objekt mit ISO639-1-Sprachcodes
   als Schlüsseln (z. B. de, en, fr, es).
-  
+
   Erfordert mindestens eine Sprache.
 end note
 
-"multilingual-text" <|.. "multilingual-text-string"
-"multilingual-text" <|.. "multilingual-text-object"
+"MultilingualText" <|.. "MultilingualTextString"
+"MultilingualText" <|.. "MultilingualTextObject"
 
 @enduml

@@ -1,4 +1,4 @@
-@startuml data-flow
+@startuml DataFlow
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,7 +18,7 @@ skinparam note {
 }
 
 
-enum "data-flow" {
+enum "DataFlow" {
   übergreifend
   1 Planung
   2 Erhebung und Aufbereitung
@@ -28,13 +28,13 @@ enum "data-flow" {
   nicht anwendbar
 }
 
-note bottom of "data-flow"
+note bottom of "DataFlow"
   Datenflussstufe, der eine
   Kompetenz zugeordnet ist.
-  
+
   Zeigt die Stufe im Datenzyklus an,
   die ein Lernziel behandelt.
-  
+
   Englisch:
   cross-cutting / 1 Planning /
   2 Collection and Preparation /

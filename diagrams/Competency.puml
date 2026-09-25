@@ -1,4 +1,4 @@
-@startuml competency
+@startuml Competency
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,7 +18,7 @@ skinparam note {
 }
 
 
-enum "competency" {
+enum "Competency" {
   Orientierungswissen
   1.1 Identifikation
   1.2 Qualitätssicherung
@@ -37,11 +37,11 @@ enum "competency" {
   nicht anwendbar
 }
 
-note bottom of "competency"
+note bottom of "Competency"
   Kompetenz aus dem QUADRIGA
   Data Competency Framework.
   Zugeordnet zu Lernzielen.
-  
+
   Englische Entsprechung:
   conceptual knowledge / 1.1 identification / 1.2 quality assurance /
   1.3 ethics and legal aspects / 2.1 acquisition /

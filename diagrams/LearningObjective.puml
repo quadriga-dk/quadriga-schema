@@ -1,4 +1,4 @@
-@startuml learning-objectives-entry
+@startuml LearningObjective
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,22 +18,22 @@ skinparam note {
 }
 
 
-class "learning-objectives-entry" {
-  multilingual-text learning-objective
-  competency competency
-  data-flow data-flow
-  blooms-category blooms-category
+class "LearningObjective" {
+  MultilingualText description
+  Competency competency
+  DataFlow dataFlow
+  BloomsCategory bloomsCategory
   __
-  <i><color:#666666>multilingual-text assessment?</color></i>
+  <i><color:#666666>MultilingualText assessment?</i>
 }
 
-note bottom of "learning-objectives-entry"
+note bottom of "LearningObjective"
   Umfassende Beschreibung eines einzelnen Lernziels.
-  
-  - learning-objective: Formulierung
+
+  - description: Formulierung des Lernziels
   - competency: QUADRIGA-Framework
-  - data-flow: Schritt im Datenfluss
-  - blooms-category: Einordnung in die Bloomsche Taxonomie
+  - dataFlow: Schritt im Datenfluss
+  - bloomsCategory: Einordnung in die Bloomsche Taxonomie
   - assessment (optional): Lernstandskontrolle
 end note
 

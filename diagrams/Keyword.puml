@@ -1,4 +1,4 @@
-@startuml License
+@startuml Keyword
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,17 +18,17 @@ skinparam note {
 }
 
 
-class "License" {
-  URI license
-  URI licenseCode
+class "Keyword" {
+  MultilingualText value
 }
 
-note bottom of "License"
-  Lizenzen der OER als URIs
-  (z. B. SPDX, Creative Commons).
+note bottom of "Keyword"
+  Ein Schlag-/Stichwort.
+  Wird für die Indexierung und Entdeckung
+  von OER-Materialien verwendet.
 
-  - license: Lizenz der Inhalte
-  - licenseCode: Lizenz des Codes
+  Der Wert ist ein (ggf. mehrsprachiger) Text –
+  URIs sind nicht erlaubt.
 end note
 
 @enduml

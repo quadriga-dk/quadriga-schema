@@ -1,4 +1,4 @@
-@startuml License
+@startuml QualityAssurance
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,17 +18,16 @@ skinparam note {
 }
 
 
-class "License" {
-  URI license
-  URI licenseCode
+class "QualityAssurance" {
+  URI description
+  ISODate date
 }
 
-note bottom of "License"
-  Lizenzen der OER als URIs
-  (z. B. SPDX, Creative Commons).
+note bottom of "QualityAssurance"
+  Nachweise von Qualitätssicherungsmaßnahmen.
 
-  - license: Lizenz der Inhalte
-  - licenseCode: Lizenz des Codes
+  - description: DOI des Qualitätssicherungsverfahrens (https://doi.org/…)
+  - date: wann das QS-Verfahren abgeschlossen wurde
 end note
 
 @enduml

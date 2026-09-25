@@ -1,4 +1,4 @@
-@startuml chapter
+@startuml Chapter
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,29 +18,29 @@ skinparam note {
 }
 
 
-class "chapter" {
-  multilingual-text title
-  multilingual-text description
+class "Chapter" {
+  MultilingualText title
+  MultilingualText description
   URI url
-  Duration time-required
-  multilingual-text learning-goal
-  learning-objectives-entry[] learning-objectives
+  Duration timeRequired
+  MultilingualText learningGoal
+  LearningObjective[] learningObjective
   __
-  <i><color:#666666>language language?</color></i>
-  <i><color:#666666>supplemental-material[] supplemented-by?</color></i>
+  <i><color:#666666>Language language?</i>
+  <i><color:#666666>SupplementalMaterial[] supplementalMaterial?</i>
 }
 
-note bottom of "chapter"
+note bottom of "Chapter"
   Beschreibung eines Kapitels.
-  
+
   - title: verwendet für Zitationen
   - description: Inhaltsbeschreibung
   - url: URL zur Webansicht
-  - time-required: geschätzte Verarbeitungszeit
-  - learning-goal: Lernziel
-  - learning-objectives: Lernziele
+  - timeRequired: geschätzte Verarbeitungszeit
+  - learningGoal: Lernziel
+  - learningObjective: Lernziele
   - language (optional): Sprache
-  - supplemented-by (optional): Zusatzmaterialien
+  - supplementalMaterial (optional): Zusatzmaterialien
 end note
 
 @enduml

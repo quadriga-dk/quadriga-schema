@@ -1,4 +1,4 @@
-@startuml supplemental-material
+@startuml SupplementalMaterial
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,21 +18,17 @@ skinparam note {
 }
 
 
-class "supplemental-material" {
-  multilingual-text title
+class "SupplementalMaterial" {
+  MultilingualText title
   URI url
-  __
-  <i><color:#666666>multilingual-text note?</color></i>
 }
 
-note bottom of "supplemental-material"
+note bottom of "SupplementalMaterial"
   Verweis auf ein Werk, Datensatz etc.,
   das mit dem Buch verbunden ist.
-  
+
   - title: Name des referenzierten Werks
   - url: direkter Link zum Werk oder zur beschreibenden Seite
-  - note (optional): beschreibt die Beziehung oder den
-    Verwendungskontext im Buch/Kapitel
 end note
 
 @enduml
