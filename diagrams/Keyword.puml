@@ -1,0 +1,34 @@
+@startuml Keyword
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+  Padding 4
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+class "Keyword" {
+  MultilingualText value
+}
+
+note bottom of "Keyword"
+  Ein Schlag-/Stichwort.
+  Wird für die Indexierung und Entdeckung
+  von OER-Materialien verwendet.
+
+  Der Wert ist ein (ggf. mehrsprachiger) Text –
+  URIs sind nicht erlaubt.
+end note
+
+@enduml

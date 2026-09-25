@@ -23,38 +23,38 @@ skinparam note {
 title QUADRIGA Metadata Schema - Entity Overview
 
 ' ===== MAIN ENTITY (TOP) =====
-class "case-study" as casestudy <<Fallstudie>> {
+class "OpenEducationalResource" as oer <<Open Educational Resource>> {
   Root entity (Jupyter Book)
 }
 
 ' ===== SECOND ROW: DIRECT CHILDREN =====
 together {
-  class "author" <<Autor:in>> { }
-  class "contributor" <<Mitarbeiter:in>> { }
-  class "chapter" <<Kapitel>> {
+  class "Author" <<Autor:in>> { }
+  class "Contributor" <<Mitarbeiter:in>> { }
+  class "Chapter" <<Kapitel>> {
     title
     description
     url
-    time-required
-    learning-goal
+    timeRequired
+    learningGoal
   }
 }
 
 ' ===== THIRD ROW: CHAPTER CHILDREN =====
-class "learning-objectives-entry" <<Lernziel>> {
-  learning-objective
+class "LearningObjective" <<Lernziel>> {
+  description
   competency
-  data-flow
-  blooms-category
+  dataFlow
+  bloomsCategory
   assessment?
 }
 
-' ===== RELATIONSHIPS FROM CASE-STUDY =====
-casestudy *-down- "author" : 1..*
-casestudy *-down- "contributor" : 0..*
-casestudy *-down- "chapter" : 1..*
+' ===== RELATIONSHIPS FROM OpenEducationalResource =====
+oer *-down- "Author" : 1..*
+oer *-down- "Contributor" : 0..*
+oer *-down- "Chapter" : 1..*
 
-' ===== RELATIONSHIPS FROM CHAPTER =====
-"chapter" *-down- "learning-objectives-entry" : 1..*
+' ===== RELATIONSHIPS FROM Chapter =====
+"Chapter" *-down- "LearningObjective" : 1..*
 
 @enduml

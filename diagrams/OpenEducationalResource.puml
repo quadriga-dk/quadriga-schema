@@ -1,0 +1,60 @@
+@startuml OpenEducationalResource
+scale 3
+skinparam dpi 300
+skinparam classAttributeIconSize 0
+skinparam backgroundColor transparent
+skinparam classFontSize 14
+skinparam classAttributeFontSize 13
+skinparam class {
+  BackgroundColor white
+  BorderColor #cccccc
+  AttributeFontColor #000000
+  Padding 4
+}
+skinparam note {
+  BackgroundColor #f5f5f5
+  BorderColor #cccccc
+  FontColor #333333
+}
+
+
+class "OpenEducationalResource" {
+  string title
+  Author[] author
+  Keyword[] keyword
+  MultilingualText description
+  MultilingualText tableOfContents
+  Discipline[] discipline
+  ResearchObjectType[] researchObjectType
+  TargetGroup[] targetGroup
+  Duration timeRequired
+  Language language
+  Contributor[] contributor
+  URI identifier
+  URI identifierGit
+  URI identifierOER
+  MultilingualText[] prerequisite
+  UsedTool[] usedTool
+  Chapter[] chapter
+  ISODate dateIssued
+  ISODate dateModified
+  SemVer version
+  string contextOfCreation
+  QualityAssurance qualityAssurance
+  string learningResourceType
+  SemVer schemaVersion
+  URI license
+  URI licenseCode
+}
+
+note bottom of "OpenEducationalResource"
+  Vollständige Beschreibung einer Open Educational Resource (OER):
+
+  Titel, Beschreibung, Inhaltsverzeichnis, Autor:innen/Beitragende,
+  Kapitel, Schlag-/Stichwörter, Disziplin, Forschungsobjekttyp,
+  Zielgruppe, erforderliche Zeit, Sprache, Kennung (DOI),
+  Git-Repositorium, OER-URL, Daten, Version, Entstehungskontext,
+  Qualitätssicherung, Lernressourcentyp und Lizenzen.
+end note
+
+@enduml
