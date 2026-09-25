@@ -1,4 +1,4 @@
-@startuml blooms-category
+@startuml BloomsCategory
 scale 3
 skinparam dpi 300
 skinparam classAttributeIconSize 0
@@ -18,7 +18,7 @@ skinparam note {
 }
 
 
-enum "blooms-category" {
+enum "BloomsCategory" {
   1 Erinnern
   2 Verstehen
   3 Anwenden
@@ -28,10 +28,10 @@ enum "blooms-category" {
   nicht anwendbar
 }
 
-note bottom of "blooms-category"
+note bottom of "BloomsCategory"
   Kategorie der Bloomschen Taxonomie,
   die einem Lernziel zugeordnet ist.
-  
+
   Englisch:
   1 Remember / 2 Understand / 3 Apply /
   4 Analyze / 5 Evaluate / 6 Create / not applicable
