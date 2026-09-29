@@ -1,7 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/timeRequired.json",
-  "title": "timeRequired – Bearbeitungsdauer",
   "type": "string",
   "format": "duration",
   "x-mappings": {
