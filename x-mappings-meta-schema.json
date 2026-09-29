@@ -130,7 +130,7 @@
     },
     "mapping-entry": {
       "type": "object",
-      "description": "A mapping to a vocabulary term. The target can be either a prefixed term (e.g., 'schema:name') or a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource'). This allows ontologies to reuse definitions from other schemas.",
+      "description": "A mapping to a vocabulary term. The target can be a prefixed term (e.g., 'schema:name'), a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource'), a LOM data element path (e.g., '2.3.2 Life Cycle Contribute Entity'), or a DOI-qualified reference (e.g., '10.5281/zenodo.8010617 learningObjectives'). This allows ontologies to reuse definitions from other schemas.",
       "properties": {
         "$comment": {
           "type": "string",
@@ -139,8 +139,8 @@
         "relation": { "$ref": "#/$defs/relation" },
         "target": {
           "type": "string",
-          "pattern": "^((dc|dcat|dcterms|lrmi|modalia|schema|skos|lom):[a-zA-Z]+|https?://.+)$",
-          "description": "The target vocabulary term, either in namespace:term format using a namespace from @context (dc, dcat, dcterms, lrmi, modalia, schema, skos) or as a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource')"
+          "pattern": "^((dc|dcat|dcterms|lrmi|modalia|schema|skos|lom):[a-zA-Z]+|https?://.+|10\\.\\d{4,9}/[^\\s]+ .+|\\d+(\\.\\d+)* .+)$",
+          "description": "The target vocabulary term. Supported formats: a prefixed term using a namespace from @context (e.g., 'dc:title'), a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource'), a LOM data element path (e.g., '2.3.2 Life Cycle Contribute Entity' or '9 Classification'), or a DOI-qualified reference (e.g., '10.5281/zenodo.8010617 learningObjectives')"
         }
       },
       "required": ["relation", "target"],

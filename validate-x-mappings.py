@@ -29,6 +29,14 @@ import re
 import sys
 from pathlib import Path
 
+#: Regex for a LOM data element path target (e.g., "2.3.2 Life Cycle Contribute Entity"
+#: or "9 Classification"): a dotted numeric path optionally followed by the element name.
+RE_LOM_ELEMENT_PATH = re.compile(r"^\d+(\.\d+)* [^:]+$")
+
+#: Regex for a DOI-qualified reference target (e.g., "10.5281/zenodo.8010617 learningObjectives"):
+#: a DOI followed by the referenced term's label.
+RE_DOI_QUALIFIED = re.compile(r"^10\.\d{4,9}/[^\s]+ [^:]+$")
+
 
 def load_json_file(filepath: Path) -> dict[str, object]:
     """Load and parse a JSON file."""
@@ -114,7 +122,8 @@ def validate_mapping_entry(
                 f"must be one of {valid_relations}"
             )
 
-    # Validate target pattern - allow both namespace:term format and full URIs
+    # Validate target pattern - allow namespace:term format, full URIs, LOM data
+    # element paths, and DOI-qualified references
     if "target" in entry:
         if not isinstance(entry["target"], str):
             errors.append(f"  {vocab}.target: must be a string")
@@ -140,10 +149,16 @@ def validate_mapping_entry(
                     errors.append(
                         f"  {vocab}.target: term '{term}' in '{target}' must contain only letters"
                     )
+            elif RE_LOM_ELEMENT_PATH.match(target) or RE_DOI_QUALIFIED.match(target):
+                # Human-readable references to non-CURIE targets (LOM data element
+                # paths, DOI-qualified terms) are allowed.
+                pass
             else:
                 errors.append(
-                    f"  {vocab}.target: '{target}' must be either a namespace:term format "
-                    f"(e.g., 'dc:title') or a full URI (e.g., 'https://...')"
+                    f"  {vocab}.target: '{target}' must be a prefixed term (e.g., 'dc:title'), "
+                    f"a full URI (e.g., 'https://...'), a LOM data element path "
+                    f"(e.g., '2.3.2 Life Cycle Contribute Entity'), or a DOI-qualified "
+                    f"reference (e.g., '10.5281/zenodo.8010617 learningObjectives')"
                 )
 
     return errors
