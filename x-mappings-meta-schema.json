@@ -61,6 +61,19 @@
       ],
       "description": "Mapping to HERMES OER metadata schema (https://zenodo.org/records/17279619)"
     },
+    "lom": {
+      "oneOf": [
+        { "type": "null", "description": "No mapping exists for this vocabulary" },
+        { "$ref": "#/$defs/mapping-entry" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mapping-entry" },
+          "minItems": 1,
+          "description": "Array of mappings to LOM properties"
+        }
+      ],
+      "description": "Mapping to Learning Object Metadata (https://doi.org/10.1109/IEEESTD.2020.9262118)"
+    },
     "lrmi": {
       "oneOf": [
         { "type": "null", "description": "No mapping exists for this vocabulary" },
@@ -126,7 +139,7 @@
         "relation": { "$ref": "#/$defs/relation" },
         "target": {
           "type": "string",
-          "pattern": "^((dc|dcat|dcterms|lrmi|modalia|schema|skos):[a-zA-Z]+|https?://.+)$",
+          "pattern": "^((dc|dcat|dcterms|lrmi|modalia|schema|skos|lom):[a-zA-Z]+|https?://.+)$",
           "description": "The target vocabulary term, either in namespace:term format using a namespace from @context (dc, dcat, dcterms, lrmi, modalia, schema, skos) or as a full URI (e.g., 'https://github.com/tibonto/educor#EducationalResource')"
         }
       },

@@ -5,6 +5,8 @@ Validate x-mappings in QUADRIGA schema files against the meta-schema.
 This script validates that all x-mappings definitions in JSON schema files
 located in directories starting with 'v' (e.g., v1.0.0/) comply with the
 x-mappings meta-schema defined in x-mappings-meta-schema.json.
+Additional vocabularies beyond the required set are permitted as long as
+their entries follow the meta-schema mapping-entry rules.
 
 Requirements:
   - Python 3.9+ (uses only standard library)
@@ -165,30 +167,30 @@ def validate_x_mappings(x_mappings: object, valid_namespaces: set[str]) -> list[
     missing_vocabs = [vocab for vocab in required_vocabs if vocab not in x_mappings]
     errors.extend(f"Missing required vocabulary: {vocab}" for vocab in missing_vocabs)
 
-    # Check for additional vocabularies (allow $comment for documentation)
-    allowed_keys = set(required_vocabs) | {"$comment"}
-    extra_vocabs = set(x_mappings.keys()) - allowed_keys
-    if extra_vocabs:
-        errors.append(f"Unexpected vocabularies: {extra_vocabs}")
+    # Additional vocabularies are allowed as long as their entries follow the
+    # meta-schema rules (i.e., the same validation as the required vocabularies).
+    # Only $comment is exempt from validation.
 
     # Validate each mapping entry (can be null, object, or array of objects)
-    for vocab in required_vocabs:
-        if vocab in x_mappings:
-            entry = x_mappings[vocab]
+    for vocab in x_mappings:
+        if vocab == "$comment":
+            continue
 
-            # Handle array of mappings
-            if isinstance(entry, list):
-                if len(entry) == 0:
-                    errors.append(f"{vocab}: array must have at least 1 item")
-                for idx, mapping in enumerate(entry):
-                    entry_errors = validate_mapping_entry(
-                        mapping, f"{vocab}[{idx}]", valid_namespaces
-                    )
-                    errors.extend(entry_errors)
-            else:
-                # Handle single mapping (object or null)
-                entry_errors = validate_mapping_entry(entry, vocab, valid_namespaces)
+        entry = x_mappings[vocab]
+
+        # Handle array of mappings
+        if isinstance(entry, list):
+            if len(entry) == 0:
+                errors.append(f"{vocab}: array must have at least 1 item")
+            for idx, mapping in enumerate(entry):
+                entry_errors = validate_mapping_entry(
+                    mapping, f"{vocab}[{idx}]", valid_namespaces
+                )
                 errors.extend(entry_errors)
+        else:
+            # Handle single mapping (object or null)
+            entry_errors = validate_mapping_entry(entry, vocab, valid_namespaces)
+            errors.extend(entry_errors)
 
     return errors
 
