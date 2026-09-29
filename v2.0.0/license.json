@@ -9,15 +9,22 @@
       "relation": "skos:broadMatch",
       "target": "dc:rights"
     },
-    "dcat": null,
+    "dcat": {
+      "relation": "skos:exactMatch",
+      "target": "dcterms:license"
+    },
     "dcterms": {
       "relation": "skos:exactMatch",
       "target": "dcterms:license"
     },
     "hermes": {
-      "$comment": "HERMES Attribut #19: Lizenz",
+      "$comment": "\"Lizenz\"",
       "relation": "skos:exactMatch",
       "target": "dcterms:license"
+    },
+    "lom": {
+      "relation": "skos:closeMatch",
+      "target": "6.3 Rights Description"
     },
     "lrmi": {
       "relation": "skos:closeMatch",
@@ -28,7 +35,7 @@
       "target": "dcterms:license"
     },
     "schema": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:broadMatch",
       "target": "schema:license"
     }
   }

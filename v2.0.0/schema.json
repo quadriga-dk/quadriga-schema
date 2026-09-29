@@ -198,7 +198,7 @@
     "disciplineLIST": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 5,
+      "maxItems": 3,
       "items": {
         "title": "discipline – Disziplin",
         "description": "Disziplin, die bei der Erstellung der OER im Fokus stand.\n\nenglish translation:\n\n- Verwaltungswissenschaften → Administrative sciences\n- Digital Humanities → Digital Humanities\n- Informatik → Computer science\n- Informationswissenschaft → Information science\n- übergreifend → Cross-disciplinary",
@@ -494,9 +494,15 @@
         "description": "Voraussetzung / Vorkenntnis, die zum Bearbeiten der OER benötigt wird",
         "$ref": "MultilingualText.json",
         "x-mappings": {
-          "dc": null,
+          "dc": {
+            "relation": "skos:closeMatch",
+            "target": "dc:description"
+          },
           "dcat": null,
-          "dcterms": null,
+          "dcterms": {
+            "relation": "skos:closeMatch",
+            "target": "dcterms:description"
+          },
           "hermes": [
             {
               "$comment": "HERMES Attribut #14: Vorkenntnisse",
@@ -520,10 +526,16 @@
               "target": "modalia:requiresProficiencyLevel"
             }
           ],
-          "schema": {
-            "relation": "skos:closeMatch",
-            "target": "schema:coursePrerequisites"
-          }
+          "schema": [
+            {
+              "relation": "skos:closeMatch",
+              "target": "schema:competencyRequired"
+            },
+            {
+              "relation": "skos:closeMatch",
+              "target": "schema:coursePrerequisites"
+            }
+          ]
         }
       }
     },
@@ -582,15 +594,23 @@
           "relation": "skos:broadMatch",
           "target": "dc:date"
         },
-        "dcat": null,
+        "dcat": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:issued"
+        },
         "dcterms": {
           "relation": "skos:exactMatch",
           "target": "dcterms:issued"
         },
         "hermes": {
-          "$comment": "HERMES Attribut #16: Veröffentlichung",
+          "$comment": "\"Veröffentlichung\"",
           "relation": "skos:exactMatch",
           "target": "dcterms:issued"
+        },
+        "lom": {
+          "$comment": "Geht in LOM nur in Verbindung mit einer Mitarbeiter:in mit Rolle \"publisher\" in 2.3.1 Life Cycle Contribute Role",
+          "relation": "skos:closeMatch",
+          "target": "2.3.3 Life Cycle Contribute Date"
         },
         "lrmi": null,
         "modalia": {
@@ -613,16 +633,20 @@
           "relation": "skos:broadMatch",
           "target": "dc:date"
         },
-        "dcat": null,
+        "dcat": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:modified"
+        },
         "dcterms": {
           "relation": "skos:exactMatch",
           "target": "dcterms:modified"
         },
         "hermes": {
-          "$comment": "HERMES Attribut #18: Modifizierung",
+          "$comment": "\"Modifizierung\"",
           "relation": "skos:exactMatch",
           "target": "dcterms:modified"
         },
+        "lom": null,
         "lrmi": null,
         "modalia": {
           "relation": "skos:exactMatch",
@@ -646,8 +670,8 @@
         },
         "dcterms": null,
         "hermes": {
-          "$comment": "HERMES Attribut #17: Version",
-          "relation": "skos:exactMatch",
+          "$comment": "\"Version\"\n\nIm Format \"Vx-y\"",
+          "relation": "skos:closeMatch",
           "target": "schema:version"
         },
         "lrmi": null,
@@ -663,7 +687,7 @@
     },
     "contextOfCreation": {
       "title": "contextOfCreation – Entstehungskontext",
-      "description": "Entstehungskontext der OER\n\n Gibt bspw. Hinweise auf Förderung, Communities etc.",
+      "description": "Entstehungskontext der OER\n\nGibt bspw. Hinweise auf Förderung, Communities etc.",
       "oneOf": [
         {
           "enum": [
@@ -673,16 +697,25 @@
         { "$ref": "MultilingualText.json" }
       ],
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:closeMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:closeMatch",
+          "target": "dcterms:description"
+        },
         "hermes": null,
         "lrmi": null,
         "modalia": {
           "relation": "skos:closeMatch",
           "target": "modalia:Community"
         },
-        "schema": null
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:funding"
+        }
       }
     },
     "qualityAssurance": {
@@ -723,7 +756,7 @@
             },
             "dcat": null,
             "dcterms": {
-              "relation": "skos:broadMatch",
+              "relation": "skos:exactMatch",
               "target": "dcterms:date"
             },
             "hermes": null,
@@ -737,11 +770,14 @@
         }
       },
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:closeMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
         "dcterms": {
           "relation": "skos:closeMatch",
-          "target": "dcterms:provenance"
+          "target": "dcterms:description"
         },
         "hermes": null,
         "lrmi": null,
@@ -767,10 +803,22 @@
           "target": "dcterms:type"
         },
         "hermes": {
-          "$comment": "HERMES Attribut #7: Format",
+          "$comment": "\"Format\"\n\nIn HERMES wird eine Auswahl von erlaubten Werten definiert.",
           "relation": "skos:closeMatch",
           "target": "modalia:hasLearningType"
         },
+        "lom": [
+          {
+            "relation": "skos:closeMatch",
+            "target": "4.1 Technical Format",
+            "$comment": "LOM fordert für 4.1 MIME type. \"Jupyter Book\" wird in \"text/html\" transformiert. LOM fordert hier die Auflistung aller Medien, also u.a. möglicherweise \"image/png\", \"video/mpeg\", \"text/csv\" etc."
+          },
+          {
+            "relation": "skos:closeMatch",
+            "target": "5.2 Educational Learning Resource Type",
+            "$comment": "5.2 definiert eine feste Liste erlaubter Werte, aus denen für eine gesamte QUADRIGA OER am besten \"narrative text\" passt."
+          }
+        ],
         "lrmi": {
           "relation": "skos:closeMatch",
           "target": "lrmi:learningResourceType"
@@ -796,13 +844,10 @@
         "dcterms": null,
         "hermes": null,
         "lrmi": null,
-        "modalia": {
-          "relation": "skos:exactMatch",
-          "target": "schema:version"
-        },
+        "modalia": null,
         "schema": {
-          "relation": "skos:exactMatch",
-          "target": "schema:version"
+          "relation": "skos:closeMatch",
+          "target": "schema:schemaVersion"
         }
       }
     },
@@ -821,7 +866,7 @@
   "x-mappings": {
     "dc": null,
     "dcat": {
-      "$comment": "Dieses Mapping ist internen Projektanforderungen geschuldet. Besser wäre skos:relatedMatch.",
+      "$comment": "Eine OER ist eine Sammlung von Datensätzen und Erläuterungen dazu, weshalb closeMatch projektintern genutzt wird. Sonst relatedMatch.",
       "relation": "skos:closeMatch",
       "target": "dcat:Dataset"
     },
