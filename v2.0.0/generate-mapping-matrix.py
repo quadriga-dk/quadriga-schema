@@ -50,14 +50,14 @@ MAX_VALUE_RANGE_DEPTH = 4
 #: Human-readable labels for reusable value types and scalar string formats.
 VALUE_LABELS = {
     "string": "Text",
-    "MultilingualText": "Multilingual Text",
-    "timeRequired": "ISO 8601 duration",
-    "duration": "ISO 8601 duration",
-    "date": "ISO 8601 date",
+    "MultilingualText": "Multilingualer Text",
+    "timeRequired": "ISO 8601 Dauer",
+    "duration": "ISO 8601 Dauer",
+    "date": "ISO 8601 Datum",
     "uri": "URI",
-    "language": "ISO 639-1 language code",
+    "language": "ISO 639-1 Sprachcode",
     "SemVer": "SemVer",
-    "license": "license URI",
+    "license": "Lizenz URI",
     "orcid": "ORCID",
 }
 
@@ -241,7 +241,7 @@ def _composite_value_range(schema: dict, repo: SchemaRepository, depth: int) -> 
                 if branch_range and branch_range not in parts:
                     parts.append(branch_range)
             if parts:
-                return " | ".join(parts)
+                return "; ".join(parts)
     return _scalar_value_range(schema)
 
 
@@ -249,7 +249,7 @@ def _scalar_value_range(schema: dict) -> str:
     """Value range of a non-array, non-union schema node."""
     schema_type = schema.get("type")
     if isinstance(schema_type, list):
-        return " | ".join(VALUE_LABELS.get(str(item), str(item)) for item in schema_type)
+        return "; ".join(VALUE_LABELS.get(str(item), str(item)) for item in schema_type)
     if schema_type == "object":
         return ""
     if schema_type == "string":
