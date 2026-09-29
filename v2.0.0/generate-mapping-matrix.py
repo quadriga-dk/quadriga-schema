@@ -59,6 +59,7 @@ VALUE_LABELS = {
     "SemVer": "SemVer",
     "license": "Lizenz URI",
     "orcid": "ORCID",
+    "credit": "CRediT-Rolle",
 }
 
 #: Value-range labels that link to their external specification.
@@ -203,6 +204,10 @@ def value_range(schema: dict, repo: SchemaRepository, *, depth: int = 0) -> str:
         ref_data = repo.get(ref)
         if array_subschema(ref_data) is not None:
             return value_range(ref_data, repo, depth=depth + 1)
+        # A referenced non-array schema: expand its enum if it has one,
+        # otherwise fall back to the type label.
+        if isinstance(ref_data.get("enum"), list) and ref_data["enum"]:
+            return _enum_range(ref_data["enum"])
         stem = Path(ref).stem
         return VALUE_LABELS.get(stem, stem)
 

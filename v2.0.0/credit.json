@@ -1,23 +1,23 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/credit.json",
-  "type": "array",
-  "items": {
-    "enum": [
-      "Conceptualization",
-      "Data curation",
-      "Formal analysis",
-      "Funding acquisition",
-      "Investigation",
-      "Methodology",
-      "Project administration",
-      "Software",
-      "Resources",
-      "Supervision",
-      "Validation",
-      "Visualization",
-      "Writing – original draft",
-      "Writing – review & editing"
-    ]
-  }
+  "title": "credit – CRediT-Rolle",
+  "description": "Eine in der OER-Entwicklung übernommene Rolle nach CRediT Taxonomie (siehe https://credit.niso.org/).",
+  "type": "string",
+  "enum": [
+    "Conceptualization",
+    "Data curation",
+    "Formal analysis",
+    "Funding acquisition",
+    "Investigation",
+    "Methodology",
+    "Project administration",
+    "Software",
+    "Resources",
+    "Supervision",
+    "Validation",
+    "Visualization",
+    "Writing – original draft",
+    "Writing – review & editing"
+  ]
 }
