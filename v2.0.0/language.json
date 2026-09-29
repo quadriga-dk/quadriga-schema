@@ -1,8 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://quadriga-dk.github.io/quadriga-schema/v2.0.0/language.json",
-  "title": "language – Sprache",
-  "description": "Sprache der OER als ISO 639-1 Sprachcode",
   "type": "string",
   "pattern": "^[a-z]{2}$",
   "x-mappings": {
