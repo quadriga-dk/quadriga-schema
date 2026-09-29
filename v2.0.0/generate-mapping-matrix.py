@@ -32,6 +32,18 @@ ENTITY_DISPLAY_NAMES = {
 #: Preferred left-to-right order of the external vocabulary columns.
 COLUMN_ORDER = ["schema", "dc", "dcterms", "modalia", "hermes", "lrmi", "dcat", "lom"]
 
+#: Display names and documentation URLs of the target vocabularies (matrix columns).
+TARGET_VOCABULARIES = {
+    "schema": ("Schema.org", "http://schema.org/"),
+    "dc": ("Dublin Core Elements", "http://purl.org/dc/elements/1.1/"),
+    "dcterms": ("DCMI Metadata Terms", "http://purl.org/dc/terms/"),
+    "modalia": ("Modalia", "https://purl.org/ontology/modalia#"),
+    "hermes": ("HERMES OER Metadata Schema", "https://zenodo.org/records/18679758"),
+    "lrmi": ("LRMI", "http://purl.org/dcx/lrmi-terms/"),
+    "dcat": ("DCAT", "http://www.w3.org/ns/dcat#"),
+    "lom": ("Learning Object Metadata (LOM)", "https://doi.org/10.1109/IEEESTD.2020.9262118"),
+}
+
 #: Recursion guard for deriving value ranges from nested schemas.
 MAX_VALUE_RANGE_DEPTH = 4
 
@@ -413,6 +425,36 @@ def html_escape(text: str) -> str:
     )
 
 
+def html_text(text: str) -> str:
+    """Return escaped HTML text with newlines converted to ``<br>`` line breaks."""
+    return html_escape(text).replace("\n", "<br>")
+
+
+def vocab_footer_html(columns: list[str]) -> str:
+    """Render the list of target vocabularies (matrix columns) with their URLs.
+
+    Shown below the matrix so users can look up the documentation of every
+    target schema.  Unknown extra vocabularies fall back to a ``@context`` URI
+    or to plain text.
+    """
+    items = []
+    for col in columns:
+        name, uri = TARGET_VOCABULARIES.get(col, (col, ""))
+        code = f"<code>{html_escape(col)}</code>"
+        if uri:
+            code = (
+                f'<a href="{html_escape(uri)}" target="_blank" rel="noopener noreferrer">{code}</a>'
+            )
+            url = (
+                f' <a class="vocab-url" href="{html_escape(uri)}" '
+                f'target="_blank" rel="noopener noreferrer">{html_escape(uri)}</a>'
+            )
+        else:
+            url = ""
+        items.append(f"<li>{code} <span class='vocab-name'>{html_escape(name)}</span>{url}</li>")
+    return f'<div class="vocab-list"><h2>Zielschema</h2><ul>{"".join(items)}</ul></div>'
+
+
 def resolve_uri(target: str, context: dict) -> str:
     """Resolve a prefixed target (e.g. ``dc:title``) to a full URI."""
     if not target:
@@ -560,13 +602,18 @@ def value_range_html(text: str) -> str:
 
 
 def description_cell(row: Row) -> str:
-    """Render the frozen Description column, clipped with ellipsis + tooltip."""
+    """Render the frozen Description column, clipped with ellipsis + tooltip.
+
+    The visible cell keeps the description's line breaks (``\n`` → ``<br>``);
+    the ``data-tip`` tooltip keeps the raw newlines, which are rendered as
+    real line breaks because ``#tooltip`` uses ``white-space: pre-line``.
+    """
     if not row.description:
         return '<td class="description"></td>'
     return (
         '<td class="description">'
         f'<div class="desc-clip" data-tip="{html_escape(row.description)}">'
-        f"{html_escape(row.description)}</div></td>"
+        f"{html_text(row.description)}</div></td>"
     )
 
 
@@ -639,7 +686,8 @@ def generate_html(rows: list[Row], columns: list[str], context: dict, base_url: 
         '<th class="description-header">Beschreibung</th>',
     ]
     for col in columns:
-        uri = context.get(col)
+        _, uri = TARGET_VOCABULARIES.get(col, (col, ""))
+        uri = uri or context.get(col) or ""
         label = (
             f'<a href="{html_escape(uri)}" target="_blank">{html_escape(col)}</a>'
             if uri
@@ -889,7 +937,7 @@ def generate_html(rows: list[Row], columns: list[str], context: dict, base_url: 
     border-radius: 4px;
     font-size: 0.82rem;
     max-width: 350px;
-    white-space: normal;
+    white-space: pre-line;
     pointer-events: none;
     z-index: 1000;
     display: none;
@@ -913,6 +961,39 @@ def generate_html(rows: list[Row], columns: list[str], context: dict, base_url: 
     display: inline-block;
   }}
   .hint {{ font-size: 0.8rem; color: #555; margin-bottom: 0.75rem; }}
+  .vocab-list {{
+    text-align: center;
+    margin: 0 auto 0.75rem;
+  }}
+  .vocab-list h2 {{ font-size: 1.1rem; margin: 0 0 0.25rem; }}
+  .vocab-list ul {{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+  }}
+  .vocab-list li {{ display: inline-flex; align-items: baseline; gap: 6px; }}
+  .vocab-list code {{
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 4px;
+  }}
+  .vocab-list a {{ color: #14385f; font-weight: 600; }}
+  .vocab-list a:hover {{ text-decoration: underline; }}
+  .vocab-list .vocab-url {{
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #0b5394;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }}
+  .vocab-name {{ color: #555; }}
   .page-header {{
     position: fixed;
     top: 0;
@@ -979,8 +1060,9 @@ def generate_html(rows: list[Row], columns: list[str], context: dict, base_url: 
   <code>required</code>, <code>minItems</code> und <code>maxItems</code> abgeleitete
   Kardinalität (<code>n</code> = unbegrenzt).
 </div>
+{vocab_footer_html(columns)}
 <div class="filters">
-  <span class="filters-label">Zielschemata:</span>
+  <span class="filters-label">Zielschema:</span>
   {vocab_filters}
   <button type="button" class="filter-btn" data-filter="all">Alle</button>
   <button type="button" class="filter-btn" data-filter="none">Keine</button>
