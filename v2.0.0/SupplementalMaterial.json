@@ -18,7 +18,10 @@
         "hermes": null,
         "lrmi": null,
         "modalia": null,
-        "schema": null
+        "schema": {
+          "relation": "skos:broadMatch",
+          "target": "schema:name"
+        }
       }
     },
     "url": {
@@ -27,11 +30,14 @@
       "type": "string",
       "format": "uri",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:exactMatch",
+          "target": "dc:identifier"
+        },
         "dcat": null,
         "dcterms": {
-          "relation": "skos:closeMatch",
-          "target": "dcterms:references"
+          "relation": "skos:exactMatch",
+          "target": "dcterms:identifier"
         },
         "hermes": null,
         "lrmi": null,
@@ -49,9 +55,16 @@
   "x-mappings": {
     "dc": null,
     "dcat": null,
-    "dcterms": null,
+    "dcterms": {
+      "relation": "skos:broadMatch",
+      "target": "dcterms:references"
+    },
     "hermes": null,
     "lrmi": null,
+    "lom": {
+      "relation": "skos:closeMatch",
+      "target": "7.2.2 Relation Resource Description"
+    },
     "modalia": {
       "relation": "skos:closeMatch",
       "target": "https://w3id.org/citedcat-ap/isSupplementedBy"

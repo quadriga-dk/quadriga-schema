@@ -544,18 +544,6 @@
       "minItems": 1,
       "items": {
         "$ref": "UsedTool.json"
-      },
-      "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": {
-          "relation": "skos:closeMatch",
-          "target": "dcterms:requires"
-        },
-        "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
       }
     },
     "chapterLIST": {
