@@ -13,12 +13,31 @@
       "$comment": "Liegt kein Nachname vor, so wird dieses Feld mit einer leeren Zeichenkette belegt und alle Namen werden in das Feld givenName eingetragen.",
       "type": "string",
       "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": null,
-        "hermes": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:contributor"
+        },
+        "dcat": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "hermes": {
+          "$comment": "\"Mitwirkende\"\n\nTeil eines Listenelements für HERMES-Attribut \"Mitwirkende\".",
+          "relation": "skos:closeMatch",
+          "target": "dcterms:contributor"
+        },
+        "lom": {
+          "$comment": "2.3.1 Life Cycle Contribute Role kann nicht \"author\" sein.",
+          "relation": "skos:closeMatch",
+          "target": "2.3.2 Life Cycle Contribute Entity"
+        },
         "lrmi": null,
         "modalia": {
+          "$comment": "In MoDALIA nur definiert über \"Contribution\".",
           "relation": "skos:exactMatch",
           "target": "schema:familyName"
         },
@@ -33,12 +52,31 @@
       "description": "Vorname der/des Beitragenden",
       "type": "string",
       "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": null,
-        "hermes": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:contributor"
+        },
+        "dcat": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "hermes": {
+          "$comment": "\"Mitwirkende\"\n\nTeil eines Listenelements für HERMES-Attribut \"Mitwirkende\".",
+          "relation": "skos:closeMatch",
+          "target": "dcterms:contributor"
+        },
+        "lom": {
+          "$comment": "2.3.1 Life Cycle Contribute Role kann nicht \"author\" sein.",
+          "relation": "skos:closeMatch",
+          "target": "2.3.2 Life Cycle Contribute Entity"
+        },
         "lrmi": null,
         "modalia": {
+          "$comment": "In MoDALIA nur definiert über \"Contribution\".",
           "relation": "skos:exactMatch",
           "target": "schema:givenName"
         },
@@ -51,42 +89,120 @@
     "orcid": {
       "title": "orcid – ORCID",
       "description": "ORCID der/des Beitragenden als URI (https://orcid.org/XXXX-XXXX-XXXX-XXXX).",
-      "$ref": "orcid.json"
+      "$ref": "orcid.json",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:contributor"
+        },
+        "dcat": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "hermes": {
+          "$comment": "\"Mitwirkende\"\n\nTeil eines Listenelements für HERMES-Attribut \"Mitwirkende\".",
+          "relation": "skos:closeMatch",
+          "target": "dcterms:contributor"
+        },
+        "lom": {
+          "$comment": "2.3.1 Life Cycle Contribute Role kann nicht \"author\" sein.",
+          "relation": "skos:closeMatch",
+          "target": "2.3.2 Life Cycle Contribute Entity"
+        },
+        "lrmi": null,
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "http://w3id.org/nfdi4ing/metadata4ing#orcidId"
+        },
+        "schema": {
+          "relation": "skos:broadMatch",
+          "target": "schema:identifier"
+        }
+      }
     },
     "credit": {
       "title": "credit – CRediT-Rolle",
       "description": "Eine in der OER-Entwicklung übernommene Rolle der/des Beitragenden nach CRediT Taxonomie (siehe https://credit.niso.org/).",
-      "$ref": "credit.json"
-    },
-    "affiliation": {
-      "type": "string",
-      "title": "affiliation – Institutionelle Zugehörigkeit",
-      "description": "Institutionelle Zugehörigkeit der/des Beitragenden (nach Möglichkeit mit ROR)",
+      "$ref": "credit.json",
       "x-mappings": {
         "dc": null,
         "dcat": null,
         "dcterms": null,
         "hermes": null,
         "lrmi": null,
+        "modalia": {
+          "$comment": "In MoDALIA ist es nur möglich dies über eine \"Contribution\" zu definieren.",
+          "relation": "skos:closeMatch",
+          "target": "http://id.loc.gov/ontologies/bibframe/role"
+        },
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:roleName"
+        }
+      }
+    },
+    "affiliation": {
+      "type": "string",
+      "title": "affiliation – Institutionelle Zugehörigkeit",
+      "description": "Institutionelle Zugehörigkeit der/des Beitragenden (nach Möglichkeit mit ROR)",
+      "x-mappings": {
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:contributor"
+        },
+        "dcat": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:contributor"
+        },
+        "hermes": {
+          "$comment": "\"Mitwirkende\"\n\nTeil eines Listenelements für HERMES-Attribut \"Mitwirkende\".",
+          "relation": "skos:closeMatch",
+          "target": "dcterms:contributor"
+        },
+        "lom": {
+          "$comment": "2.3.1 Life Cycle Contribute Role kann nicht \"author\" sein.",
+          "relation": "skos:closeMatch",
+          "target": "2.3.2 Life Cycle Contribute Entity"
+        },
+        "lrmi": null,
         "modalia": null,
-        "schema": null
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:affiliation"
+        }
       }
     }
   },
   "x-mappings": {
     "dc": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:broadMatch",
       "target": "dc:contributor"
     },
-    "dcat": null,
+    "dcat": {
+      "relation": "skos:broadMatch",
+      "target": "dcterms:contributor"
+    },
     "dcterms": {
-      "relation": "skos:exactMatch",
+      "relation": "skos:broadMatch",
       "target": "dcterms:contributor"
     },
     "hermes": {
-      "$comment": "HERMES Attribut #5: Mitwirkende",
-      "relation": "skos:exactMatch",
+      "$comment": "\"Mitwirkende\"\n\nTeilwerte können nach HERMES-Regeln zu einem Listenelement zusammengeführt werden.",
+      "relation": "skos:closeMatch",
       "target": "dcterms:contributor"
+    },
+    "lom": {
+      "$comment": "2.3.1 Life Cycle Contribute Role kann nicht \"author\" sein.",
+      "relation": "skos:closeMatch",
+      "target": "2.3.2 Life Cycle Contribute Entity"
     },
     "lrmi": null,
     "modalia": {

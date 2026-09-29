@@ -19,20 +19,5 @@
       "Writing – original draft",
       "Writing – review & editing"
     ]
-  },
-  "x-mappings": {
-    "dc": null,
-    "dcat": null,
-    "dcterms": null,
-    "hermes": null,
-    "lrmi": null,
-    "modalia": {
-      "relation": "skos:closeMatch",
-      "target": "http://id.loc.gov/ontologies/bibframe/Role"
-    },
-    "schema": {
-      "relation": "skos:closeMatch",
-      "target": "schema:roleName"
-    }
   }
 }
