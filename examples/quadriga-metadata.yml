@@ -7,7 +7,7 @@ authorLIST:
   - familyName: Walter
     givenName: Paul
     orcid: https://orcid.org/0000-0002-9236-3268
-    credit:
+    creditLIST:
       - Data curation
       - Methodology
       - Validation
@@ -17,7 +17,7 @@ authorLIST:
   - familyName: Plomin
     givenName: Jana
     orcid: https://orcid.org/0000-0003-0127-7493
-    credit:
+    creditLIST:
       - Methodology
       - Writing – original draft
       - Writing – review & editing
@@ -73,7 +73,7 @@ contributorLIST:
   - familyName: Schnaitter
     givenName: Hannes
     orcid: https://orcid.org/0000-0002-1602-6032
-    credit:
+    creditLIST:
       - Data curation
       - Methodology
       - Software

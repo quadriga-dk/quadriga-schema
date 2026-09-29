@@ -124,24 +124,28 @@
         }
       }
     },
-    "credit": {
-      "title": "credit – CRediT-Rolle",
-      "description": "Eine in der OER-Entwicklung übernommene Rolle der/des Beitragenden nach CRediT Taxonomie (siehe https://credit.niso.org/).",
-      "$ref": "credit.json",
-      "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": null,
-        "hermes": null,
-        "lrmi": null,
-        "modalia": {
-          "$comment": "In MoDALIA ist es nur möglich dies über eine \"Contribution\" zu definieren.",
-          "relation": "skos:closeMatch",
-          "target": "http://id.loc.gov/ontologies/bibframe/role"
-        },
-        "schema": {
-          "relation": "skos:closeMatch",
-          "target": "schema:roleName"
+    "creditLIST": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "credit – CRediT-Rolle",
+        "description": "Eine in der OER-Entwicklung übernommene Rolle der/des Beitragenden nach CRediT Taxonomie (siehe https://credit.niso.org/).",
+        "$ref": "credit.json",
+        "x-mappings": {
+          "dc": null,
+          "dcat": null,
+          "dcterms": null,
+          "hermes": null,
+          "lrmi": null,
+          "modalia": {
+            "$comment": "In MoDALIA ist es nur möglich dies über eine \"Contribution\" zu definieren.",
+            "relation": "skos:closeMatch",
+            "target": "http://id.loc.gov/ontologies/bibframe/role"
+          },
+          "schema": {
+            "relation": "skos:closeMatch",
+            "target": "schema:roleName"
+          }
         }
       }
     },
