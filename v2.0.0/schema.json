@@ -755,12 +755,7 @@
     "learningResourceType": {
       "title": "learningResourceType – Format",
       "description": "(Material-)Format der OER\n\nIn QUADRIGA typischerweise \"Jupyter Book\"",
-      "oneOf": [
-        {
-          "enum": ["Jupyter Book"]
-        },
-        { "$ref": "MultilingualText.json" }
-      ],
+      "$ref": "MultilingualText.json",
       "x-mappings": {
         "dc": {
           "relation": "skos:broadMatch",
