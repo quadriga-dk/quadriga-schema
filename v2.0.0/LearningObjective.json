@@ -13,13 +13,29 @@
       "$comment": "Strukturiert formuliert bpsw. nach Schermutzki, M. (2007). Lernergebnisse—Begriffe, Zusammenhänge, Umsetzung und Erfolgsermittlung: Lernergebnisse und Kompetenzvermittlung als elementare Orientierungen des Bologna-Pozesses. FH Aachen.",
       "$ref": "MultilingualText.json",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:description"
+        },
         "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
+        "lom": null,
+        "lrmi": {
+          "relation": "skos:exactMatch",
+          "target": "lrmi:teaches"
+        },
+        "modalia": {
+          "relation": "skos:exactMatch",
+          "target": "modalia:LearningObjective"
+        },
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:teaches"
+        }
       }
     },
     "competency": {
@@ -44,14 +60,32 @@
         "nicht anwendbar"
       ],
       "x-mappings": {
-        "$comment": "Die Einordnung in das QUADRIGA DKF kann nicht gemappt werden. Die darüberliegende Beschreibung des Lernziels ist gemappt.",
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:subject"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:subject"
+        },
         "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
+        "lom": {
+          "relation": "skos:closeMatch",
+          "target": "9 Classification"
+        },
+        "lrmi": {
+          "relation": "skos:closeMatch",
+          "target": "lrmi:teaches"
+        },
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:LearningObjective"
+        },
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:teaches"
+        }
       }
     },
     "dataFlow": {
@@ -67,10 +101,15 @@
         "nicht anwendbar"
       ],
       "x-mappings": {
-        "$comment": "Der Datenfluss ist spezifisch zum QUADRIGA DKF und kann nicht gemappt werden. Die darüberliegende Beschreibung des Lernziels ist gemappt.",
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:subject"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:subject"
+        },
         "hermes": null,
         "lrmi": null,
         "modalia": null,
@@ -91,14 +130,32 @@
         "nicht anwendbar"
       ],
       "x-mappings": {
-        "$comment": "Die Bloomsche Taxonomie beschreibt kognitive Komplexität und nicht eine Abstufung nach Lernstufen. Daher passen die Variationen von `educationalLevel` in den Schemata nicht. `educationalAlignment` würde genutzt, wenn es bspw. ein Standard-Curriculum gäbe, was hier auch nicht der Fall ist.",
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:subject"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:subject"
+        },
         "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
+        "lom": {
+          "relation": "skos:closeMatch",
+          "target": "9 Classification"
+        },
+        "lrmi": {
+          "relation": "skos:closeMatch",
+          "target": "lrmi:teaches"
+        },
+        "modalia": {
+          "relation": "skos:closeMatch",
+          "target": "modalia:LearningObjective"
+        },
+        "schema": {
+          "relation": "skos:closeMatch",
+          "target": "schema:teaches"
+        }
       }
     },
     "assessment": {
@@ -106,9 +163,15 @@
       "description": "Art des Assessments des Lernziels (z.B. Multiple-Choice-Fragen)",
       "$ref": "MultilingualText.json",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:description"
+        },
         "hermes": null,
         "lrmi": {
           "relation": "skos:closeMatch",
@@ -126,17 +189,28 @@
     }
   },
   "x-mappings": {
-    "dc": null,
+    "dc": {
+      "relation": "skos:broadMatch",
+      "target": "dc:description"
+    },
     "dcat": null,
-    "dcterms": null,
-    "hermes": null,
+    "dcterms": {
+      "relation": "skos:broadMatch",
+      "target": "dcterms:description"
+    },
+    "hermes": {
+      "relation": "skos:closeMatch",
+      "target": "10.5281/zenodo.8010617 learningObjectives",
+      "$comment": "\"Lernziele\"\n\nHERMES nutzt die Lernzielmatrix (Petersen et al., 2025)"
+    },
+    "lom": null,
     "lrmi": {
       "relation": "skos:exactMatch",
       "target": "lrmi:teaches"
     },
     "modalia": {
       "relation": "skos:exactMatch",
-      "target": "modalia:hasLearningObjective"
+      "target": "modalia:LearningObjective"
     },
     "schema": {
       "relation": "skos:exactMatch",
