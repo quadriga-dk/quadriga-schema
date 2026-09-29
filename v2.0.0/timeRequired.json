@@ -4,16 +4,23 @@
   "type": "string",
   "format": "duration",
   "x-mappings": {
-    "dc": null,
+    "dc": {
+      "relation": "skos:broadMatch",
+      "target": "dc:date"
+    },
     "dcat": null,
     "dcterms": {
       "relation": "skos:closeMatch",
       "target": "dcterms:extent"
     },
     "hermes": {
-      "$comment": "HERMES Attribut #12: Dauer",
+      "$comment": "\"Dauer\"\n\nAngabe im Format \"D:hh:mm:ss\"",
       "relation": "skos:closeMatch",
       "target": "schema:duration"
+    },
+    "lom": {
+      "relation": "skos:exactMatch",
+      "target": "5.9 Educational Typical Learning Time"
     },
     "lrmi": {
       "relation": "skos:exactMatch",
