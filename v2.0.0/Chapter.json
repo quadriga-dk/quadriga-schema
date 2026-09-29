@@ -19,13 +19,26 @@
       "description": "Titel des Kapitels",
       "$ref": "MultilingualText.json",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:title"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:title"
+        },
         "hermes": null,
+        "lom": null,
         "lrmi": null,
-        "modalia": null,
-        "schema": null
+        "modalia": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:title"
+        },
+        "schema": {
+          "relation": "skos:broadMatch",
+          "target": "schema:name"
+        }
       }
     },
     "description": {
@@ -33,13 +46,26 @@
       "description": "Beschreibung des Kapitels",
       "$ref": "MultilingualText.json",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:description"
+        },
         "hermes": null,
+        "lom": null,
         "lrmi": null,
-        "modalia": null,
-        "schema": null
+        "modalia": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:description"
+        },
+        "schema": {
+          "relation": "skos:broadMatch",
+          "target": "schema:name"
+        }
       }
     },
     "url": {
@@ -48,10 +74,17 @@
       "type": "string",
       "format": "uri",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:identifier"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:identifier"
+        },
         "hermes": null,
+        "lom": null,
         "lrmi": null,
         "modalia": {
           "relation": "skos:exactMatch",
@@ -74,10 +107,20 @@
       "$comment": "Dieses Lernziel gibt einen groben Überblick über die zu erlernenden Inhalte des Kapitels.",
       "$ref": "MultilingualText.json",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:broadMatch",
+          "target": "dc:description"
+        },
         "dcat": null,
-        "dcterms": null,
-        "hermes": null,
+        "dcterms": {
+          "relation": "skos:broadMatch",
+          "target": "dcterms:description"
+        },
+        "hermes": {
+          "relation": "skos:closeMatch",
+          "target": "10.5281/zenodo.8010617 learningObjectives",
+          "$comment": "\"Lernziele\"\n\nHERMES nutzt die Lernzielmatrix (Petersen et al., 2025)"
+        },
         "lrmi": {
           "relation": "skos:exactMatch",
           "target": "lrmi:teaches"
@@ -98,15 +141,6 @@
       "uniqueItems": true,
       "items": {
         "$ref": "LearningObjective.json"
-      },
-      "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": null,
-        "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
       }
     },
     "supplementalMaterialLIST": {
@@ -115,15 +149,6 @@
       "uniqueItems": true,
       "items": {
         "$ref": "SupplementalMaterial.json"
-      },
-      "x-mappings": {
-        "dc": null,
-        "dcat": null,
-        "dcterms": null,
-        "hermes": null,
-        "lrmi": null,
-        "modalia": null,
-        "schema": null
       }
     },
     "language": {
@@ -136,7 +161,10 @@
   "x-mappings": {
     "dc": null,
     "dcat": null,
-    "dcterms": null,
+    "dcterms": {
+      "relation": "skos:exactMatch",
+      "target": "schema:Chapter"
+    },
     "hermes": null,
     "lrmi": null,
     "modalia": null,
