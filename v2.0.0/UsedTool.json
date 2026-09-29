@@ -16,9 +16,16 @@
         "dcat": null,
         "dcterms": null,
         "hermes": null,
+        "lom": {
+          "relation": "skos:closeMatch",
+          "target": "4.4.1.2 Technical Requirement OrComposite Name"
+        },
         "lrmi": null,
         "modalia": null,
-        "schema": null
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:name"
+        }
       }
     },
     "url": {
@@ -27,26 +34,48 @@
       "type": "string",
       "format": "uri",
       "x-mappings": {
-        "dc": null,
+        "dc": {
+          "relation": "skos:exactMatch",
+          "target": "dc:identifier"
+        },
         "dcat": null,
-        "dcterms": null,
+        "dcterms": {
+          "relation": "skos:exactMatch",
+          "target": "dcterms:identifier"
+        },
         "hermes": null,
         "lrmi": null,
         "modalia": null,
-        "schema": null
+        "schema": {
+          "relation": "skos:exactMatch",
+          "target": "schema:url"
+        }
       }
     }
   },
   "x-mappings": {
     "dc": null,
-    "dcat": null,
+    "dcat": {
+      "relation": "skos:closeMatch",
+      "target": "dcterms:requires"
+    },
     "dcterms": {
       "relation": "skos:closeMatch",
       "target": "dcterms:requires"
     },
     "hermes": null,
+    "lom": {
+      "relation": "skos:closeMatch",
+      "target": "4.4 Technical Requirement"
+    },
     "lrmi": null,
-    "modalia": null,
-    "schema": null
+    "modalia": {
+      "relation": "skos:closeMatch",
+      "target": "dcterms:requires"
+    },
+    "schema": {
+      "relation": "skos:closeMatch",
+      "target": "schema:softwareRequirements"
+    }
   }
 }
