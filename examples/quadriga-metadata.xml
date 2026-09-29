@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenEducationalResource>
+  <title>Reproduzierbarkeit von Datenanalysen: Ein Fallbeispiel aus dem Nationalen Bildungsbericht. QUADRIGA Open Educational Resources: Tabelle 1</title>
+  <author>
+    <familyName>Walter</familyName>
+    <givenName>Paul</givenName>
+    <orcid>https://orcid.org/0000-0002-9236-3268</orcid>
+    <credit>Data curation</credit>
+    <credit>Methodology</credit>
+    <credit>Validation</credit>
+    <credit>Writing – original draft</credit>
+    <credit>Writing – review &amp; editing</credit>
+    <affiliation>Fachhochschule Potsdam (https://ror.org/012m9bp23)</affiliation>
+  </author>
+  <author>
+    <familyName>Plomin</familyName>
+    <givenName>Jana</givenName>
+    <orcid>https://orcid.org/0000-0003-0127-7493</orcid>
+    <credit>Methodology</credit>
+    <credit>Writing – original draft</credit>
+    <credit>Writing – review &amp; editing</credit>
+    <affiliation>Fraunhofer-Institut für Offene Kommunikationssysteme FOKUS (https://ror.org/00px80p03)</affiliation>
+  </author>
+  <keyword>
+    <de>Verwaltung</de>
+  </keyword>
+  <keyword>
+    <de>Verwaltungswissenschaft</de>
+  </keyword>
+  <keyword>
+    <de>Tabelle</de>
+  </keyword>
+  <keyword>
+    <de>Lerneinheit</de>
+  </keyword>
+  <keyword>
+    <en>Public Sector</en>
+  </keyword>
+  <keyword>
+    <en>Open Educational Resource</en>
+  </keyword>
+  <keyword>
+    <de>FAIR-Prinzipien</de>
+  </keyword>
+  <keyword>
+    <de>Datenqualität</de>
+  </keyword>
+  <keyword>
+    <de>Persistente Identifikatoren</de>
+  </keyword>
+  <keyword>
+    <de>Reproduzierbarkeit</de>
+  </keyword>
+  <keyword>
+    <de>R (Programmiersprache)</de>
+  </keyword>
+  <description>Diese Fallstudie bildet mit Hilfe eines JupyterBooks einen Forschungsverlauf in der Verwaltungswissenschaft nach. Dabei wird anhand einer modellhaften Forschungsfrage auf die Reproduzierbarkeit von Analysen und Forschungsergebnissen eingegangen. Dazu werden in einzelnen Kapiteln die Themen Datennachnutzung, Bewertung von Datenqualität und Nachvollziehbarkeit von Analysen behandelt.</description>
+  <tableOfContents>- Einstieg
+- Datenbasis: Nationaler Bildungsbericht
+- Datennachnutzung
+- Qualitätsbewertung
+- Identifikatoren
+- Datenaufbereitung I - Organisation und Strukturierung
+- Datenaufbereitung II - Analyse und Reproduzierbarkeit
+- Zusammenfassung und Reflexion
+- Abschluss</tableOfContents>
+  <discipline>Verwaltungswissenschaften</discipline>
+  <discipline>Informationswissenschaft</discipline>
+  <researchObjectType>Tabelle</researchObjectType>
+  <targetGroup>Forschende (PostDoc)</targetGroup>
+  <targetGroup>Forschende (Projektleitung)</targetGroup>
+  <targetGroup>Promovierende</targetGroup>
+  <targetGroup>Hochschullehrende</targetGroup>
+  <timeRequired>PT3H15M</timeRequired>
+  <language>de</language>
+  <contributor>
+    <familyName>Schnaitter</familyName>
+    <givenName>Hannes</givenName>
+    <orcid>https://orcid.org/0000-0002-1602-6032</orcid>
+    <credit>Data curation</credit>
+    <credit>Methodology</credit>
+    <credit>Software</credit>
+    <credit>Validation</credit>
+    <affiliation>Humboldt-Universität zu Berlin, Institut für Bibliotheks- und Informationswissenschaft (https://ror.org/01hcx6992)</affiliation>
+  </contributor>
+  <identifier>https://doi.org/10.5281/zenodo.14975202</identifier>
+  <identifierGit>https://github.com/quadriga-dk/Tabelle-Fallstudie-1</identifierGit>
+  <identifierOER>https://quadriga-dk.github.io/Tabelle-Fallstudie-1/Markdown/0_Intro.html</identifierOER>
+  <prerequisite>Ein Grundverständnis für statistische Software bzw. für das Programmieren wird empfohlen. Ansonsten sind keine Vorkenntnisse nötig.</prerequisite>
+  <usedTool>
+    <name>R (Programmiersprache)</name>
+    <url>http://id.loc.gov/authorities/subjects/sh2002004407</url>
+  </usedTool>
+  <usedTool>
+    <name>RStudio</name>
+    <url>https://posit.co/download/rstudio-desktop/</url>
+  </usedTool>
+  <chapter>
+    <title>Datennachnutzung</title>
+    <description>Dieses Kapitel befasst sich mit der Datennachnutzung und den FAIR-Prinzipien.</description>
+    <url>https://quadriga-dk.github.io/Tabelle-Fallstudie-1/Markdown/05_Datennachnutzung.html</url>
+    <timeRequired>PT15M</timeRequired>
+    <learningGoal>Grundsätze des Datenmanagements</learningGoal>
+    <learningObjective>
+      <description>Die Bedeutung der vier FAIR-Prinzipien kann anhand eines konkreten Beispiels erläutert werden.</description>
+      <competency>Orientierungswissen</competency>
+      <dataFlow>übergreifend</dataFlow>
+      <bloomsCategory>2 Verstehen</bloomsCategory>
+      <assessment>Multiple-Choice-Quiz, Reflexionsfragen</assessment>
+    </learningObjective>
+    <learningObjective>
+      <description>Die FAIRness eines gegebenen Datensatzes kann anhand einer Checkliste bewertet werden.</description>
+      <competency>Orientierungswissen</competency>
+      <dataFlow>übergreifend</dataFlow>
+      <bloomsCategory>3 Anwenden</bloomsCategory>
+      <assessment>Multiple-Choice-Quiz, Reflexionsfragen</assessment>
+    </learningObjective>
+    <supplementalMaterial>
+      <title>Checkliste "How FAIR are your data?"</title>
+      <url>https://doi.org/10.5281/zenodo.5111307</url>
+    </supplementalMaterial>
+  </chapter>
+  <chapter>
+    <title>Qualitätsbewertung</title>
+    <description>In diesem Kapitel stehen die Kriterien der Qualitätsbewertung im Mittelpunkt.</description>
+    <url>https://quadriga-dk.github.io/Tabelle-Fallstudie-1/Markdown/Qualit%C3%A4tsbewertung.html</url>
+    <timeRequired>PT30M</timeRequired>
+    <learningGoal>Sicherstellen der Qualität von Datensätzen</learningGoal>
+    <learningObjective>
+      <description>Die Bedeutung zentraler Qualitätskriterien für Datensätze kann für die Forschung erläutert werden.</description>
+      <competency>1.2 Qualitätssicherung</competency>
+      <dataFlow>1 Planung</dataFlow>
+      <bloomsCategory>2 Verstehen</bloomsCategory>
+      <assessment>Multiple-Choice-Quiz, Reflexionsfragen</assessment>
+    </learningObjective>
+    <learningObjective>
+      <description>Die Vor- und Nachteile zwischen XLSX- und CSV-Dateiformaten können für verschiedene Anwendungsfälle aufgezeigt werden.</description>
+      <competency>1.2 Qualitätssicherung</competency>
+      <dataFlow>1 Planung</dataFlow>
+      <bloomsCategory>2 Verstehen</bloomsCategory>
+      <assessment>Multiple-Choice-Quiz, Reflexionsfragen</assessment>
+    </learningObjective>
+    <learningObjective>
+      <description>Die Qualität eines gegebenen Datensatzes kann anhand einer Checkliste bewertet werden.</description>
+      <competency>1.2 Qualitätssicherung</competency>
+      <dataFlow>1 Planung</dataFlow>
+      <bloomsCategory>3 Anwenden</bloomsCategory>
+      <assessment>Multiple-Choice-Quiz, Reflexionsfragen</assessment>
+    </learningObjective>
+    <supplementalMaterial>
+      <title>Video "ODIS | Tutorial: Offene Daten und Datenqualität"</title>
+      <url>https://www.youtube.com/watch?v=Nb_cLObVKho</url>
+    </supplementalMaterial>
+    <supplementalMaterial>
+      <title>Datensatz "Personal an Hochschulen: Deutschland, Jahre, Personalgruppen nach Beschäftigungsverhältnis, Geschlecht"</title>
+      <url>https://www-genesis.destatis.de/datenbank/online/statistic/21341/table/21341-0001/search/s/cGVyc29uYWwlMjBob2Noc2NodWxl</url>
+    </supplementalMaterial>
+  </chapter>
+  <dateIssued>2024-06-13</dateIssued>
+  <dateModified>2026-04-10</dateModified>
+  <version>1.0.0</version>
+  <contextOfCreation>Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.
+
+Förderkennzeichen: 16DKZ2034A-H
+</contextOfCreation>
+  <qualityAssurance>
+    <description>https://doi.org/10.5281/zenodo.18953896</description>
+    <date>2025-10-01</date>
+  </qualityAssurance>
+  <learningResourceType>Jupyter Book</learningResourceType>
+  <schemaVersion>2.0.0</schemaVersion>
+  <license>https://creativecommons.org/licenses/by/4.0/</license>
+  <licenseCode>https://opensource.org/licenses/MIT</licenseCode>
+</OpenEducationalResource>
