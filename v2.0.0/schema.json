@@ -682,7 +682,17 @@
             "Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt.\n\nFörderkennzeichen: 16DKZ2034A-H"
           ]
         },
-        { "$ref": "MultilingualText.json" }
+        {
+          "allOf": [
+            { "$ref": "MultilingualText.json" },
+            {
+              "not": {
+                "type": "string",
+                "pattern": "^Die vorliegenden Open Educational Resources wurden durch das Datenkompetenzzentrum QUADRIGA erstellt\\.\\n\\nFörderkennzeichen: 16DKZ2034A-H$"
+              }
+            }
+          ]
+        }
       ],
       "x-mappings": {
         "dc": {
@@ -721,7 +731,17 @@
               "format": "uri",
               "pattern": "^https://doi\\.org/"
             },
-            { "$ref": "MultilingualText.json" }
+            {
+              "allOf": [
+                { "$ref": "MultilingualText.json" },
+                {
+                  "not": {
+                    "type": "string",
+                    "pattern": "^https://doi\\.org/"
+                  }
+                }
+              ]
+            }
           ],
           "x-mappings": {
             "dc": null,
