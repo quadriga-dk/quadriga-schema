@@ -74,10 +74,14 @@ The following order of elements is recommended (required fields have an asterisk
 ```
 - title*
 - authors*
-  - (definition of each author)
+  - author*
     - family-names*
     - given-names*
+    - orcid
+    - credit
+    - affiliation
 - keywords*
+  - keyword*
 - description*
 - table-of-contents*
 - discipline*
@@ -86,26 +90,29 @@ The following order of elements is recommended (required fields have an asterisk
 - time-required*
 - language*
 - contributors*
-  - (definition of each contributor)
+  - contributor*
     - family-names*
     - given-names*
+    - orcid
+    - credit
+    - affiliation
 - identifier*
 - git*
 - url*
 - prerequisites
 - used-tools
-  - (definition for each tool)
+  - used-tool
     - name
     - url
 - chapters*
-  - (definition of each chapter)
+  - chapter*
     - title*
     - description*
     - url*
     - time-required*
     - learning-goal*
     - learning-objectives*
-      - (definition for each learning-objective)
+      - learning-objective-entry*
         - learning-objective*
         - competency*
         - data-flow*
@@ -113,16 +120,16 @@ The following order of elements is recommended (required fields have an asterisk
         - assessment
         - jupyter-book-glue-id (only for internal use)
     - supplemented-by
-      - (definition for each supplemental material)
-        - title*
-        - url*
-        - note
-    - language (only allowed if it overwrites the books language)
+      - title*
+      - url*
+      - note
 - date-issued*
 - date-modified*
 - version*
 - context-of-creation*
 - quality-assurance*
+  - description*
+  - date*
 - learning-resource-type*
 - schema-version*
 - license*
