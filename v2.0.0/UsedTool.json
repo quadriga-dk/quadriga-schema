@@ -4,7 +4,7 @@
   "title": "UsedTool – Verwendetes Werkzeug",
   "description": "Werkzeug / (Software-)Tool, das im Verlauf der OER benötigt wird.",
   "type": "object",
-  "required": ["name", "url"],
+  "required": ["name"],
   "additionalProperties": false,
   "properties": {
     "name": {

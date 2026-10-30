@@ -4,7 +4,7 @@
   "title": "SupplementalMaterial – Nachgenutztes Materiali",
   "description": "Nachgenutztes Material",
   "type": "object",
-  "required": ["url", "title"],
+  "required": ["title"],
   "additionalProperties": false,
   "properties": {
     "title": {
