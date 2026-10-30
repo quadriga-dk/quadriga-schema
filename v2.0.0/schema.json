@@ -36,8 +36,7 @@
     "qualityAssurance",
     "learningResourceType",
     "schemaVersion",
-    "license",
-    "licenseCode"
+    "license"
   ],
   "additionalProperties": false,
   "properties": {
