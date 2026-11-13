@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/zenodo/zenodo/482ee72ad501cbbd7f8ce8df9b393c130d1970f7/zenodo/modules/deposit/jsonschemas/deposits/records/legacyrecord.json",
   "title": "QUADRIGA Application Profile",
-  "description": "Internal application profile for the OER authored in the QUADRIGA project. Use this schema to validate the metadata of QUADRIGA case studies. The schema provides mappings to other schemas and the relationship of those mappings is defined via SKOS mapping relations. These mappings are defined in `x-mappings-meta-schema.json`.",
+  "description": "Internal application profile for the OER authored in the QUADRIGA project. Use this JSON Schema to validate the metadata of QUADRIGA learning materials (quadriga-metadata.yml). This release provides version 2.0.0 of the application profile; the previous version 1.0.0 remains available. The application profile provides crosswalk mappings to Dublin Core, DCAT, DCMI Metadata Terms, HERMES, IEEE LOM, LRMI, Modalia and Schema.org. The relationship of those mappings is defined via SKOS mapping relations and validated in `x-mappings-meta-schema.json`. Interactive HTML documentation and a mapping matrix are available at https://quadriga-dk.github.io/quadriga-schema/.",
   "upload_type": "other",
-  "publication_date": "2026-09-29",
+  "publication_date": "2026-11-13",
   "creators": [
     {
       "name": "Schnaitter, Hannes",
@@ -40,6 +40,11 @@
       "identifier": "https://quadriga-dk.github.io/quadriga-schema/",
       "relation": "isDocumentedBy",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.14747822",
+      "relation": "references",
+      "scheme": "doi"
     }
   ]
 }
