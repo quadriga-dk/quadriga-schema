@@ -39,9 +39,8 @@ tailored for educational content creation and management.
 This repository contains the complete QUADRIGA application profile definition split into
 modular JSON files for maintainability. It features a versioning system with one directory
 per profile version (`v1.0.0`, `v2.0.0`) and a `latest` symlink pointing to the current
-stable version (currently `v1.0.0`; version `2.0.0` is available as beta), automated HTML
-documentation generation via GitHub Actions, and deployment to GitHub Pages for easy access
-and reference.
+stable version (currently `v2.0.0`), automated HTML documentation generation via GitHub
+Actions, and deployment to GitHub Pages for easy access and reference.
 
 **Entry Point:** `schema.json` in each version directory (e.g.
 [`v2.0.0/schema.json`](./v2.0.0/schema.json), or
@@ -183,7 +182,7 @@ the export to JSON-LD, RDF/XML, OERSI and Citation File Format) is described in 
 [QUADRIGA-OER-Manual](https://github.com/quadriga-dk/QUADRIGA-OER-Manual).
 
 You can use `latest` in the application profile URL, but in production we recommend picking
-a specific version like `v2.0.0` (`latest` currently resolves to `v1.0.0`).
+a specific version like `v2.0.0`.
 
 ### Migrating from v1.0.0 to v2.0.0
 
